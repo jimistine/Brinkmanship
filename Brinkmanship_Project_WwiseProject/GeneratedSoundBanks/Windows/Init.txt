@@ -1,0 +1,71 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	905848135	PausedStateGroup			\Default Work Unit\PausedStateGroup	
+	2549671355	Brig_State_Group			\Default Work Unit\Brig_State_Group	
+	4287612753	ProgressGroup			\Default Work Unit\ProgressGroup	
+
+State	ID	Name	State Group			Notes
+	748895195	None	PausedStateGroup			
+	2467044301	UnpausedState	PausedStateGroup			
+	3815970118	PausedState	PausedStateGroup			
+	748895195	None	Brig_State_Group			
+	2227855087	In_Brig	Brig_State_Group			
+	3055554516	Out_of_Brig	Brig_State_Group			
+	748895195	None	ProgressGroup			
+	2068062714	Bridge	ProgressGroup			
+	3249103918	Void_0p	ProgressGroup			
+	3552940382	Coda	ProgressGroup			
+	3604647259	MainMenu	ProgressGroup			
+	3749756136	Void_2	ProgressGroup			
+	3749756138	Void_0	ProgressGroup			
+	3749756139	Void_1	ProgressGroup			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	153902213	PausedState	PausedStateGroup	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
+	1012643067	UnpausedState	PausedStateGroup	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1093937226	VO_Vol			\Default Work Unit\VO_Vol	
+	2246609544	Music_Vol			\Default Work Unit\Music_Vol	
+	2295956853	Music_LPF			\Default Work Unit\Music_LPF	
+	2467517340	SunIntensity			\Default Work Unit\SunIntensity	
+	2481014485	FX_Vol			\Default Work Unit\FX_Vol	
+	3578718921	Master_Vol			\Default Work Unit\Master_Vol	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	311764516	Dad			\Default Work Unit\Master Audio Bus\VO_Bus\Dad	
+	689086705	Brine			\Default Work Unit\Master Audio Bus\VO_Bus\Brine	
+	845985350	Tav			\Default Work Unit\Master Audio Bus\VO_Bus\Tav	
+	1080136498	You			\Default Work Unit\Master Audio Bus\VO_Bus\You	
+	1082004790	Mom			\Default Work Unit\Master Audio Bus\VO_Bus\Mom	
+	1183067806	Kee			\Default Work Unit\Master Audio Bus\VO_Bus\Kee	
+	1191351487	VO_Bus			\Default Work Unit\Master Audio Bus\VO_Bus	
+	1304734411	Captain			\Default Work Unit\Master Audio Bus\VO_Bus\Captain	
+	1842327993	Pilot			\Default Work Unit\Master Audio Bus\VO_Bus\Pilot	
+	2583651660	FX_Bus			\Default Work Unit\Master Audio Bus\FX_Bus	
+	2680856269	Music_Bus			\Default Work Unit\Master Audio Bus\Music_Bus	
+	2991672517	Prisoner			\Default Work Unit\Master Audio Bus\VO_Bus\Prisoner	
+	3099087715	Urnst			\Default Work Unit\Master Audio Bus\VO_Bus\Urnst	
+	3247222208	UI_Bus			\Default Work Unit\Master Audio Bus\UI_Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3959274332	Ailyn			\Default Work Unit\Master Audio Bus\VO_Bus\Ailyn	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	124586632	Aux_Brig			\Default Work Unit\Master Audio Bus\Aux_Brig	
+	2112505204	Aux_ShipVoice			\Default Work Unit\Master Audio Bus\Aux_ShipVoice	
+	2372645886	Aux_Void			\Default Work Unit\Master Audio Bus\Aux_Void	
+	2664785639	Aux_Bridge			\Default Work Unit\Master Audio Bus\Aux_Bridge	
+
+Effect plug-ins	ID	Name	Type				Notes
+	220363450	Matrix Reverb (Custom)	Wwise Matrix Reverb			
+	920479720	Guitar Distortion (Custom)	Wwise Guitar Distortion			
+	1674078407	Chorus_Like	Wwise Flanger			
+	1706684651	Plate_Medium	Wwise RoomVerb			
+	2154715732	New_Stereo_Delay	Wwise Stereo Delay			
+	2995775460	Room_Small	Wwise RoomVerb			
+	3216246379	Space_Dreaming	Wwise RoomVerb			
+	3290519051	Aluminium_Tank	Wwise RoomVerb			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

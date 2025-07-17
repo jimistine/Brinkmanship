@@ -1,0 +1,303 @@
+Event	ID	Name			Wwise Object Path	Notes
+	60408112	Play_ailyn_ping			\Default Work Unit\FX\UI\Play_ailyn_ping	
+	81877127	Plr_Walk			\Default Work Unit\FX\Player\Plr_Walk	
+	128432694	Play_countdown_30s			\Default Work Unit\FX\General\ShipVoice\Play_countdown_30s	
+	219020023	Play_Ui_2_Hover_b			\Default Work Unit\FX\UI\Play_Ui_2_Hover_b	
+	259336453	Play_Brinkmanship_Domestic_Layer			\Default Work Unit\FX\Ambient\Play_Brinkmanship_Domestic_Layer	
+	304358110	Lockdown_Doors			\Default Work Unit\FX\General\Lockdown_Doors	
+	338393565	Play_Brinkmanship_Beethoven_Layer			\Default Work Unit\FX\Ambient\Play_Brinkmanship_Beethoven_Layer	
+	359548399	stop_amb_coda_soldacia			\Default Work Unit\FX\Ambient\stop_amb_coda_soldacia	
+	421979143	play_amb_coda_trado			\Default Work Unit\FX\Ambient\play_amb_coda_trado	
+	435209092	Play_Quarters_Comp_Interact_Layer			\Default Work Unit\FX\Ambient\Play_Quarters_Comp_Interact_Layer	
+	581117196	Stop_Prisoner_Humming			\Default Work Unit\FX\Ambient\Stop_Prisoner_Humming	
+	653852588	ActiveEngine_Creak			\Default Work Unit\FX\General\ActiveEngine\ActiveEngine_Creak	
+	689749492	Play_gun_slide_draft_3			\Default Work Unit\FX\General\Play_gun_slide_draft_3	
+	710247509	CubicleDoor_Close			\Default Work Unit\FX\General\Cubicle\CubicleDoor_Close	
+	817593702	Play_Quarters_Brine			\Default Work Unit\FX\Ambient\Play_Quarters_Brine	
+	827448016	Play_Quarters_Prisoner			\Default Work Unit\FX\Ambient\Play_Quarters_Prisoner	
+	829756566	OnSelect			\Default Work Unit\FX\UI\OnSelect	
+	858036857	Ship_turning			\Default Work Unit\FX\General\Ship_turning	
+	859724335	Stop_Brinkmanship_Domestic_Layer			\Default Work Unit\FX\Ambient\Stop_Brinkmanship_Domestic_Layer	
+	953289098	Stop_Quarters_Comp_Interact_Layer			\Default Work Unit\FX\Ambient\Stop_Quarters_Comp_Interact_Layer	
+	1030992424	Play_Beeps_Trado			\Default Work Unit\FX\General\Cubicle\Play_Beeps_Trado	
+	1055382950	Play_Prisoner_Humming			\Default Work Unit\FX\Ambient\Play_Prisoner_Humming	
+	1150960456	Stop_finding_gun_foley			\Default Work Unit\FX\General\Stop_finding_gun_foley	
+	1165673265	Play_Type_Dialogue_Bridge			\Default Work Unit\FX\UI\Play_Type_Dialogue_Bridge	
+	1190944899	Play_Quarters_Parents			\Default Work Unit\FX\Ambient\Play_Quarters_Parents	
+	1242451805	Play_BridgeDoorsComp_01			\Default Work Unit\FX\General\Play_BridgeDoorsComp_01	
+	1326785954	Stop_All_Audio			\Default Work Unit\FX\Stop_All_Audio	
+	1402573747	stop_engine_ambient			\Default Work Unit\FX\Ambient\stop_engine_ambient	
+	1439068160	BridgeDoorAlarm_Opening			\Default Work Unit\FX\General\BridgeDoorAlarm_Opening	
+	1518059158	GunFireNoAmmo			\Default Work Unit\FX\Player\Gun\GunFireNoAmmo	
+	1531165091	Play_Quarters_Soccer_Match			\Default Work Unit\FX\Ambient\Play_Quarters_Soccer_Match	
+	1541785979	Play_Brinkmanship_Plant_Spritizng_Layer			\Default Work Unit\FX\Ambient\Play_Brinkmanship_Plant_Spritizng_Layer	
+	1605250912	Coda_Hit			\Default Work Unit\FX\General\Coda_Hit	
+	1635944957	Knock_Rand_Deeper			\Default Work Unit\FX\General\Knock_Rand_Deeper	
+	1706867339	Play_ship_voice_ugly_ending			\Default Work Unit\FX\General\ShipVoice\Play_ship_voice_ugly_ending	
+	1780237597	play_amb_coda_soldacia			\Default Work Unit\FX\Ambient\play_amb_coda_soldacia	
+	1828823542	GunStow			\Default Work Unit\FX\Player\Gun\GunStow	
+	1928394692	Stop_Gun_Alarm			\Default Work Unit\FX\General\GunAlarm\Stop_Gun_Alarm	
+	1976863846	Play_finding_gun_foley			\Default Work Unit\FX\General\Play_finding_gun_foley	
+	1994169264	Door_A_Close			\Default Work Unit\FX\General\Door_A_Close	
+	2016696953	Stop_Brinkmanship_Plant_Spritizng_Layer			\Default Work Unit\FX\Ambient\Stop_Brinkmanship_Plant_Spritizng_Layer	
+	2029103987	Play_Quarters_Clean			\Default Work Unit\FX\Ambient\Play_Quarters_Clean	
+	2199040031	Stop_Brinkmanship_Beethoven_Layer			\Default Work Unit\FX\Ambient\Stop_Brinkmanship_Beethoven_Layer	
+	2242732987	Lockdown_Doors_Fade			\Default Work Unit\FX\General\Lockdown_Doors_Fade	
+	2279016546	Door_Despawn			\Default Work Unit\FX\General\Door_Despawn	
+	2308684427	Play_countdown_60s			\Default Work Unit\FX\General\ShipVoice\Play_countdown_60s	
+	2320974241	Stop_Quarters_Clean			\Default Work Unit\FX\Ambient\Stop_Quarters_Clean	
+	2321755733	CubicleDoor_Locked			\Default Work Unit\FX\General\Cubicle\CubicleDoor_Locked	
+	2352812999	ActiveEngine_End			\Default Work Unit\FX\General\ActiveEngine\ActiveEngine_End	
+	2387212484	Door_A_Open			\Default Work Unit\FX\General\Door_A_Open	
+	2410041256	CubicleDoor_Unlocked			\Default Work Unit\FX\General\Cubicle\CubicleDoor_Unlocked	
+	2477593508	Play_countdown_10s			\Default Work Unit\FX\General\ShipVoice\Play_countdown_10s	
+	2500861615	Knock_Random			\Default Work Unit\FX\General\Knock_Random	
+	2529334769	stop_amb_coda_trado			\Default Work Unit\FX\Ambient\stop_amb_coda_trado	
+	2541245939	stop_void_amb_01			\Default Work Unit\FX\Ambient\stop_void_amb_01	
+	2631106099	MarkerIntro			\Default Work Unit\FX\General\MarkerIntro	
+	2748252963	GunDraw			\Default Work Unit\FX\Player\Gun\GunDraw	
+	2761130076	Hit_Metal			\Default Work Unit\FX\General\Hit_Metal	
+	2774406324	ActiveEngine_Start			\Default Work Unit\FX\General\ActiveEngine\ActiveEngine_Start	
+	2893290485	Play_Types			\Default Work Unit\FX\UI\Play_Types	
+	2935197580	Play_Quarters_Urnst			\Default Work Unit\FX\Ambient\Play_Quarters_Urnst	
+	2947554964	Play_Beeps_Soldacia			\Default Work Unit\FX\General\Cubicle\Play_Beeps_Soldacia	
+	2975448509	GunFire			\Default Work Unit\FX\Player\Gun\GunFire	
+	3002812021	play_engine_ambient			\Default Work Unit\FX\Ambient\play_engine_ambient	
+	3027540232	Play_Exchange_Bullet			\Default Work Unit\FX\General\Play_Exchange_Bullet	
+	3133018699	Play_Intercom_GAM_Lockdown			\Default Work Unit\FX\General\ShipVoice\Play_Intercom_GAM_Lockdown	
+	3194061534	Play_Modern_UI_Confirm_02			\Default Work Unit\FX\UI\Play_Modern_UI_Confirm_02	
+	3230459744	Knock_2			\Default Work Unit\FX\General\Knock_2	
+	3230459747	Knock_1			\Default Work Unit\FX\General\Knock_1	
+	3309584930	Play_Type			\Default Work Unit\FX\UI\Play_Type	
+	3432941551	Play_elevator_hum			\Default Work Unit\FX\General\Play_elevator_hum	
+	3549508922	Play_Gun_Alarm			\Default Work Unit\FX\General\GunAlarm\Play_Gun_Alarm	
+	3562746041	Play_Type_Bio			\Default Work Unit\FX\UI\Play_Type_Bio	
+	3611726393	Play_turning_announcement			\Default Work Unit\FX\General\ShipVoice\Play_turning_announcement	
+	3614068781	play_void_amb_01			\Default Work Unit\FX\Ambient\play_void_amb_01	
+	3639525744	PanelDisappear			\Default Work Unit\FX\UI\PanelDisappear	
+	3685757823	CubicleDoor_Open			\Default Work Unit\FX\General\Cubicle\CubicleDoor_Open	
+	3760776862	PanelAppear			\Default Work Unit\FX\UI\PanelAppear	
+	3761866791	Play_Intercom_Halfway_Warning			\Default Work Unit\FX\General\ShipVoice\Play_Intercom_Halfway_Warning	
+	3778278455	Stop_Quarters_All			\Default Work Unit\FX\Ambient\Stop_Quarters_All	
+	3785327628	Ship_turning_stop			\Default Work Unit\FX\General\Ship_turning_stop	
+	3796379992	Play_Quarters_Stack			\Default Work Unit\FX\Ambient\Play_Quarters_Stack	
+	3818819293	Door_Spawn			\Default Work Unit\FX\General\Door_Spawn	
+	3868676625	Stop_Quarters_Soccer_Match			\Default Work Unit\FX\Ambient\Stop_Quarters_Soccer_Match	
+	3953971107	Play_Type_Dialogue			\Default Work Unit\FX\UI\Play_Type_Dialogue	
+	3998425947	Shoot_Gun_Alarm			\Default Work Unit\FX\General\GunAlarm\Shoot_Gun_Alarm	
+	4012991767	Cut_Boom			\Default Work Unit\FX\General\Cut_Boom	
+	4016985356	Play_Bridge_Fire			\Default Work Unit\FX\General\Play_Bridge_Fire	
+	4066999656	BridgeDoorAlarm_Stop			\Default Work Unit\FX\General\BridgeDoorAlarm_Stop	
+	4167392400	play_bridge_ambient			\Default Work Unit\FX\Ambient\play_bridge_ambient	
+	4173368433	Hover_1			\Default Work Unit\FX\UI\Hover_1	
+	4194538932	BridgeDoorAlarm_TimeUp			\Default Work Unit\FX\General\BridgeDoorAlarm_TimeUp	
+	4195621385	Play_countdown_2m			\Default Work Unit\FX\General\ShipVoice\Play_countdown_2m	
+	4212399002	Play_countdown_3m			\Default Work Unit\FX\General\ShipVoice\Play_countdown_3m	
+	4223697182	Play_Bridge_Doors_Warmup			\Default Work Unit\FX\General\Play_Bridge_Doors_Warmup	
+	4229827606	Stop_ailyn_ping			\Default Work Unit\FX\UI\Stop_ailyn_ping	
+	4263856424	HoverGone_1			\Default Work Unit\FX\UI\HoverGone_1	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2549671355	Brig_State_Group			\Default Work Unit\Brig_State_Group	
+	4287612753	ProgressGroup			\Default Work Unit\ProgressGroup	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Brig_State_Group			
+	2227855087	In_Brig	Brig_State_Group			
+	3055554516	Out_of_Brig	Brig_State_Group			
+	748895195	None	ProgressGroup			
+	2068062714	Bridge	ProgressGroup			
+	3249103918	Void_0p	ProgressGroup			
+	3552940382	Coda	ProgressGroup			
+	3604647259	MainMenu	ProgressGroup			
+	3749756136	Void_2	ProgressGroup			
+	3749756138	Void_0	ProgressGroup			
+	3749756139	Void_1	ProgressGroup			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	308877694	In_Brig	Brig_State_Group	\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\AmbientMixer		
+	417418603	Void_0p	ProgressGroup	\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CharacterAmbients		
+	712444087	Void_0	ProgressGroup	\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CharacterAmbients		
+	749418345	In_Brig	Brig_State_Group	\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Bridge_Door_Alarm		
+	882409122	In_Brig	Brig_State_Group	\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps		
+	931095858	Void_0	ProgressGroup	\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\ParentsAmbMixer		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1437246667	Azimuth			\Default Work Unit\Azimuth	
+	2023530258	EngineIntensity			\Default Work Unit\EngineIntensity	
+	2467517340	SunIntensity			\Default Work Unit\SunIntensity	
+
+Modulator Time	ID	Name			Wwise Object Path	Notes
+	992346667	Tinnitus_Fade_Out			\Default Work Unit\Tinnitus_Fade_Out	
+
+Effect plug-ins	ID	Name	Type				Notes
+	470033426	ActiveEngineDistort	Wwise Guitar Distortion			
+	508303773	Guitar Distortion (Custom)	Wwise Guitar Distortion			
+	778830813	Parametric EQ (Custom)	Wwise Parametric EQ			
+	882543483	Flanger (Custom)	Wwise Flanger			
+	1291433344	Bass	Wwise Flanger			
+	1674078407	Chorus_Like	Wwise Flanger			
+	2154715732	New_Stereo_Delay	Wwise Stereo Delay			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	813589615	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Single_BioPanel\New Sound SFX\Silence	
+	846664143	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Single_Dialogue_Bridge\New Sound SFX\Silence	
+	987084562	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Single_Dialogue\New Sound SFX\Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	4041616	BatchRender_Run38	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run38_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run38		1080920
+	6561418	Alarm_b	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\SCIAlrm_Simple Alarm Medium 07_JSE_FI_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Bridge_Door_Alarm\Alarm_b		2832272
+	32710221	DoorClose_2_ElevatorStop	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\307538-PM-FSSF-DOOR-BIG-1 48000 1_7C26577C.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Doors\DoorClose_2_ElevatorStop		170740
+	42615006	Prisoner_Humming_Solo	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Prisoner_Humming_Solo_FB74D7B9.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CharacterAmbients\Prisoner_Humming_Solo		5245156
+	47395255	Ui_2_Hover	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Ui_2_9622FA7E.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\3D_UI\Ui_2_Hover		16724
+	61472640	BatchRender_Run11	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run11		1295368
+	65118878	BridgeDoorsComp_01	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BridgeDoorsComp_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Doors\BridgeDoors\BridgeDoorsComp_01		2304096
+	68899494	lettertype_18	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-018_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_18		37244
+	76173654	Ui_4_Close	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Ui_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\3D_UI\Ui_4_Close		120096
+	78429074	ActiveEngineBegin	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\ActiveEngineBegin_7C5E8F5B.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Engine\EngineStart\ActiveEngineBegin		805188
+	79620755	UI_MovementA_01	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\UI_MovementA_CDCE61EC.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\UI_MovementA_01		85160
+	81655879	Hit Cinematic Synth Thriller Stab Transition-003	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Hit Cinematic Synth Thriller Stab Transition-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Coda_Hits\Hit Cinematic Synth Thriller Stab Transition-003		1134836
+	92575846	BatchRender_Run20	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run20_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run20		1166736
+	96163859	knocks_--_denoised_-_214_m4a	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\knocks_--_denoised_-_214.m4a_D67BD0F4.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Knocks\knocks_--_denoised_-_214_m4a		242020
+	98489677	BatchRender_Run34	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run34_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run34		1253320
+	101771238	Metal_Trainers_FullStep_05	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_05		86072
+	104046062	Spas_Foley_01	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Spas_Foley_01_100E9907.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Weapon\Spas_Foley_01		66146
+	114525043	Alarm_Loop_c	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Sci_Fi_Alarm_Loop_10_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Bridge_Door_Alarm\Alarm_Loop_c		3072096
+	119362852	countdown_2m	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\two minute warning_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\countdown_2m		960096
+	119527604	gun_slide_draft_3	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\gun_slide_draft_3_304655F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\gun_slide_draft_3		120000
+	120687329	BatchRender_Run37	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run37_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run37		738328
+	121043548	finding_gun_foley	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\finding_gun_foley_draft_1_-_finding_gun_AC6428C7.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\finding_gun_foley		3962552
+	124854498	BatchRender_Run9	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run9		1084240
+	135600530	BatchRender_Run39	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run39_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run39		1303432
+	138938615	Metal_Trainers_FullStep_12	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_12_B80F8502.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_12		90492
+	155638685	BatchRender_Run31	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run31_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run31		995364
+	158561132	DoorClose_2	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\307538-PM-FSSF-DOOR-BIG-1 48000 1_CEF44F58.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Doors\DoorClose_2		235608
+	169406625	lettertype_18	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-018_0FB5F78A.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Single_Dialogue\lettertype_18		26120
+	186570123	Metal_Trainers_FullStep_01	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_01_3F2D5F97.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_01		85140
+	195918866	lettertype_14	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-014_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_14		35860
+	206644768	lettertype_06	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_06		16756
+	251791710	BatchRender_Run14	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run14		834132
+	270009041	ActiveEngineLayers-002	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\ActiveEngineLayers-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Engine\EngineLayers\Layer2\ActiveEngineLayers-002		20970296
+	275263768	Metal_Trainers_FullStep_13	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_13		80608
+	306774550	Electrical Current Strong	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Electrical Current Strong_E98AD9B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Electrical Current Strong		293688
+	310505724	Ice_and_Wind_Drone_6	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Ice_and_Wind_Drone_6_38EA25FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CodaAmbients\Ice_and_Wind_Drone_6		10014532
+	310946322	Wind Strong	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Wind Strong_04342946.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CodaAmbients\Wind Strong		7395340
+	324523139	lettertype_19	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-019_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_19		17804
+	339846896	BatchRender_Run21	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run21_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run21		1101788
+	344226463	BatchRender_Run25	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run25_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run25		1217068
+	355621781	Brinkmanship_Beethoven_Layer	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Brinkmanship_Beethoven_Layer_FEE0E8C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CharacterAmbients\Brinkmanship_Beethoven_Layer		7217648
+	359609611	metal_hit_2	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\metal_hit_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Impacts\Impacts_Metal\metal_hit_2		152740
+	371646743	lettertype_08	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_08		7276
+	375180904	BatchRender_Run40	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run40_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run40		780036
+	383952064	BatchRender_Run33	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run33_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run33		1003784
+	385882111	Alarm_01	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Alarm_01_C5579977.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\Alarm_01		997552
+	392360280	countdown_3m	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\three minute warning_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\countdown_3m		1286496
+	394452580	BatchRender_Run23	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run23_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run23		1054464
+	394737524	Door_Despawn	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Door_Despawn_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Doors\Door_Despawn		215708
+	395836458	BatchRender_Run17	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run17_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run17		985408
+	398432649	lettertype_09	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_09		11372
+	400564993	BatchRender_Run24	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run24_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run24		781528
+	400667241	lettertype_14	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-014_4C7FA638.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Single_Dialogue\lettertype_14		17384
+	432645115	ActiveEngineLayers-003	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LUNCH_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Engine\EngineLayers\Base\ActiveEngineLayers-003		25316488
+	436068552	lettertype_16	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-016_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_16		11692
+	437698067	BatchRender_Run1	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run1		982660
+	438196019	BatchRender_Run15	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run15		637040
+	438614114	6K_Ringing	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\6K_Ringing_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\6K_Ringing		674148
+	440477726	lettertype_12	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-012_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_12		30576
+	445620093	BatchRender_Run18	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run18_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run18		995992
+	448252831	BatchRender_Run30	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run30_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run30		1230888
+	448978489	lettertype_10	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_10		16440
+	485323735	Howling Wind 02	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Howling Wind 02_A37FD710.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CodaAmbients\Howling Wind 02		4369672
+	487607274	turning announcement	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\turning announcement_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\turning announcement		1305696
+	487934776	Metal_Trainers_FullStep_03	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_03		71236
+	501627414	UI_4_Reversed	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\UI_4_Reversed_6E70FCA8.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\3D_UI\UI_4_Reversed		85324
+	508495834	lettertype_07	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_07		10768
+	509198202	Intercom_Halfway_Warning	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Intercom_Halfway_Warning_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Void_Intercom\Intercom_Halfway_Warning		3379296
+	520572657	knocks_--_denoised_-_217_m4a	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\knocks_--_denoised_-_217.m4a_0504E327.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Knocks\Knocks_Random\knocks_--_denoised_-_217_m4a		264492
+	520832234	BatchRender_Run6	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run6		894288
+	522091583	BatchRender_Run35	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run35_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run35		1156204
+	524018887	environment_forest	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\environment_forest_19840B39.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CodaAmbients\environment_forest		4456956
+	530493989	Metal_Trainers_FullStep_04	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_04		88340
+	535299529	lettertype_05	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_05		15908
+	544817521	Brinkmanship_Plant_Spritizng_Layer	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Brinkmanship_Plant_Spritizng_Layer_EDB795F1.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CharacterAmbients\Brinkmanship_Plant_Spritizng_Layer		4960320
+	545975775	BatchRender_Run29	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run29_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run29		1207008
+	561501303	BatchRender_Run2	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run2		1223028
+	567658026	elevator_hum	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\elevator_hum_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\elevator_hum		1067884
+	572965139	lettertype_15	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-015_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_15		13012
+	584026574	Quarters_Clean	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Quarters_Clean_17A6DBAB.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CharacterAmbients\Quarters_Clean		5802920
+	584299169	Wind Medium	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Wind Medium_F89415E4.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CodaAmbients\Wind Medium		10779268
+	585117332	lettertype_02	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_02		15116
+	605656745	Sci_Fi_Alarm_Loop_06	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Sci_Fi_Alarm_Loop_06_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\Sci_Fi_Alarm_Loop_06		3072096
+	609360410	Door_Close	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Door_Close_3CC0E795.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Doors\Door_Close		743648
+	610659821	Foley Bag Fabric Large Trekking-004	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Foley Bag Fabric Large Trekking-004_2D01D990.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\Foley Bag Fabric Large Trekking-004		71936
+	614932513	EngineEnd	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\EngineEnd_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Engine\EngineEnd\EngineEnd		765768
+	621276136	BatchRender_Run19	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run19_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run19		1396480
+	627119229	Door_Open_01	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Door_Open_42358AFA.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Doors\Door_Open_01		279640
+	630000038	Beeps_Soldacia	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Beeps_Soldacia_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Computer\Beeps_Soldacia		1443220
+	631131484	Ship_ambience	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Ship_ambience_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\AmbientMixer\BridgeAmbient\Ship_ambience		20913976
+	641333352	BatchRender_Run3	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run3		1067212
+	641721126	PowerfulSciFiHandgun_01	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\PowerfulSciFiHandgun_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Weapon\PowerfulSciFiHandgun_01		497320
+	652315403	ailyn_ping	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\ailyn_ping_dry_43AEF32C.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\ailyn_ping_seq\ailyn_ping		31672
+	658645602	lettertype_03	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_03		13028
+	679946442	Modern_UI_Confirm_02	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Modern_UI_Confirm_02_A7036B4E.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\Modern_UI_Confirm_02		22364
+	690883332	Quarters_Soccer_Match	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Quarters_Soccer_Match_D83F58CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CharacterAmbients\Quarters_Soccer_Match		5816688
+	702261158	countdown_30s	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\countdown_30s_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\countdown_30s		576096
+	704311481	metal_hit_1	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\metal_hit_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Impacts\Impacts_Metal\metal_hit_1		243760
+	704618966	BatchRender_Run12	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run12		1147812
+	709779343	Exchange_Bullet	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Foley Leather Jacket Pocket Search-002_491142FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Exchange_Bullet		93088
+	720342110	BatchRender_Run8	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run8		990164
+	725628464	Quarters_Comp_Interact_Layer	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Quarters_Comp_Interact_Layer_A5687370.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CharacterAmbients\Quarters_Comp_Interact_Layer		5816688
+	725809448	Alarm_Loop_05_Locked	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Sci_Fi_Alarm_Loop_05_4208D098.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Alarm_Loop_05_Locked		190320
+	735306933	Ui_2_Hover_b	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Ui_2_22DB5309.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\Ui_2_Hover_b		11600
+	735397370	New_Door_TEMP_01	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Door_Close_388B1AA0.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\New_Door_TEMP_01		504316
+	744949374	knocks_--_denoised_-_209_m4a	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\knocks_--_denoised_-_209.m4a_9A88A8AC.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Knocks\knocks_--_denoised_-_209_m4a		323016
+	745679514	M4_Foley_06	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\M4_Foley_06_96F1478B.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Weapon\M4_Foley_06		18684
+	757967219	BatchRender_Run4	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run4		1276504
+	760712200	lettertype_01	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_01		20136
+	764280362	Metal_Trainers_FullStep_06	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_06		80688
+	771677346	Bridge_ambiance_draft_2	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\bridge_ambiance_-_bridge_ambiance_draft_2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\AmbientMixer\Bridge_ambiance_draft_2		6874120
+	790392272	BatchRender_Run27	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run27_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run27		1056732
+	805238017	ship voice ugly ending	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\ship voice ugly ending_9C813C6E.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\ship voice ugly ending		1651296
+	814969196	Engine_Ambient	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Engine_Ambient_0543861E.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\AmbientMixer\BridgeAmbient\Engine_Ambient		3612144
+	819209306	Metal_Trainers_FullStep_09	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_09		56396
+	820513136	BatchRender_Run32	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run32_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run32		1407756
+	834243079	Intercom_GAM_Lockdown	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Intercom_GAM_Lockdown_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Void_Intercom\Intercom_GAM_Lockdown		1664096
+	856213125	abandon_ship	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\ship voice ugly ending_F44EB31F.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\abandon_ship		235580
+	858190577	BatchRender_Run5	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run5		902268
+	864252224	ActiveEngineLayers-001	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\ActiveEngineLayers-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Engine\EngineLayers\Layer1\ActiveEngineLayers-001		20970296
+	873161927	Metal_Trainers_FullStep_14	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_14		69428
+	876290436	Beeps_Trado_fx	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Beeps_Trado_fx_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Computer\Beeps_Trado_fx		1011296
+	877233402	Electro-magnetic Pick-up Designed_02	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Electro-magnetic Pick-up Designed_02_78EE9571.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Doors\BridgeDoors\Electro-magnetic Pick-up Designed_02		524388
+	903208229	countdown_10s-001	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\countdown_10s-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\countdown_10s-001		1245548
+	913087021	Radio_Hum	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Radio_Hum_66996532.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Computer\Radio_Hum		1150368
+	915299928	lettertype_13	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-013_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_13		17924
+	920043025	New_Door_TEMP	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Door_Close_0C6FE22C.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\New_Door_TEMP		444584
+	920163321	lettertype_04	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_04		15852
+	923744472	metal_hit_3	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\metal_hit_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Impacts\Impacts_Metal\metal_hit_3		417340
+	926207972	beeps	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\beeps_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Computer\beeps		1988900
+	928199318	knocks_--_denoised_-_216_m4a_1	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\knocks_--_denoised_-_216.m4a_1_0BE45727.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Knocks\Knocks_Random\knocks_--_denoised_-_216_m4a_1		336392
+	934605140	Door_Open	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Door_Open_4046DF0C.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Doors\Door_Open		755584
+	937058756	BatchRender_Run7	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run7		967400
+	943170386	Brinkmanship_Domestic_Layer	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Brinkmanship_Domestic_Layer_3D67CA0C.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\ParentsAmbMixer\Brinkmanship_Domestic_Layer		6178088
+	949767173	lettertype_12	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-012_A396BC27.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Single_Dialogue\lettertype_12		15676
+	955866377	BatchRender_Run16	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run16_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run16		1083388
+	985850694	BatchRender_Run36	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run36_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run36		711428
+	987991094	Metal_Trainers_FullStep_02	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_02_D3CAA266.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_02		68824
+	993113904	BatchRender_Run10	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run10		1305520
+	1007547926	BatchRender_Run13	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run13		987564
+	1011737792	countdown_60s	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\countdown_60s_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\countdown_60s		518496
+	1019742938	BatchRender_Run22	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run22_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run22		769328
+	1024252513	BatchRender_Run28	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run28_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run28		1047908
+	1029705183	BatchRender_Run26	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\BatchRender_Run26_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Creaks\BatchRender_Run26		984180
+	1031384181	lettertype_17	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-017_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_17		21220
+	1038325773	Sci_Fi_Alarm_Loop_18	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Sci_Fi_Alarm_Loop_18_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\Sci_Fi_Alarm_Loop_18		3072096
+	1049681436	UI_Glitchy	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\UI_Glitchy_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\3D_UI\UI_Glitchy		96096
+	1050276054	Metal_Trainers_FullStep_08	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Metal_Trainers_FullStep_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Player\Foley\FootSteps\Plr_FS\Metal_Trainers_FullStep_08		62884
+	1051786945	lettertype_11	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\LetterTypes\untitled-011_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\UI\UI\LetterTypes\LetterTypesRand_Cont\lettertype_11		18396
+	1052295544	Forest Birds 01	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Forest Birds 01_BD4BF293.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\Ambient\CodaAmbients\Forest Birds 01		8277316
+	1062066737	Beeps_Trado	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Beeps_Trado_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\Computer\Beeps_Trado		1011296
+	1065299226	Fire Burning - Forest Fire	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Fire Burning - Forest Fire_1B061045.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\BridgeVerb\Fire Burning - Forest Fire		2096864
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	950951544	EngineLoop	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\EngineLoop_D79FB2B7.wem	950951544.wem	\Actor-Mixer Hierarchy\Default Work Unit\FX\FX_General\ActiveEngine\Engine\EngineLayers\Base\EngineLoop	
+

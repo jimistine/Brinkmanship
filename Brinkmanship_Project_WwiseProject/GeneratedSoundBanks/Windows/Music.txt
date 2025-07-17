@@ -1,0 +1,37 @@
+Event	ID	Name			Wwise Object Path	Notes
+	293921080	Play_MM_Music			\Default Work Unit\Music\Play_MM_Music	
+	821746483	Play_Airlock_In			\Default Work Unit\Music\Play_Airlock_In	
+	1188559822	Play_Airlock_Out			\Default Work Unit\Music\Play_Airlock_Out	
+	1227732809	Play_Lvl_3_Loop_Bridge			\Default Work Unit\Music\Play_Lvl_3_Loop_Bridge	
+	1875770428	Mute_Track_01			\Default Work Unit\Music\Mute_Track_01	
+	1875770430	Mute_Track_03			\Default Work Unit\Music\Mute_Track_03	
+	1875770431	Mute_Track_02			\Default Work Unit\Music\Mute_Track_02	
+	2234091736	Play_Lvl_2_Loop			\Default Work Unit\Music\Play_Lvl_2_Loop	
+	2502521793	Fade_In_Lvl_02			\Default Work Unit\Music\Fade_In_Lvl_02	
+	3154158901	Play_Lvl_1_Loop_Filtered			\Default Work Unit\Music\Play_Lvl_1_Loop_Filtered	
+	3189177580	Unmute_Track_02			\Default Work Unit\Music\Unmute_Track_02	
+	3189177581	Unmute_Track_03			\Default Work Unit\Music\Unmute_Track_03	
+	3189177583	Unmute_Track_01			\Default Work Unit\Music\Unmute_Track_01	
+	3442548163	Fade_Music			\Default Work Unit\Music\Fade_Music	
+	3527429195	Play_Lvl_3_Loop			\Default Work Unit\Music\Play_Lvl_3_Loop	
+	3625384668	Play_Stinger_Drama			\Default Work Unit\Music\Play_Stinger_Drama	
+	4080406489	Play_Lvl_1_Loop			\Default Work Unit\Music\Play_Lvl_1_Loop	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	4287612753	ProgressGroup			\Default Work Unit\ProgressGroup	
+
+State	ID	Name	State Group			Notes
+	748895195	None	ProgressGroup			
+	2068062714	Bridge	ProgressGroup			
+	3249103918	Void_0p	ProgressGroup			
+	3552940382	Coda	ProgressGroup			
+	3604647259	MainMenu	ProgressGroup			
+	3749756136	Void_2	ProgressGroup			
+	3749756138	Void_0	ProgressGroup			
+	3749756139	Void_1	ProgressGroup			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	288686507	Brinkmanship_MX_L1_v01_022824	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Brinkmanship_MX_L1_v01_022824_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Playlist_01\Full_Stack\Brinkmanship_MX_L1_v01_022824		28540112
+	674644771	Brinkmanship_MX_L2_v02_032724	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Brinkmanship_MX_L2_v02_032724_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Playlist_01\Full_Stack\Brinkmanship_MX_L2_v02_032724		28539968
+	1014767039	Brinkmanship_MX_L3_v01_022824	C:\Users\jrsti\Perforce\jimi_pc_594\CTIN_594\20233-20241\Brinkmanship\Brinkmanship_Project\Brinkmanship_Project_WwiseProject\.cache\Windows\SFX\Brinkmanship_MX_L3_v01_022824_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Playlist_01\Full_Stack\Brinkmanship_MX_L3_v01_022824		28539968
+
