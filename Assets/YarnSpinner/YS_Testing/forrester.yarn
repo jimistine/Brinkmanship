@@ -1,0 +1,373 @@
+title: forrester_cheat
+position: -591,-423
+---
+Hi welcome, here is the initial node for testing Forrester.
+->Initial start
+	<<jump forrester_start>>
+->Talk to Forrester again but she’s still ok with talking to you
+	<<jump forrester_continue>>
+->Talk to Forrester again after failing completely
+	<<jump forrester_failed>>
+->Talk to Forrester again after succeeding
+	<<jump forrester_bonus>>
+->Raise your gun in front of Forrester
+	<<jump forrester_gunDraw>>
+===
+title: forrester_start
+position: -571,-144
+---
+YOU: Chief Kee?
+YOU: Chief Kee, are you there?
+FORRESTER: What in the world…
+FORRESTER: Hey, trying to get some shut-eye here. Not like we get any when the ship’s running proper.
+FORRESTER: Don’t tell me… it’s the gnat, isn’t it? Get it? Guh-nat?
+//The “g” in “gnat” is usually silent but Forrester really wants to make this joke, so she pronounces “nat” oddly then clarifies it in her next sentence.
+->YOU: Gnat? That’s a new one.
+	FORRESTER: I’ll give you three guesses what it means.
+	FORRESTER: Nah, screw that. You’ll stand there for hours goddamn ruminating the possibilities.
+	FORRESTER: It stands for “Goddamn NAT.” How about that?
+->YOU: No, it’s Kase.
+	FORRESTER: How they let you graduate from Shana’s kindergarten, I’ll never know.
+->YOU: Never mind.
+	<<jump goaway>>
+FORRESTER: Wait… how the hell are you out and about?                
+FORRESTER: What are you up to this time?
+->YOU: Something’s happened with the ship.
+	<<jump forrester_ship>>
+->YOU: Never mind.
+	<<jump goaway>>
+===
+title: goaway
+position: 171,265
+---
+FORRESTER: Good boy. Get back to your office.
+===
+title: forrester_ship
+position: -236,-251
+---
+FORRESTER: Something’s always happening with the ship.
+FORRESTER: How many years we’ve been on this voyage, decades even, and you still get spooked by creaks in the floorboards.
+YOU: Floorboards?
+FORRESTER: Eh, that’s before your time.
+YOU: But anyway, I’m serious. I was looking into the ship’s course just now, when I –
+FORRESTER: And why were you looking into the ship’s course?
+YOU: I thought something was off.
+FORRESTER: Maybe something’s off with you.
+FORRESTER: You’re the one staying after hours every night, mapping out the stars or whatever your fancy might be, like we would ever go anywhere other than one planet in our lifetimes.
+FORRESTER: Then you show up at my desk five minutes before the end of the day, asking me to vet an “anomaly” that turns out to be just your misinterpretation.
+FORRESTER: How do you know you haven’t started seeing things?
+->YOU: If what I saw is true, everyone could be in danger.
+	<<jump forrester_foolproof>>
+->YOU: I talked to Tav. //if visited("tav")==true
+	<<jump forrester_tav_initial>>
+->YOU: Maybe you’re right.
+	<<jump goaway>>
+
+===
+title: forrester_foolproof
+position: 147,-243
+---
+FORRESTER: Look who’s a drama king.
+FORRESTER: The ship’s engineering is foolproof. Are you doubting the vessel that’s kept us all breathing for as long as you’ve been alive?
+FORRESTER: In fact, more importantly than that–
+FORRESTER: Are you insulting everything I’ve done to keep it together?
+-> YOU: If that’s what it takes.
+	YOU: I know you don’t respect me, and maybe I haven’t earned your respect.
+	YOU: But I really think there’s a problem here… and if I’m right, we’re all in danger.
+	YOU: You need to hear me out. Please.
+	<<jump forrester_persuaded>>
+-> YOU: I don’t mean to offend…
+	<<jump forrester_offended>>
+-> YOU: Ugh, why am I even talking to you?
+	<<jump goaway>>
+===
+title: forrester_persuaded
+position: 355,-491
+---
+FORRESTER: …
+FORRESTER: Good.
+FORRESTER: Seems I underestimated you, Kase.
+FORRESTER: Not that I regret it. Underestimating children is part of our safety protocol.
+FORRESTER: Thought you were too much of a suck-up, trying to be real good at your job and real good at following orders like all the other kids.
+FORRESTER: But you got your own brain. A brain that really likes maps for no other reason than liking maps.
+YOU: What do you mean?
+FORRESTER: I mean I might just trust you after all.
+<<jump forrester_success>>
+===
+title: forrester_offended
+position: 355,-154
+---
+FORRESTER: Then what do you mean, gnat?
+-> YOU: I trust you, but the captain…
+	<<jump forrester_captain>>
+-> YOU: My parents told me not to trust anyone.
+	<<jump forrester_parents>>
+===
+title: forrester_captain
+position: 663,-158
+---
+FORRESTER: The captain, huh.
+FORRESTER: Captain Cyrus Typhe.
+FORRESTER: Tell me, kid.
+FORRESTER: What did you learn about him growing up?
+FORRESTER: In your kindergarten and vocational programs.
+YOU: He was always a leader, I guess.
+YOU: He was important on the moon our families came from, so that’s why he became captain.
+FORRESTER: Sounds about right.
+FORRESTER: The storied hero of our mother-moon.
+FORRESTER: And now? With these new… revelations of yours?
+FORRESTER: What do you think of him?
+-> YOU: I think even he could make a mistake.
+	<<jump forrester_captain_doubt>>
+-> YOU: I think even he could have something to hide.
+	<<jump forrester_persuaded>>
+===
+title: forrester_captain_doubt
+position: 948,-141
+---
+FORRESTER: So go ask the captain about it.
+FORRESTER: Nothing you need to bother me with, right?
+FORRESTER: I’m going the fuck back to sleep. Have fun.
+===
+title: forrester_parents
+position: 352,115
+---
+FORRESTER: Your parents?
+FORRESTER: Can’t say I made it a point to recall your last name.
+FORRESTER: Remind me, would you?
+->YOU: Rego.
+	<<jump forrester_parents_rego>>
+->YOU: …Never mind.
+	<<jump goaway>>
+===
+title: forrester_parents_rego
+position: 656,119
+---
+FORRESTER: Oh, of course.
+FORRESTER: Gil and Eriana. I remember them.
+FORRESTER: Alright. I’ll hear you out.
+FORRESTER: Give me a minute. You said something about the ship’s course, right?
+YOU: Wait, really?
+YOU: That’s all? Not gonna interrogate me anymore?
+FORRESTER: Yeah.
+FORRESTER: If your parents sent you, there’s something going on.
+<<jump forrester_success>>
+===
+title: forrester_tav_initial
+position: -203,538
+---
+FORRESTER: Tav? What about her?
+->YOU: She told me about the EPMs. //if visited tav_epm =true
+	<<jump forrester_tav_1>>
+->YOU: She thinks something’s up too.
+	<<jump forrester_tav_dismiss>>
+===
+title: forrester_tav_dismiss
+position: -203,771
+---
+FORRESTER: And you think putting two brain cells next to each other makes them smarter than just one?
+FORRESTER: Well, have fun rubbing ‘em together.
+FORRESTER: Let me know if you come up with anything real.
+FORRESTER: If I’m still awake.
+===
+title: forrester_tav_1
+position: 39,536
+---
+FORRESTER: EPMs?
+YOU: You know how we haven’t been allowed to send any? Well, the captain has. And they’re classified.
+FORRESTER: So the captain gets special privileges to send classified letters.
+FORRESTER: That rubs you the wrong way because…?
+->YOU: They’re to a family member. Sone Typhe. //if player got the info from tav
+	<<jump forrester_tav_2>>
+->YOU: I don’t know. Something’s fishy.
+	<<jump keepgoing>>
+->YOU: I guess it makes sense.
+	<<jump goaway>>
+===
+title: forrester_tav_2
+position: 293,538
+---
+FORRESTER: And there’s something wrong with people talking to family?
+YOU: No, I mean, not ordinarily, but this isn’t an ordinary situation.
+YOU: There’s something up with the captain. I can feel it.
+<<jump forrester_captain>>
+===
+title: keepgoing
+position: 266,406
+---
+FORRESTER: Hm. Might be.
+FORRESTER: If you find out more about that, let me know.
+FORRESTER: I’ll wait up for you.
+===
+title: forrester_gunDraw
+position: -644,-590
+---
+FORRESTER: Huh? The hell is that?
+FORRESTER: Kid, do you have a fucking gun?
+FORRESTER: You dare wave that shit around on here?
+===
+title: forrester_gunDraw_gunStow
+position: -647,-866
+---
+FORRESTER: Thought as much.
+===
+title: forrester_gunShoot
+position: -652,-735
+---
+FORRESTER: Holy shit!
+FORRESTER: Kase, what the hell’s gotten into you?
+FORRESTER: What’s next, gonna gun me down to get you to talk?
+===
+title: forrester_gunShootNoAmmo
+position: -452,-735
+---
+FORRESTER: Ha… hahaha!
+FORRESTER: Damn, got a little worried for a while there.
+FORRESTER: Did you have no bullets to begin with or did you waste ‘em all on something else?
+FORRESTER: What an interesting kid you are, gnat.
+===
+title: forrester_shootdoor
+position: -248,-734
+---
+FORRESTER: Fuck!
+FORRESTER: Goddamn, kid.
+FORRESTER: You know what? You got guts.
+FORRESTER: Looks like you’re serious. I’ll hear you out.
+FORRESTER: Give me a second.
+<<jump forrester_success>>
+===
+title: forrester_success
+position: 809,-714
+---
+FORRESTER: I pulled up the nav log a few seconds ago.
+FORRESTER: Consider me cowed, gnat. You were right.
+FORRESTER: There was a course correction… and whoever did it tried to cover it up.
+YOU: No way.
+FORRESTER: I’m not gonna speculate on who did it. I don’t want my head on a platter.
+FORRESTER: But whoever it was, they had some kind of clearance.
+YOU: So what was the course correction?
+FORRESTER: Looks like the ship’s now headed to the Modula Region.
+FORRESTER: Exactly where to, I can’t be sure.
+FORRESTER: You know who Urnst is, right? The agriculture head?
+YOU: Yeah, why?
+FORRESTER: They know about plants everywhere. In every single system, even.
+FORRESTER: Real infodump of a person, they are.
+FORRESTER: But if anyone would know about the habitable planets in Modula, it’s Urnst.
+YOU: Thanks, chief.
+FORRESTER: Urnst is your next stop now, got it?
+FORRESTER: Good luck, gnat. Gotta feeling you’ll need it.
+
+//<<set_variable “forrester_course” true>> Player knows about the course correction now!
+===
+title: forrester_continue
+position: -571,80
+---
+FORRESTER: Ugh, what now?
+->YOU: I still think you should hear me out about the ship.
+	<<jump forrester_continue_ship>>
+->YOU: You told me to come back if I found something else. //if tav true
+	<<jump forrester_continue_tav>>
+
+===
+title: forrester_continue_ship
+position: -378,256
+---
+FORRESTER: Okay, let’s do this again.
+FORRESTER: How do you know you’re right about the ship?
+->YOU: If what I saw is true, everyone could be in danger.
+	<<jump forrester_foolproof>>
+->YOU: Maybe you’re right.
+	<<jump goaway>>
+
+===
+title: forrester_continue_tav
+position: -553,469
+---
+FORRESTER: About the EPMs? What about ‘em?
+->YOU: They’re to a family member. Sone Typhe. //if player got the info from tav
+	<<jump forrester_tav_2>>
+->YOU: …I lied, I don’t have anything.
+	<<jump goaway>>
+
+===
+title: forrester_failed
+position: -329,-560
+---
+FORRESTER: Go the hell away, gnat.
+===
+title: forrester_bonus
+position: -851,-110
+---
+FORRESTER: You ain’t done with me yet, gnat?
+->YOU: How do you know my parents? //if visited forrester_rego true 
+	<<jump forrester_bonus_parents>>
+->YOU: Can you come with me?
+	<<jump forrester_bonus_me>>
+->YOU: Did you really think I was such a wuss? //if visited forrester_shootdoor false
+	<<jump forrester_bonus_wuss>>
+->YOU: Sorry for shooting your door, chief. //if visited forrester_shootdoor true
+	<<jump forrester_bonus_shoot>>
+->YOU: I’m good.
+	<<jump forrester_bonus_bye>>
+===
+title: forrester_bonus_parents
+position: -1324,301
+---
+FORRESTER: I knew them before the ship took off.
+FORRESTER: They’re both doctors. Good people.
+FORRESTER: Everyone’s got secrets, especially when they sign on for a twenty-year trip with no coming back.
+FORRESTER: But they’re solid folk. You lucked out, gnat.
+<<jump forrester_bonus_recur>>
+===
+title: forrester_bonus_me
+position: -1120,300
+---
+FORRESTER: Hey, if you die, who navigates the ship?
+FORRESTER: I’m kidding. But I’m also serious here.
+FORRESTER: I’ll keep an eye on you. If something happens, I’ll see what I can do.
+FORRESTER: But till then, let’s not put our eggs in one basket.
+FORRESTER: Eggs being us.
+<<jump forrester_bonus_recur>>
+===
+title: forrester_bonus_wuss
+position: -914,303
+---
+FORRESTER: All you kids are.
+FORRESTER: Sorry, but it’s true.
+FORRESTER: You don’t know a world outside this ship. All you’re taught is what Miss Shana tells you in that little room of hers.
+FORRESTER: You can’t blame me for not trusting any one of you one bit.
+FORRESTER: Until now, that is.
+<<jump forrester_bonus_recur>>
+===
+title: forrester_bonus_shoot
+position: -695,301
+---
+FORRESTER: No worries, gnat. It showed me you weren’t a wuss.
+YOU: You thought I was a wuss?
+FORRESTER: All you kids are.
+FORRESTER: Sorry, but it’s true.
+FORRESTER: You don’t know a world outside this ship. All you’re taught is what Miss Shana tells you in that little room of hers.
+FORRESTER: You can’t blame me for not trusting any one of you one bit.
+FORRESTER: Until now, that is.
+<<jump forrester_bonus_recur>>
+===
+title: forrester_bonus_recur
+position: -1180,482
+---
+FORRESTER: Anything else?
+->YOU: How do you know my parents? <<if visited("forrester_bonus_parents")==false>>
+	<<jump forrester_bonus_parents>>
+->YOU: Can you come with me? <<if visited("forrester_bonus_me")==false>>
+	<<jump forrester_bonus_me>>
+->YOU: Did you really think I was such a wuss? <<if visited("forrester_bonus_wuss")==false>>//if visited forrester_shootdoor false
+	<<jump forrester_bonus_wuss>>
+->YOU: Sorry for shooting your door, chief. <<if visited("forrester_bonus_shoot")==false>> //if visited forrester_shootdoor true
+	<<jump forrester_bonus_shoot>>
+->YOU: I’m good.
+	<<jump forrester_bonus_bye>>
+===
+title: forrester_bonus_bye
+position: -828,511
+---
+FORRESTER: Good luck, gnat. Gonna need it.
+===

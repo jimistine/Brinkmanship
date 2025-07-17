@@ -1,0 +1,356 @@
+﻿title: prisonerstart
+position: -5666,32
+---
+<<if !visited("prisonerstart")>>
+    <<Knock_Random Player>>
+    <<Stop_Humming_Layer PrisonerAudioController>>
+    You: He-hello? Is anybody there?  #line:0f889d0 
+    Prisoner: ... #line:034bbab 
+    You: I need to talk to you. Please?  #line:008e570 
+    Prisoner: Who sent you here?  #line:0fe2efe 
+    -> Jonn Brine.  #line:0ed8b91 
+        You: Jonn Brine gave me a key.  #line:0db49b0 
+        Prisoner: Ha! What'd you give him? Your kidney?  #line:0a0da1e 
+        Prisoner: Though, I suppose I'm not that valuable...  #line:0dd4b1e 
+    -> I can't tell you that.  #line:01f77da 
+        You: I don't think I should tell you that. #line:0f95ee0 
+        Prisoner: Fair enough, generally better to not get others involved.   #line:0adab82 
+        Prisoner: I, however, have nothing left to lose.  #line:0ac9f3e 
+    Prisoner: So, why do you want to talk to me?  #line:01d6181 
+    -> You tell me. #line:06122d7 
+        <<jump unsure>>
+    -> The ship's in danger! #line:0ad2711 
+        <<jump danger>>
+<<else>>
+    <<jump prisoner_revisit>>
+<<endif>>
+===
+title: danger
+position: -5355,-127
+---
+You: The ship's in danger.  #line:04230ee 
+Prisoner: Hmph. I could have told you that.  #line:0f41990 
+Prisoner: I'm assuming you don't know who I am. Or, more precisely, who I was...? #line:07bba7d 
+-> Who were you? #line:07be307 
+    <<jump whowereyou>>
+-> I don't have time for riddles.  #line:0137f0f 
+    <<jump riddles>>
+===
+title: unsure
+position: -5356,133
+---
+You: To tell you the truth, I don't actually know.  #line:0bdf743 
+You: ...who are you?  #line:0286b54 
+Prisoner: Who am I? Now? Nobody. A better question would be who <i>was</i> I?  #line:00239fe 
+-> Okay...who were you?  #line:0a48436 
+    <<jump whowereyou>>
+-> I don't have time for riddles.  #line:05e4da1 
+    <<jump riddles>>
+===
+title: riddles
+position: -4916,139
+---
+You: I don't have time for riddles, just tell me who you are.  #line:085df05 
+Prisoner: I don't get many visitors here. You'll have to excuse me for wanting to create some intrigue.  #line:0ef9f91 
+Prisoner: Do you want to know who I was or not?  #line:00f709d 
+-> Yes.  #line:0f93da6 
+    <<jump whowereyou>>
+-> No.  #line:054fa86 
+    <<jump notime>>
+===
+title: notime
+position: -4614,325
+---
+You: Sorry. I just don't have time for this.  #line:074954c 
+Prisoner: Very well. If you change your mind... #line:0d3dfc6 
+Prisoner: I'll be here.  #line:014630b 
+===
+title: whowereyou
+position: -4715,-111
+---
+You: Okay then...who were you? #line:002971b 
+Prisoner: Do you remember the ship's first mate?  #line:0bf296a 
+-> Yes. #line:0c97721 
+    <<jump yesmate>>
+-> Not really... #line:0fbc1b0 
+    <<jump nomate>>
+===
+title: yesmate
+position: -4405,-90
+---
+You: I do. She left, right?  #line:00ba00d 
+Prisoner: I believe the phrasing that they used was "terminated her relationship with the ship's team due to irreconcilable differences with the captain." #line:09786cc 
+You: Okay... #line:0329983 
+Prisoner:... #line:09c8b8f 
+You: Oh! So you're... #line:0dbbfe7 
+<<set_variable "captain_punish_prisoner_intel" "true">>
+Prisoner: My name is <style=imp>Haden Loomis. Former first mate of The Brink.</style>  #line:0e09de4 
+->What are you doing down here?  #line:007e13b 
+    <<jump whathappened>>
+->How do I know it's you?  #line:0a90ca8 
+    <<jump trustyou>>
+===
+title: nomate
+position: -4398,124
+---
+You: I don't. When did we have a first mate? #line:0e5f98a 
+Prisoner: Ouch. I was a pretty behind-the-scenes figure, but I thought...well, it hardly matters now.  #line:04d5c17 
+Prisoner: My name is <style=imp>Haden Loomis. Former first mate of The Brink.</style>  #line:00e92b1 
+You: That sounds familiar...you were let go, right?  #line:04a8f2e 
+<<set_variable "captain_punish_prisoner_intel" "true">>
+Prisoner: I believe the phrasing SDG used was that I "terminated my relationship with the ship's team due to irreconcilable differences with the captain." #line:09dc142 
+->What are you doing down here?  #line:0c5a334 
+    <<jump whathappened>>
+->How do I know it's you?  #line:01ce469 
+    <<jump trustyou>>
+===
+title: trustyou
+position: -4096,5
+---
+You: How do I know you're telling the truth?  #line:060784e 
+Prisoner: Who else would I be?  #line:03212c3 
+Prisoner: I didn't board the ship as a prisoner. What would be the point?  #line:0b45051 
+Prisoner: In your memory, has anyone else on the ship ever "left"? Disappeared? #line:0d01e7b 
+You: No... #line:03281ad 
+Prisoner: There you have it.  #line:0646139 
+->Okay, so...what happened?  #line:09fe15d 
+    <<jump whathappened>>
+->I don't believe you #line:067ac8b 
+    <<jump unbeliever>>
+===
+title: unbeliever
+position: -3847,332
+---
+You: That's not enough evidence. I don't believe you.  #line:0ebaa1e 
+Prisoner: Fine. I'm sure it's more comfortable for you to believe that no crew member would ever be put down here.  #line:0916980 
+Prisoner: But I won't beg you to believe me. You chose your truth. Now go.  #line:0e40d78 
+===
+title: whathappened
+position: -3801,-165
+---
+You: So what happened? How did you end up down here?  #line:0ca7d53 
+Prisoner: What are you going to do with this information?  #line:084c994 
+    -> Confront the captain with it.  #line:0d9cbbb 
+        <<jump gotocap>>
+    -> Tell everyone on board.  #line:0983c32 
+        <<jump tellall>>
+===
+title: tellall
+position: -3465,330
+---
+You: I'm going to tell everyone on the ship what's going on.  #line:01aca66 
+Prisoner: Ah. So your plan is to cause absolute chaos.  #line:0a1f96d 
+Prisoner: I may be disgraced, but I still care about the future of the people on this ship. #line:0e3afef 
+Prisoner: Many of them were my friends.  #line:0466f3e 
+Prisoner: I'm sorry, but if that's your plan, then I can't help you.  #line:0e87982 
+===
+title: gotocap
+position: -3441,-90
+---
+You: The ship is headed in the wrong direction. I plan on going to the bridge and telling the captain everything I know. #line:0e433b1 
+Prisoner: You mean you plan to accuse him? You believe this is his doing?  #line:0494983 
+    ->Yes.  #line:076f380 
+        <<jump accusecap>>
+    ->No.  #line:0e2375b 
+        <<jump chickenshit>>
+===
+title: accusecap
+position: -3121,-142
+---
+You: Yes. I have evidence that the captain has changed the heading of the ship and I plan to confront him.  #line:047cd6f 
+Prisoner: Well, well. It's about time somebody did. But fair warning - that's what landed me in here.  #line:0fa58c3 
+->What do I need to know?  #line:0fb778d 
+    <<jump risk>>
+->Oh. Nevermind then.  #line:0785417 
+    <<jump chickenshit>>
+===
+title: chickenshit
+position: -2999,339
+---
+You: Actually, I might not accuse him outright.  #line:03882ed 
+Prisoner: Ha. That might save your own ass, but you won't be helping anyone on the ship.  #line:0e10ce0 
+Prisoner: But don't feel too bad. You're making the same choice as everyone else who's turning a blind eye to what's really happening.  #line:0c4e16f 
+Prisoner: And if that's what you want to do, fine. But I can't help you.  #line:05b7c63 
+===
+title: risk
+position: -2846,-109
+---
+You: That's a risk I'm willing to take. What do I need to know?  #line:08f5752 
+<<set_variable "trado_intel" "true">>
+Prisoner: The captain has re-routed the ship to Trado, a planet owned by the terraforming group Terradeus.  #line:057b0e3 
+Prisoner: But the real mastermind behind this maneuver is his sister, Sone. #line:0736777 
+Prisoner: Sone started sending him EPMs about a year ago, warning him of "concerns" she had about the safety of Soldacia based on recent surveys.  #line:0e25048 
+Prisoner: She began suggesting that the ship reroute to Trado.  #line:04e46c9 
+You: What if I could get someone in the mailroom to open those messages? #line:0451d85 
+Prisoner: I'd be impressed...but you'd probably learn a lot. #line:09d54af 
+    -> And are those "concerns" legitimate? #line:0ef0aee 
+        <<jump legit>>
+    -> Why would she do that? #line:096f574 
+        You: Why would she want our ship to go to Trado?  #line:0976076 
+        Prisoner: Could be genuine concern for her brother...  #line:06bbeb0 
+        Prisoner: But I think it's likely that it has more to do with the fact that she's Terradeus' Head of Recruitment.  #line:02fda40 
+        <<jump Soneterradeus>>
+    -> Doesn't his sister work for Terradeus? <<if get_variable("sone_recruiter_intel") == "true">> #line:046ef64 
+        You: Wait. Doesn't she - Sone - work for Terradeus? #line:00b220e 
+        Prisoner: I see you've already done some investigative work. She does, in fact, work for Terradeus.  #line:0f7b26e 
+        Prisoner: She's their Head of Recruitment.  #line:0162091 
+        <<jump Soneterradeus>>
+===
+title: legit
+position: -2486,-6
+---
+You: And are her concerns legitimate?  #line:08317a7 
+Prisoner: I don't know, but I doubt it. The captain never let me see the messages between himself and Sone.  #line:0cf40ed 
+<<jump had_the_nerve>>
+
+===
+title: Soneterradeus
+position: -2504,-224
+---
+Prisoner: Now, I have no way of knowing if she has real evidence. The captain never let me see the messages between himself and Sone.  #line:038b0b7 
+<<jump had_the_nerve>>
+
+===
+title: advice
+position: -1833,-242
+---
+You: What can I do with that information? What will actually make a difference?  #line:0278d46 
+Prisoner: I don't know. The captain seems to have been masterfully brainwashed by his sister.  #line:02f299e 
+Prisoner: But don't get me wrong - this move is advantageous for both Sone and Cyrus. #line:00a9d3e 
+Prisoner: Terradeus offers captains both a heftier captain's fee and private land for settling.   #line:0cc8811 
+Prisoner: The Typhe family were wealthy landowners on Estea before the crop failure.  #line:0889115 
+Prisoner: His family's fall from grace was devastating for him. I imagine he finds the idea of having "his own" land again very appealing. #line:03b2600 
+Prisoner: But Cyrus does care about the people on this ship. #line:02d18b1 
+Prisoner: He's only been able to justify lying to them by making himself believe that it's what's best for them.  #line:0666443 
+    ->So I have to convince him he's wrong?  #line:0b5ebea 
+        <<jump needevidence>>
+    ->Is there any way I could turn the ship around myself?  #line:0cc839d 
+        <<jump turntheship>>
+===
+title: needevidence
+position: -1414,333
+---
+You: But if I could somehow convince him that this wasn't the best thing for everyone... #line:0b2ee7f 
+Prisoner: If you could actually find evidence that Soldacia is safe and Terradeus isn't, he might change his mind.  #line:04cba7b 
+Prisoner: It's a long shot, but it may be your only hope.  #line:0af0ec7 
+Prisoner: Good luck.  #line:07cbad2 
+Prisoner: As nice as it would be to have company, I certainly hope I don't see you thrown back here anytime soon.  #line:0b45970 
+===
+title: turntheship
+position: -1479,-367
+---
+You: This might be a crazy question but...is there any way I could turn the ship myself?  #line:0025a1f 
+Prisoner: Well, that depends on how brave -- or stupid -- you are.  #line:06bd172 
+    ->Pretty brave. #line:0ea84ec 
+        You: Pretty brave. #line:031acde 
+        Prisoner: Ha! We'll see about that.  #line:077411b 
+        <<jump turntheship2>>
+    ->Pretty stupid. #line:02c36a0 
+        You: Pretty stupid. #line:02a96bf 
+        Prisoner: Ha! Well that might just be what you need.  #line:005f13d 
+        <<jump turntheship2>>
+===
+title: turntheship2
+position: -1142,-284
+---
+Prisoner: There's an override button on the bridge, you'll need to enter the code: 7907652. #line:074739d 
+<<set_variable "override_code_intel" "true">>
+Prisoner: The coordinates of his family's farm on Estea. #line:05e0231 
+Prisoner: Remember - the override takes sixty seconds to process. So if you don't have the time, don't use it. #line:0042a5f 
+Prisoner: The tricky part will be getting to the override terminal.  #line:0b22da0 
+    ->I'll figure out a way.  #line:01f002b 
+        <<jump figureitout>>
+    ->I have a gun. Should I use it?  #line:05c38ad 
+        <<jump advicegun>>
+===
+title: figureitout
+position: -1165,328
+---
+You: I'll find a way. Thank you for your help.  #line:0273105 
+You: I hope we can get you out of here soon.  #line:07c2dd3 
+Prisoner: I appreciate the sentiment. #line:066b9e2 
+Prisoner: The most important thing is that you help everyone else on this ship. You'd better get moving.  #line:05ecc8a 
+===
+title: advicegun
+position: -1830,-21
+---
+You: I have a gun. Should I...I mean, should use it?  #line:02e76cb 
+Prisoner: Why didn't you say so earlier? That changes everything.  #line:044316a 
+Prisoner: Or, it doesn't. It depends if you want to use it.  #line:000b0a2 
+Prisoner: If it were me, I don't think I'd be able to help myself from shooting the bastard.  #line:03c5226 
+    ->What if I kill him?  #line:03e99fd 
+        <<jump killcaptain>>
+    ->What if I just scare him?  #line:06f2159 
+        <<jump scarecaptain>>
+===
+title: scarecaptain
+position: -1884,323
+---
+You: What if I just threaten him with it? Will he be scared?  #line:0dafa90 
+Prisoner: The captain's not immune to fear. Fear is the reason why he's making this move without telling anyone.  #line:055fef5 
+Prisoner: His fear is why he put me in here.  #line:068dca9 
+Prisoner: I don't know what scaring him will do, but he's certainly not fearless.  #line:097d16c 
+Prisoner: And he values his own life, perhaps more than anything.  #line:0660e13 
+You: Good to know.  #line:0b9aac3 
+Prisoner: Just be careful.  #line:01a24c3 
+Prisoner: As nice as it would be to have company, I certainly hope I don't see you thrown back here anytime soon.  #line:0a8433c 
+===
+title: killcaptain
+position: -1655,334
+---
+You: And if I were to kill him?  #line:0606edf 
+Prisoner: I'm going to guess you've never killed someone before. #line:0845747 
+Prisoner: I'm going to guess you've never even seen a dead body.  #line:014d4ab 
+You: Right on both counts. #line:04f4dd0 
+Prisoner: That's a luxury most of us who were born on Estea didn't have.  #line:0e79409 
+Prisoner: I wouldn't blame you for not being in a hurry to give it up.  #line:056a42d 
+Prisoner: If you find you do have it in yourself to finish him... #line:0c0e7ce 
+Prisoner: As far as I know, no one else on this ship has good reason to steer it to Trado.  #line:03cb30a 
+Prisoner: But you'll have a lot of questions to answer. From others, and from yourself.  #line:0fcf686 
+Prisoner: Now get out of here.  #line:0293860 
+Prisoner: As nice as it would be to have company, I certainly hope I don't see you thrown back here anytime soon.  #line:09629a1 
+===
+title: gun_shoot_event_Prisoner
+position: -5669,363
+tags: 1
+---
+Prisoner: Are you serious?! #line:06e85df 
+Prisoner: The door's bullet proof, you moron. Now stop wasting bullets. #line:08466b5 
+===
+title: prisoner_revisit
+position: -5341,-427
+---
+<<Knock_Random Player>>
+You: Hey, you still wanna talk? #line:088f85f 
+<<if !visited("whowereyou")>>
+    Prisoner: Why not? #line:00e1886 
+    <<jump whowereyou>>
+<<elseif !visited("whathappened")>>
+    Prisoner: Sure. #line:00a2b96 
+    <<jump whathappened>>
+<<elseif !visited("gotocap")>>
+    Prisoner: I'm listening. #line:08ebae5 
+    <<jump gotocap>>
+<<elseif !visited("accusecap")>>
+    Prisoner: Do I have a choice? #line:05055c9 
+    You: Ok, I've rethought some things. #line:04c349c 
+    <<jump accusecap>>
+<<elseif !visited("risk")>>
+    Prisoner: You ready to take on the captain? Gonna be dangerous. #line:0ededf0 
+    <<jump risk>>
+<<else>>
+    Prisoner: No. I think we're done here. #line:08097fc 
+<<endif>>
+===
+title: had_the_nerve
+position: -2174,-131
+---
+Prisoner: I merely had the nerve to suggest that if he was seriously considering a reroute, he ought to survey his passengers.  #line:04dbd57 
+Prisoner: Decide whether or not to reroute based on the available information with a democratic process. #line:03291b0 
+Prisoner: But he refused, essentially suggesting the people of this ship didn't know what was best for them.  #line:06c9943 
+Prisoner: And when I threatened to tell everyone...well, I think you can imagine the rest.  #line:066df3e 
+    ->What can I do? #line:0575203 
+        <<jump advice>>
+    ->I have a gun. Should I use it?  #line:0dd29b1 
+        <<jump advicegun>>
+===

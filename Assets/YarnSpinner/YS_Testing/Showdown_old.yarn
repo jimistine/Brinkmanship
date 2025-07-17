@@ -1,0 +1,315 @@
+﻿title: archive
+---
+You: It's time.
+<<declare $numOfBullets = 6>> //brtodo: check number of bullets w function
+
+<<if $numOfBullets == 0>>
+    You: Dammit, I wasted all my bullets.
+    You: Hopefully, I can finish this without needing to shoot.  
+    You: Maybe I should have saved my ammo.
+<<else>>
+    You: Alright, I have {$numOfBullets}. That should be plenty.
+    You: Just aim if you need to shoot.
+<<endif>>
+You: Deep breaths, deep breaths.
+<<jump visit_ailyn>>
+===
+title: visit_ailyn
+position: -259,-195
+---
+Ailyn: Hey, did you find out anything else?
+You: Yeah, but I don't have a lot of time to explain. I need you to open the door.
+Ailyn Door to what?
+You: The bridge. I'm going in.
+Ailyn The bridge? Absolutely not.
+You: No? Why?
+Ailyn What do you mean why? My ass is on the line if I open it without authority approval. I'm already thin on ice when I let you out during lockout earlier.
+You: But it's important! Lives are on the line! I have to save everyone!
+Ailyn Save them from what? You haven't told me anything since you got here.
+
+-> The captain's EPMs reveal everything.
+    <<jump explain_it_tav>>
+-> The captain is working with another firm.
+    <<jump explain_it_forrester>>
+-> There's no time.
+    <<jump do_not_explain>>
+===
+title: explain_it_tav
+position: 190,-324
+---
+You: I told you what Tav said to me earlier, remember?
+Ailyn I do. We confirmed it as true.
+You: Not everyone on the crew could make those heading changes. It has to be a higher up, like the Captain.
+Ailyn That's just speculation.
+You: I know she's a gossip, but I she has the information I need, so I went back to talk with her.
+You: She was the first to see the EPMs. The recipent of them is someone with the Captain's last name. Plus, the subjects imply that he was sending confidential information.
+You: He should know better than that.
+Ailyn You really trust Tav?
+You: She doesn't gossip freely or lie. She wants info in exchange, so I believe her.
+<<jump open_gate>>
+===
+title: explain_it_forrester
+position: 209,-116
+---
+You: The captain is betraying us. The change in course we discovered earlier? It's to another planet owned by another firm.
+You: And that planet is unhabitable, but they somehow convinced the captain that it's safe.
+Ailyn You're just guessing.
+You: Forrester told me all this.
+Ailyn Wait, did she work for the other firm?
+You: Yes.
+You: It took some convincing, but I got other info out of her.
+You: Essentially, the firm needs to make money, even if the planet is dangerous.
+You: So if we go there, then the other firm loses a lot of money.
+You: The captain is being played all for monetary gain.
+Ailyn They care more about money then people.
+<<jump open_gate>>
+===
+title: do_not_explain
+position: 219,60
+---
+You: Ailyn, I don't want to put you in more danger. If I tell you, I don't know what will happen to you.
+Ailyn If I open the bridge for no reason, I'm ruined. I don't open it unless there's a good reason.
+Ailyn You involved me so much earlier, and now you won't tell me shit? Just go away.
+You: Please...
+Ailyn I said no.
+===
+title: open_gate
+position: 613,-239
+---
+Ailyn Dammit. Fine.
+// Ailyn opens the gate
+Ailyn You better do this right. My ass is on the line.
+You: I won't let you down.
+You: Ailyn, thank you so much. I couldn't have done this without you.
+Ailyn You can thank me once the ship is on the right course again.
+===
+title: shoot_panel
+position: -638,45
+---
+Ailyn What the fuck are you doing?
+You: I'm sorry, Ailyn, but I need to do this.
+You: You'll understand soon.
+===
+
+// Additional beat here where you confirm what your genearl strategy with the captain will be
+// eg, So what's you're plan, Kase? Convince them, blackmail one, threaten them?
+// No real effect on gameplay, but gets the  player thinking about what their plan really is
+
+//<<declare $numOfBullets = 6>> // I assume this will be declared earlier
+//<<declare $enoughEvidence = false>> // Also assuming that convincing Ailyn to open the door depends on the amount of evidence assembled.
+
+
+//You: Alright... #line:0b1ce53 
+//You: I'm ready. #line:0a35499 
+//You: It's time. #line:0e167bb 
+//<<if $numOfBullets == 0>>
+    //You: Dammit, I wasted all my bullets. #line:0ffbbee 
+    //You: Hopefully, I can finish this without needing to shoot. #line:0840de5 
+    //You: Maybe I should have saved my ammo. #line:0c9e981 
+//<<else>>
+    //You: Alright, I have {$numOfBullets}. That should be plenty. #line:0de6214 
+    //You: Just aim if you need to shoot. #line:03219ef 
+//<<endif>>
+//You: Deep breaths, deep breaths. #line:0f45efa 
+//-> Open the bridge #line:0c2ac4a 
+    //<<jump visit_ailyn>>
+//===
+
+
+//title: visit_ailyn
+//position: 296,-1
+//---
+//Ailyn Hey, did you find out anything else? #line:083ce99 
+//You: Yeah, but I don't have a lot of time to explain. I need you to open the door. #line:0367fb2 
+//Ailyn Door to what? #line:00353b3 
+//You: The bridge. I'm going in. #line:0c8c319 
+//Ailyn The bridge? Absolutely not. #line:0f8eeea 
+//You: No? Why? #line:0285016 
+//Ailyn What do you mean why? My ass is on the line if I open it without authority approval. #line:065dcf4 
+//You: But it's important! Lives are on the line! I have to save everyone! #line:0b1ed52 
+//Ailyn Save them from what? You haven't told me anything since you got here. #line:0db6e51 
+//-> Please understand. The captain is going to lead us to certain death. #line:0e3af87 
+    //<<jump explain_it>>
+//-> I can't tell you because you'll be in danger like me. #line:0ef378b 
+    //<<jump do_not_explain>>
+//===
+
+
+//title: explain_it
+//position: 574,102
+//---
+//You: The captain has us fucked if we continue this course. #line:006e9f0 
+//Ailyn You theorized that earlier. #line:03cecd6 
+//You: No it's not a theory anymore. I have proof. #line:070f4af 
+//You: The planet we're now going to, it's not liveable. #line:07ae6d4 
+//Ailyn Huh? #line:01cee0d 
+//You: Some kind of storm has ruined the planet. It lasted for a month, and now the whole planet is barren. The people on the ship won't last long there. #line:074cd64 
+//Ailyn So why is the captain taking us there? #line:0a5afe7 
+//<<if $enoughEvidence is true>>
+    //<<jump the_reason>>
+//<<elseif $enoughEvidence is false>>
+    //<<jump no_reason>>
+//<<endif>>
+//===
+
+
+//title: do_not_explain
+//position: 574,-86
+//---
+//You: Ailyn, I don't want to put you in more danger. If I tell you, I don't know what will happen to you. #line:0d9cb69 
+//Ailyn If I open the bridge for no reason, I'm ruined. I don't open it unless there's a good reason. #line:003bc7c 
+//You: Please... #line:01c1fae 
+//Ailyn I said no. #line:0b0b039
+//===
+
+//title: the_reason
+//position: 845,254
+//---
+//You: Alright, you want your evidence? Here it is. #line:0c0a8de 
+//-> The captain has a sibling. #line:0d499a1 
+    //<<jump siblings>>
+//-> There's another firm. #line:072c43e 
+    //<<jump firm_two>>
+//===
+
+
+//title: no_reason
+//position: 847,51
+//---
+//You: I... I don't know. #line:0c84d42 
+//Ailyn So he's going to an inhabitable planet for fun? #line:0992d29 
+//Ailyn You really think I would believe something like that? #line:011cfba 
+//Ailyn I'm not risking my life for something so baseless. I thought you would have had something by now. #line:09f31f9 
+//You: Ailyn, please, I'm begging. #line:04db4cc 
+//Ailyn Ailyn I'm not listening to you if you can't even tell me anything. If you want to confront the Captain like you keep boasting, then what exactly is your plan? #line:0898252
+//-> I'll convince him with evidence //might rephrase this
+    //<<jump convince_without_evidence>>
+//-> I plan to blackmail him. //possibly rephrase this too.
+    //<<jump blackmail_without_evidence>>
+//-> I have a gun.
+//connect this to the threaten_captain node?
+//===
+
+//title: convince_without_evidence
+//position: 1175,-56
+//---
+//You: I have some evidence that proves the captain is doing the wrong thing. If I present them to him, he'll listen.
+//Ailyn Some evidence? Is that the evidence you won't show me? You're stupid to think that will work.
+//Ailyn And you're even dumber if you think I'll open the gate. Go back to your post and leave me alone.
+//===
+
+//title: blackmail_without_evidence
+//position: 1180,-219
+//---
+//You: The captain is selfish, and the evidence shows that. I can blackmail him into backing off.
+//Ailyn Again with the evidence. You still won't show it to me, and yet you think whatever dumb stuff you found can scare the captain to listen to your commands.
+//Ailyn I used to think you were smart. Leave before I smack you.
+//===
+
+//title: siblings
+//position: 1223,427
+//---
+//You: The captain has a sibling. They are on the planet I mentioned. #line:02e2a22 
+//You: They were on a crew and were stranded. They're desperate and want the captain to save them. #line:02d1940 
+//You: The problem is that if we go there, everyone is going to die. #line:00ab8e9 
+//You: The storm that took that survey group out will take us too. #line:03a58e4 
+//You: The captain was manipulated by their sibling. They don't care that the captain will be leading his ship to certain death. They want to see their brother one last time. #line:03144d4 
+//You: Every person on this ship will die because of a few people being selfish. #line:00e04c8 
+//Ailyn ... #line:0c46732 
+//<<wait  2>>
+//Ailyn I don't... I don't know what to say. #line:019cf84 
+// if player has not explained the other evidence
+//-> There's more. #line:0a9f623 
+    //<<jump firm_two>>
+//-> Think of your family. #line:097e06c 
+    //<<jump emotions>>
+//===
+
+
+//title: firm_two
+//position: 1218,101
+//---
+//You: There's another firm, one that competes with the one that owns this ship. #line:03311bd 
+//You: They also own a planet. That planet is the one I mentioned earlier. #line:0ef732a 
+//You: It's a financial disaster for them. #line:078f16a 
+//You: So, they lied to the captain. #line:04a6055 
+//You: The captain thinks the planet we were originally going to is dangerous and that the other planet is safe. #line:0aae463 
+//You: In addition, the firm offered him much higher profits than what he was first offered. #line:06667c2 
+//Ailyn But what would they have to gain by sending another ship? #line:070730b 
+//You: They can't afford to send a new ship. They risked our ship for the slim chance that they can be saved. #line:084d519 
+//You: It took some convincing and bribes, but the captain is now on their side. #line:0671fd8 
+//<<wait  2>>
+//Ailyn Why... why would he betray us? #line:0551c1d 
+// if player has not explained the other evidence
+//-> There's more. #line:038b22c 
+    //<<jump siblings>>
+//-> Think of your family. #line:0584e85 
+    //<<jump emotions>>
+//===
+
+//title: emotions
+//position: 1570,248
+//---
+//You: Ailyn, I know your family has dreams. Once we land on the intended planet, they can make a name for themselves, be better off than they were before. #line:0f0a27d 
+//You: We both have seen how excited they are. #line:0a68c9b 
+//You: Hell, even the excitement of our friends. The anticipation that they can get off the ship and have a space of their own. #line:0d31e60 
+//You: The captain will take that away. #line:075d6d4 
+//<<wait  3>>
+//Ailyn That fucking bastard. #line:02eba11 
+//Ailyn I just... I have one more question. If I let you on the bridge, and that's a big if, what will you do? Please don't tell me you're walking in there without a plan.
+//-> I have the evidence, so I'll convince him.
+    //<<jump convince_captain_evidence>>
+//-> The evidence is damning. I can blackmail him.
+  //  <<jump blackmail_captain_evidence>>
+//-> I'll threaten him.
+    //<<jump threaten_captain>>
+//===
+
+//title: convince_captain_evidence
+//position: 1862,481
+//---
+//You: All that evidence I just presented you, I'll show it to him.
+//You: The planet isn't liveable, but he doesn't realize that. All I have to do is show him the facts and he'll listen to me. It's simple.
+//Ailyn You're sure about that? You seem pretty confident.
+//You: I can do this.
+//<<jump open_gate>>
+//===
+
+//title: blackmail_captain_evidence
+//position: 1928,248
+//---
+//You: I could easily tell everyone on this ship about what I found. I have the evidence to back it up.
+//You: The Captain won't like that.
+//You: He doesn't want to be seen as weak and selfish. And if I phrase my words correctly, I can show him how damning the situation is. He'll have no choice but to stop his part in the conspiracy.
+//<<jump open_gate>>
+//===
+
+//title: threaten_captain
+//position: 1877,58
+//---
+//You: My father gave me a gun. 
+//Ailyn Huh?
+//You: I told them about I initially found, and my dad gave this to me to protect myself.
+//<<if $numOfBullets == 0>>
+    //You: I'm out of bullets, but he doesn't need to know that.
+    //Maybe add a node where Ailyn expresses doubt that going in without bullets will work.
+    //Ailyn Have you been shooting up the ship?
+    //You: It's a long and complicated story, but trust me, a gun pointed at him should threaten him enough to put us back on the right path.
+//<<else>>
+    //You: I have plenty of bullets left, too. I can fire a warning shot if needed.
+//<<endif>>
+//<<jump open_gate>>
+//===
+
+//title: open_gate
+//position: 2300,232
+//---
+//Ailyn You seemed prepared, at least.
+//<<wait 2>>
+//Ailyn Dammit. Fine.
+// Ailyn opens the gate
+//Ailyn You better do this right. My ass is on the line. #line:055feda 
+//You: I won't let you down. #line:030a1a7 
+//You: Ailyn, thank you so much. I couldn't have done this without you/ #line:08f22ec 
+//Ailyn You can thank me once the ship is on the right course again. #line:0540d39 
+//===

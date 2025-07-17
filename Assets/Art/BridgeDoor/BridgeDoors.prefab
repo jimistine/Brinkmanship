@@ -1,0 +1,222 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7823997488958664490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6877654673095531295}
+  m_Layer: 0
+  m_Name: BridgeDoors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6877654673095531295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823997488958664490}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.35603, y: 0.04647204, z: 14.446358}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7807753359449910158}
+  - {fileID: 3023897767962393379}
+  - {fileID: 4182631460047211968}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3350031072363797704
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6877654673095531295}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.31275558
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.38952795
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.48135757
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+      propertyPath: m_Name
+      value: brinkmanship_airlock_leftdoor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+--- !u!4 &3023897767962393379 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f4b83c36f505deb43a55facd912b9337, type: 3}
+  m_PrefabInstance: {fileID: 3350031072363797704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4431832693042424363
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6877654673095531295}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.31275558
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.42952797
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1681118
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+      propertyPath: m_Name
+      value: brinkmanship_airlock_doorframe
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+--- !u!4 &4182631460047211968 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4b21e7d2846315b42886e43f8209fc13, type: 3}
+  m_PrefabInstance: {fileID: 4431832693042424363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7768726044594572389
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6877654673095531295}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.31275558
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.38952795
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.12664223
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+      propertyPath: m_Name
+      value: brinkmanship_airlock_rightdoor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+--- !u!4 &7807753359449910158 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3e00d8e0a69479a4484e9b751cdcc6fe, type: 3}
+  m_PrefabInstance: {fileID: 7768726044594572389}
+  m_PrefabAsset: {fileID: 0}

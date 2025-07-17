@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4f542882d664ba6b0bf56467e7d62e, type: 3}
+  m_Name: CC2C1A62-A705-44DE-B947-0E37A5DBD123
+  m_EditorClassIdentifier: 
+  objectName: Play_Lvl_3_Loop
+  id: 3527429195
+  guid: CC2C1A62-A705-44DE-B947-0E37A5DBD123

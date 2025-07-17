@@ -1,0 +1,127 @@
+﻿title: Grace_Test
+tags:
+position: 0,0
+---
+<<if visited("Grace_Test") == true>>
+    <<jump forrester_return>>
+<<endif>>
+Forrester: Listen, kid. #line:08df81d 
+Forrester: If what Urnst says is true… #line:0152093 
+Forrester: Then the <style=imp><shake>captain's single-handedly steering all 30,000 of us to our deaths</shake></style>, #line:02c87e3 
+Forrester: while believing the exact opposite. #line:0853957 
+Forrester: Do you really think you can talk him down? #line:0efffe6 
+-> Yes. #line:0fc9538 
+    //<<wait 0.5>>
+    YOU: I do.	 #line:0cd5ced 
+    Forrester: That's some confidence. #line:07ef819 
+	Forrester: Makes me miss being young. #line:0739c40 
+-> Urnst wouldn't come with me… #line:00ec388 
+    //<<wait 0.5>>
+    YOU: Well, Urnst wouldn't come with me... #line:09653aa 
+	Forrester: Hah, that's Urnst for ya. #line:0bb5422 
+	Forrester: Trust me, it's better this way. Urnst couldn't talk a tree into dropping its leaves for winter. #line:0cb8eb0 
+    //<<wait 0.5>>
+Forrester: You still got that gun, right? #line:0d7b1b5 
+Forrester: I gotta ask, kid. #line:0776407 
+Forrester: If it comes down to it… #line:09ab7cd 
+Forrester: Are you gonna pull the trigger? #line:0bb0f03 
+-> Of course. #line:0f51f6f 
+    //<<wait 2>>
+    YOU: Of course. #line:090f4ad 
+    Forrester: Okay. #line:097d1f1 
+    Forrester: Not gonna lie, I don't know if that's more or less reassuring. #line:0f4afba 
+    Forrester: Just do me a favor… try not to shoot the pipes. #line:036a7f7 
+    Forrester: Persuading the captain's one thing, decompressing the ship's another.  #line:0202a9e 
+    //<<set_pipes_learned>> //If the player knows about the pipes, the pipes flash red in the cockpit and you can shoot them if you want?? IDK haha
+-> I don't know if I can. #line:0d24841 
+    //<<wait 0.5>>
+    YOU: I don't know if I can. #line:03977d2 
+    Forrester: Can't say I blame you. #line:0f1e232 
+    Forrester: You know, I just thought of something. #line:0f2d665 
+    Forrester: There should be an intercom in the cockpit. You could slam the button, tell the whole ship everything you know. #line:0dd90b4 
+    Forrester: That could change his mind just as well as a bullet to the knee.  #line:09c7e13 
+    //<<set_intercom_learned>> //If the player knows about the pipes, the intercom flashes red in the cockpit and you can shoot it to activate it, and shoot it again to destroy it.
+//<<wait 0.5>>
+Forrester: You sure you're ready to go in there? If you do, <style=imp>there's no going back.</style> #line:0662168 
+    -> No time to lose. #line:09478f7 
+        <<jump going_in>>
+    -> Now that you mention it... #line:06817de 
+        <<jump mention_it>>
+
+===
+title: gunOut
+position: 24,547
+---
+Forrester: I see you still have that gun. #line:08908c4 
+===
+title: shootDoor_01
+position: 25,704
+---
+Forrester: HEY! Relax! I'm trying to help! #line:07b803d 
+Forrester: Can you just calm down? #line:056b99d 
+Forrester: Now what were we talking about? #line:01dc31b 
+Forrester: Right. #line:0dc7633 
+===
+title: shootDoor_02
+position: 31,860
+---
+Forrester: Shit! Ok that's it. I'm done here you're on your own. #line:0c1a268 
+Forrester: I hope you get what's coming. #line:06a8938 
+<<enter_bridge>>
+===
+title: going_in
+position: 347,-57
+---
+You: There's no time to lose, Forrester. I'm going in. #line:0d08a73 
+Forrester: Good luck in there. #line:004067a 
+Forrester: And don't sweat it if you fail, alright? #line:0846236 
+Forrester: Even if we do end up landing on Perpetual Storms Forever Planet… #line:05e18f1 
+Forrester: We've had a pretty fun ride in this tin can. #line:009f3aa 
+//<<set_bridge_timer 120>>
+<<enter_bridge>>
+===
+title: mention_it
+position: 340,83
+---
+You: Well, now that you mention it... #line:04d4ab7 
+You: There are a couple things I'd like to do before going in. #line:053fb9e 
+Forrester: Ok, well don't take too long. #line:0c42996 
+Forrester: The gravity assist maneuver is coming fast. #line:059dc77 
+===
+title: forrester_return
+position: 358,306
+---
+<<if visited("forrester_return") == true>>
+    <<jump forrester_return_2>>
+<<endif>>
+Forrester: Hey kid. #line:05f4eb5 
+Forrester: You ready now? #line:0bf1529 
+    -> Ready. #line:0487167 
+        <<jump ready_now_1>>
+    -> Actually... #line:004cb5b 
+        <<jump actually>>
+===
+title: ready_now_1
+position: 1147,228
+---
+You: Ready as I'll ever be. #line:0f504cb 
+Forrester: And don't sweat it if you fail, alright?  #line:001951e 
+Forrester: Even if we do end up landing on Perpetual Storms Forever Planet…  #line:0cc2119 
+Forrester: We've had a pretty fun ride in this tin can. #line:0105186 
+<<enter_bridge>>
+===
+title: actually
+position: 1117,440
+---
+You: Well, come to think of it there are a couple loose ends I shuold look into. #line:0afcbe8 
+Forrester: Then why did you...whatever. #line:02a8c84 
+===
+title: forrester_return_2
+position: 744,161
+---
+Forrester: Well? #line:0b980a5 
+    -> Ready. #line:0909c68 
+        <<jump ready_now_1>>
+    -> Hold on... #line:06f812b 
+        <<jump actually>>
+===

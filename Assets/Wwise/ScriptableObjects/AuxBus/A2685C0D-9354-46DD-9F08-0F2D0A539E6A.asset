@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55aab1952dd144b0a77740fa1be1385, type: 3}
+  m_Name: A2685C0D-9354-46DD-9F08-0F2D0A539E6A
+  m_EditorClassIdentifier: 
+  objectName: Aux_Void
+  id: 2372645886
+  guid: A2685C0D-9354-46DD-9F08-0F2D0A539E6A

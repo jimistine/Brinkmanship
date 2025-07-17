@@ -1,0 +1,30 @@
+﻿title: gun_shoot_event
+tags:
+---
+<<if get_variable("eventOwner") == "Parents">>
+    <<jump gun_shoot_event_Parents>>
+<<elseif get_variable("eventOwner") == "Tav">>
+    <<jump gun_shoot_event_Tav>>
+<<elseif get_variable("eventOwner") == "Forrester">>
+    <<jump Forrester_shootdoor>>
+<<elseif get_variable("eventOwner") == "Urnst">>
+    <<jump gun_shoot_event_Urnst>>
+<<endif>>
+===
+title: event-npc-death
+position: -1,144
+---
+<<if get_variable("eventOwner") == "Captain">>
+    <<if get_variable("pilot") == "living">>
+        <<jump cap_killed_pilot_living_event>>
+    <<else>>
+        <<jump captain_killed_pilot_dead_event>>
+    <<endif>>
+<<elseif get_variable("eventOwner") == "Pilot">>
+    <<if get_variable("captain") == "living">>
+        <<jump pilot_killed_cap_living_event>>
+    <<else>>
+        <<jump pilot_killed_cap_dead_event>>
+    <<endif>>
+<<endif>>
+===

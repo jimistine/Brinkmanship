@@ -1,0 +1,99 @@
+﻿title: 2-10_Bridge
+tags:
+position: -667,0
+---
+<<if get_variable("void_timer_running") == "true">>
+    You: Alright...the bridge is just through here. #line:0343e79 
+    You: I'm ready...I think. #line:0392084 
+    You: Just have to patch in to Ailyn.
+    You: Ailyn, you there? #line:04838b8 
+    Ailyn: Yeah boss, you sure about this? #line:09ae39b 
+    -> Yeah. #line:0f77759 
+        You: Yes. Let's go with yes... #line:0634f39 
+    -> Actually I could use more time. #line:01d00c5 
+        <<jump need_more_time>>
+    Ailyn: That's reassuring. #line:078e768 
+    Ailyn: You at least got a plan? #line:081a28a 
+    You: As much as I can given the timeframe we're working with. #line:08c1d5a 
+    Ailyn: Let's hear it. #line:0736fa1 
+<<else>>
+    Ailyn: Time's up Kase, we do this now, or we don't do this at all. #line:0f05fc5 
+    Ailyn: You got a plan? #line:0347da6 
+<<endif>>
+-> I'll convince the captain he's wrong. #line:0405cb4 
+    <<jump captain_wrong>>
+-> I've got some dirt on Garm.<<if get_variable("garm_racing_intel") == "true">> #line:0b9f10e 
+    <<jump dirt_on_garm>>
+-> I've got some dirt on the Captain.<<if get_variable("profit_sharing_intel") == "true">> #line:0d8b95b 
+    <<jump dirt_on_cap>>
+-> I've got a gun. #line:0859caa 
+    <<jump got_a_gun>>
+===
+title: captain_wrong
+position: -224,-237
+---
+You: I'll convince the captain he's wrong about all this. #line:0f93cf9 
+Ailyn: You really think you've got the evidence ready? #line:0a27ebb 
+You: Enough to try anyway.
+<<if visited("gave_me_gun")>>
+    You: I'd really rather not kill anyone today. 
+<<endif>>
+Ailyn: Fair enough. #line:03bae3d 
+<<jump open_bridge_doors>>
+===
+title: dirt_on_garm
+position: -224,-83
+---
+<<if visited("ailyn_garm_racing")>>
+    You: Yeah gonna try and blackmail Garm I think. #line:0f729f7 
+    Ailyn: He's the one at the controls so I guess that makes sense. #line:0ca7679 
+    Ailyn: Think the captain will let him buck command? #line:0516367 
+    You: Well I might not give the captain a choice... #line:0f201ab 
+    Ailyn: Stars on you, Kase. Just don't come out in a body bag, alright? #line:08d8e85 
+    You: Not planning on it. #line:0a2c37d 
+<<else>>
+    You: I've got some dirt on Garm Doro, the pilot. #line:090cbd0 
+    Ailyn: No shit. You think it'll stick? #line:02611f5 
+    You: Only one way to find out. #line:0f576d7 
+<<endif>>
+<<jump open_bridge_doors>>
+===
+title: dirt_on_cap
+position: -223,94
+---
+<<if visited("ailyn_urnst_profit_sharing")>>
+    You: Gonna run with that info I have on the captain selling us out. #line:085d0fb 
+    Ailyn: Seems strong if you can get Garm to believe you. #line:08783c2 
+    You: I'll find a way... #line:0ac065c 
+<<else>>
+    You: I've got some dirt on the Captain Typhe. #line:028b3a4 
+    Ailyn: You're gonna blackmail the captain?! #line:08419ba 
+    You: Gonna try at least. #line:0d9705c 
+    Ailyn: Holy shit, Kase, good luck. #line:055e726 
+<<endif>>
+<<jump open_bridge_doors>>
+===
+title: got_a_gun
+position: -224,238
+---
+You: Well, I've got a gun. What else should I need? #line:06e4ff1 
+Ailyn: Stars protect us we're so screwed aren't we? #line:068c542 
+You: Probably, yeah. #line:02ccb38 
+<<jump open_bridge_doors>>
+===
+title: open_bridge_doors
+position: 209,45
+---
+You: Ok. Let's do this. #line:026ca37 
+Ailyn: Here goes... #line:05f58c4 
+<<enter_bridge>>
+===
+title: need_more_time
+position: -669,259
+---
+You: Ha. No. Not really. #line:077c33f 
+You: Think I could use a bit more time now that I think about it. #line:06dbc97 
+Ailyn: Alright, but there's not much left. #line:0074d4b 
+Ailyn: Don't lose your nerve here, Kase. #line:06d02fd 
+You: I'll try not to. #line:07a6dc7 
+===

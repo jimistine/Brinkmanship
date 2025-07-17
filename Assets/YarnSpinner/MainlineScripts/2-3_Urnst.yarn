@@ -1,0 +1,461 @@
+﻿title: urnst_start
+position: -2890,-99
+---
+<<if visited("gun_shoot_event_Urnst")>>
+   <<jump urnst_revisit_done>>
+<<elseif visited("urnst_intro") == false>>
+   <<jump urnst_intro>>
+<<else>>
+   <<jump urnst_revisit_1>>
+<<endif>>
+===
+title: urnst_revisit_1
+position: -2355,-743
+---
+<<if visited("urnst_revisit_1")>>
+   <<jump urnst_revisit_2>>
+<<endif>>
+
+<<Knock_Random_Deeper Player>>
+You: Hey Urnst, you still there? #line:0c10d69 
+<<Stop_Sprtiz_Layer UrnstAudioController>>
+Urnst: Kase? What is it? #line:0d9d0af 
+<<jump urnst_revisit_router>>
+===
+title: urnst_revisit_2
+position: -2086,-852
+---
+<<if visited("urnst_revisit_2")>>
+   <<jump urnst_revisit_3>>
+<<endif>>
+<<Knock_Random_Deeper Player>>
+You: You there? #line:03233ed 
+<<Stop_Sprtiz_Layer UrnstAudioController>>
+Urnst: What is it now? #line:0369bcb 
+<<jump urnst_revisit_router>>
+===
+title: urnst_revisit_3
+position: -1785,-969
+---
+<<if visited("urnst_revisit_3")>>
+   <<jump urnst_revisit_done>>
+<<endif>>
+
+<<Knock_Random_Deeper Player>>
+You: Urnst? #line:049a200 
+Urnst: What, Kase? #line:00ee945 
+<<Stop_Sprtiz_Layer UrnstAudioController>>
+<<jump urnst_revisit_router>>
+===
+title: urnst_revisit_router
+position: -1834,-524
+---
+<<if visited("impact_possible")>>
+   <<Knock_Random_Deeper Player>> 
+   You: Urnst! #line:005c266 
+   <<Knock_Random_Deeper Player>>
+   You: Hey we need to talk! #line:0c69fe2 
+   <<Knock_Random_Deeper Player>>
+   Urnst: Enough! I'm right here. What is it? #line:0c4a924 
+   <<jump urnst_meteor>>
+<<elseif visited("urnst_advice") == false>>
+   <<jump urnst_advice>>
+<<elseif visited("urnst_agriculture") == false>>
+   <<jump urnst_agriculture>>
+<<elseif visited("urnst_interest") == false>>
+   <<jump urnst_interest>>
+<<else>>
+   <<jump urnst_revisit_done>>
+<<endif>>
+===
+title: urnst_revisit_done
+position: -1350,-953
+---
+<<Knock_Random_Deeper Player>>
+You: Urnst? #line:0b06632 
+<<if visited("impact_possible") || get_variable("meteor_email_intel") == "true">>
+   You: Urnst this is really important! #line:05e992d 
+   You: The captain...I think the captain believes Soldacia was hit by a meteor! #line:0e6caf7 
+   Urnst: What? #line:01e437b 
+   <<Stop_Sprtiz_Layer UrnstAudioController>>
+   <<jump urnst_meteor>>
+<<elseif visited("urnst_revisit_done")>>
+   <<Knock_Random_Deeper Player>>
+   You: Hey! Come on! #line:08be063 
+   You: Shit...guess they're done talking. #line:02fd546 
+<<else>>
+   <<if visited("gun_shoot_event_Urnst")>>
+      Urnst: You nearly killed me, Kase. How can I trust you? #line:00f8a44 
+      Urnst: I don't want any part of what you're doing. #line:0f9378e 
+   <<endif>>
+   Urnst: I've got nothing left to say. #line:06bdc10 
+   Urnst: Now please focus your attentions elsewhere. #line:0e90df1 
+<<endif>>
+===
+title: urnst_intro
+position: -2490,-10
+---
+<<Knock_Random_Deeper Player>>
+You: Uh...hey Urnst. You there? #line:0c13d0e
+<<Stop_Sprtiz_Layer UrnstAudioController>> 
+Urnst: Who's this? #line:047b773 
+You: It's me, Kase. #line:08a394c 
+Urnst: Kase! Normally I'd be more than happy to see you, or rather hear you at my door, but we're in a lockdown young friend... #line:0c7dfdb 
+->I have permission to move about. #line:061e580 
+   <<jump urnst_permission>>
+->I need to talk to you. #line:028ba1d 
+   <<jump urnst_wait>>
+===
+title: urnst_permission
+position: -2141,-62
+---
+You: I have permission to move about from security. #line:08cfaa1 
+You: The junior navigation team are on call while we make this maneuver. #line:0381221 
+Urnst: Really? That's unusual, not something we've done before but... #line:0f898ae 
+Urnst: I guess after 20 years on the ship some things change. What can I help you with? #line:050d026 
+   ->I need your advice. #line:0d5db9c 
+       <<jump urnst_advice>>
+   ->The ship has changed trajectory. #line:03c76c3 
+       <<jump urnst_trajectory>>
+===
+title: urnst_wait
+position: -2142,99
+---
+You: I need to talk to you about something important. #line:0642c4d 
+Urnst: Well, I'm honored, Kase, and I'll be happy to talk to you as soon as this lockdown is over. #line:0673a84 
+Urnst: But rules are rules, and you'd better get back to your station. #line:0bb6dff 
+<<if get_variable("meteor_email_intel") == "true">>
+   You: Wait! I swear this is important, you have to trust me on this. #line:040b368 
+   Urnst: I...alright, Kase. What is it? #line:013f3db 
+   <<jump urnst_meteor>>
+<<endif>>
+===
+title: urnst_trajectory
+position: -1762,45
+---
+You: I noticed something off about the ship's trajectory. We don't seem to be headed to Soldacia. #line:0df4ab6 
+Urnst: Oh, my. Well, my boy...you've always been very talented with those maps, but as talented as you are... #line:06e6857 
+Urnst: With all due repect, I'm sure the senior navigation team knows what they're doing. #line:0e92ddc 
+Urnst: Perhaps you'd better focus on whatever it is they've asked you to do now. #line:01ad336 
+===
+title: urnst_advice
+position: -1769,-134
+---
+You: I have to admit, this isn't exactly navigation-related. But I was hoping to get your advice on something. #line:043d332 
+You: I know it's a lockdown, but you're usually so busy... #line:0205664 
+You: And when I do get to talk to you, my parents are usually around. #line:061b9a5 
+Urnst: Well! I...I'm flattered. And I have to admit, intrigued. What's on your mind? #line:01ec436 
+   -><style=lie></style>I'm not sure navigation is for me. #line:08952ec 
+       <<jump urnst_careerchange>>
+   -><style=lie></style>Uh...I'm in love. #line:0d113b4 
+       <<jump urnst_love>>
+===
+title: urnst_love
+position: -1450,27
+---
+You: Here's the truth: I'm in love. #line:03433d5 
+Urnst: Oh! Oh. I...I admit, I'm surprised you've chosen to approach me with this. I'm only the ship's most notorious bachelor. #line:039d740 
+Urnst: I myself have been unlucky in love... #line:03b3319 
+Urnst: I tend to blame it on the fact that most of the ship's population of my age was already coupled when we boarded. #line:0583692 
+Urnst: I realize it can be awkward to talk to your parents about these things but really, I think they'd have more to offer you in terms of advice. #line:0a4b5eb 
+Urnst: I'm sorry, friend. I don't think I can help you. #line:0acd1c8 
+===
+title: urnst_careerchange
+position: -1446,-241
+---
+You: I've been thinking, and I don't think I want to stay in navigation. #line:028793f 
+Urnst: No? Well, I admit I never considered it to be one of the more interesting positions on board, but that's me. More botanically minded. #line:084c66c 
+Urnst: It always seemed a natural fit for you with your visual mind but...you're still young, and interests, like crops, can be fickle things. #line:0bd7ea9 
+Urnst: What do you think you might want to do instead? #line:011e152 
+->I'm not really sure. #line:02e1f60 
+   <<jump urnst_undecided>>
+->I want to know more about agriculture. #line:0a480c4 
+   <<jump urnst_agriculture>>
+===
+title: urnst_undecided
+position: -1179,-44
+---
+You: Uh...I don't really know yet. I haven't thought that far. #line:08e1eff 
+Urnst: That's quite all right. But my advice to you would be to not make any rash decisions- #line:0cebc27 
+Urnst: Or risk a potential promotion within the navigation team -- while you're thinking. #line:06668cf 
+Urnst: Maybe some quiet time in this lockdown will be a blessing in disguise. Give you time to think clearly. #line:0c71298 
+===
+title: urnst_agriculture
+position: -1176,-325
+---
+You: I was actually thinking I might request a transfer to your department. #line:0daa936 
+Urnst: Really?! I don't mean to sound so surprised... #line:09520d6 
+Urnst: But you did always tend to nod off whenever I'd get into debates about which root vegetables had the greatest potential for healing with your father over dinner... #line:0095d0d 
+->I guess I've changed. #line:0eb31cc 
+   <<jump urnst_interest>>
+->Maybe agriculture's not for me... #line:09d59eb 
+   <<jump urnst_disappointed>>
+===
+title: urnst_disappointed
+position: -868,-78
+---
+You: That's a good point. Maybe I'd better look elsewhere. #line:0ce079f 
+Urnst: Perhaps. But I have faith in you, young friend. You'll find your path in time. #line:0cf6147 
+Urnst: Even if it's not in agriculture. #line:08e3400 
+===
+title: urnst_interest
+position: -874,-426
+---
+You: I think I've had a change of heart. #line:02f9e8e 
+You: Can you tell me more about what your team is working on these days? #line:041fdda 
+Urnst: Certainly! Much is same as always, we're minding the onboard greenhouse, harvesting for the kitchen, propagating plants and building our store of seeds for landing... #line:0a2b287 
+Urnst: But the exciting stuff's in what we're developing. For example, we recently got a request from the captain to start experimenting with drought-resistant crops. #line:0150210 
+->Why would we need those? #line:02808de 
+   <<jump urnst_drought>>
+->Oh. Cool. #line:0c8b78d 
+   <<jump urnst_meh>>
+===
+title: urnst_meh
+position: -554,-102
+---
+You: Oh, that's...cool. I guess. #line:05f8368 
+Urnst: You guess? Say, maybe you should give some more thought to other departments where you could apply your skills. This lockdown would certainly be a good time to ponder that...perhaps back at your post... #line:028f33d 
+===
+title: urnst_drought
+position: -552,-527
+---
+<<set_variable "urnst_plants_intel" "true">>
+You: Drought resistant plants? Will we need those on Soldacia? #line:000e65f 
+Urnst: Well, it's hard to say. Hopefully, no. Initial surveys all communicated that Soldacia has rich soil and consistent rainfall. #line:0f6cc27 
+Urnst: I'll admit, I was also surprised by the captain's abrupt request. #line:0a52995 
+Urnst: Even if our experiments are successfull, our terraforming equipment isn't particularly geared for a dry, arid climate. #line:009cd05 
+Urnst: But you never know what can happen. #line:08c1bde 
+Urnst: Of course I don't have to remind you what happened back on Estea. #line:02db1aa 
+->Of course not. #line:0eee2dd 
+   <<jump urnst_planettwo>>
+->You don't have to...but could you give me a refresher? #line:051c787 
+   <<jump urnst_monocrop>>
+===
+title: urnst_planettwo
+position: -223,-628
+---
+You: Yeah, I remember the history. We cultivated a monocrop, which failed, and left us screwed.  #line:0348ad5 
+You: So these drought resistant crops are just for backup? #line:0dfdb8e 
+Urnst: Oh, yes. Don't worry. Soldacia has been surveyed carefully, unlike, say, <style=imp>Trado</style>. #line:053e2c3 
+->What's up with Trado?  #line:0a3fe5e 
+   <<jump urnst_planettwoctd>>
+->Thank goodness. #line:0ad625d 
+   <<jump urnst_work>>
+===
+title: urnst_monocrop
+position: -209,-324
+---
+You: I could actually use a refresher on what happened back home...do you mind? #line:0b7b056 
+Urnst: Certainly not! After all, if you're going to be working with us in the agriculture department, you'd better have a good idea of our history. #line:0a6ada4 
+Urnst: ...and a solid understanding of what we're aiming <i>not</i> to do on Soldacia. #line:0555931 
+Urnst: The first settlers on Estea were focused on growing a single crop, a sugar called Iclicose. #line:08d4e9f 
+Urnst: We imported all of our food from more crop-diverse moons, which were able to afford becaues we had a virtual monopoly on Iclicose.  #line:03ac9f1 
+Urnst: This was effective, and made many people very wealthy, Captain Typhe's family among them come to think of it... #line:0c479fb 
+Urnst: -- until a blight struck the Iclicose plant and spread like wildfire.  #line:0e04957 
+Urnst: When we had nothing to export, we had to rely primarily on aid from the Tursmara Galaxy Council.  #line:01a71b5 
+Urnst: This aid was meant for temporary relief, to help us as we began to plant new crops.  #line:0f7d968 
+Urnst: But settlers who'd rushed to Estea to make big money growing Iclicose ruined all of the tenable land with unsustainable farming practices.  #line:0b46a67 
+Urnst: As you know, most of us had no choice but to leave. #line:07cc09a 
+You: Right... #line:045ad2d 
+Urnst: Now it's my job to make sure this doesn't happen again, and I'm taking it quite seriously.  #line:0cc98cf 
+Urnst: Soldacia has been surveyed carefully and is ready for sowing with diverse plant life, unlike <style=imp>Trado</style>.  #line:0156729 
+->What's up with Trado? #line:09e211f 
+   <<jump urnst_planettwoctd>>
+->Thank goodness. #line:033b9c8 
+   <<jump urnst_work>>
+===
+title: urnst_work
+position: 102,-466
+---
+You: Glad to hear it! #line:0662c35 
+Urnst: Good, good. Now, we've probably been talking too long, I should get back to my work. #line:06a75f9 
+   ->Wait! Trado?  #line:0acff18 
+       <<jump urnst_planettwoctd>>
+   ->Okay, thanks! #line:0289804 
+       <<jump urnst_end>>
+===
+title: urnst_end
+position: 522,-624
+---
+You: Thanks for talking. I'm going to keep thinking about changing paths here... #line:062b810 
+Urnst: I'm sure you'll find your place here, Kase. Stay safe. #line:00a1f41 
+===
+title: urnst_planettwoctd
+position: 517,-299
+---
+You: What happened on Trado? #line:013772e 
+Urnst: It's more a question of what didn't happen. See, when SDG began making moves to settle on Soldacia, a few other firms were eager to catch up. #line:05cbd8e 
+Urnst: A firm called <style=imp>Terradeus</style> was among them. They snatched up Trado and started recruiting a settling team before really conducting proper surveys. #line:0f4c71c 
+<<set_variable "trado_intel" "true">>
+<<set_variable "terradeus_intel" "true">>
+Urnst: There were rumors that the planet was dry as bone, mostly desert. They didn't publicize any surveys, so people couldn't know for sure if it was safe. #line:0b25de9 
+Urnst: In fact, they offered me a job. A higher paying one, too...but that's neither here nor there. #line:0052c22 
+->Why didn't you go? #line:0a39a65 
+   <<jump urnst_profit>>
+->Where is Trado? #line:09752d8 
+   <<jump urnst_backtonav>>
+===
+title: urnst_profit
+position: 880,-213
+---
+You: Why didn't you go? Just because there weren't enough surveys? #line:0a10a7c 
+Urnst: There was that...there were also, well, political reasons. #line:07785f1 
+Urnst: The <style=imp>profit sharing model</style> they had didn't align with my personal values. #line:0754b10 
+Urnst: As you know, when we arrive on Soldacia, we'll be employees of SDG but we're all stewards of the same land, receiving the same benefits. #line:0facda8 
+Urnst: Terradeus was offering everyone "their own" land. Most settlers would be working with very little and would have to pay it off with labor over time. #line:0413e12 
+Urnst: Higher-ranking officers like, say, the captain of the arriving ships, would be given rather huge plots of land in addition to their high captain's fee. #line:0655eae 
+<<set_variable "profit_sharing_intel" "true">>
+Urnst: As a director of agriculture, I would have landed somewhere in the middle, but I didn't believe in that system. #line:03dcf6f 
+Urnst: We're all risking our lives here, spending more than two decades to travel to a new planet and start a life there. #line:0e5a995 
+Urnst: I simply don't believe my labor, or anyone's, should be "worth" more than anyone else's. #line:02759fb 
+Urnst: Besides, the privatization of land really contributed  to the mess back home. #line:07a0815 
+Urnst: But I'm carrying on, aren't I? You really ought to go back to your post now. And I need to return to work. #line:000e561 
+
+
+===
+title: urnst_backtonav
+position: 886,-399
+---
+You: Interesting...do you happen to know where Trado is? #line:0f4d49c 
+Urnst: Oh, it's somewhere over...kind of around and behind...well, this is embarassing. #line:061b482 
+Urnst: I'm afraid maps and me have never gotten along. #line:08840d1 
+Urnst: Perhaps Ms. Kee would know? #line:06097a9 
+Urnst: But I'm carrying on, aren't I? You really ought to go back to your post now. And I need to return to work. #line:0ab4844 
+===
+title: gun_shoot_event_Urnst
+position: -2553,-1274
+tags: 2
+---
+<<if visited("gun_shoot_event_Urnst") == true>>
+   <<jump gun_shoot_event_Urnst_02>>
+<<else>>
+   Urnst: <shake>AH!</shake>  #line:0830a5f 
+   Urnst: Did your parents give you their gun? I'm sure this isn't how they intended for you to use it.  #line:092ea98 
+<<endif>>
+===
+title: gun_shoot_event_Urnst_02
+position: -2195,-1278
+---
+Urnst: I told your father he should have left that thing on Estea - it'll bring no good on this ship! #line:0138c14 
+Urnst: Clearly, you lack the responsibility to wield it. You'd better give it back to your parents.  #line:062c540 
+===
+
+title: urnst_meteor
+position: -901,-961
+---
+You: Quickly... #line:00a502e 
+-> Could a meteor have hit Soldacia without us knowing?  #line:041f68d 
+   <<jump meteor_hit>>
+-> Would a meteor strike impact agriculture on Soldacia?  #line:07dc23f 
+   <<jump meteor_effect>>
+===
+title: meteor_hit
+position: -548,-1056
+---
+You: Is it possible for a meteor to have hit Soldacia since our scanner broke?  #line:0498034 
+Urnst: I suppose a very small one could, but it's highly unlikely. #line:00575ae 
+Urnst: There was nothing approaching the planet during the decades we were actively scanning.  #line:0d5c0b4 
+Urnst: I'm not an expert on this kind of tracking, but if there were risks I needed to know about, I would have known about them years ago.  #line:0ef8180 
+Urnst: May I ask what put this idea into your head?  #line:0b8e02e 
+   -> I just heard a rumor.  #line:052d572 
+      <<jump rumor>> 
+   -> Sone Typhe told the captain a meteor hit Soldacia.  #line:08c2bb3 
+      <<jump sonesaid>>
+===
+title: meteor_effect
+position: -548,-891
+---
+You: If a meteor were to hit Soldacia...how much would that affect our agricultural plans?  #line:0064c5e 
+Urnst: Well, that really depends on the size of the meteor. And whether it hit land or water. #line:0ebebdf 
+You: Ok so what if a massive one hit land? #line:0445968 
+Urnst: A large meteor could cause major disruption, but that's not really something to worry about.  #line:00bca02 
+Urnst: Although our scanner is currently out of sorts, we spent decades scanning Soldacia's orbit to ensure that it would be safe.  #line:0bc42f9 
+You: Have you seen the actual scans?  #line:0e080b2 
+Urnst: Of course! As agricultural director, I reviewed all of the scans and signed off on Soldacia's long-term tenability myself. #line:082d234 
+Urnst: If I thought there were any chance a meteor could strike and destroy the planet, I wouldn't be on this ship.  #line:0174cb9 
+Urnst: Now, may I ask what put this thought into your head?  #line:09077b7 
+   -> I just heard a rumor. #line:075b382 
+      <<jump rumor>>
+   -> Sone Typhe told the captain a meteor hit Soldacia. #line:03aac00 
+      <<jump sonesaid>>
+===
+title: rumor
+position: -187,-900
+---
+You: Oh. I just heard a rumor going around that a meteor hit Soldacia.  #line:0dc5578 
+Urnst: Ha! Sorry - I shouldn't laugh. It's just a ridiculous and pernicious lie.  #line:0f16791 
+Urnst: Anyone who believed it for longer than a second would have to jump through a dozen mental hoops to overlook the sheer improbability.  #line:003d696 
+Urnst: In fact, I'd say it would be hard to believe unless you really wanted to believe it. #line:08cba43 
+You: I see... #line:093687e 
+Urnst: Really, Kase. You have nothing to fear.  #line:0a6c38e 
+You: Thanks, Urnst, I'll be on my way. #line:0848002 
+===
+title: sonesaid
+position: -192,-1047
+---
+<<set_variable "sone_lied_intel" "true">>
+You: Sone Typhe has been corresponding with the captain about a reroute to Trado.  #line:081418b 
+You: She told him that a meteor has hit Soldacia and made it uninhabitable.  #line:02cda67 
+Urnst:... #line:0695af9 
+Urnst: Where did you hear this?  #line:0514626 
+You: I've been conducting an investigation.  #line:0c309c6 
+You: I got a mailroom assistant to hack into the EPM feed.  #line:0b42cf4 
+Urnst: My, my. How did you manage that?  #line:01e6376 
+   -> I shared some info I got from Jonn Brine.  #line:042232d 
+      You: I went to Jonn Brine and got some information from him. I told her what he told me.  #line:05bae1d 
+      <<jump urnst_brine>>
+   -> I gave her something she wanted.  #line:00c66f2 
+      You: She wanted information, I had some.  #line:068da43 
+   -> She's a friend of mine.  #line:093048e 
+      You: She's my friend, and she trusts me. She's also concerned.  #line:03d49b7 
+You: Based on what Sone said in the EPM, I believe the ship is currently headed to Trado.  #line:06dea09 
+Urnst: I...I appreciate your concern, Kase, but I highly doubt that's true.  #line:00c8352 
+-> You said Terradeus was recruiting, right?  #line:07996b3 
+   You: You're the one that told me Terradeus was having trouble recruiting!  #line:0c05383 
+   You: Sone is literally the head of recruitment! #line:0d8bd44 
+   Urnst: That's merely a coincidence.  #line:01a3fc4 
+   -> You're a coward.  #line:0db00f5 
+      <<jump coward>>
+   -> Please. Help me.  #line:0620081 
+      <<jump helpme>>
+-> What about the drought resistant plants?  #line:02f0992 
+   You: What about the captain's instructions to develop drought resistant plants? #line:0766559 
+   Urnst: Although Soldacia is safe, we have to take precautions.  #line:074cf24 
+   Urnst: Kase, I'm sorry. I can't entertain this nonsense any longer.  #line:0a4131e 
+   Urnst: I have a responsibility to the ship and a responsibility to uphold the captain's integrity.  #line:04ec679 
+   -> You're a coward.  #line:0bd2d67 
+      <<jump coward>>
+   -> Please. Help me.  #line:02dfab5 
+      <<jump helpme>>
+===
+title: coward
+position: 231,-977
+---
+You: You're a coward.  #line:0508efc 
+Urnst: No. I am a faithful member of this community.  #line:079eba8 
+Urnst: In a true collective, there are no heros.  #line:0bcc5f0 
+Urnst: Mind that your desire to save us doesn't ruin us. #line:0720d2f 
+Urnst: Good day. #line:02efd25 
+===
+title: helpme
+position: 237,-1129
+---
+You: Please, Urnst. I came to you because you know me. You know my parents.  #line:06b017e 
+You: I trusted you.  #line:0379ea2 
+Urnst: Kase, even if I did believe -  #line:025fb0a 
+Urnst: ... #line:022d0b9 
+Urnst: Whatever you think you understand, there is infinitely more that you don't.  #line:0b50638 
+Urnst: I am sorry you felt wrong to trust me.  #line:028e218 
+Urnst: I hope you'll come to understand why I can't help you.  #line:0902c73 
+You: Urnst please- #line:0ed668b 
+Urnst: Goodbye, Kase. #line:07a1fcc 
+===
+title: urnst_brine
+position: 234,-1286
+---
+Urnst: You made a deal with that swindler?! #line:084d294 
+Urnst: Goodness, Kase, I really thought your parents would have taught you better.  #line:0766b42 
+Urnst: If this all traces back to Brine, I don't want anything to do with it. #line:0ae7276 
+You: Urnst wait! #line:0fd7329 
+Urnst: I won't discuss this with you any further.  #line:03869ca 
+===

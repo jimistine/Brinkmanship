@@ -1,0 +1,14 @@
+﻿{
+  "projectFileVersion": 2,
+  "sourceFiles": [
+    "**/*.yarn"
+  ],
+  "excludeFiles": [],
+  "localisation": {
+    "en": {
+      "assets": "${UnityProjectRoot}/Assets/YarnSpinner/MainlineScripts"
+    }
+  },
+  "baseLanguage": "en",
+  "compilerOptions": {}
+}

@@ -1,0 +1,60 @@
+﻿title: Start
+tags:
+position: 0,0
+---
+Mark: ayyyyy its me marky mark!! #line:0743076 
+Andrea: Wow typical Mark lol #line:056e46a
+Mark: That's right! #line:040e79c 
+Mark: Very Average Mark behavior! #line:0924084 
+It sure is, buddy.  #line:0ec19b7 
+
+-> What's wrong with Mark? #line:0529a87 
+    <<jump wrong_with_mark>>
+-> Yeah fuck you Mark! #line:07a7e08 
+    Mark: That's not very nice now is it!?!? #line:0ae8e15 
+-> Where's Tony?? #line:04aaa56 
+    Mark: Tony... #line:03736df 
+    <<wait 3>>
+    Mark: Tony's dead. #line:0d64426 
+        -> What??? #line:04b91ca 
+         <<jump tony_is_dead_surprise>>
+        -> Serves him right. #line:0f90d88 
+         <<jump tony_is_dead_hooray>>
+===
+title: wrong_with_mark
+position: 288,-143
+---
+Andrea: Just look at him... #line:0aff296 
+Good point. #line:0aaa268 
+===
+
+title: tony_is_dead_surprise
+position: 235,-366
+---
+Andrea: Yeah, he slipped on a banana peel and fell on a sharp tortilla chip.  #line:0e036a5 
+
+===
+
+title: tony_is_dead_hooray
+position: 303,164
+---
+Andrea: Hey! He was your father.  #line:0d3c624 
+-> Actually, he was a monkey.  #line:09af149 
+    <<jump tony_is_monkey>>
+-> I'm still glad he's dead! Hooray! #line:02c9243 
+    <<jump we_hate_tony>>
+
+
+===
+title: tony_is_monkey
+position: 200,336
+---
+Mark: That explains the "ooh ooh ah ahs." #line:0562f05 
+===
+
+title: we_hate_tony
+position: 30,30
+---
+Mark: Yeah, Andrea. You gotta admit - that guy sucked! #line:0c0d09f 
+
+===

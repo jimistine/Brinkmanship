@@ -1,0 +1,10 @@
+﻿title: 2-10_BridgeDoor_Start
+tags:
+---
+//<<setSequence "TheDiscovery">>
+Game: Enter bridge? It's a one-way trip. #line:0e4ff0f 
+-> Yes #line:0cae17b 
+    <<enter_bridge>>
+-> No #line:05ca0f1 
+    Game: Ok. Bye. #line:03997e1 
+===

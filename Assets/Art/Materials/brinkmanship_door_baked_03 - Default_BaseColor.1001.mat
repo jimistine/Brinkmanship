@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3575529309401268242
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: brinkmanship_door_baked_03 - Default_BaseColor.1001
+  m_Shader: {fileID: -6465566751694194690, guid: 920e6a4cc2e7aaf4bba19f2866023046, type: 3}
+  m_Parent: {fileID: 2100000, guid: 05352557ada10c64caa9560601d0b64d, type: 2}
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords:
+  - _DISABLE_SSR_TRANSPARENT
+  m_InvalidKeywords:
+  - _NORMALMAP_TANGENT_SPACE
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2225
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AO_Map:
+        m_Texture: {fileID: 2800000, guid: 0f2ea4b3843aa3c478b4637fe767e1b0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseColor:
+        m_Texture: {fileID: 2800000, guid: 330581195ff8c4d4b9f32e5e946f567d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Metalness:
+        m_Texture: {fileID: 2800000, guid: 9697706be1773b242b9542b933a23f04, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_Map:
+        m_Texture: {fileID: 2800000, guid: 68603f9e35d4f724697eecb65c864fc7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Roughness:
+        m_Texture: {fileID: 2800000, guid: 2cd1228ce3fc16f4982df60d2597ca9a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Albedo_Lightness: 1.75
+    - _DoubleSidedNormalMode: 1
+    - _Exposure_Multiplier: 0.51
+    - _Glow_Multiplier: 0.03
+    - _Highlight_Intensity_Bloom: 3.91
+    - _Highlight_Threshold_1: 0.12
+    - _Highlight_Threshold_2: 0.17
+    - _Rim_Light_Intensity_Bloom: 0
+    - _Rim_Light_Threshold_1: 0
+    - _Rim_Light_Threshold_2: 0
+    m_Colors:
+    - _Highlight_Color_1: {r: 1, g: 0.50181097, b: 0, a: 0}
+    - _Highlight_Color_2: {r: 0, g: 0.7975576, b: 0.8679245, a: 0}
+  m_BuildTextureStacks: []

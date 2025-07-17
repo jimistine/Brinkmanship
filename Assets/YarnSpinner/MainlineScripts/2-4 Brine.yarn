@@ -1,0 +1,243 @@
+﻿title: brinestart
+tags:
+position: -712,107
+---
+<<if !visited("brinestart")>>
+    <<Knock_Random Player>>
+    You: Uh...hello?  #line:0ccc1f7
+    <<Stop_TV_Layer BrineAudioController>>
+    You: Is this...Mr. Brine, are you there? #line:01feb3d 
+    Brine: Mr.?! Ha! Who the hell is this?  #line:0cfd226 
+    -> Kase Rego. NAT. #line:077d0dd 
+        <<jump help>>
+    -> That's not important.  #line:0438312 
+        <<jump scram>>
+<<elseif visited("brine_shootdoor")>>
+    <<Knock_Random Player>>
+    You: Hey, you still there? #line:0b3fcfe 
+    You: Hmph. Guess I really scared him. #line:07928b9 
+<<else>>
+    <<jump brine_revisit>>
+<<endif>>
+===
+title: scram
+position: -434,277
+---
+You: Who I am isn't important.  #line:0cbc298 
+Brine: Oh, I see. Don't want your name associated with "Mr." Jonn Brine, eh?  #line:0227f80 
+Brine: Well, that's just fine. I don't deal with strangers. Didn't your parents ever teach ya that?  #line:0e72a0c 
+
+-> Ok fine... #line:0cce648 
+    You: Ok, ok. #line:0125a7c 
+    <<jump help>>
+-> Leave. #line:009e6c7 
+
+===
+title: help
+position: -195,69
+---
+You: My name is Kase, sir. I'm a Navigational Assistant in Training.  #line:0b6750d 
+Brine: I see. Why don't you drop all this formal business and tell me what you want, NAT?  #line:0f48bd4 
+You: I'm investigating a change in the ship's course. I first noticed... #line:0ad3308 
+Brine: Whoa, whoa, whoa kid. I'm gonna stop you right there.  #line:074434d 
+Brine: I don't deal in gossip. It doesn't make for good business. #line:0f6ff8d 
+Brine: I work with goods and goods only. So let me ask you this: what have you got?  #line:0f068c0 
+-> Nothing.  #line:0f19431 
+    <<jump leave>>
+-> I've got bullets.  #line:0e1c275 
+    <<jump bullets1>>
+===
+title: leave
+position: 105,312
+---
+You: I don't have anything for you. #line:04fa101 
+Brine: Well, that makes my offer easy. I don't have anything for you either.  #line:0f6cd13 
+Brine: Now get out of here. Thanks for wasting my time.  #line:0640768 
+===
+title: bullets1
+position: 83,57
+---
+You: I have bullets.  #line:0d24839 
+Brine: Bullets, eh? Well, well. Now we're talking.  #line:0364b66 
+Brine: I have to ask - do you have something to put them in?  #line:0e68847 
+-> Yes.  #line:056c5f9 
+    <<jump yesgun>>
+-> No.  #line:00b4d4b 
+    <<jump nogun>>
+
+===
+title: nogun
+position: 484,387
+---
+You: I don't have a weapon. Just the bullets.  #line:0afdb2c 
+Brine: All the more reason to get them off your hands, then, I imagine.  #line:08a1350 
+Brine: I could easily find someone who would have a use for them.  #line:0ed9a69 
+Brine: But what do you want?  #line:0e7e0b5 
+
+-> I need access to talk to...everyone.  #line:0aa36fd 
+    <<jump access1>>
+-> I only want information.  #line:0fffa17 
+    <<jump access2>>
+===
+title: yesgun
+position: 405,-136
+---
+You: I have a gun.  #line:0c65cae 
+Brine: Interesting. And is that something you're interested in getting off your hands?  #line:0a69ff4 
+Brine: I'm confident I could find a buyer.  #line:0165cae 
+-> No way.  #line:0f06b6f 
+    <<jump yesgun1>>
+-> I'm only  offering bullets.  #line:05e288f 
+   <<jump yesgun2>>
+===
+title: yesgun1
+position: 915,-344
+---
+You: Not a chance in hell, Brine. I'm keeping my gun.  #line:0d8be1e 
+Brine: Okay, okay. Just thought I'd ask.  #line:0366895 
+Brine: Young kid like you...wasn't sure you'd even know how to use it.  #line:008c8f2 
+Brine: But the bullets. What would you want for one?  #line:0f8e475 
+-> Is there anywhere on the ship I can get special access to?  #line:0633a8d 
+    <<jump access1>>
+-> I only want information.  #line:04881fe 
+    <<jump access2>>
+===
+title: yesgun2
+position: 666,56
+---
+You: Sorry, Brine. I'm only offering one bullet.  #line:0e566a9 
+Brine: Fair enough. Sticking your neck out like you are, a gun might come in handy. #line:06f85fd 
+Brine: The bullet then. What do you want for it? #line:02e44e5 
+ -> Is there anywhere on the ship I can get special access to?  #line:007d330 
+    <<jump access1>>
+-> I only want information.  #line:0b49eca 
+    <<jump access2>>
+        
+===
+title: access1
+position: 989,332
+---
+You: A friend in security gave me general clearance to move about for now, but they're also in training. #line:0992ce6 
+You: I have a feeling there are areas of the ship that they don't have access to. Areas that they might not even know about.  #line:0fcfdca 
+You: Is there anywhere...out of the way that you could get me into?  #line:0bd5e12 
+Brine: Ha, well, you're in luck. I've got something in stock - what would you say to a key to a high-security area of the brig?  #line:0a3101f 
+-> I'll take it. #line:026ca40 
+    <<jump deal1>>
+->What's in there?  #line:0b7a562 
+    <<jump mysterydoor>>
+-> No deal.  #line:0996bc1 
+    <<jump hardbargain>>
+===
+title: access2
+position: 1286,-263
+---
+You: I want information.  #line:0662191 
+Brine: I've told you, I don't deal in information. Don't keep asking.  #line:0967690 
+Brine: But what would you say to a key to a high-security area of the brig?  #line:0e949df 
+Brine: I'm guessing you've got a friend in security helping you out, otherwise you wouldn't be here. #line:0210ae4 
+Brine: But access to this area's not given to junior security.  #line:03835c7 
+-> I'll take it. #line:00421d2 
+    <<jump deal1>>
+-> What's in there?  #line:0ef1569 
+    <<jump mysterydoor>>
+-> No deal.  #line:0de282f 
+    <<jump hardbargain>>
+//you exchange one bullet for the key card
+===
+title: deal1
+position: 1688,349
+---
+You: I'll take the key.  #line:03a9eca 
+Brine: Glad we could make a deal.  #line:0a800fb 
+<<set_variable "have_brig_key" "true">>
+<<take_bullet DialogueSystem>>
+Brine: There you are. Now whatever you want to do with these is none of my business - but I sure hope you know what you're doing.  #line:0b67af6 
+<<setSequence GameManager "Prisoner">>
+===
+title: mysterydoor
+position: 1284,85
+---
+You: What's in this high-security area?  #line:02e2f26 
+Brine: Can't tell you that. I don't actually know - though I have my suspicions.  #line:0069313 
+Brine: Knowledge is dangerous, but you seem to want it pretty badly. #line:05de69f 
+Brine: You could either ask your friend in security what's in the brig, or go in blind.  #line:006941d 
+Brine: Either way, you'll find out when you go down there.  #line:0924031 
+Brine: Now do you want the key, or not?  #line:018d612 
+-> I'll take it. #line:0ab59df 
+    <<jump deal1>>
+-> No deal.  #line:046d80f 
+    <<jump hardbargain>>
+===
+title: hardbargain
+position: 1870,-74
+---
+You: A key to a mystery door? Do you think I'm stupid? I'm keeping my bullets.  #line:0fde89d 
+Brine: Huh. Well, I've offered you all I can offer. Unless... #line:000ccdb 
+Brine: I told you I don't normally deal information. But it happens that you've got something I want and now that I know you've got it... #line:089c63b 
+Brine: Well, this once, I'll make an exception. Mind you don't tell anyone I did this.  #line:050e4bd 
+Brine: I'll give you a little bit of intel on the ship's pilot if you hand over one of those bullets.  #line:077024a 
+-> Now we've got a deal.  #line:0288114 
+    <<jump deal2>>
+-> Sorry. No.  #line:0037a1b 
+    <<jump nodeal>>
+===
+title: deal2
+position: 2180,-194
+---
+You: That's more like it. I'll take the intel.  #line:0fb3c61 
+<<take_bullet DialogueSystem>>
+Brine: Right, then. Garm Doro. Career pilot. Captain's right hand man - supposedly.  #line:0f0e66a 
+Brine: You probably don't know much about him, don't see him around much.  #line:0f09c9e 
+Brine: For most of our journey, he's tried not to get involved with the colonists.  #line:05f551a 
+Brine: That's because as soon as we land and deconstruct, he's supposed to be off on a solo shuttle and onto his next assignment.  #line:00726dd 
+Brine: Between you and me, Doro's gone a bit soft and sentimental over the course of 20 years on this ship. He's thinking about staying on Soldacia, working ground transport.  #line:0d92fd7 
+Brine: Maybe even starting a family.  #line:00eb74b 
+-> And this matters because... #line:00d3432 
+    You: Sorry to interrupt - why does it matter that Garm might want to start a family on Soldacia? #line:0b03b1d 
+    <<jump garmctd2>>
+-> What am I supposed to do with that information?! #line:059f4df 
+    You: Look, I gave you something that's obviously extremely valuable. What do you expect me to do with information on Garm's personal life? #line:074deaf 
+    Brine: I'm getting there, if you'll let me! This is why I usually don't trade in information... #line:0b7b33a 
+    You: Sorry. Please - go on.  #line:0fe32cd 
+    <<jump garmctd2>>
+===
+title: garmctd2
+position: 2465,-203
+---
+Brine: Hmph. Well, Garm wasn't thinking this way when he jumped on ship as a young man. At that time, he was only thinking of himself.  #line:004a720 
+Brine: Career pilots make decent credit - but making decent credit only tends to make men want to make more credit. #line:009cf0c 
+Brine: Garm's got himself involved in a ship-racing scheme. People back on land bet on how fast colony ships make their trips and how quick they make certain maneuvers.  #line:085125d 
+Brine: Being involved in this business illegal in itself, but his involvement probably means he's been cutting corners to make certain times.  #line:00de333 
+Brine: Now, Captain is in a position to turn a blind eye - all the better for him if we get where we're going faster.  #line:03d65ad 
+Brine: But if the firm were to find out...Doro'd lose his job and have his license revoked for life.  #line:0b90b06 
+Brine: He'd be ineligible to fly - and he certainly wouldn't be welcome to settle on Soldacia.  #line:00015bf 
+<<set_variable "garm_racing_intel" "true">>
+Brine: So that's what I know. I don't do follow-up questions. And if anyone asks - you didn't hear this from me.    #line:001401c 
+===
+
+title: nodeal
+position: 2199,6
+---
+You: Sorry. I'm keeping my bullets. I might need them. #line:056b82b 
+Brine: That was my final offer kid. I don't get turned down often, and I have to say...I don't like it.  #line:09298c8 
+Brine: You watch your back, now. Everything they teach you in school about community and teamwork is SDG propoganda.  #line:06abd99 
+Brine: Seems like you're learning pretty quick that things are a little more complicated than all that.  #line:06fb588 
+===
+title: gun_shoot_event_Brine
+position: -738,649
+---
+<<if !visited("gun_shoot_event_Brine")>>
+    Brine: <i><shake>Shit!</shake></i> #line:0f7b640 
+    Brine: You out of your mind?! #line:0dff231 
+    Brine: That's it. You know what? We're done here. #line:0b9bcc5 
+    Brine: Get the fuck away from me. #line:0989ee6
+<<endif>>
+===
+title: brine_revisit
+position: -715,416
+---
+<<Knock_Random Player>>
+You: Hey. Brine? You there? #line:0dc5b56 
+Brine: Kid, I think we're done here. Stop wasting your time. #line:04591d3 
+You: Crap... #line:0724794 
+===

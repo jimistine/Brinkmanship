@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-949750199081303263
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GridWhite_01_Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 920e6a4cc2e7aaf4bba19f2866023046, type: 3}
+  m_Parent: {fileID: 2100000, guid: bb2d3eeb806f23b4b91d33e50ea1ead5, type: 2}
+  m_ModifiedSerializedProperties: 2
+  m_ValidKeywords:
+  - _DISABLE_SSR_TRANSPARENT
+  m_InvalidKeywords:
+  - _NORMALMAP_TANGENT_SPACE
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
+  - MOTIONVECTORS
+  m_LockedProperties: _Rim_Color_2
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Roughness:
+        m_Texture: {fileID: 2800000, guid: b00a9b1781c21754bb1d599958764a2f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Albedo_Lightness: 0.15
+    - _DoubleSidedNormalMode: 1
+    - _Exposure_Multiplier: 5.97
+    - _Glow_Multiplier: 0.51
+    - _Highlight_Intensity_Bloom: -0.2
+    - _Highlight_Threshold_1: 0.33
+    - _Highlight_Threshold_2: 0.25
+    - _Rim_Light_Intensity_Bloom: 0.3
+    - _Rim_Light_Threshold_1: -0.24
+    - _Rim_Light_Threshold_2: 0.85
+    m_Colors:
+    - _Highlight_Color_1: {r: 0, g: 1, b: 0.928957, a: 0}
+    - _Highlight_Color_2: {r: 1, g: 0.11936571, b: 0, a: 0}
+    - _Rim_Color_1: {r: 0.9254902, g: 0.5077696, b: 0, a: 0}
+    - _Rim_Color_2: {r: 1, g: 0.13927601, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &1555229834196132327
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

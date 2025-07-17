@@ -1,0 +1,1780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C6947ABA-7B11-BD29-A0F9-E0B08B8AA8BD}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="2945072214" Name="My_Closet" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3216246379" Name="Space_Dreaming" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3290519051" Name="Aluminium_Tank" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="1191351487" Name="VO_Bus"/>
+				<Bus Id="2583651660" Name="FX_Bus"/>
+				<Bus Id="2680856269" Name="Music_Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2112505204" Name="Aux_ShipVoice">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3216246379"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2372645886" Name="Aux_Void">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3290519051"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2664785639" Name="Aux_Bridge">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2945072214"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="1093937226" Name="VO_Vol"/>
+				<GameParameter Id="1437246667" Name="Azimuth"/>
+				<GameParameter Id="2246609544" Name="Music_Vol"/>
+				<GameParameter Id="2481014485" Name="FX_Vol"/>
+				<GameParameter Id="3578718921" Name="Master_Vol"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="1534528548" Type="User" Language="English(US)" Hash="{0D58E56D-6964-4DC1-FB23-624CB41290C8}">
+			<ShortName>VO</ShortName>
+			<Path>English(US)/VO.bnk</Path>
+			<Media>
+				<File Id="3505788" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line090f4ad.wav</ShortName>
+					<Path>Media/English(US)/3505788.wem</Path>
+					<CachePath>Voices/English(US)/line090f4ad_10C4C929.wem</CachePath>
+				</File>
+				<File Id="3932505" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line02c87e3.wav</ShortName>
+					<Path>Media/English(US)/3932505.wem</Path>
+					<CachePath>Voices/English(US)/line02c87e3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="4756334" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line07abcff.wav</ShortName>
+					<Path>Media/English(US)/4756334.wem</Path>
+					<CachePath>Voices/English(US)/line07abcff_10C4C929.wem</CachePath>
+				</File>
+				<File Id="18428286" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0e848bd.wav</ShortName>
+					<Path>Media/English(US)/18428286.wem</Path>
+					<CachePath>Voices/English(US)/line0e848bd_10C4C929.wem</CachePath>
+				</File>
+				<File Id="28370821" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0cb8eb0.wav</ShortName>
+					<Path>Media/English(US)/28370821.wem</Path>
+					<CachePath>Voices/English(US)/line0cb8eb0_10C4C929.wem</CachePath>
+				</File>
+				<File Id="33363046" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line056b99d.wav</ShortName>
+					<Path>Media/English(US)/33363046.wem</Path>
+					<CachePath>Voices/English(US)/line056b99d_10C4C929.wem</CachePath>
+				</File>
+				<File Id="44267493" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0152093.wav</ShortName>
+					<Path>Media/English(US)/44267493.wem</Path>
+					<CachePath>Voices/English(US)/line0152093_10C4C929.wem</CachePath>
+				</File>
+				<File Id="58362243" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0182ea8.wav</ShortName>
+					<Path>Media/English(US)/58362243.wem</Path>
+					<CachePath>Voices/English(US)/line0182ea8_10C4C929.wem</CachePath>
+				</File>
+				<File Id="84870752" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0cd5e81.wav</ShortName>
+					<Path>Media/English(US)/84870752.wem</Path>
+					<CachePath>Voices/English(US)/line0cd5e81_10C4C929.wem</CachePath>
+				</File>
+				<File Id="103103789" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0f3ef83.wav</ShortName>
+					<Path>Media/English(US)/103103789.wem</Path>
+					<CachePath>Voices/English(US)/line0f3ef83_10C4C929.wem</CachePath>
+				</File>
+				<File Id="112257396" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line004067a.wav</ShortName>
+					<Path>Media/English(US)/112257396.wem</Path>
+					<CachePath>Voices/English(US)/line004067a_10C4C929.wem</CachePath>
+				</File>
+				<File Id="128217380" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line06a8938.wav</ShortName>
+					<Path>Media/English(US)/128217380.wem</Path>
+					<CachePath>Voices/English(US)/line06a8938_10C4C929.wem</CachePath>
+				</File>
+				<File Id="167045962" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line009bed3.wav</ShortName>
+					<Path>Media/English(US)/167045962.wem</Path>
+					<CachePath>Voices/English(US)/line009bed3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="167379795" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0575026.wav</ShortName>
+					<Path>Media/English(US)/167379795.wem</Path>
+					<CachePath>Voices/English(US)/line0575026_10C4C929.wem</CachePath>
+				</File>
+				<File Id="174277717" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line027a4e2.wav</ShortName>
+					<Path>Media/English(US)/174277717.wem</Path>
+					<CachePath>Voices/English(US)/line027a4e2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="179789967" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line09d4be8.wav</ShortName>
+					<Path>Media/English(US)/179789967.wem</Path>
+					<CachePath>Voices/English(US)/line09d4be8_10C4C929.wem</CachePath>
+				</File>
+				<File Id="184320497" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line090ba70.wav</ShortName>
+					<Path>Media/English(US)/184320497.wem</Path>
+					<CachePath>Voices/English(US)/line090ba70_10C4C929.wem</CachePath>
+				</File>
+				<File Id="196510706" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0b7d4da.wav</ShortName>
+					<Path>Media/English(US)/196510706.wem</Path>
+					<CachePath>Voices/English(US)/line0b7d4da_10C4C929.wem</CachePath>
+				</File>
+				<File Id="219700868" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0e91a46.wav</ShortName>
+					<Path>Media/English(US)/219700868.wem</Path>
+					<CachePath>Voices/English(US)/line0e91a46_10C4C929.wem</CachePath>
+				</File>
+				<File Id="240022050" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0846236.wav</ShortName>
+					<Path>Media/English(US)/240022050.wem</Path>
+					<CachePath>Voices/English(US)/line0846236_10C4C929.wem</CachePath>
+				</File>
+				<File Id="247603711" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0776407.wav</ShortName>
+					<Path>Media/English(US)/247603711.wem</Path>
+					<CachePath>Voices/English(US)/line0776407_10C4C929.wem</CachePath>
+				</File>
+				<File Id="248058235" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line050ac92.wav</ShortName>
+					<Path>Media/English(US)/248058235.wem</Path>
+					<CachePath>Voices/English(US)/line050ac92_10C4C929.wem</CachePath>
+				</File>
+				<File Id="248601507" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line03977d2.wav</ShortName>
+					<Path>Media/English(US)/248601507.wem</Path>
+					<CachePath>Voices/English(US)/line03977d2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="250026786" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line044e13b.wav</ShortName>
+					<Path>Media/English(US)/250026786.wem</Path>
+					<CachePath>Voices/English(US)/line044e13b_10C4C929.wem</CachePath>
+				</File>
+				<File Id="252503577" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line05e18f1.wav</ShortName>
+					<Path>Media/English(US)/252503577.wem</Path>
+					<CachePath>Voices/English(US)/line05e18f1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="259902236" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line009f3aa.wav</ShortName>
+					<Path>Media/English(US)/259902236.wem</Path>
+					<CachePath>Voices/English(US)/line009f3aa_10C4C929.wem</CachePath>
+				</File>
+				<File Id="263790471" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line04bc184.wav</ShortName>
+					<Path>Media/English(US)/263790471.wem</Path>
+					<CachePath>Voices/English(US)/line04bc184_10C4C929.wem</CachePath>
+				</File>
+				<File Id="263957911" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line055a0e9.wav</ShortName>
+					<Path>Media/English(US)/263957911.wem</Path>
+					<CachePath>Voices/English(US)/line055a0e9_10C4C929.wem</CachePath>
+				</File>
+				<File Id="268743557" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0cd5ced.wav</ShortName>
+					<Path>Media/English(US)/268743557.wem</Path>
+					<CachePath>Voices/English(US)/line0cd5ced_10C4C929.wem</CachePath>
+				</File>
+				<File Id="276326809" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0fe1db4.wav</ShortName>
+					<Path>Media/English(US)/276326809.wem</Path>
+					<CachePath>Voices/English(US)/line0fe1db4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="281012952" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0868a49.wav</ShortName>
+					<Path>Media/English(US)/281012952.wem</Path>
+					<CachePath>Voices/English(US)/line0868a49_10C4C929.wem</CachePath>
+				</File>
+				<File Id="282060083" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0c19b06.wav</ShortName>
+					<Path>Media/English(US)/282060083.wem</Path>
+					<CachePath>Voices/English(US)/line0c19b06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="283474948" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line019e6dc.wav</ShortName>
+					<Path>Media/English(US)/283474948.wem</Path>
+					<CachePath>Voices/English(US)/line019e6dc_10C4C929.wem</CachePath>
+				</File>
+				<File Id="285406962" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>3sec.wav</ShortName>
+					<CachePath>SFX/3sec_10C4C929.wem</CachePath>
+				</File>
+				<File Id="295899282" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0c50fa1.wav</ShortName>
+					<Path>Media/English(US)/295899282.wem</Path>
+					<CachePath>Voices/English(US)/line0c50fa1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="304929701" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0785f7b.wav</ShortName>
+					<Path>Media/English(US)/304929701.wem</Path>
+					<CachePath>Voices/English(US)/line0785f7b_10C4C929.wem</CachePath>
+				</File>
+				<File Id="317396825" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0c9c64e.wav</ShortName>
+					<Path>Media/English(US)/317396825.wem</Path>
+					<CachePath>Voices/English(US)/line0c9c64e_10C4C929.wem</CachePath>
+				</File>
+				<File Id="319731537" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line001b4be.wav</ShortName>
+					<Path>Media/English(US)/319731537.wem</Path>
+					<CachePath>Voices/English(US)/line001b4be_10C4C929.wem</CachePath>
+				</File>
+				<File Id="322422254" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0d20197.wav</ShortName>
+					<Path>Media/English(US)/322422254.wem</Path>
+					<CachePath>Voices/English(US)/line0d20197_10C4C929.wem</CachePath>
+				</File>
+				<File Id="332371760" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0f1e232.wav</ShortName>
+					<Path>Media/English(US)/332371760.wem</Path>
+					<CachePath>Voices/English(US)/line0f1e232_10C4C929.wem</CachePath>
+				</File>
+				<File Id="335212284" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0f4f5f4.wav</ShortName>
+					<Path>Media/English(US)/335212284.wem</Path>
+					<CachePath>Voices/English(US)/line0f4f5f4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="336339044" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line00c9153.wav</ShortName>
+					<Path>Media/English(US)/336339044.wem</Path>
+					<CachePath>Voices/English(US)/line00c9153_10C4C929.wem</CachePath>
+				</File>
+				<File Id="340224965" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line049aa3d.wav</ShortName>
+					<Path>Media/English(US)/340224965.wem</Path>
+					<CachePath>Voices/English(US)/line049aa3d_10C4C929.wem</CachePath>
+				</File>
+				<File Id="344045192" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line00abd0e.wav</ShortName>
+					<Path>Media/English(US)/344045192.wem</Path>
+					<CachePath>Voices/English(US)/line00abd0e_10C4C929.wem</CachePath>
+				</File>
+				<File Id="344307945" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>BakerQuestStart_01.wav</ShortName>
+					<Path>Media/English(US)/344307945.wem</Path>
+					<CachePath>Voices/English(US)/BakerQuestStart_01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="345981531" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0c1a268.wav</ShortName>
+					<Path>Media/English(US)/345981531.wem</Path>
+					<CachePath>Voices/English(US)/line0c1a268_10C4C929.wem</CachePath>
+				</File>
+				<File Id="347244105" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line06beb9d.wav</ShortName>
+					<Path>Media/English(US)/347244105.wem</Path>
+					<CachePath>Voices/English(US)/line06beb9d_10C4C929.wem</CachePath>
+				</File>
+				<File Id="350762789" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line09ab7cd.wav</ShortName>
+					<Path>Media/English(US)/350762789.wem</Path>
+					<CachePath>Voices/English(US)/line09ab7cd_10C4C929.wem</CachePath>
+				</File>
+				<File Id="372361281" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0bb5422.wav</ShortName>
+					<Path>Media/English(US)/372361281.wem</Path>
+					<CachePath>Voices/English(US)/line0bb5422_10C4C929.wem</CachePath>
+				</File>
+				<File Id="373064150" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0947fb7.wav</ShortName>
+					<Path>Media/English(US)/373064150.wem</Path>
+					<CachePath>Voices/English(US)/line0947fb7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="378795244" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0ab1b1f.wav</ShortName>
+					<Path>Media/English(US)/378795244.wem</Path>
+					<CachePath>Voices/English(US)/line0ab1b1f_10C4C929.wem</CachePath>
+				</File>
+				<File Id="391372148" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line019740a.wav</ShortName>
+					<Path>Media/English(US)/391372148.wem</Path>
+					<CachePath>Voices/English(US)/line019740a_10C4C929.wem</CachePath>
+				</File>
+				<File Id="395049566" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0f547f7.wav</ShortName>
+					<Path>Media/English(US)/395049566.wem</Path>
+					<CachePath>Voices/English(US)/line0f547f7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="402057242" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0efffe6.wav</ShortName>
+					<Path>Media/English(US)/402057242.wem</Path>
+					<CachePath>Voices/English(US)/line0efffe6_10C4C929.wem</CachePath>
+				</File>
+				<File Id="404274054" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line08df81d.wav</ShortName>
+					<Path>Media/English(US)/404274054.wem</Path>
+					<CachePath>Voices/English(US)/line08df81d_10C4C929.wem</CachePath>
+				</File>
+				<File Id="405812002" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line05cfb73.wav</ShortName>
+					<Path>Media/English(US)/405812002.wem</Path>
+					<CachePath>Voices/English(US)/line05cfb73_10C4C929.wem</CachePath>
+				</File>
+				<File Id="413660407" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line058eb5b.wav</ShortName>
+					<Path>Media/English(US)/413660407.wem</Path>
+					<CachePath>Voices/English(US)/line058eb5b_10C4C929.wem</CachePath>
+				</File>
+				<File Id="417385865" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0de587f.wav</ShortName>
+					<Path>Media/English(US)/417385865.wem</Path>
+					<CachePath>Voices/English(US)/line0de587f_10C4C929.wem</CachePath>
+				</File>
+				<File Id="420883433" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0f90742.wav</ShortName>
+					<Path>Media/English(US)/420883433.wem</Path>
+					<CachePath>Voices/English(US)/line0f90742_10C4C929.wem</CachePath>
+				</File>
+				<File Id="421942688" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0b6e655.wav</ShortName>
+					<Path>Media/English(US)/421942688.wem</Path>
+					<CachePath>Voices/English(US)/line0b6e655_10C4C929.wem</CachePath>
+				</File>
+				<File Id="438904362" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0bcb5eb.wav</ShortName>
+					<Path>Media/English(US)/438904362.wem</Path>
+					<CachePath>Voices/English(US)/line0bcb5eb_10C4C929.wem</CachePath>
+				</File>
+				<File Id="455647755" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0ec64f3.wav</ShortName>
+					<Path>Media/English(US)/455647755.wem</Path>
+					<CachePath>Voices/English(US)/line0ec64f3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="472369773" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0b61fcf.wav</ShortName>
+					<Path>Media/English(US)/472369773.wem</Path>
+					<CachePath>Voices/English(US)/line0b61fcf_10C4C929.wem</CachePath>
+				</File>
+				<File Id="481507361" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line06a7b5a.wav</ShortName>
+					<Path>Media/English(US)/481507361.wem</Path>
+					<CachePath>Voices/English(US)/line06a7b5a_10C4C929.wem</CachePath>
+				</File>
+				<File Id="490558720" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0065c8a.wav</ShortName>
+					<Path>Media/English(US)/490558720.wem</Path>
+					<CachePath>Voices/English(US)/line0065c8a_10C4C929.wem</CachePath>
+				</File>
+				<File Id="499828612" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0cf5245.wav</ShortName>
+					<Path>Media/English(US)/499828612.wem</Path>
+					<CachePath>Voices/English(US)/line0cf5245_10C4C929.wem</CachePath>
+				</File>
+				<File Id="503252973" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line00c6829.wav</ShortName>
+					<Path>Media/English(US)/503252973.wem</Path>
+					<CachePath>Voices/English(US)/line00c6829_10C4C929.wem</CachePath>
+				</File>
+				<File Id="516569855" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line008dc3d.wav</ShortName>
+					<Path>Media/English(US)/516569855.wem</Path>
+					<CachePath>Voices/English(US)/line008dc3d_10C4C929.wem</CachePath>
+				</File>
+				<File Id="519771339" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line05a947e.wav</ShortName>
+					<Path>Media/English(US)/519771339.wem</Path>
+					<CachePath>Voices/English(US)/line05a947e_10C4C929.wem</CachePath>
+				</File>
+				<File Id="521612911" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0fbe3ca.wav</ShortName>
+					<Path>Media/English(US)/521612911.wem</Path>
+					<CachePath>Voices/English(US)/line0fbe3ca_10C4C929.wem</CachePath>
+				</File>
+				<File Id="522726559" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line03d31c3.wav</ShortName>
+					<Path>Media/English(US)/522726559.wem</Path>
+					<CachePath>Voices/English(US)/line03d31c3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="523948569" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0fd594d.wav</ShortName>
+					<Path>Media/English(US)/523948569.wem</Path>
+					<CachePath>Voices/English(US)/line0fd594d_10C4C929.wem</CachePath>
+				</File>
+				<File Id="559209593" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line03969d9.wav</ShortName>
+					<Path>Media/English(US)/559209593.wem</Path>
+					<CachePath>Voices/English(US)/line03969d9_10C4C929.wem</CachePath>
+				</File>
+				<File Id="560632475" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0bb0f03.wav</ShortName>
+					<Path>Media/English(US)/560632475.wem</Path>
+					<CachePath>Voices/English(US)/line0bb0f03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="562694771" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0166d8b.wav</ShortName>
+					<Path>Media/English(US)/562694771.wem</Path>
+					<CachePath>Voices/English(US)/line0166d8b_10C4C929.wem</CachePath>
+				</File>
+				<File Id="594047870" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0f2d665.wav</ShortName>
+					<Path>Media/English(US)/594047870.wem</Path>
+					<CachePath>Voices/English(US)/line0f2d665_10C4C929.wem</CachePath>
+				</File>
+				<File Id="611911169" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line07b724d.wav</ShortName>
+					<Path>Media/English(US)/611911169.wem</Path>
+					<CachePath>Voices/English(US)/line07b724d_10C4C929.wem</CachePath>
+				</File>
+				<File Id="617727531" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line09c7e13.wav</ShortName>
+					<Path>Media/English(US)/617727531.wem</Path>
+					<CachePath>Voices/English(US)/line09c7e13_10C4C929.wem</CachePath>
+				</File>
+				<File Id="639279455" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0b4b06e.wav</ShortName>
+					<Path>Media/English(US)/639279455.wem</Path>
+					<CachePath>Voices/English(US)/line0b4b06e_10C4C929.wem</CachePath>
+				</File>
+				<File Id="649032354" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line09653aa.wav</ShortName>
+					<Path>Media/English(US)/649032354.wem</Path>
+					<CachePath>Voices/English(US)/line09653aa_10C4C929.wem</CachePath>
+				</File>
+				<File Id="649794237" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0b4e269.wav</ShortName>
+					<Path>Media/English(US)/649794237.wem</Path>
+					<CachePath>Voices/English(US)/line0b4e269_10C4C929.wem</CachePath>
+				</File>
+				<File Id="655333426" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line097d1f1.wav</ShortName>
+					<Path>Media/English(US)/655333426.wem</Path>
+					<CachePath>Voices/English(US)/line097d1f1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="657919295" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line04ea8f1.wav</ShortName>
+					<Path>Media/English(US)/657919295.wem</Path>
+					<CachePath>Voices/English(US)/line04ea8f1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="665200766" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line08908c4.wav</ShortName>
+					<Path>Media/English(US)/665200766.wem</Path>
+					<CachePath>Voices/English(US)/line08908c4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="698078738" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line07ef819.wav</ShortName>
+					<Path>Media/English(US)/698078738.wem</Path>
+					<CachePath>Voices/English(US)/line07ef819_10C4C929.wem</CachePath>
+				</File>
+				<File Id="702649540" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0d24841.wav</ShortName>
+					<Path>Media/English(US)/702649540.wem</Path>
+					<CachePath>Voices/English(US)/line0d24841_10C4C929.wem</CachePath>
+				</File>
+				<File Id="703312531" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line06d3c17.wav</ShortName>
+					<Path>Media/English(US)/703312531.wem</Path>
+					<CachePath>Voices/English(US)/line06d3c17_10C4C929.wem</CachePath>
+				</File>
+				<File Id="704825616" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line011f173.wav</ShortName>
+					<Path>Media/English(US)/704825616.wem</Path>
+					<CachePath>Voices/English(US)/line011f173_10C4C929.wem</CachePath>
+				</File>
+				<File Id="706623073" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0efcc38.wav</ShortName>
+					<Path>Media/English(US)/706623073.wem</Path>
+					<CachePath>Voices/English(US)/line0efcc38_10C4C929.wem</CachePath>
+				</File>
+				<File Id="715737171" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>1sec.wav</ShortName>
+					<CachePath>SFX/1sec_10C4C929.wem</CachePath>
+				</File>
+				<File Id="722131664" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0f51f6f.wav</ShortName>
+					<Path>Media/English(US)/722131664.wem</Path>
+					<CachePath>Voices/English(US)/line0f51f6f_10C4C929.wem</CachePath>
+				</File>
+				<File Id="731805744" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line05d3b30.wav</ShortName>
+					<Path>Media/English(US)/731805744.wem</Path>
+					<CachePath>Voices/English(US)/line05d3b30_10C4C929.wem</CachePath>
+				</File>
+				<File Id="733860143" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0f4afba.wav</ShortName>
+					<Path>Media/English(US)/733860143.wem</Path>
+					<CachePath>Voices/English(US)/line0f4afba_10C4C929.wem</CachePath>
+				</File>
+				<File Id="743145964" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line043fe2f.wav</ShortName>
+					<Path>Media/English(US)/743145964.wem</Path>
+					<CachePath>Voices/English(US)/line043fe2f_10C4C929.wem</CachePath>
+				</File>
+				<File Id="743804027" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0239926.wav</ShortName>
+					<Path>Media/English(US)/743804027.wem</Path>
+					<CachePath>Voices/English(US)/line0239926_10C4C929.wem</CachePath>
+				</File>
+				<File Id="762087201" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line08bfecb.wav</ShortName>
+					<Path>Media/English(US)/762087201.wem</Path>
+					<CachePath>Voices/English(US)/line08bfecb_10C4C929.wem</CachePath>
+				</File>
+				<File Id="771516412" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line00ec388.wav</ShortName>
+					<Path>Media/English(US)/771516412.wem</Path>
+					<CachePath>Voices/English(US)/line00ec388_10C4C929.wem</CachePath>
+				</File>
+				<File Id="793930842" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0dc7633.wav</ShortName>
+					<Path>Media/English(US)/793930842.wem</Path>
+					<CachePath>Voices/English(US)/line0dc7633_10C4C929.wem</CachePath>
+				</File>
+				<File Id="802634105" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0210bc5.wav</ShortName>
+					<Path>Media/English(US)/802634105.wem</Path>
+					<CachePath>Voices/English(US)/line0210bc5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="806640406" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line07169a1.wav</ShortName>
+					<Path>Media/English(US)/806640406.wem</Path>
+					<CachePath>Voices/English(US)/line07169a1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="815463296" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line018a93c.wav</ShortName>
+					<Path>Media/English(US)/815463296.wem</Path>
+					<CachePath>Voices/English(US)/line018a93c_10C4C929.wem</CachePath>
+				</File>
+				<File Id="818587718" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line05a3fa1.wav</ShortName>
+					<Path>Media/English(US)/818587718.wem</Path>
+					<CachePath>Voices/English(US)/line05a3fa1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="823355572" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line041861a.wav</ShortName>
+					<Path>Media/English(US)/823355572.wem</Path>
+					<CachePath>Voices/English(US)/line041861a_10C4C929.wem</CachePath>
+				</File>
+				<File Id="843793477" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0853957.wav</ShortName>
+					<Path>Media/English(US)/843793477.wem</Path>
+					<CachePath>Voices/English(US)/line0853957_10C4C929.wem</CachePath>
+				</File>
+				<File Id="845793820" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line02d48b8.wav</ShortName>
+					<Path>Media/English(US)/845793820.wem</Path>
+					<CachePath>Voices/English(US)/line02d48b8_10C4C929.wem</CachePath>
+				</File>
+				<File Id="848356607" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line05e9a6f.wav</ShortName>
+					<Path>Media/English(US)/848356607.wem</Path>
+					<CachePath>Voices/English(US)/line05e9a6f_10C4C929.wem</CachePath>
+				</File>
+				<File Id="851713086" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>5sec.wav</ShortName>
+					<CachePath>SFX/5sec_10C4C929.wem</CachePath>
+				</File>
+				<File Id="860921311" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0fb771b.wav</ShortName>
+					<Path>Media/English(US)/860921311.wem</Path>
+					<CachePath>Voices/English(US)/line0fb771b_10C4C929.wem</CachePath>
+				</File>
+				<File Id="863085865" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0b7e394.wav</ShortName>
+					<Path>Media/English(US)/863085865.wem</Path>
+					<CachePath>Voices/English(US)/line0b7e394_10C4C929.wem</CachePath>
+				</File>
+				<File Id="868627162" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0cff02f.wav</ShortName>
+					<Path>Media/English(US)/868627162.wem</Path>
+					<CachePath>Voices/English(US)/line0cff02f_10C4C929.wem</CachePath>
+				</File>
+				<File Id="868744852" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0f31568.wav</ShortName>
+					<Path>Media/English(US)/868744852.wem</Path>
+					<CachePath>Voices/English(US)/line0f31568_10C4C929.wem</CachePath>
+				</File>
+				<File Id="881299387" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0e27a06.wav</ShortName>
+					<Path>Media/English(US)/881299387.wem</Path>
+					<CachePath>Voices/English(US)/line0e27a06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="883504382" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line07b803d.wav</ShortName>
+					<Path>Media/English(US)/883504382.wem</Path>
+					<CachePath>Voices/English(US)/line07b803d_10C4C929.wem</CachePath>
+				</File>
+				<File Id="894787344" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0fc79fc.wav</ShortName>
+					<Path>Media/English(US)/894787344.wem</Path>
+					<CachePath>Voices/English(US)/line0fc79fc_10C4C929.wem</CachePath>
+				</File>
+				<File Id="899338182" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0662024.wav</ShortName>
+					<Path>Media/English(US)/899338182.wem</Path>
+					<CachePath>Voices/English(US)/line0662024_10C4C929.wem</CachePath>
+				</File>
+				<File Id="908516087" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0d7b1b5.wav</ShortName>
+					<Path>Media/English(US)/908516087.wem</Path>
+					<CachePath>Voices/English(US)/line0d7b1b5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="909234522" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0202a9e.wav</ShortName>
+					<Path>Media/English(US)/909234522.wem</Path>
+					<CachePath>Voices/English(US)/line0202a9e_10C4C929.wem</CachePath>
+				</File>
+				<File Id="917451241" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line099d639.wav</ShortName>
+					<Path>Media/English(US)/917451241.wem</Path>
+					<CachePath>Voices/English(US)/line099d639_10C4C929.wem</CachePath>
+				</File>
+				<File Id="957871677" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line066d799.wav</ShortName>
+					<Path>Media/English(US)/957871677.wem</Path>
+					<CachePath>Voices/English(US)/line066d799_10C4C929.wem</CachePath>
+				</File>
+				<File Id="958936904" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line031b89e.wav</ShortName>
+					<Path>Media/English(US)/958936904.wem</Path>
+					<CachePath>Voices/English(US)/line031b89e_10C4C929.wem</CachePath>
+				</File>
+				<File Id="960833078" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line05ade42.wav</ShortName>
+					<Path>Media/English(US)/960833078.wem</Path>
+					<CachePath>Voices/English(US)/line05ade42_10C4C929.wem</CachePath>
+				</File>
+				<File Id="963441470" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line037741e.wav</ShortName>
+					<Path>Media/English(US)/963441470.wem</Path>
+					<CachePath>Voices/English(US)/line037741e_10C4C929.wem</CachePath>
+				</File>
+				<File Id="978014773" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line01dc31b.wav</ShortName>
+					<Path>Media/English(US)/978014773.wem</Path>
+					<CachePath>Voices/English(US)/line01dc31b_10C4C929.wem</CachePath>
+				</File>
+				<File Id="993703196" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0dee354.wav</ShortName>
+					<Path>Media/English(US)/993703196.wem</Path>
+					<CachePath>Voices/English(US)/line0dee354_10C4C929.wem</CachePath>
+				</File>
+				<File Id="997938784" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0174e61.wav</ShortName>
+					<Path>Media/English(US)/997938784.wem</Path>
+					<CachePath>Voices/English(US)/line0174e61_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1001302579" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0e74052.wav</ShortName>
+					<Path>Media/English(US)/1001302579.wem</Path>
+					<CachePath>Voices/English(US)/line0e74052_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1011189262" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line005b3d9.wav</ShortName>
+					<Path>Media/English(US)/1011189262.wem</Path>
+					<CachePath>Voices/English(US)/line005b3d9_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1037027259" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line00881f3.wav</ShortName>
+					<Path>Media/English(US)/1037027259.wem</Path>
+					<CachePath>Voices/English(US)/line00881f3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1041596456" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0c19429.wav</ShortName>
+					<Path>Media/English(US)/1041596456.wem</Path>
+					<CachePath>Voices/English(US)/line0c19429_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1049725403" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0739c40.wav</ShortName>
+					<Path>Media/English(US)/1049725403.wem</Path>
+					<CachePath>Voices/English(US)/line0739c40_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1059988626" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line036a7f7.wav</ShortName>
+					<Path>Media/English(US)/1059988626.wem</Path>
+					<CachePath>Voices/English(US)/line036a7f7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1072175735" Language="English(US)" Streaming="true" Location="Loose">
+					<ShortName>line0dd90b4.wav</ShortName>
+					<Path>Media/English(US)/1072175735.wem</Path>
+					<CachePath>Voices/English(US)/line0dd90b4_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4257224390" Name="Play_1sec" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.1685033" DurationMax="2.1685033">
+					<MediaRefs>
+						<MediaRef Id="715737171"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="550936912" Name="Play_3sec" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.8239002" DurationMax="3.8239002">
+					<MediaRefs>
+						<MediaRef Id="285406962"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2033643682" Name="Play_5sec" MaxAttenuation="30" DurationType="OneShot" DurationMin="6.3751926" DurationMax="6.3751926">
+					<MediaRefs>
+						<MediaRef Id="851713086"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3431332124" Name="Play_line001b4be" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.9727664" DurationMax="2.9727664">
+					<MediaRefs>
+						<MediaRef Id="319731537"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="389409766" Name="Play_line004067a" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.063764" DurationMax="3.063764">
+					<MediaRefs>
+						<MediaRef Id="112257396"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2145310333" Name="Play_line005b3d9" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.6247618" DurationMax="3.6247618">
+					<MediaRefs>
+						<MediaRef Id="1011189262"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2307220651" Name="Play_line0065c8a" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.5887527" DurationMax="2.5887527">
+					<MediaRefs>
+						<MediaRef Id="490558720"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2780312016" Name="Play_line00881f3" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.818753" DurationMax="4.818753">
+					<MediaRefs>
+						<MediaRef Id="1037027259"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4022400914" Name="Play_line008dc3d" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.727755" DurationMax="4.727755">
+					<MediaRefs>
+						<MediaRef Id="516569855"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="940078069" Name="Play_line009bed3" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.284762" DurationMax="4.284762">
+					<MediaRefs>
+						<MediaRef Id="167045962"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2907321178" Name="Play_line009f3aa" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.189773" DurationMax="5.189773">
+					<MediaRefs>
+						<MediaRef Id="259902236"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2997930790" Name="Play_line00abd0e" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.8747618" DurationMax="3.8747618">
+					<MediaRefs>
+						<MediaRef Id="344045192"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2256329842" Name="Play_line00c6829" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.9297733" DurationMax="5.9297733">
+					<MediaRefs>
+						<MediaRef Id="503252973"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2171331829" Name="Play_line00c9153" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.6807709" DurationMax="3.6807709">
+					<MediaRefs>
+						<MediaRef Id="336339044"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="711492867" Name="Play_line00ec388" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.340771" DurationMax="3.340771">
+					<MediaRefs>
+						<MediaRef Id="771516412"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2631032459" Name="Play_line011f173" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.5227666" DurationMax="5.5227666">
+					<MediaRefs>
+						<MediaRef Id="704825616"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2403512092" Name="Play_line0152093" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.178753" DurationMax="4.178753">
+					<MediaRefs>
+						<MediaRef Id="44267493"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2863447521" Name="Play_line0166d8b" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.607755" DurationMax="5.607755">
+					<MediaRefs>
+						<MediaRef Id="562694771"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1728227198" Name="Play_line0174e61" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.7587528" DurationMax="3.7587528">
+					<MediaRefs>
+						<MediaRef Id="997938784"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="385832459" Name="Play_line0182ea8" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.0667574" DurationMax="3.0667574">
+					<MediaRefs>
+						<MediaRef Id="58362243"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3279090567" Name="Play_line018a93c" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.0917687" DurationMax="4.0917687">
+					<MediaRefs>
+						<MediaRef Id="815463296"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3092816258" Name="Play_line019740a" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.3067575" DurationMax="3.3067575">
+					<MediaRefs>
+						<MediaRef Id="391372148"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3245063828" Name="Play_line019e6dc" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.3497732" DurationMax="2.3497732">
+					<MediaRefs>
+						<MediaRef Id="283474948"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1128633128" Name="Play_line01dc31b" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.487755" DurationMax="3.487755">
+					<MediaRefs>
+						<MediaRef Id="978014773"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="845941295" Name="Play_line0202a9e" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.753764" DurationMax="5.753764">
+					<MediaRefs>
+						<MediaRef Id="909234522"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4184034045" Name="Play_line0210bc5" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.6817687" DurationMax="3.6817687">
+					<MediaRefs>
+						<MediaRef Id="802634105"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1636034259" Name="Play_line0239926" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.1367574" DurationMax="4.1367574">
+					<MediaRefs>
+						<MediaRef Id="743804027"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2864557375" Name="Play_line027a4e2" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.0457597" DurationMax="4.0457597">
+					<MediaRefs>
+						<MediaRef Id="174277717"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1712322374" Name="Play_line02c87e3" MaxAttenuation="30" DurationType="OneShot" DurationMin="6.911769" DurationMax="6.911769">
+					<MediaRefs>
+						<MediaRef Id="3932505"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="749481388" Name="Play_line02d48b8" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.864762" DurationMax="4.864762">
+					<MediaRefs>
+						<MediaRef Id="845793820"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="543734424" Name="Play_line031b89e" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.318753" DurationMax="4.318753">
+					<MediaRefs>
+						<MediaRef Id="958936904"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2365129510" Name="Play_line036a7f7" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.5657597" DurationMax="4.5657597">
+					<MediaRefs>
+						<MediaRef Id="1059988626"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4108898697" Name="Play_line037741e" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.9037641" DurationMax="1.9037641">
+					<MediaRefs>
+						<MediaRef Id="963441470"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1578353762" Name="Play_line03969d9" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.9727664" DurationMax="2.9727664">
+					<MediaRefs>
+						<MediaRef Id="559209593"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3433174728" Name="Play_line03977d2" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.4867573" DurationMax="2.4867573">
+					<MediaRefs>
+						<MediaRef Id="248601507"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1169363331" Name="Play_line03d31c3" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.1827664" DurationMax="4.1827664">
+					<MediaRefs>
+						<MediaRef Id="522726559"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2158730173" Name="Play_line041861a" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.8977551" DurationMax="2.8977551">
+					<MediaRefs>
+						<MediaRef Id="823355572"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4092259928" Name="Play_line043fe2f" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.500771" DurationMax="3.500771">
+					<MediaRefs>
+						<MediaRef Id="743145964"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="685872421" Name="Play_line044e13b" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.5627666" DurationMax="3.5627666">
+					<MediaRefs>
+						<MediaRef Id="250026786"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3721995966" Name="Play_line049aa3d" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.5917687" DurationMax="3.5917687">
+					<MediaRefs>
+						<MediaRef Id="340224965"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2682559506" Name="Play_line04bc184" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.594762" DurationMax="4.594762">
+					<MediaRefs>
+						<MediaRef Id="263790471"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2768191713" Name="Play_line04ea8f1" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.5457597" DurationMax="3.5457597">
+					<MediaRefs>
+						<MediaRef Id="657919295"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1886970586" Name="Play_line050ac92" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.1367574" DurationMax="4.1367574">
+					<MediaRefs>
+						<MediaRef Id="248058235"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3309473939" Name="Play_line055a0e9" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.340771" DurationMax="5.340771">
+					<MediaRefs>
+						<MediaRef Id="263957911"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3246484909" Name="Play_line056b99d" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.7497733" DurationMax="3.7497733">
+					<MediaRefs>
+						<MediaRef Id="33363046"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1138720415" Name="Play_line0575026" MaxAttenuation="30" DurationType="OneShot" DurationMin="6.0917687" DurationMax="6.0917687">
+					<MediaRefs>
+						<MediaRef Id="167379795"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1281658287" Name="Play_line058eb5b" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.273764" DurationMax="5.273764">
+					<MediaRefs>
+						<MediaRef Id="413660407"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3622021199" Name="Play_line05a3fa1" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.1917686" DurationMax="5.1917686">
+					<MediaRefs>
+						<MediaRef Id="818587718"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1806813537" Name="Play_line05a947e" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.804762" DurationMax="3.804762">
+					<MediaRefs>
+						<MediaRef Id="519771339"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3457623269" Name="Play_line05ade42" MaxAttenuation="30" DurationType="OneShot" DurationMin="6.9897733" DurationMax="6.9897733">
+					<MediaRefs>
+						<MediaRef Id="960833078"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3726553014" Name="Play_line05cfb73" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.8977551" DurationMax="2.8977551">
+					<MediaRefs>
+						<MediaRef Id="405812002"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3639312633" Name="Play_line05d3b30" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.6827664" DurationMax="5.6827664">
+					<MediaRefs>
+						<MediaRef Id="731805744"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="295452670" Name="Play_line05e18f1" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.764762" DurationMax="5.764762">
+					<MediaRefs>
+						<MediaRef Id="252503577"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="634203412" Name="Play_line05e9a6f" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.794762" DurationMax="3.794762">
+					<MediaRefs>
+						<MediaRef Id="848356607"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="220537044" Name="Play_line0662024" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.2347617" DurationMax="5.2347617">
+					<MediaRefs>
+						<MediaRef Id="899338182"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3649098801" Name="Play_line066d799" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.7627664" DurationMax="3.7627664">
+					<MediaRefs>
+						<MediaRef Id="957871677"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1277495418" Name="Play_line06a7b5a" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.1367574" DurationMax="4.1367574">
+					<MediaRefs>
+						<MediaRef Id="481507361"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2002701411" Name="Play_line06a8938" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.7497733" DurationMax="3.7497733">
+					<MediaRefs>
+						<MediaRef Id="128217380"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="700464098" Name="Play_line06beb9d" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.4887528" DurationMax="1.4887528">
+					<MediaRefs>
+						<MediaRef Id="347244105"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1009288616" Name="Play_line06d3c17" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.8197732" DurationMax="2.8197732">
+					<MediaRefs>
+						<MediaRef Id="703312531"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3680012377" Name="Play_line07169a1" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.1127665" DurationMax="3.1127665">
+					<MediaRefs>
+						<MediaRef Id="806640406"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3045583442" Name="Play_line0739c40" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.2517686" DurationMax="3.2517686">
+					<MediaRefs>
+						<MediaRef Id="1049725403"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1291532983" Name="Play_line0776407" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.034762" DurationMax="3.034762">
+					<MediaRefs>
+						<MediaRef Id="247603711"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3024786211" Name="Play_line0785f7b" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.727755" DurationMax="4.727755">
+					<MediaRefs>
+						<MediaRef Id="304929701"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1560328965" Name="Play_line07abcff" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.137755" DurationMax="4.137755">
+					<MediaRefs>
+						<MediaRef Id="4756334"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4116197208" Name="Play_line07b724d" MaxAttenuation="30" DurationType="OneShot" DurationMin="1.6647619" DurationMax="1.6647619">
+					<MediaRefs>
+						<MediaRef Id="611911169"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3143665202" Name="Play_line07b803d" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.0767574" DurationMax="4.0767574">
+					<MediaRefs>
+						<MediaRef Id="883504382"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2702203496" Name="Play_line07ef819" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.188753" DurationMax="3.188753">
+					<MediaRefs>
+						<MediaRef Id="698078738"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="609000143" Name="Play_line0846236" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.0027666" DurationMax="4.0027666">
+					<MediaRefs>
+						<MediaRef Id="240022050"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2218786813" Name="Play_line0853957" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.7187529" DurationMax="2.7187529">
+					<MediaRefs>
+						<MediaRef Id="843793477"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="809272246" Name="Play_line0868a49" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.5457597" DurationMax="4.5457597">
+					<MediaRefs>
+						<MediaRef Id="281012952"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1611874616" Name="Play_line08908c4" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.290771" DurationMax="3.290771">
+					<MediaRefs>
+						<MediaRef Id="665200766"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3986156922" Name="Play_line08bfecb" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.1367574" DurationMax="4.1367574">
+					<MediaRefs>
+						<MediaRef Id="762087201"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2657948041" Name="Play_line08df81d" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.4427664" DurationMax="2.4427664">
+					<MediaRefs>
+						<MediaRef Id="404274054"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3070230817" Name="Play_line090ba70" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.227755" DurationMax="4.227755">
+					<MediaRefs>
+						<MediaRef Id="184320497"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2855818966" Name="Play_line090f4ad" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.5697732" DurationMax="2.5697732">
+					<MediaRefs>
+						<MediaRef Id="3505788"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1825167221" Name="Play_line0947fb7" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.1737642" DurationMax="2.1737642">
+					<MediaRefs>
+						<MediaRef Id="373064150"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="883752519" Name="Play_line09653aa" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.340771" DurationMax="3.340771">
+					<MediaRefs>
+						<MediaRef Id="649032354"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="991118194" Name="Play_line097d1f1" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.313764" DurationMax="2.313764">
+					<MediaRefs>
+						<MediaRef Id="655333426"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="478264460" Name="Play_line099d639" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.617755" DurationMax="4.617755">
+					<MediaRefs>
+						<MediaRef Id="917451241"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3591351094" Name="Play_line09ab7cd" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.813764" DurationMax="2.813764">
+					<MediaRefs>
+						<MediaRef Id="350762789"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4203263476" Name="Play_line09c7e13" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.439773" DurationMax="4.439773">
+					<MediaRefs>
+						<MediaRef Id="617727531"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="998966310" Name="Play_line09d4be8" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.6807709" DurationMax="3.6807709">
+					<MediaRefs>
+						<MediaRef Id="179789967"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3799630181" Name="Play_line0ab1b1f" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.760771" DurationMax="2.760771">
+					<MediaRefs>
+						<MediaRef Id="378795244"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2172204903" Name="Play_line0b4b06e" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.6667573" DurationMax="3.6667573">
+					<MediaRefs>
+						<MediaRef Id="639279455"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2110588528" Name="Play_line0b4e269" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.068753" DurationMax="4.068753">
+					<MediaRefs>
+						<MediaRef Id="649794237"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3803284566" Name="Play_line0b61fcf" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.690771" DurationMax="4.690771">
+					<MediaRefs>
+						<MediaRef Id="472369773"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3722027779" Name="Play_line0b6e655" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.690771" DurationMax="5.690771">
+					<MediaRefs>
+						<MediaRef Id="421942688"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1803881808" Name="Play_line0b7d4da" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.7127664" DurationMax="3.7127664">
+					<MediaRefs>
+						<MediaRef Id="196510706"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1244733294" Name="Play_line0b7e394" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.8637643" DurationMax="3.8637643">
+					<MediaRefs>
+						<MediaRef Id="863085865"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="361283573" Name="Play_line0bb0f03" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.938753" DurationMax="2.938753">
+					<MediaRefs>
+						<MediaRef Id="560632475"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3060271627" Name="Play_line0bb5422" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.8147619" DurationMax="3.8147619">
+					<MediaRefs>
+						<MediaRef Id="372361281"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="209499223" Name="Play_line0bcb5eb" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.543764" DurationMax="3.543764">
+					<MediaRefs>
+						<MediaRef Id="438904362"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3594368992" Name="Play_line0c19429" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.931769" DurationMax="4.931769">
+					<MediaRefs>
+						<MediaRef Id="1041596456"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3775444931" Name="Play_line0c19b06" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.090771" DurationMax="3.090771">
+					<MediaRefs>
+						<MediaRef Id="282060083"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3665688291" Name="Play_line0c1a268" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.8627663" DurationMax="4.8627663">
+					<MediaRefs>
+						<MediaRef Id="345981531"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3116024600" Name="Play_line0c50fa1" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.1367574" DurationMax="4.1367574">
+					<MediaRefs>
+						<MediaRef Id="295899282"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3373431122" Name="Play_line0c9c64e" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.144762" DurationMax="5.144762">
+					<MediaRefs>
+						<MediaRef Id="317396825"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1361280188" Name="Play_line0cb8eb0" MaxAttenuation="30" DurationType="OneShot" DurationMin="7.1627665" DurationMax="7.1627665">
+					<MediaRefs>
+						<MediaRef Id="28370821"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="923378550" Name="Play_line0cd5ced" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.2387528" DurationMax="2.2387528">
+					<MediaRefs>
+						<MediaRef Id="268743557"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2417469062" Name="Play_line0cd5e81" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.4037642" DurationMax="4.4037642">
+					<MediaRefs>
+						<MediaRef Id="84870752"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="876462071" Name="Play_line0cf5245" MaxAttenuation="30" DurationType="OneShot" DurationMin="6.318753" DurationMax="6.318753">
+					<MediaRefs>
+						<MediaRef Id="499828612"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2254824361" Name="Play_line0cff02f" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.7767575" DurationMax="2.7767575">
+					<MediaRefs>
+						<MediaRef Id="868627162"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1239253303" Name="Play_line0d20197" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.500771" DurationMax="4.500771">
+					<MediaRefs>
+						<MediaRef Id="322422254"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="631467643" Name="Play_line0d24841" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.4867573" DurationMax="2.4867573">
+					<MediaRefs>
+						<MediaRef Id="702649540"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3599600767" Name="Play_line0d7b1b5" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.1227665" DurationMax="3.1227665">
+					<MediaRefs>
+						<MediaRef Id="908516087"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2998312214" Name="Play_line0dc7633" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.570771" DurationMax="2.570771">
+					<MediaRefs>
+						<MediaRef Id="793930842"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1993721961" Name="Play_line0dd90b4" MaxAttenuation="30" DurationType="OneShot" DurationMin="7.6927667" DurationMax="7.6927667">
+					<MediaRefs>
+						<MediaRef Id="1072175735"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2817969657" Name="Play_line0de587f" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.4997733" DurationMax="2.4997733">
+					<MediaRefs>
+						<MediaRef Id="417385865"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="846176482" Name="Play_line0dee354" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.000771" DurationMax="5.000771">
+					<MediaRefs>
+						<MediaRef Id="993703196"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="844805907" Name="Play_line0e27a06" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.3387527" DurationMax="4.3387527">
+					<MediaRefs>
+						<MediaRef Id="881299387"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1693972757" Name="Play_line0e74052" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.9837642" DurationMax="2.9837642">
+					<MediaRefs>
+						<MediaRef Id="1001302579"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1831420129" Name="Play_line0e848bd" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.319773" DurationMax="5.319773">
+					<MediaRefs>
+						<MediaRef Id="18428286"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3996082326" Name="Play_line0e91a46" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.5487528" DurationMax="3.5487528">
+					<MediaRefs>
+						<MediaRef Id="219700868"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2995772463" Name="Play_line0ec64f3" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.100771" DurationMax="4.100771">
+					<MediaRefs>
+						<MediaRef Id="455647755"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2420769722" Name="Play_line0efcc38" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.018753" DurationMax="4.018753">
+					<MediaRefs>
+						<MediaRef Id="706623073"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2563801376" Name="Play_line0efffe6" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.2527666" DurationMax="4.2527666">
+					<MediaRefs>
+						<MediaRef Id="402057242"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3291457597" Name="Play_line0f1e232" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.1267574" DurationMax="3.1267574">
+					<MediaRefs>
+						<MediaRef Id="332371760"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2179156977" Name="Play_line0f2d665" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.6267574" DurationMax="3.6267574">
+					<MediaRefs>
+						<MediaRef Id="594047870"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1390192361" Name="Play_line0f31568" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.2287529" DurationMax="3.2287529">
+					<MediaRefs>
+						<MediaRef Id="868744852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="131397955" Name="Play_line0f3ef83" MaxAttenuation="30" DurationType="OneShot" DurationMin="3.7587528" DurationMax="3.7587528">
+					<MediaRefs>
+						<MediaRef Id="103103789"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2497626448" Name="Play_line0f4afba" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.0027666" DurationMax="5.0027666">
+					<MediaRefs>
+						<MediaRef Id="733860143"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3206002031" Name="Play_line0f4f5f4" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.2597733" DurationMax="4.2597733">
+					<MediaRefs>
+						<MediaRef Id="335212284"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="576918834" Name="Play_line0f51f6f" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.5697732" DurationMax="2.5697732">
+					<MediaRefs>
+						<MediaRef Id="722131664"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="49043157" Name="Play_line0f547f7" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.5917687" DurationMax="4.5917687">
+					<MediaRefs>
+						<MediaRef Id="395049566"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4054830878" Name="Play_line0f90742" MaxAttenuation="30" DurationType="OneShot" DurationMin="8.629773" DurationMax="8.629773">
+					<MediaRefs>
+						<MediaRef Id="420883433"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1468898315" Name="Play_line0fb771b" MaxAttenuation="30" DurationType="OneShot" DurationMin="4.051769" DurationMax="4.051769">
+					<MediaRefs>
+						<MediaRef Id="860921311"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3023258736" Name="Play_line0fbe3ca" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.4557595" DurationMax="5.4557595">
+					<MediaRefs>
+						<MediaRef Id="521612911"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="974054988" Name="Play_line0fc79fc" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.6367574" DurationMax="5.6367574">
+					<MediaRefs>
+						<MediaRef Id="894787344"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1318585832" Name="Play_line0fd594d" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.424762" DurationMax="5.424762">
+					<MediaRefs>
+						<MediaRef Id="523948569"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="485589462" Name="Play_line0fe1db4" MaxAttenuation="30" DurationType="OneShot" DurationMin="5.6827664" DurationMax="5.6827664">
+					<MediaRefs>
+						<MediaRef Id="276326809"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="798440620" Name="STOPVO" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="3505788"/>
+						<MediaRef Id="3932505"/>
+						<MediaRef Id="4756334"/>
+						<MediaRef Id="18428286"/>
+						<MediaRef Id="28370821"/>
+						<MediaRef Id="33363046"/>
+						<MediaRef Id="44267493"/>
+						<MediaRef Id="58362243"/>
+						<MediaRef Id="84870752"/>
+						<MediaRef Id="103103789"/>
+						<MediaRef Id="112257396"/>
+						<MediaRef Id="128217380"/>
+						<MediaRef Id="167045962"/>
+						<MediaRef Id="167379795"/>
+						<MediaRef Id="174277717"/>
+						<MediaRef Id="179789967"/>
+						<MediaRef Id="184320497"/>
+						<MediaRef Id="196510706"/>
+						<MediaRef Id="219700868"/>
+						<MediaRef Id="240022050"/>
+						<MediaRef Id="247603711"/>
+						<MediaRef Id="248058235"/>
+						<MediaRef Id="248601507"/>
+						<MediaRef Id="250026786"/>
+						<MediaRef Id="252503577"/>
+						<MediaRef Id="259902236"/>
+						<MediaRef Id="263790471"/>
+						<MediaRef Id="263957911"/>
+						<MediaRef Id="268743557"/>
+						<MediaRef Id="276326809"/>
+						<MediaRef Id="281012952"/>
+						<MediaRef Id="282060083"/>
+						<MediaRef Id="283474948"/>
+						<MediaRef Id="285406962"/>
+						<MediaRef Id="295899282"/>
+						<MediaRef Id="304929701"/>
+						<MediaRef Id="317396825"/>
+						<MediaRef Id="319731537"/>
+						<MediaRef Id="322422254"/>
+						<MediaRef Id="332371760"/>
+						<MediaRef Id="335212284"/>
+						<MediaRef Id="336339044"/>
+						<MediaRef Id="340224965"/>
+						<MediaRef Id="344045192"/>
+						<MediaRef Id="344307945"/>
+						<MediaRef Id="345981531"/>
+						<MediaRef Id="347244105"/>
+						<MediaRef Id="350762789"/>
+						<MediaRef Id="372361281"/>
+						<MediaRef Id="373064150"/>
+						<MediaRef Id="378795244"/>
+						<MediaRef Id="391372148"/>
+						<MediaRef Id="395049566"/>
+						<MediaRef Id="402057242"/>
+						<MediaRef Id="404274054"/>
+						<MediaRef Id="405812002"/>
+						<MediaRef Id="413660407"/>
+						<MediaRef Id="417385865"/>
+						<MediaRef Id="420883433"/>
+						<MediaRef Id="421942688"/>
+						<MediaRef Id="438904362"/>
+						<MediaRef Id="455647755"/>
+						<MediaRef Id="472369773"/>
+						<MediaRef Id="481507361"/>
+						<MediaRef Id="490558720"/>
+						<MediaRef Id="499828612"/>
+						<MediaRef Id="503252973"/>
+						<MediaRef Id="516569855"/>
+						<MediaRef Id="519771339"/>
+						<MediaRef Id="521612911"/>
+						<MediaRef Id="522726559"/>
+						<MediaRef Id="523948569"/>
+						<MediaRef Id="559209593"/>
+						<MediaRef Id="560632475"/>
+						<MediaRef Id="562694771"/>
+						<MediaRef Id="594047870"/>
+						<MediaRef Id="611911169"/>
+						<MediaRef Id="617727531"/>
+						<MediaRef Id="639279455"/>
+						<MediaRef Id="649032354"/>
+						<MediaRef Id="649794237"/>
+						<MediaRef Id="655333426"/>
+						<MediaRef Id="657919295"/>
+						<MediaRef Id="665200766"/>
+						<MediaRef Id="698078738"/>
+						<MediaRef Id="702649540"/>
+						<MediaRef Id="703312531"/>
+						<MediaRef Id="704825616"/>
+						<MediaRef Id="706623073"/>
+						<MediaRef Id="715737171"/>
+						<MediaRef Id="722131664"/>
+						<MediaRef Id="731805744"/>
+						<MediaRef Id="733860143"/>
+						<MediaRef Id="743145964"/>
+						<MediaRef Id="743804027"/>
+						<MediaRef Id="762087201"/>
+						<MediaRef Id="771516412"/>
+						<MediaRef Id="793930842"/>
+						<MediaRef Id="802634105"/>
+						<MediaRef Id="806640406"/>
+						<MediaRef Id="815463296"/>
+						<MediaRef Id="818587718"/>
+						<MediaRef Id="823355572"/>
+						<MediaRef Id="843793477"/>
+						<MediaRef Id="845793820"/>
+						<MediaRef Id="848356607"/>
+						<MediaRef Id="851713086"/>
+						<MediaRef Id="860921311"/>
+						<MediaRef Id="863085865"/>
+						<MediaRef Id="868627162"/>
+						<MediaRef Id="868744852"/>
+						<MediaRef Id="881299387"/>
+						<MediaRef Id="883504382"/>
+						<MediaRef Id="894787344"/>
+						<MediaRef Id="899338182"/>
+						<MediaRef Id="908516087"/>
+						<MediaRef Id="909234522"/>
+						<MediaRef Id="917451241"/>
+						<MediaRef Id="957871677"/>
+						<MediaRef Id="958936904"/>
+						<MediaRef Id="960833078"/>
+						<MediaRef Id="963441470"/>
+						<MediaRef Id="978014773"/>
+						<MediaRef Id="993703196"/>
+						<MediaRef Id="997938784"/>
+						<MediaRef Id="1001302579"/>
+						<MediaRef Id="1011189262"/>
+						<MediaRef Id="1037027259"/>
+						<MediaRef Id="1041596456"/>
+						<MediaRef Id="1049725403"/>
+						<MediaRef Id="1059988626"/>
+						<MediaRef Id="1072175735"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1802970371" Type="User" Language="SFX" Hash="{8A4B5C04-DA6F-3D63-7D12-8C9CBB3BFC70}">
+			<ShortName>FX</ShortName>
+			<Path>FX.bnk</Path>
+			<Media>
+				<File Id="101771238" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_05.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="104046062" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Spas_Foley_01.wav</ShortName>
+					<CachePath>SFX/Spas_Foley_01_100E9907.wem</CachePath>
+				</File>
+				<File Id="138938615" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_12.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_12_B80F8502.wem</CachePath>
+				</File>
+				<File Id="186570123" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_01.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_01_3F2D5F97.wem</CachePath>
+				</File>
+				<File Id="275263768" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_13.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_13_10C4C929.wem</CachePath>
+				</File>
+				<File Id="306774550" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Electrical Current Strong.wav</ShortName>
+					<CachePath>SFX/Electrical Current Strong_E98AD9B2.wem</CachePath>
+				</File>
+				<File Id="385882111" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Alarm_01.wav</ShortName>
+					<CachePath>SFX/Alarm_01_C5579977.wem</CachePath>
+				</File>
+				<File Id="487934776" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_03.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="530493989" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_04.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="609360410" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Door_Close.wav</ShortName>
+					<CachePath>SFX/Door_Close_3CC0E795.wem</CachePath>
+				</File>
+				<File Id="610659821" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley Bag Fabric Large Trekking-004.wav</ShortName>
+					<CachePath>SFX/Foley Bag Fabric Large Trekking-004_2D01D990.wem</CachePath>
+				</File>
+				<File Id="631131484" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ship_ambience.wav</ShortName>
+					<CachePath>SFX/Ship_ambience_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="641721126" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PowerfulSciFiHandgun_01.wav</ShortName>
+					<CachePath>SFX/PowerfulSciFiHandgun_01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="679946442" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Modern_UI_Confirm_02.wav</ShortName>
+					<CachePath>SFX/Modern_UI_Confirm_02_140E4D40.wem</CachePath>
+				</File>
+				<File Id="702261158" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>countdown_30s.wav</ShortName>
+					<CachePath>SFX/countdown_30s_10C4C929.wem</CachePath>
+				</File>
+				<File Id="745679514" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>M4_Foley_06.wav</ShortName>
+					<CachePath>SFX/M4_Foley_06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="764280362" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_06.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="771677346" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>bridge_ambiance_-_bridge_ambiance_draft_2.wav</ShortName>
+					<CachePath>SFX/bridge_ambiance_-_bridge_ambiance_draft_2_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="814969196" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Engine_Ambient.wav</ShortName>
+					<CachePath>SFX/Engine_Ambient_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="819209306" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_09.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="873161927" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_14.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_14_10C4C929.wem</CachePath>
+				</File>
+				<File Id="886452002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>countdown_10s.wav</ShortName>
+					<CachePath>SFX/countdown_10s_10C4C929.wem</CachePath>
+				</File>
+				<File Id="923744472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>metal_hit_3.wav</ShortName>
+					<CachePath>SFX/metal_hit_3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="934605140" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Door_Open.wav</ShortName>
+					<CachePath>SFX/Door_Open_4046DF0C.wem</CachePath>
+				</File>
+				<File Id="987991094" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_02.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_02_D3CAA266.wem</CachePath>
+				</File>
+				<File Id="1011737792" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>countdown_60s.wav</ShortName>
+					<CachePath>SFX/countdown_60s_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1038325773" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sci_Fi_Alarm_Loop_18.wav</ShortName>
+					<CachePath>SFX/Sci_Fi_Alarm_Loop_18_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1050276054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Trainers_FullStep_08.wav</ShortName>
+					<CachePath>SFX/Metal_Trainers_FullStep_08_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="778830813" Name="Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="1994169264" Name="Door_A_Close" DurationType="OneShot" DurationMin="3.8726625" DurationMax="3.8726625">
+					<MediaRefs>
+						<MediaRef Id="609360410"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2387212484" Name="Door_A_Open" DurationType="OneShot" DurationMin="3.9348242" DurationMax="3.9348242">
+					<MediaRefs>
+						<MediaRef Id="934605140"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2748252963" Name="GunDraw" DurationType="OneShot" DurationMin="0.6880319" DurationMax="0.6880319">
+					<MediaRefs>
+						<MediaRef Id="104046062"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2975448509" Name="GunFire" DurationType="OneShot" DurationMin="2.5897083" DurationMax="2.5897083">
+					<MediaRefs>
+						<MediaRef Id="641721126"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1518059158" Name="GunFireNoAmmo" DurationType="OneShot" DurationMin="0.23808333" DurationMax="0.23808333">
+					<MediaRefs>
+						<MediaRef Id="745679514"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1828823542" Name="GunStow" DurationType="OneShot" DurationMin="0.37417862" DurationMax="0.37417862">
+					<MediaRefs>
+						<MediaRef Id="610659821"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="829756566" Name="OnSelect" DurationType="OneShot" DurationMin="1.3425688" DurationMax="1.3425688">
+					<MediaRefs>
+						<MediaRef Id="679946442"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4167392400" Name="play_bridge_ambient" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="771677346"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2477593508" Name="Play_countdown_10s" MaxAttenuation="30" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="886452002"/>
+						<MediaRef Id="1038325773"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2112505204" Name="Aux_ShipVoice"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="128432694" Name="Play_countdown_30s" MaxAttenuation="30" DurationType="OneShot" DurationMin="3" DurationMax="3">
+					<MediaRefs>
+						<MediaRef Id="702261158"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2112505204" Name="Aux_ShipVoice"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2308684427" Name="Play_countdown_60s" MaxAttenuation="30" DurationType="OneShot" DurationMin="2.7" DurationMax="2.7">
+					<MediaRefs>
+						<MediaRef Id="1011737792"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2112505204" Name="Aux_ShipVoice"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3002812021" Name="play_engine_ambient" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="814969196"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3549508922" Name="Play_Gun_Alarm" MaxAttenuation="30" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="385882111"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2112505204" Name="Aux_ShipVoice"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3614068781" Name="play_void_amb_01" MaxAttenuation="50" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="631131484"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="81877127" Name="Plr_Walk" DurationType="OneShot" DurationMin="0.310671" DurationMax="0.49881953">
+					<MediaRefs>
+						<MediaRef Id="101771238"/>
+						<MediaRef Id="138938615"/>
+						<MediaRef Id="186570123"/>
+						<MediaRef Id="275263768"/>
+						<MediaRef Id="487934776"/>
+						<MediaRef Id="530493989"/>
+						<MediaRef Id="764280362"/>
+						<MediaRef Id="819209306"/>
+						<MediaRef Id="873161927"/>
+						<MediaRef Id="987991094"/>
+						<MediaRef Id="1050276054"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="778830813"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2664785639" Name="Aux_Bridge"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3998425947" Name="Shoot_Gun_Alarm" MaxAttenuation="300" DurationType="OneShot" DurationMin="2.3653288" DurationMax="2.3653288">
+					<MediaRefs>
+						<MediaRef Id="306774550"/>
+						<MediaRef Id="923744472"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1928394692" Name="Stop_Gun_Alarm" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2541245939" Name="stop_void_amb_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="1437246667" Name="Azimuth"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{6AA89107-3364-5BF2-BC72-0A1DE24BD6FD}">
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+			<Media>
+				<File Id="469241327" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>brinkmanship_main_score_1.wav</ShortName>
+					<CachePath>SFX/brinkmanship_main_score_1_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2330966677" Name="Play_Temp_Loop" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="469241327"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{40F25728-827E-15C9-70D4-1E322C55EDAA}</FileHash>
+</SoundBanksInfo>

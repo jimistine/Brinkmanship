@@ -1,0 +1,504 @@
+﻿title: tav_intro
+position: -2429,-218
+---
+<<if visited("tavstart") == false>>
+    <<jump tavstart>>
+<<else>>
+    <<jump tav_revisit>>
+<<endif>>
+===
+title: tav_revisit
+position: -1993,-517
+---
+<<Knock_Random Player>>
+You: Tav, you still there? #line:0179e4d 
+Tav: Yeah, what's up now? #line:067e466 
+->I talked to Forrester. <<if visited("Forrester_start")==true && visited("tav_Forrester1") == false>> #line:038afce  
+     <<jump tav_Forrester1>>
+->I talked to Urnst. <<if visited ("urnst_start") == true && visited("tav_urnst") == false>> #line:05b2a91  
+    <<jump tav_urnst>> 
+-> Got something big. <<if get_variable("captain_messages_intel") == "true" || get_variable("garm_racing_intel") == "true" || get_variable("captain_punish_prisoner_intel") == "true">> #line:0151385 
+    <<jump tav_l_4>>
+-> Nothing yet. #line:047e0d8 
+    You: Nothing yet, sorry. #line:0be1b4a 
+
+===
+title: tavstart
+position: -2058,71
+---
+<<Knock_Random Player>>
+You: Psst, Tav. Are you there?  #line:0ae139c 
+Tav: Kase? Sneaking out during a lockdown...seems unlike you, I like it. You must be up to something.  #line:0703bf5 
+-> I'm not. #line:0dc0250 
+    <<jump boring>>
+-> I am.  #line:08474b3 
+    <<jump interesting>>
+===
+title: boring
+position: -1664,265
+---
+You: Actually, I was just hoping to chat.  #line:02a2729 
+Tav: Oh, well. You had me exicted for a second, but I guess you're just as un-fun as I always suspected you were. #line:0befa96 
+Tav: I'm busy, so you might as well get back to...wherever you're supposed to be right now.  #line:05b37f0 
+===
+title: interesting
+position: -1638,-42
+---
+You: Let's say I was up to something...can you keep a secret? #line:0fdd21c 
+Tav: Not necessarily. But I can offer one in return, if that's what you're looking for.  #line:0f91b48 
+-> Never mind. #line:038579c 
+    <<jump boring>>
+-> It's about the ship's trajectory.   #line:01cf590 
+    <<jump tav_l_1>>
+-> I need you to open some EPMs <<if visited("risk")>> #line:0034208 
+    <<jump open_epms>>
+===
+title: tav_l_1
+position: -1261,147
+---
+You: I noticed something off about the ship's trajectory. #line:0604411 
+You: Has anything, I don't know, weird been going on with the mailroom lately? #line:08f9d3b 
+Tav: Off? That's definitely concerning...but intriguing. #line:021783b 
+Tav: If there's been a change in the route, I don't know anything about it. #line:02de9fc 
+<<set_variable "EPM_intel" "true">>
+Tav: Though I wonder if this has something to do with the halt to EPMs. #line:0aabca6
+-> What's an EPM? #line:0d65712 
+    <<jump EPM_def>>
+-> Halted? #line:0310537 
+    <<jump halted>>
+===
+title: EPM_def
+position: -952,-26
+---
+You: Okay, I know I should know this but...an EPM? What's that?  #line:0ea7ef9 
+Tav: Emergency Personal Messages. I do the preliminary approvals and usually it's pretty standard - you know, #line:0030d4d 
+Tav: if someone is trying to reach a sick relative on another ship we put it through, if they're just trying to say hi to a buddy we don't.  #line:0095c33 
+Tav: We only have the capacity to send out two or three EPMs day if we don't want all our internal systems to overload.  #line:0e5e8f4 
+-> Can you give me more details?  #line:0c2b11c 
+    <<jump halted>>
+-> Huh. Well, doesn't seem like this has anything to do with my thing.  #line:0f9b109 
+    <<jump irrelevant>>
+===
+title: irrelevant
+position: -670,-37
+---
+You: That's definitely weird, but I don't see how that would have anything to do with the ship apparently changing course.   #line:0964668 
+Tav: Wow, okay. Fine. I tried to help. But that's all I've got.  #line:0967c1d
+<<jump gossip_router>>
+===
+title: halted
+position: -944,248
+---
+You: And you say they've all been halted? Why wouldn't they let everyone on the ship know that?  #line:01b3708 
+Tav: I don't know. At first I noticed that my supervisor was just overriding all of my approvals... #line:0d94801 
+Tav: Then yesterday he told me not to approve any EPMs until further notice.  #line:0142bf2 
+-> Why?  #line:0597bcc 
+    <<jump sup_explanation>>
+-> Huh. Okay.  #line:07934ac 
+    <<jump tav_comeback>>
+    //<<jump tav_irrelevant>>
+===
+title: sup_explanation
+position: -624,392
+---
+You: Did he say anything about why you can't send any out? Maybe there's a good reason.  #line:013ea82 
+Tav: He didn't say why explicity but I...I shouldn't say anymore. I'm really not supposed to talk about this stuff.  #line:0e8ca6b 
+Tav: Although, if you have anything else to tell me... #line:0491b23 
+-> I don't.  #line:0746d93 
+    <<jump tav_bye2>>
+-> You know what I know.  #line:073630f 
+    <<jump tav_comeback>>
+-> I talked to Forrester. <<if visited("forrester")==true>> #line:07375d8  
+     <<jump tav_Forrester1>>
+-> I talked to Urnst. <<if visited ("urnst_start")==true>> #line:0f14380 
+    <<jump tav_urnst>> 
+===
+title: tav_bye2
+position: -632,642
+---
+You: No. I don't know anything else of interest. But if you do... #line:08db0cb 
+Tav: Nope, that's all I've got. Look, maybe you should just go back to...wherever you're supposed to be.  #line:0725f8c 
+===
+title: tav_comeback
+position: 1681,-81
+---
+You: I've told you all I know for now, but I'm going to keep moving around and asking questions.  #line:01564f4 
+You: If I were to come back to you with more information...? #line:0b2756b 
+Tav: Then I might have something else to tell you.  #line:03fbf76 
+Tav: I'll do some digging here and see what I can find in the meantime...you know I love a good mystery.  #line:08791d9 
+===
+title: tav_Forrester1
+position: -327,-1065
+---
+You: I talked to Forrester about this. #line:0a34fba 
+Tav: You brought this to your boss, huh? Bold, but I respect that. Did she say anything?  #line:04babd3 
+-> Not really.  #line:0b93af3 
+    <<jump tav_forrester_nothing>>
+-> She thinks I'm overthinking it.  #line:0b23f1b 
+    <<jump tav_forrester_overthinking>>
+-> She thinks it's possible something's up. <<if get_variable("forresterStatus") == "trust">> #line:0b84510 
+    <<jump tav_forrester_somethingup>>
+-> She confirmed what I saw. <<if get_variable("forresterStatus") == "trust">> #line:089dbf2 
+    <<jump tav_forrester_confirmed>>
+===
+title: tav_forrester_nothing
+position: 817,-867
+ ---
+ You: She was trying to sleep. I couldn't get much of anything out of her.  #line:0fe2744 
+ Tav: That's a shame...though not terribly surprising. Did you talk to anyone else?  #line:00cab83 
+    -> Nope.  #line:025db43 
+        <<jump tav_comeback>>
+    -> I talked to Urnst. <<if visited ("urnst_start")==true>> #line:00b0985  
+        <<jump tav_urnst>> 
+===
+title: tav_forrester_overthinking
+position: 813,-711
+---
+You: I told her what I saw, but she thinks that I'm overthinking it. #line:0bc9d0f 
+Tav: Maybe she's right. Or maybe she's not telling you everything. Did you talk to anyone else?  #line:07db39b 
+    ->Nope.  #line:0526aa4 
+        <<jump tav_comeback>>
+    ->I talked to Urnst. <<if visited ("urnst_start")==true>> #line:0b46293  
+        <<jump tav_urnst>> 
+===
+title: tav_forrester_somethingup
+position: 806,-1041
+---
+You: I couldn't get her to actually say anything along the lines of "you're right" or "the captain's up to something" but... #line:08f6a6c 
+You: She did say she was impressed with me for investigating and encouraged me to keep going.  #line:0458632 
+You: She wouldn't say any of that if she thought there wasn't even a chance something was up, would she?  #line:0693dab 
+Tav: True - if Forrester thought you were acting like an idiot, she would probably just say so... #line:050df28 
+    ->Exactly.   #line:0aacea4 
+        <<jump tav_level_2>>
+===
+title: tav_forrester_confirmed
+position: 804,-1231
+---
+You: I got her to take a look at the glitch, and it's there all right.  #line:001bc23 
+You: Whatever the reason is, we are not headed to Soldacia right now.  #line:0849d6f 
+Tav: A secret change of course...there's no scenario in which that's particularly good for us, is there?   #line:0e530c6 
+    -> So help me.  #line:04f8d30 
+        <<jump tav_level_2>>
+    -> Your turn. #line:0aacd33 
+        <<jump tav_level_2>>
+===
+title: tav_level_2
+position: 1289,-1035
+---
+You: Is there anything you know that might be of interest?  #line:0d3da6d 
+Tav: You know how I said we weren't sending out any EPMs? That's not exactly true... #line:01b2fa7 
+Tav: We haven't been sending out anyone's EPMs except for the captain's. And he's been sending out a lot.  #line:0ba86ec 
+Tav: Like sending and receiving two or three messages a day. #line:0720cd7 
+<<set_variable "captain_messages_intel" "true">>
+Tav: I know that doesn't sound like much, but that's all the messages we have the capacity to send.  #line:07b2c80 
+    ->What are the messages are about?  #line:0a3546b 
+        <<jump tav_captainsmessages>>
+    ->Huh. Well, thanks for letting me know.  #line:0781f6c 
+        <<jump tav_comeback>>
+        //<<jump tav_irrelevant>>
+===
+title:tav_captainsmessages
+position: 1612,-540
+---
+You: Do you have any idea what are these messages are about? #line:0eda858 
+Tav: I don't know for sure. To be honest, I have a suspicion but... #line:056e6c8 
+Tav: I don't really want to be starting fires if this is all nothing. Did you talk to anyone else?  #line:0a6297e 
+     ->Nope.  #line:03b1f43 
+    <<jump tav_comeback>>
+    ->I talked to Urnst. <<if visited ("urnst_start")==true>> #line:02c9e34  
+    <<jump tav_urnst>> 
+===
+title: tav_urnst
+position: 245,-38
+---
+You: I went and talked to Urnst. #line:04a9a94 
+Tav: Urnst? Not the first person I'd go to in a high stakes investigation, but okay. #line:0dd412a 
+Tav: Did they have anything interesting to say? Or did they just talk your ear off about plants? #line:068f7ec 
+    ->They talked my ear off about plants.  #line:02102f0 
+        <<jump tav_urnst_nothing>>
+    ->They told me they were offered a job working for Terradeus. <<if get_variable("terradeus_intel") == "true">> #line:08a4fff 
+        <<jump tav_urnst_firm2>>
+    ->They told me they're working on drought-tolerant plants. <<if get_variable("urnst_plants_intel") == "true">> #line:05b5488 
+        <<jump tav_urnst_plants>>
+===
+title: tav_urnst_nothing
+position: 797,135
+---
+You: They just talked my ear off about plants. I couldn't get anything out of them.  #line:06c8928 
+Tav: Sorry you had to endure that, all for nothing. Did you talk to anyone else?  #line:0ee0f3f 
+->I talked to Forrester. <<if visited("Forrester_start")==true && visited("tav_Forrester1") == false>>   
+     <<jump tav_Forrester1>> 
+-> Got something big. <<if get_variable("captain_messages_intel") == "true" || get_variable("garm_racing_intel") == "true" || get_variable("captain_punish_prisoner_intel") == "true">>  
+    <<jump tav_l_4>>
+-> Nothing yet.  
+    You: Nothing yet, sorry.  
+//<<jump gossip_router>>
+// ->Nope.  #line:0ddc0e6 
+//     <<jump tav_comeback>>
+// ->I talked to Forrester <<if visited("forrester")==true>>
+//     <<jump tav_Forrester>>
+===
+title: tav_urnst_plants
+position: 68,510
+---
+You: They were talking my ear off about plants, but then they mentioned something interesting. #line:08c7e13 
+You: They told me that in the lab, they've been instructed to start propogating some drought-tolerant plants.  #line:0f6b9f7 
+You: Soldacia is supposed to have plenty of water.  #line:020f86b 
+You: I don't know about you, but to me that seems like an instruction that would only be given if we were changing course.   #line:0844d3b 
+Tav: I see your point.  #line:0cbc025 
+You: I thought you might.  #line:0482a98 
+    ->Is there anything else you can tell me?  #line:00921e1 
+        <<jump tav_l_3>>
+===
+title: tav_urnst_firm2
+position: 402,327
+---
+You: Urnst brought up another planet, Trado, that's being surveyed for development.   #line:0c485cc 
+You: They mentioned that they were originally offered a position by a firm called Terradeus -- apparently, Terradeus wanted to get a colony up and running there stat.  #line:007a6c7 
+You: They said that based on initial surveys, there were some concerns about water availability that the firm was trying to brush off. #line:03e0352 
+You: And on top of that, apparently they said "no" to the gig because they didn't like the profit-sharing model -- #line:002f469 
+You: Terradeus was giving higher-ranking employees, captains and agricultural directors included, privatized land for development. #line:0e7e20e 
+Tav: You mean that the captain would have a motive to bring us to this place? Trado?   #line:0fc1ea3 
+You: I think so.  #line:0e56086 
+    ->Is there anything else you can tell me?  #line:0970f73 
+        <<jump tav_l_3>>
+===
+title: tav_l_3
+position: 401,516
+---
+You: Alright, your turn. What else can you tell me?  #line:0fdbe24 
+Tav: Okay, I'll spill - but this is really all that I know. #line:017cf1a 
+Tav: The messages the captain has been sending in and out these past few weeks? #line:082fac4 
+<<set_variable "sone_messages_intel" "true">>
+Tav: They've all been to a <style=imp>Sone Typhe.</style> I'm assuming they're related.  #line:0695718 
+    ->That seems suspicious.  #line:0adbbd6 
+        <<jump tav_l_3_sus>>
+    ->That seems normal.  #line:01d612c 
+        <<jump tav_l_3_normal>>
+===
+title: tav_l_3_sus
+position: 792,294
+---
+You: Another Typhe. I guess he could be in some sort of family emergency but...it seems suspicious.  #line:065b647 
+Tav: Suspicious or not. Family can motivate people to do crazy things.  #line:0d78a1d 
+-> Ha. I know that's true.  #line:0174b60 
+    You: Ha. Right you are... #line:004622d 
+-> That's what scares me.  #line:087c45e 
+    You: Yeah, that's what scares me. #line:08d1dca 
+Tav: That's really  all I know. I can't get any more information without seriously breaching mailroom assistant code so... #line:0e66836 
+Tav: If you bring me anything else, it had better be really good.  #line:044cfd7 
+Tav: Good luck, I guess.  #line:0684508 
+Tav: Try not to get yourself killed.  #line:00045be 
+Tav: Or get anyone else killed, for that matter.  #line:02fdc37 
+===
+title: tav_l_3_normal
+position: 790,472
+---
+You: Oh. If he's just talking to his family... #line:0207ea4 
+You: I guess it's not super cool of him to use up all the EPMs. #line:0a6679a 
+You: But reaching out to your mom a little more often isn't really evil behavior.  #line:0181446 
+Tav: Yeah. I guess not. Well, sorry I don't have anything jucier to offer up, but that's really all I know. Really.  #line:0f72186 
+//possibility to add a tav l 4 if you come back again - she opens an email. 
+===
+title: gun_shoot_event_Tav
+position: -2604,369
+---
+<<if visited("gun_shoot_event_Tav")>>
+    <<jump gun_shoot_event_Tav2>>
+<<endif>>
+Tav: SHIT! #line:0cd6533 
+Tav: What the fuck was that?! #line:0be277e 
+===
+title: gun_shoot_event_Tav2
+position: -2298,375
+---
+<<if visited("gun_shoot_event_Tav2")>>
+    <<jump gun_shoot_event_Tav3>>
+<<endif>>
+Tav: Kase? Is that...do you have explosives?  #line:067c486 
+Tav: I did not think this was that kind of conversation.  #line:011587b 
+Tav: I don't know what you're trying to do here, but you'd better just go.  #line:08d2a4c 
+===
+title: gun_shoot_event_Tav3
+position: -2019,372
+---
+<<if visited("gun_shoot_event_Tav3")>>
+
+<<else>>
+    Tav: What is wrong with you?  #line:012be6e 
+    Tav: You must be stupider than I thought if you think you'll get away with threatening me.  #line:0d24639 
+    Tav: I'm not saying another word to you, and I won't step out until I know you're gone and someone has taken...whatever it is you have away from you.  #line:0fdbd60 
+<<endif>>
+===
+
+title: tav_l_4
+position: -1850,927
+---
+You: Yeah, got something pretty huge actually.  #line:0b2f3a2 
+Tav: No kidding, what's the scoop?   #line:02647d0 
+    -> Remember the first mate? <<if get_variable("captain_punish_prisoner_intel") == "true">> #line:06bce9e 
+        <<jump tav_prisoner>> 
+    -> Do you know Garm Doro? <<if get_variable("garm_racing_intel") == "true">> #line:07280a1 
+        <<jump tav_Brine>>
+    -> I want information from you first.  #line:062afa5 
+        <<jump youfirst>>
+===
+title: youfirst
+position: -1851,1213
+---
+You: I want more information from you first. Have you found anything?  #line:0deaea8 
+Tav: I was able to open one of these EPMs.  #line:0899d38 
+Tav: I could tell you what is inside but...you'll have to tell me what you know first.  #line:09d8c50 
+    -> Okay, I'll tell you.  #line:0b447d6 
+        You: Okay, I'll tell you. But you have to swear to secrecy. Really.  #line:0e655c7 
+        Tav: Cross my heart. #line:05d18e0 
+        You: Very reassuring. #line:08ec5c4 
+        Tav: You want this info or not? #line:0afa717 
+    -> No, you first.  #line:023810f 
+        You: Open the EPM, then I'll tell you.  #line:085a953 
+        Tav: That's not how this works. #line:0674f7a 
+    You: Fine, fine. #line:05d9ad3 
+    <<if get_variable("garm_racing_intel") == "true">>
+        <<jump tav_Brine>> 
+    <<elseif get_variable("captain_punish_prisoner_intel") == "true">>
+        <<jump tav_prisoner>>
+    <<endif>>
+===
+title: tav_Brine
+position: -1484,962
+---
+You: You know Garm Doro? Got some dirt on him from Jonn Brine.  #line:0ff5c98 
+Tav: That creep down on san deck? #line:09377e5 
+You: You know him?  #line:0044bdf 
+Tav: I've heard of him, sure. #line:0a6b210 
+Tav: Don't tell me... #line:0b70423 
+You: We made a deal.  #line:030920d 
+Tav: What did you give him? #line:0c89ee7 
+    -> Bullets.  #line:074e9ad 
+        You: A bullet. My parents gave me a weapon, but I don't plan on using it much.  #line:0871582 
+        Tav: I guess I'm relieved to hear you're not planning on shooting anyone...but, wow. #line:0152a8b 
+        Tav: What'd Brine tell you?  #line:09e3942 
+    -> I'd rather not say.  #line:0d83ada 
+        You: I'm going to tell you what Brine told me, but I'd rather keep our trade private.  #line:052b8e4 
+        Tav: Fine... I understand. What'd Brine tell you?  #line:0146958 
+You: So Garm, the pilot currently steering the ship, is involved in an illegal betting ring.  #line:0492a75 
+You: He could be cutting corners to win some extra units. He would lose his license if anyone found out.  #line:01036db 
+Tav: Doro, you sneaky bastard. I guess that's useful information to have, but how do I know it's any good?  #line:0927362 
+Tav: Brine's not known for his trustworthiness... #line:09a04e1 
+    -> You just have to trust me.  #line:044aeb5 
+        You: I'm choosing to believe him. I'm asking you to believe me.  #line:0be7855 
+        Tav: Dammit, Kase...fine. #line:05c3725 
+        Tav: I'll open the EPM.  #line:0a51575 
+        <<jump tav_email>>
+    -> Just open the EPM.  #line:09b7506 
+        You: Hey. The deal was I would tell you what I heard and you would read me the EPM. #line:0fd1c7e 
+        You: Whether you believe it or not is up to you, but you have to read it to me.  #line:0f31945 
+        Tav: I'm not one to back out of a deal, so fine. I'll open the EPM.  #line:0c887a9 
+        <<jump tav_email>>
+===
+title: tav_prisoner
+position: -1459,1136
+---
+You: Remember the first mate?  #line:02b3c0f 
+Tav: Uh...sort of. She left before I was in the mailroom, so I don't really know what happened there.  #line:059ecd6 
+Tav: It seemed messy.  #line:0b7af6d 
+You: Yeah, well. She and the captain had a disagreement. He wanted to take the ship to the planet Trado. She wanted to tell everyone. #line:0efc934 
+Tav: And...? #line:0245fc8 
+You: Now she's in the brig.  #line:03871f7 
+Tav: Wait, wait, wait. Like, as a prisoner?! #line:00c265e 
+You: Yep.  #line:093a8ac 
+Tav: And she confirmed the ship is going to Trado?  #line:0a3f321 
+You: She says the captain has been manipulated by his sister into thinking it's safer than Soldacia.  #line:070ea47 
+    -> That EPM might have survey data.  #line:088d1ea 
+        You: She never got to see any of the surveys the captain got from Sone, though.  #line:03fb625 
+        You: Does the message you have reference any surveys? Reports?    #line:0cbb4a7 
+        Tav: I think so. Hold on... #line:0f5b5c2 
+        <<jump tav_email>>
+    -> I need to know if Sone was really lying.  #line:0a32fb7 
+        You: She never read any of the correspondences with Sone, though.  #line:0fd96f4 
+        You: The one you read...did it seem like she was trying to brainwash him?  #line:0db9a22 
+        Tav: I don't know about brainwash, but it was definitely persuasive.  #line:0c9841d 
+        Tav: Hold on. I'll read it to you... #line:0eb63f5 
+        <<jump tav_email>>
+===
+title: tav_email
+position: -1063,1049
+---
+Tav: Here's what it says: "<i>Dearest Cyrus, I'm not sure if you've had a chance to think about my proposal.</i> #line:0c55175 
+Tav: "<i>I recognize that the maneuver around Surator-9 is quickly approaching and you'll need to decide what to do at that juncture presently.</i>" #line:0618ef2 
+    -> Proposal?  #line:0d1ec6f 
+        You: Proposal? I guess she means changing the ship's course.  #line:013ee6b 
+    -> Who talks to their brother like this?  #line:07e8ee8 
+        You: I know I'm an only child, but doesn't this sound a bit formal for a letter to a sibling? #line:01d33b5
+        Tav: Beats me. Anyway, she goes on... #line:021fa0f 
+Tav: "<i>...as I understand your primary scanning mast has been out of order for several years, I pulled some strings to have our survey team conduct a scan of Soldacia.</i>  #line:0897c2d 
+Tav: "<i>It brings me no joy to report that your intended destination has experienced an impact event since your last scan five years ago.</i>"  #line:040fa9d 
+    -> Impact event? #line:0a8d724 
+        You: Impact event? Like an asteroid?  #line:00163ae 
+        Tav: Let me read. #line:05a4723 
+    -> Don't we scan for meteors?  #line:0f802df 
+        You: I thought we scanned for potential meteors.  #line:0072f60 
+        Tav: We did. Before our scanning mast broke. Keep up.  #line:0b398cb 
+Tav: She continues: "<i>a large meteor hit the surface of the planet, apparently about four years ago.</i>  #line:0ee7c79 
+Tav:"<i>...the fallout of this event - ash, polluted air, continued storms -  promises to have consequences for years to come.</i> #line:00555fd 
+Tav:"<i>... in addition to the polluted air, your agricultural plans will be greatly disrupted by the change in weather patterns.</i>  #line:06eb210 
+Tav: "<i>...bringing your crew to Soldacia at this point would seal their fate.</i>  #line:0bd3a3f 
+Tav: "<i>...I beg you, brother. Come to Trado.</i>" #line:021a914 
+
+<<set_variable "meteor_email_intel" "true">>
+Tav: And there's all kinds of scan report docs attached here. #line:0f0cac2 
+    -> Is an impact event even possible?  #line:065c74a 
+        <<jump impact_possible>>
+    -> This definitely seems manipulative.   #line:0cc147c 
+        <<jump brainwash>>
+===
+title: impact_possible
+position: -775,1141
+---
+You: Is that possible? Our scanner has been broken for five years, and the meteor hit a year later?  #line:0bf1037 
+You: Wouldn't we have seen it in time before the scanner broke?  #line:0707636 
+Tav: I don't know. You'll have to go ask someone who would. #line:0d8402d 
+Tav: If impact events affect agricultural plans... #line:08764f0 
+    -> I should talk to Urnst.  #line:052bd3c 
+        You: Right. I'd better go talk to Urnst, huh? #line:03818c6 
+    -> I guess I have to talk to Urnst again. <<if visited("urnst_intro")>> #line:04ef8f2 
+        You: Oof. I guess I could go talk to Urnst. Again. #line:01b489e 
+===
+title: brainwash
+position: -776,994
+---
+You: "I beg you, brother?!" This has emotional manipulation written all over it.  #line:05ea030 
+Tav: Uh-huh. And it's signed with her title: "Terradeus Corp. Head of Recruitment." #line:0c97b52 
+<<set_variable "sone_recruiter_intel" "true">>
+You: I guess she's just doing her job...  #line:0d1f0e9 
+    -> I'd better go to the bridge.  #line:011b889 
+        You: Well, as Sone mentioned, time's running out. I'd better go talk to the captain.  #line:02dc7cf 
+    -> I'd better do some more digging around.  #line:066f8b7 
+        You: I need to convince the captain that she's lying. I'd better do some more digging around.  #line:0594fa0 
+Tav: Careful out there Kase... #line:017638c 
+===
+title: gossip_router
+position: -1774,-365
+---
+<<if !visited("gossip_router")>>
+    Tav: You got anything for me? #line:043e2da 
+<<else>>
+    Tav: Got anything else? #line:0b7cd61 
+<<endif>>
+->I talked to Forrester. <<if visited("Forrester_start")==true && visited("tav_Forrester1") == false>> #line:03d6bba  
+     <<jump tav_Forrester1>>
+->I talked to Urnst. <<if visited ("urnst_start") == true && visited("tav_urnst") == false>> #line:0c6c816 
+    <<jump tav_urnst>> 
+-> Got something big. <<if get_variable("captain_messages_intel") == "true" || get_variable("garm_racing_intel") == "true" || get_variable("captain_punish_prisoner_intel") == "true">> #line:041a907 
+    <<jump tav_l_4>>
+-> Nothing yet.  #line:022c69a 
+    You: Nothing yet, sorry.  #line:01f3c8d 
+===
+title: open_epms
+position: -1426,429
+---
+You: I know this is asking a lot, but I need you to open some EPMs. #line:01ca930 
+Tav: Open some-- what's going on? You know I can't just do that. #line:0b74e8a 
+Tav: Unless you have something big to share? I mean this would need to be <i>big</i> big. #line:005e2bd 
+<<jump tav_l_4>>
+===

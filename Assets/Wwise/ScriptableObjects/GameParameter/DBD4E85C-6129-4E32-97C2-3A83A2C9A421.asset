@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b4e32bc734b4a3fbdb5ea334581ba3, type: 3}
+  m_Name: DBD4E85C-6129-4E32-97C2-3A83A2C9A421
+  m_EditorClassIdentifier: 
+  objectName: Music_LPF
+  id: 2295956853
+  guid: DBD4E85C-6129-4E32-97C2-3A83A2C9A421

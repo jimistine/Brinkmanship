@@ -1,0 +1,176 @@
+﻿title: Intro_Start
+tags:
+position: -1068,-495
+---
+<<setSequence GameManager "TheDiscovery">>
+<<Toggle_Ailyn_Ping VoidSpaceManager>>
+Ailyn: Contacting Quad 1 navigation pod 8, we've got a serious security threat. Over. #line:0a624ca 
+    ->Really? I don't see anything.  #line:02204a7 
+        <<jump loser1>>
+    ->Very funny, Ailyn.  #line:04c528a 
+        <<jump loser2>>
+===
+title: loser1
+position: -655,-545
+---
+You: I'm in this room by myself! I...oh. Wait.  #line:05d038b 
+Ailyn: Yeah, 'fraid we've got a NAT in there that's a major loser.  #line:017890a 
+Ailyn: Dangerous to our reputation as a crew.  #line:0825b3d 
+You: You know for a second you almost scared me.  #line:0e7acbe 
+Ailyn: <i>I'm</i> scared. If we run into some ETs and you're the first thing they see... #line:026025d 
+<<jump worktodo>>
+===
+title: loser2
+position: -660,-376
+---
+You: Let me guess. I'm the security threat? #line:0d99f86 
+Ailyn: Losers are a serious threat to our safety. If we run into any ETs and you're the first thing they see... #line:0221e5e 
+<<jump worktodo>>
+===
+title: worktodo
+position: -288,-463
+---
+You: Hey, don’t you have actual security work to be doing?  #line:05b77c9 
+Ailyn: Do you have actual navigation work to be doing? #line:02a2ce5 
+You: ... #line:0315a64 
+Ailyn: Exactly. Well, that's Level 1 jobs for you. What are you actually doing?  #line:004fbd9 
+You: Looking at star clusters out by Estea. There was so much still there that no one had a chance to properly map... #line:04ba504 
+You: This huge cluster was so close -- in 80 years they never named it. I think I would have called it… #line:03f9d75 
+<<declare $clusterName = "The Cluster">>
+    -> The Nut Cluster #line:0336606 
+        <<jump name_1>>
+    -> The Fistful Group #line:04ae3f2 
+        <<jump name_2>>
+    -> Never mind #line:0530dd1 
+        <<jump name_3>>
+===
+title: name_1
+position: 95,-591
+---
+<<set $clusterName to "The Nut Cluster">>
+You: {$clusterName}. #line:0cefa19 
+Ailyn: Wow. Memorable. #line:0598b2e 
+<<jump Intro_2>>
+===
+title: name_2
+position: 84,-455
+---
+<<set $clusterName to "The Fistful Group">>
+You: {$clusterName}. #line:07db7ba 
+Ailyn: Hm. I like it. #line:0fff35d 
+Ailyn: But a fist full of what? #line:06b1141 
+You: You know...stars? #line:08fd430 
+<<jump Intro_2>>
+===
+title: name_3
+position: 92,-293
+---
+<<set $clusterName to "The Nevermind Stars">>
+You: You know what? Never mind. #line:035fb1f 
+Ailyn: Ooo {$clusterName}, I like it. #line:0c05f8c 
+<<jump Intro_2>>
+
+===
+title: Intro_2
+position: 378,-460
+---
+Ailyn: If you're really that torn up about the mapping of Estea never getting finished, maybe you should get a head start naming stars near Soldacia.  #line:0b6008d 
+You: But Estea is our ancestral -- #line:0890528 
+Ailyn: Please. Not before a lockdown. #line:00e515b 
+Ailyn: I don't need to spend this time alone with my thoughts about a home I've never been to.  #line:055122b 
+You: You're never alone with your thoughts. You abuse your security team privleges to bother me constantly! #line:0d0e0f6 
+Ailyn: And aren't you glad? #line:0afc867 
+->Yes.  #line:0a78070 
+    <<jump friendship>>
+->No.  #line:02b9812 
+    <<jump peaceandquiet>>
+===
+title: friendship
+position: 676,-372
+---
+You: Eternally grateful for your friendship.  #line:0217e6d 
+Ailyn: That's what I thought.  #line:0650c49 
+<<jump Intro_3>>
+===
+title: peaceandquiet
+position: 684,-527
+---
+You: I wouldn't mind a little peace and quiet... #line:027f4e0 
+Ailyn: Yeah, well. We've got a lifetime of bringing a planet to life ahead, so I think you'll find some.  #line:0ff8066 
+You: Okay, now you're being depressing. #line:030e993 
+<<jump Intro_3>>
+
+===
+title: Intro_3
+position: 1012,-450
+---
+Ailyn: Getting close to lockdown. How close are we to Surator-9?  #line:05bb1a4 
+You: Close enough that it's dead out here. Too hot for anything to survive for a milisecond.   #line:0d5fcad 
+<<Play_Soldacia_Clip MapAnimation>>
+You: That's why I was looking at other maps. No space trash or debris to report.  #line:05432d2 
+You: But I guess I could actually do my job and check how close we are to this slingshot maneuver...  #line:0fed8ad 
+You: What the -- #line:01578f8 
+You: Wait, the tracking map... #line:0f3a2be 
+//<<Play_Soldacia_Clip MapAnimation>>
+Ailyn: What is it?  #line:04564ce 
+You: It's...it's wrong? I think there's- #line:05f12e2 
+<<Lockdown_que VoidSpaceManager>>
+<<Play_Intercom_Lockdown VoidSpaceManager>>
+INTERCOM: <uppercase>Initiating lockdown systems. All crew members should remain in their current location until gravity assist maneuver complete.</uppercase>  #line:025a9a3 
+Ailyn: Damn, that was sooner than I thought, did they change the schedule? Please tell me you were joking about the map thing.  #line:03bba0b 
+You: I'm not messing with you. I saw a version of the map where we were going the wrong way around Surator-9.  #line:0daf82e 
+Ailyn: What!?  #line:0286d0f 
+<<Play_Trado_Clip MapAnimation>>
+You: Yeah. When I zoomed back out from {$clusterName}, it flashed for a second. Let me see if I can… #line:022114a 
+You: Got it. #line:0cd2f5a 
+You: This is bad Ailyn. It looks like we're going... #line:0e5f1c5 
+You: I-I don't know where we're going...I don't know where we're going! #line:0e93d03 
+Ailyn: Hey, relax. #line:0f8443b 
+You: We don't have a lot of time, Ailyn. #line:09e0eda 
+You: And I'm stuck in here. We're all stuck. #line:0aaa583 
+You: If I wasn't locked down I'd try to talk to someone but... #line:0e18deb 
+Ailyn: Too bad you don't have a best friend in security.  #line:0c1fbb1 
+    -> Can you get me out of here?  #line:031ac30 
+        <<jump breakout>>
+    -> I should probably stay put.  #line:09cfd35 
+        <<jump stayput>>
+===
+title: breakout
+position: 1371,-306
+---
+You: You think you can get me out of here?  #line:0cb4e2b 
+Ailyn: I can. Should is another question... #line:0cd0c33 
+Ailyn: Screw it. I'm uploading an override.  #line:08a96d3 
+<<UnlockDoor VoidSpaceManager>> 
+<<jump outofpod>>
+===
+title: stayput
+position: 1361,-591
+---
+You: I don't know...I should probably stay put.  #line:0d963c7 
+Ailyn: Are you kidding?! I'm overriding your door now.  #line:02a2696 
+<<UnlockDoor VoidSpaceManager>> 
+You: Your really shouldn't... #line:02c529a 
+Ailyn: Too late! You should be able to open it now. #line:00721b4 
+
+<<jump outofpod>>
+===
+title: outofpod
+position: 1733,-449
+---
+Ailyn: Did it work?  #line:022243d 
+You: Sounds like it. #line:00b9809 
+Ailyn: Now what? #line:0838e80 
+You: I don't know...the only people I can think to trust are my parents. #line:07e5a9b 
+Ailyn: Consider yourself lucky you can trust them at all, Kase. #line:00d9b94 
+Ailyn: Hop back on comms after ok? And tell them I say hi.  #line:0f3b78b 
+
+<<if visited("setSequenceEnd") == false>>
+    <<jump setSequenceEnd>>
+<<endif>>
+===
+title: setSequenceEnd
+position: 2007,-452
+---
+<<setSequence GameManager "FirstSteps">>
+===

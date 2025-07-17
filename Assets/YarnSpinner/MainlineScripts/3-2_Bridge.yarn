@@ -1,0 +1,1953 @@
+﻿title: Bridge_Start
+position: -2548,753
+---
+//<<begin_turn BridgeManager>>
+<<set_variable "captain" "living">>
+<<set_variable "pilot" "living">>
+<<set_variable  "tension_lvl" "1">>
+<<set_variable  "bridge_sequence" "pre_mid">>
+<<set_variable  "turn_status" "none">>
+<<jump Bridge_Intro>>
+===
+title: Bridge_Intro
+position: -2000,740
+---
+// Some of this could be moved up to the airlock scene, but for now we're putting it here to set context for players
+Captain: I hope you know how dangerous it is for you to be here, NAT. #line:0c3125e 
+Pilot: Hold on, this kid's still in training? This better be good. #line:0c78575 
+Captain: I'm inclined to agree with Garm on that point. Now, what is this emergency that you're going on about? #line:0846ce3 
+-> I noticed serious...errors in our heading, Captain. #line:0a4c86f
+    <<jump CONVICE>>
+-> I won't let you two get away with this. #line:0b7438a 
+    <<jump BLACKMAIL>>
+-> Cut the shit, you know why I'm here. #line:0f12ab3 
+    <<jump THREATEN>>
+
+===
+title: CONVICE
+position: -1336,-449
+---
+You: I've noticed some serious errors in our heading, Captain. #line:099df1d 
+Captain: Oh? I assure you there are no errors in our heading.  #line:099eb2e 
+Captain: A Navigational Assistant, even one in training, should know that would be impossible. #line:05af2c8 
+-> I think someone's been interfereing. #line:0b1e687 
+    <<jump interfering>>
+-> I have proof, someone at the rank of officer or higher changed our heading. #line:0a2fb47 
+    <<jump logs_1>>
+
+===
+title: BLACKMAIL
+position: -1297,705
+---
+You: Give it up, Captain. I won't let you get away with this. #line:088227c 
+Pilot: Cap, what's the kid talking about? #line:0972f8c 
+Captain: Nothing that concerns you, Garm. #line:048f67e 
+Pilot: If you say so. #line:0796739 
+
+-> You're both guilty. #line:0476401 
+    <<jump both_guilty>>
+-> You think you're smart, don't you Captain? #line:0d7e334 
+    <<jump think_your_slick>>
+-> Don't play dumb, Garm. #line:09499ca 
+    <<jump dont_play_dumb_garm>>
+===
+title: THREATEN
+position: -1253,2296
+---
+You: I think you know why I'm here, Captain. #line:0b0087a 
+Captain: I don't, actually, know why you're here. Or how you managed to get here during a lockdown. #line:06051b0 
+Pilot: You had better start talking, kid. #line:03ed23a 
+
+-> You changed the heading, Captain. #line:01015b5 
+    You: You changed the heading, Captain. #line:09de4bc 
+    <<jump changed_the_heading>>
+-> Don't mess with me. #line:0f1c3c0 
+    <<jump mess_with_me>>
+-> Stop playing dumb. #line:0473ae3 
+    <<jump playing_dumb>>
+
+===
+title: interfering
+position: -46,-720
+---
+You: "Errors" was the wrong word. Someone has been interfering with the ship's course. #line:001038e 
+Captain: Now that <i>is</i> interesting. What gave you that idea? #line:081de6f 
+You: You said it yourself: there's no way the computers would have made a mistake. #line:0d77841 
+You: The change in course I saw could only be done intentionally. #line:0b2df85 
+Captain: I'm sure you're mistaken. Your supervisors agreed with you on this? #line:0b1754a 
+// something Forrester related should be an option here
+-> <style=true></style>Forrester confirmed it. <<if get_variable("Forrester_course_intel") == "true">> #line:071bcbc 
+    <<jump forrester_confirm>>
+-> <style=true></style>I talked with my supervisor about it.<<if visited("Forrester_start")>> #line:01f7350 
+    <<jump visited_forrester>>
+-> <style=lie></style><i>Everyone</i> knows. #line:0f1a00e 
+    <<jump everyone_knows>>
+===
+title: forrester_confirm
+position: 264,-991
+---
+You: I talked with Nav Deck Officer Kee. #line:040d524 
+You: She confimed what I saw. #line:0d44079 
+Captain: And how do you know Officer Kee wasn't the one who made this log update? #line:0a62884 
+Pilot: Come on, Cap. Kee would never go behind- #line:0d0141d 
+Captain: I'm speaking with the NAT! #line:0eabaa4 
+
+-> <style=lie></style>She doesn't have the clearance. #line:0520230 
+    <<jump no_clearance_forrester>>
+-> Listen to Garm. #line:047e66f 
+    <<jump listen_to_garm>>
+-> How did you not know about this? Unless... #line:05eb113 
+    <<jump know_about_this>>
+===
+title: visited_forrester
+position: 264,-839
+---
+You: I talked with Nav Deck Officer Kee. #line:0091687 
+Captain: And?  #line:015b849 
+You: She-she was upset that a this kind of change could me made without her knowledge.  #line:06d7627 
+Captain: But did she confirm what you saw? #line:02c36d2 
+Captain: And how do you know she wasn't the one who made this "log update"? #line:027ab3f 
+Pilot: Come on, Cap. Kee would never go behind- #line:027e577 
+Captain: I'm speaking with the NAT! #line:0d0ae78 
+
+-> <style=lie></style>She doesn't have the clearance. #line:04eccb2 
+    <<jump no_clearance_forrester>>
+-> Listen to Garm. #line:022165b 
+    <<jump listen_to_garm>>
+-> How did you not know about this? Unless... #line:06c3076 
+    <<jump know_about_this>>
+===
+title: everyone_knows
+position: 403,-633
+---
+You: <i>Everyone</i> knows what you've done. #line:0fff1df 
+Captain: They do, do they?  #line:09fa5a8 
+Captain: I suppose that means I'm the only one in the dark.  #line:0795913 
+Captain: Because I still don't have a clue what you're on about.  #line:06a3133 
+
+-> We're going to the Modula Region <<if get_variable("Forrester_course_intel") == "true">> #line:0895536 
+    You: We're going to the Modula Region. #line:0db60c7 
+    You: Don't try to tell me you didn't realize that's the wrong region. #line:02aa871 
+    <<jump con_t1>>
+-> We're going to Trado <<if get_variable("trado_intel") == "true">> #line:0287f91 
+    You: Captain, we're going to Trado. #line:037399e 
+    You: I know you know that, don't you? #line:0736fa2 
+    <<jump con_t1>>
+-> You really are dense, aren't you? #line:0c2c795 
+    You: You really are dense, aren't you? #line:0b6d7b0 
+    <<jump con_t1>>
+-> Do you really not know what's going on? #line:0bbbbfe 
+    You: You really don't know what's happening? #line:03c1ee6 
+    <<jump know_about_this>>
+===
+title: logs_1
+position: -614,-284
+---
+You: I have the logs from when the change was made. #line:0a97d7e 
+Captain: What does that prove? #line:04029ca 
+You: They show that Executive clearance was required to operate the terminal that put in the order. #line:08387f7 
+<<if get_variable("pilot") == "living">>
+    Pilot: Cap? You wanna tell me what's going on? #line:0500933 
+<<endif>>
+Captain: That's it? We make log updates all the time. #line:08ed43b 
+
+-> This one was different. #line:0f14e84 
+    <<jump logs_different>>
+-> Then tell me what it was. #line:0dc308c 
+    <<jump what_it_was>>
+-> The user data was scrubbed. #line:01fdf74 
+    <<jump scrubbed>>
+===
+title: gun_draw_bridge_event
+position: -1263,-2221
+tags: 3
+---
+<<set_variable "tension_lvl" "2">>
+<<if get_variable("captain") == "living">>
+    <<if visited("gun_draw_bridge_event")==false>>
+        // Fallback for if the node we're on doesn't have a specific gunDraw version and you pull out the gun
+        <<jump gun_draw_bridge_01_event>>
+    <<elseif visited("gun_draw_bridge_02_event")==false>>
+        <<jump gun_draw_bridge_02_event>>
+    <<else>>
+        <<jump gun_draw_bridge_03_event>>
+    <<endif>>
+<<endif>>
+
+
+===
+
+title: gun_draw_bridge_01_event
+position: -905,-2409
+---
+Captain: Is that a-- #line:096826d 
+Captain: Where the hell did you get that? #line:0565a68 
+You: Wouldn't you like to know? #line:074b604 
+Captain: Kase, is it? Kase don't do this. #line:09fe231 
+Captain: Please, just put it away. #line:049cb67 
+// -> Fine. \[holster gun\]
+//     <<jump holster_01>>
+-> I won't be doing that. #line:036f2e8 
+    <<jump dont_think_so>>
+-> I'll think about it.  #line:05d2357 
+    <<jump think_about_it>>
+
+===
+title: gun_draw_bridge_02_event
+position: -905,-2216
+---
+Captain: I- #line:0075567 
+Captain: I thought we figured this out. #line:03b475e 
+Captain: You don't have to do this. #line:0e488e9 
+You: It's starting to feel like I do, Captain. #line:0bc6d70 
+<<resume_stopped_node>>
+===
+title: gun_draw_bridge_03_event
+position: -912,-2029
+---
+Captain: Ahem... #line:0c35966 
+<<resume_stopped_node>>
+===
+title: gun_holster_bridge_event
+position: -1247,-1778
+tags: 2
+---
+<<if get_variable("captain") == "dead" || get_variable("ill_kill_you") == "true">>
+    // do nothing if captain's dead
+<<else>>
+    <<if visited("gun_holster_bridge_event")==false>>
+        // Fallback for if the node we're on doesn't have a specific gun holster version and you pull out the gun
+        <<jump gun_holster_bridge_event_01>>
+    <<elseif visited("gun_draw_bridge_02_event")==false>>
+        <<jump gun_holster_bridge_event_02>>
+    <<endif>>
+<<endif>>
+===
+title: gun_holster_bridge_event_01
+position: -952,-1662
+---
+Captain: Th-thank you. #line:0c95ec6 
+Captain: Now, we can talk. #line:0196116 
+<<resume_stopped_node>>
+===
+title: gun_holster_bridge_event_02
+position: -939,-1835
+---
+Captain: That's more like it. #line:03356d2 
+Captain: Where were we... #line:0d61e58 
+<<resume_stopped_node>>
+===
+title: dont_think_so_event
+position: -626,-2494
+---
+You: I won't be doing anything you tell me to. #line:0e8458a 
+Captain: Fine. #line:07304d7 
+<<resume_stopped_node>>
+===
+
+title: gun_shoot_bridge_event
+position: -54,-2161
+tags: 3
+---
+<<if get_variable("tension_lvl") != "3">>
+    <<set_variable tension_lvl "2.5">>
+<<endif>>
+<<if get_variable("captain") == "dead" && get_variable("pilot") == "dead">>
+    // Do nothing
+<<else>>
+    <<if visited("gun_shoot_bridge_01_event") == false>>
+        <<jump gun_shoot_bridge_01_event>>
+    <<elseif visited("gun_shoot_bridge_02_event") == false>>
+        <<jump gun_shoot_bridge_02_event>>
+    <<elseif visited("gun_shoot_bridge_03_event") == false>>
+        <<jump gun_shoot_bridge_03_event>>
+    <<endif>>
+<<endif>>
+===
+title: gun_shoot_bridge_01_event
+position: 225,-2452
+---
+<<if get_variable("pilot") == "living" && get_variable("captain") == "living">>
+    <<if get_variable("captain") != "dead">>
+        Captain: <shake>FUCK!</shake> #line:08f2c51 
+        Captain: Are you crazy?! #line:00da28f 
+        -> Maybe. #line:03991e2 
+            <<jump are_you_crazy>>
+        -> You're not taking me seriously. #line:017e375 
+            <<jump take_me_seriously>>
+        -> <style=address>to Garm</style> I'm not messing around, Garm. <<if get_variable("pilot") == "living">> #line:08e1c74 
+            <<jump not_messing_around>>
+    <<elseif get_variable("pilot") != "dead">> //brtodo: figure out how to get this back without risking the captain speaking from beyond the grave
+        Pilot:<shake>SHIT!</shake> #line:03e6195 
+        Pilot: What the hell was that?! #line:05f3e4e 
+        -> You're not taking me seriously. #line:050d1cc 
+            <<jump take_me_seriously>>
+        -> You wanna be next? #line:05f1a0e 
+            <<jump not_messing_around>>
+    <<endif>>
+<<endif>>
+===
+title: gun_shoot_bridge_02_event
+position: 672,-2157
+---
+<<if get_variable("captain") != "dead">>
+    Captain: Shit! Again?! #line:0d7d3e8 
+    <<resume_stopped_node>>
+<<elseif get_variable("pilot") != "dead">>
+    Pilot: Easy!! #line:0c009fc 
+    Pilot: You'll get us <i>all</i> killed doing that. #line:05fec3a 
+    <<resume_stopped_node>>
+<<endif>>
+===
+title: gun_shoot_bridge_03_event
+position: 673,-1996
+---
+<<if get_variable("captain") != "dead">>
+    Captain: GAH! #line:0b37ee3 
+    Captain: Could you <i>please</i> stop doing that?! #line:0bcd896 
+<<elseif get_variable("pilot") != "dead">>
+    Pilot: Ah! #line:0e1394e 
+    Pilot: I get it, ok!? Please stop that! #line:03549a9 
+<<endif>>
+
+<<if !visited("what_do_you_want")>>
+    <<jump what_do_you_want>>
+<<else>>
+    <<resume_stopped_node>>
+<<endif>>
+===
+
+title: are_you_crazy_event
+position: 682,-2691
+---
+You: I might be. #line:05384d6 
+You: Do you really want to find out? #line:0e24076 
+Captain: Void take me, you are crazy. #line:0074aa7
+<<if get_variable("pilot") != "dead">> 
+    Pilot: Cap, I really think you should listen-- #line:0a407fe 
+    Captain: Shut up, Garm! #line:06ef766 
+    <<resume_stopped_node>>
+<<else>>
+    <<jump what_do_you_want>>
+<<endif>>
+===
+title: take_me_seriously_event
+position: 677,-2327
+---
+You: You're not taking me seriously. #line:0d9e7cc 
+You: You should <shake><i>really</i></shake> be taking me seriously. #line:06cdfd2 
+<<resume_stopped_node>>
+===
+title: not_messing_around_event
+position: 685,-2525
+---
+You: I'm not messing around. #line:030d573 
+<<resume_stopped_node>>
+===
+title: what_do_you_want
+position: 1106,-2700
+---
+Captain: Now, what the hell do you want? #line:0cc487d 
+
+-> Turn the ship. #line:046061f 
+    <<jump turn_the_ship>>
+-> Just tell me what's going on. #line:090a8ee 
+    You: I want you to tell me what the hell is going on!
+    <<jump going_to_trado>>
+===
+title: turn_the_ship
+position: 1484,-2491
+---
+You: Turn. The. Ship. #line:0b1a8c5 
+<<if get_variable("pilot") == "living">>
+    Captain: Garm, you have to trust me. #line:0bf5474 
+    Pilot: I'm sorry, Cap. But I don't want anyone to die today. #line:004b01c 
+    Pilot: Shit... #line:0d95bb6 
+    <<begin_turn BridgeManager>>
+    Pilot: Here goes! #line:064a8e3 
+    Pilot: Everyone hold onto something! #line:089aecb 
+    Captain: I'll ruin you, Garm! What are you doing! #line:08a2ae0 
+    You: It's over Captain. You won't be doing anything else without the consent of your passengers.  #line:04d52b1 
+<<else>>
+    Captain: What do you mean?! #line:0ad61c9 
+    Captain: You killed the fucking pilot! #line:007e19a 
+    You: I did. I guess you'd better authorize that override, then. #line:0a4fbd6 
+    Captain: The manual override takes twice as long! We'll never make it in time. #line:057df57 
+    -> Just. Do it. #line:09bdaee 
+        You: Just. Do it. #line:00697e8 
+        Captain: Stars protect us... #line:06ba481 
+        <<begin_turn BridgeManager>>
+    -> So that's it? #line:00865f9 
+        <<jump so_thats_it>>
+<<endif>>
+===
+title: manual_override
+position: -112,-5090
+---
+Captain: The manual override takes twice as long! We'll never make it in time.  #line:017a69b 
+    -> Just. Do it.  #line:0343be3 
+        You: Just. Do it. #line:029d94a 
+        Captain: Stars protect us...  #line:0c9fa6b 
+        <<begin_turn BridgeManager>>
+    -> So that's it?  #line:0f8974f 
+        <<jump so_thats_it>>
+===
+title: cap_killed_pilot_living_event
+position: -1188,-3995
+---
+// Heavy breathing for a beat
+<<set_variable "captain" "dead">>
+<<set_variable "tension_lvl" "3">>
+Pilot: What did you do?! Captain?! #line:017f8d2 
+Pilot: Cyrus! #line:01577b6 
+You: Holy shit.  #line:0b5ccd9 
+You: Ok, Kase. Just breathe. <i>Fuck</i>. #line:0fe1db4 
+-> Alright Garm, just you and me now.  #line:0286954 
+    <<jump you_and_me_now>>
+-> It had to be done. #line:0efcc38 
+    <<jump had_to_be_done>>
+-> You have to believe I didn't want to do that. #line:01023d5 
+    <<jump didnt_want_to>>
+===
+title: pilot_killed_cap_living_event
+position: -1524,-4992
+---
+<<set_variable "pilot" "dead">>
+<<set_variable "tension_lvl" "3">>
+You: Holy shit. Ok, Kase. Just breathe. Fuck. #line:05d3b30 
+Captain: What have you done?! #line:0c19b06 
+You: I- #line:04ea8f1 
+Captain: Without anyone to pilot the ship, the guidance computer is <i>locked in</i> you fool! #line:0fbe3ca 
+-> Then you'd better hop on the controls. #line:043fe2f
+    You: Then you'd better get your ass in gear and hop on those controls. #line:0fe3f14 
+    <<jump hop_on_controls>>
+-> He was in the way. #line:09d4be8 
+    <<jump in_the_way>>
+-> Just calm down. #line:0786aac 
+    You: Just calm down, Captain. We can still turn the ship somehow, right? #line:0dd09af 
+    <<jump hop_on_controls>>
+
+===
+title: hop_on_controls
+position: -981,-5281
+---
+Captain: I'm a captain, not a pilot! #line:04e230b 
+You: Then initiate the override. Now! #line:0cac7bc 
+<<if get_variable("bridge_sequence") == "pre_mid">>
+    Captain: You have no idea what's really going on here. #line:0a56bac 
+    -> So tell me! #line:0c23b12 
+        <<jump tell_me_cap>>
+    -> Use the override or else. <<if get_variable("override_code_intel") != "true">> #line:01ac892 
+        <<jump override_or_else>>
+    -> I've got the code, get out of my way. <<if get_variable("override_code_intel") == "true">> #line:0d476cd 
+        <<jump i_have_override>>
+<<else>>
+    <<jump manual_override>>
+<<endif>>
+===
+title: pilot_killed_cap_dead_event
+position: -1134,-3220
+---
+<<set_variable "pilot" "dead">>
+<<if get_variable("turn_status") != "none">>
+    You: I'm sorry, Garm. #line:09be97e 
+    You: No one can know... #line:0523ed7 
+    You: They'll believe me...right? #line:059fc4a 
+    You: No one can know... #line:0315740 
+<<else>>
+    You: I'm sorry, Garm. #line:04f1064 
+    You: I can't take it. #line:0bcb5eb 
+    You: I just...can't. #line:00abd0e 
+    You: Stars surround, what the fuck am I supposed to do now? #line:011f173
+    <<jump all_dead_router>>
+<<endif>>
+===
+title: captain_killed_pilot_dead_event
+position: -1138,-2970
+---
+<<set_variable "captain" "dead">>
+<<if get_variable("turn_status") != "none">>
+    You: No one can know... #line:0dc2d9f 
+    You: They'll believe me...right? #line:098d704 
+    You: No one can know... #line:03696f2 
+<<elseif get_variable("ill_kill_you") == "true">>
+    You: FINE! #line:0f47dec 
+    You: <shake>He...he wouldn't tell me.</shake> #line:02eed3d 
+    You: What have I done... #line:0c4f304 
+    You: What am I going to do? #line:0db8787 
+    <<jump all_dead_router>>
+<<else>>
+    You: <shake>He wouldn't listen.</shake> #line:0eab159 
+    You: <shake>Neither of them would <i>listen to me!</i></shake> #line:018a93c 
+    You: Void take us all, how do I get us out of this mess now? #line:0cf5245 
+    <<jump all_dead_router>>
+<<endif>>
+===
+title: you_and_me_now
+position: -633,-4291
+---
+You: It's just you and me now, Pilot! #line:05f1eff 
+<<if get_variable("bridge_sequence") =="pre_mid">>
+    Pilot: Are you crazy?! I don't even know who you are! #line:0fb41c3 
+    -> Calm down and listen to me. #line:0c649f1 
+        <<jump calm_down>>
+    -> I'm someone you can trust. #line:014b030 
+        You: I'm someone you can trust. #line:0e08268 
+        Pilot: Bullshit! You just killed the captain! #line:0ff2a56 
+        <<jump no_choice>>
+    -> I'm the one with the gun here. #line:08e0e16 
+        You: I'm the one with the gun here, and that's all you need to know. #line:01301d5 
+        <<jump join_him>>
+<<else>>
+    Pilot: Ok. What do you want me to do? #line:0474b6b 
+    -> Take us to Soldacia #line:0db5b23 
+        <<jump take_us_to_soldacia>>
+    -> Where do you think we should go? #line:0f443ae 
+        <<jump where_should_we_go>>
+<<endif>>
+===
+title: had_to_be_done
+position: -633,-3980
+---
+You: It had to be done. #line:0310a05 
+You: He was too far gone down a path I couldn't let the rest of us follow.  #line:00d6054 
+<<if get_variable("bridge_sequence") =="pre_mid">>
+    Pilot: What are you talking about? You barely heard him out at all! #line:0a97537 
+    Pilot: You have no idea where he was going. I doubt you even know where <i>we're</i> going! #line:0ca3045 
+    -> Then tell me! <<if get_variable("trado_intel") != "true">> #line:0010ad6 
+        <<jump tell_me>>
+    -> I don't care, just turn the ship or else. #line:09352aa 
+        <<jump turn_the_ship_premid>>
+    -> So you want to join him, then? #line:02bfb11 
+        <<jump join_him>>
+<<else>>
+    Pilot: Well, I certainly don't want to follow him now...  #line:051ca1e 
+    Pilot: Just please, please don't kill me. #line:094151d 
+    <<jump take_us_to_soldacia>>
+<<endif>>
+===
+title: didnt_want_to
+position: -630,-3719
+---
+You: Garm please...I'm not a monster. #line:016698e 
+You: You have to believe I didn't want to kill him. #line:01444d5 
+<<if get_variable("bridge_sequence") =="pre_mid">>
+    Pilot: You barely even talked to him! #line:08e0d81 
+    Pilot: How am I supposed to trust you after what you've done? #line:05517b8 
+    -> There isn't time. #line:0b7b7aa 
+        <<jump no_time>>
+    -> Then I guess you'd like to join him. #line:0ce6ddc 
+        <<jump join_him>>
+    -> You don't have a choice.  #line:0e9e78a 
+        <<jump no_choice>>
+<<else>>
+    Pilot: I don't know what to believe, kid.  #line:004e4e9 
+    You: Just pull us around. Don't let his death mean nothing. #line:0c8bf65 
+    <<jump take_us_to_soldacia>>
+<<endif>>
+===
+title: take_us_to_soldacia
+position: 592,-4333
+---
+You: Take us to Soldacia. #line:051165b 
+You: Update the heading <i>now</i>. #line:0ced3b1 
+<<if get_time_left() <= 35>>
+    Pilot: There's not enough time left! You'll doom us all! #line:0443d8b 
+    -> Do it anyway. #line:0040d70 
+        You: <i><shake>Do what I say!</i></shake> #line:0b54485 
+        Pilot: Stars help us all... #line:0a0c2bd 
+        <<begin_turn BridgeManager>>
+        Pilot: Hold on to something! It's gonna be close! #line:0376ff3 
+    -> So that's it? #line:008bc6f 
+        <<jump so_thats_it_cap_dead>>
+<<else>>
+    Pilot: You better be right about this. #line:04b9af7 
+    <<begin_turn BridgeManager>>
+    Pilot: Hold onto something now. #line:0302e95 
+<<endif>>
+===
+title: so_thats_it
+position: 1760,-4525
+---
+You: So that's it then? #line:00f21c3 
+Captain: That's it. #line:0f85b75 
+Captain: And when we land on Trado, I'll make your life hell! #line:01bfb71 
+<<jump END_2>>
+===
+title: one_min_left_event
+position: 5363,-100
+---
+// these should be checked on the unity side before this is called, but just in case...
+<<if get_variable("tension_lvl") == "1" && get_variable("pilot") == "living">>
+    Pilot: We're running out of time, here, people! #line:03b78fb 
+    Captain: I'm very much aware of that Pilot, thank you.   #line:09b64df 
+    <<resume_stopped_node>>
+<<endif>>
+===
+title: END_1
+position: 5028,310
+---
+// the good
+//<<setSequence "EndingOne">>
+You: I- I can't believe it. #line:0ad9588 
+You: I did it. #line:0917d58 
+You: I did it... #line:0e47c24 
+<<jump Looper>>
+
+===
+title: END_2
+position: 5028,468
+---
+// the bad
+//<<setSequence "EndingTwo">> 
+You: It's over. #line:012a832 
+You: It's all over... #line:0580aa0 
+<<jump Looper>>
+===
+title: END_3
+position: 5025,618
+---
+// the ugly
+//<<setSequence "EndingThree">>
+<<set_variable "ugly_ending" "true">>
+You: No! #line:00e830c 
+You: What have I done?! 
+<<jump Looper>>
+===
+title: Looper
+position: 5389,468
+---
+<<deactiavate_gun_reminder GunDrawSlider>>
+<<start_coda>>
+
+// -> Restart Bridge? #line:02eb1c1 
+//     <<restart_bridge>>
+// -> Restart Game? #line:0e7e054 
+//     <<restart_game>>
+// -> Quit? #line:0d9da7d 
+//     Game: Quitter. #line:0ef51d4 
+//     <<quit_game>>
+===
+
+title: what_it_was
+position: 265,-435
+---
+You: Then why don't you tell me what it was. #line:0f34258 
+<<jump know_about_this>>
+===
+title: logs_different
+position: -358,-469
+---
+You: This update was different. #line:0d57c7e 
+Pilot: Different how? #line:0c9aa12 
+<<jump interfering>>
+===
+title: listen_to_garm
+position: 724,-921
+---
+You: I'm with Garm. Kee wouldn't do this. #line:0f0d9d4 
+You: If she was trying to pull something, she probably wouldn't have been asleep at such a critical moment. #line:04ce1cc 
+Pilot: Sleeping during a high-g maneuver, now that <i>does</i> sound like Forrester. #line:014e212 
+<<jump con_t1>>
+===
+title: no_clearance_forrester
+position: 724,-1072
+---
+You: She... doesn't have the clearance. #line:037f523 
+Captain: You shouldn't have the clearance to be here. And yet.  #line:063ba7c 
+You: Stop trying to pin this on someone else! #line:0fc8746 
+You: You know who did it, because <i>you</i> did it! #line:04ef8b4 
+You: Or do you really have no idea what's going on on your ship? #line:03cb9a6 
+<<jump con_t1>>
+===
+title: know_about_this
+position: 716,-777
+---
+You: Surely, you would have had to know about this. You would have gotten some kind of report. #line:09269d6 
+You: Unless of course, <i>you</i> made the change? #line:0cdf764 
+Pilot: Captain...Cyrus should we- #line:00d683e 
+<<jump con_t1>>
+===
+title: scrubbed
+position: 246,-244
+---
+You: The user data was scrubbed. Anonymized. #line:02b0195 
+<<jump know_about_this>>
+===
+title: con_t1
+position: 1252,-798
+---
+// music here?
+<<set_variable "bridge_sequence" "midpoint_reached">>
+Captain: This is <shake>ridiculous!</shake> #line:0d1b938 
+Captain: Of course I know about everything going on on this ship. #line:0513400 
+Captain: <i><shake>Nothing</shake></i> escapes me, and <i><shake>nothing</shake></i> happens without my approval! #line:0c6a9a0 
+
+-> I know you know, and you're dooming us all! #line:0055c2f 
+    You: I know you know what's happening, and you're dooming us all! #line:08a6381 
+    <<jump dooming_us_all>>
+-> You're greed is blinding you, Captain. #line:0826d76 
+    <<jump blinding_greed>>
+-> Don't make me get violent... #line:022521d 
+    <<jump get_violent_t>>
+===
+title: dooming_us_all
+position: 1734,-806
+---
+Captain: You have no idea what you're talking about, boy! #line:066706a 
+
+-> Sone lied to you! <<if get_variable("sone_lied_intel") == "true">> #line:0d9d585 
+    <<jump sone_lied>>
+-> Then why do we need desert plants? <<if get_variable("urnst_plants_intel") == "true">> #line:00d3b59 
+    <<jump desert_plants>>
+-> So tell me. #line:00d19ab 
+    <<jump so_tell_me>>
+-> I know everything! #line:0115a38 
+    <<jump know_everything>>
+===
+title: blinding_greed
+position: 1792,681
+---
+You: You're blinded by your greed, Captain. #line:0c16508 
+<<if get_variable("profit_sharing_intel") == "true">>
+    You: I know you're taking us to Trado- #line:04bf0cb 
+    Captain: Nonsense. You have- #line:0a91275 
+    You: Terradeus has you in their pocket. You'll get a huge portion of the planet's - supposedly - tillable land when we touch down. #line:0cefbc1 
+    You: That's what you're after, right? You want to rebuild your family's name after what they did to Estea? #line:07212a4 
+    Captain: What happened on Estea is more complicated than you could ever comprehend! You weren't even alive then! #line:0d788d9 
+    You: That may be true, but what's not complicated is what I'm about to propose... #line:058dece 
+    -> I'll stay quiet if you give me half of your land allotment. #line:01a1dfb 
+        <<jump pay_me_captain>>
+    -> You take us to Soldacia and I forget this ever happened. #line:0d3f8b8 
+        <<jump deal_to_soldacia_captain>>
+<<elseif get_variable("garm_racing_intel") == "true">>
+    You: You <i>and</i> Garm. #line:0008633 
+    Pilot: Hey, leave me out of this. I just follow commands and fly the ship, kid. #line:0103101 
+    You: What you're really doing is putting all of our lives in danger. #line:04670de 
+    Pilot: What are you talking about? #line:01718ff 
+    <<jump cut_a_deal>>
+<<else>>
+    <<if get_variable("tension_lvl") == "1">>
+        Captain: Oh? What can I not see? #line:019d4fb 
+        You: You-Just look out the window! That looks nothing like Soldacia! #line:0b2af12 
+        Captain: I think we're done here. #line:017bd8e 
+        Captain: Garm, get security on deck now. #line:03f14cc 
+        <<actiavate_gun_reminder GunDrawSlider>>
+        You: No! #line:0185e11 
+        <<jump END_2>>
+    <<else>>
+        <<jump get_violent_t>>
+    <<endif>>
+<<endif>>
+===
+title: get_violent_t
+position: 1814,2126
+---
+<<if get_variable("tension_lvl") == "1">>
+    You: Captain, I really don't want to force your hand, but I will if I have to... #line:0254dd4 
+    Captain: Are you really trying to intimidate me? #line:0007677 
+    Captain: I'll have security in here before you can lift a finger. #line:0dc7f4b 
+
+    -> You don't want to do that. #line:0d9e353 
+        <<jump dont_want_to_do_that>>
+    -> Fine, lets talk then. #line:0f7062c 
+        <<jump lets_talk>>
+<<else>>
+    You: Look. I <i>really</i> don't want to shoot anyone. #line:0e63bf2 
+    You: But I will if I have to. #line:06984f5 
+    Captain: So...what do you want me to do? #line:0169f42 
+
+    -> I want you to turn the ship. #line:0b1157a 
+        <<jump turn_the_ship_threat_t2_t3>>
+    -> I want you to tell me what's really going on. #line:018f768 
+        You: I want you to tell me what in the voidfire is goin on. #line:0d0f03b 
+        Captain: It's so complicated! You see- #line:06f0c13 
+        You: Talk faster! #line:0efd48c 
+        <<jump going_to_trado>>
+<<endif>>
+===
+title: know_everything
+position: 2036,-968
+---
+You: I know everything! Everything I <i>need</i> to know. #line:0e39e7b 
+Captain: I highly doubt that. But go on. What exactly do you know? #line:03fc820 
+
+-> I know your sister is lying to you. <<if get_variable("sone_lied_intel") == "true">> #line:00387d9 
+    You: I know you're being played. #line:076901b 
+    <<jump sone_lied>>
+-> I know you're getting a bigger cut. <<if get_variable("profit_sharing_intel") == "true">> #line:017c9b1 
+    <<jump blinding_greed>>
+-> I know we're going to Trado. <<if get_variable("trado_intel") == "true">> #line:05374d1 
+    You: I know we're going to Trado. #line:07ffcf3 
+    You: But surely you have a reason for that too? #line:0caa702 
+    Captain: For the last time, you don't understand! #line:0bae0fc 
+    <<jump going_to_trado>>
+-> I...umm... #line:0751895 
+    You: I...I know you're up to something! #line:0f34a42 
+    Captain: As I expected. You don't really know anything, do you? #line:05708dd 
+    Captain: I am your captain, and you'll have to trust that I know what I'm doing. We're done here. #line:0d13305 
+    <<jump sure_about_this>>
+===
+title: so_tell_me
+position: 2047,-551
+---
+You: Then tell me what the fuck is going on here! #line:04102ff 
+Pilot: He's gonna find out sooner or later, Cap. #line:08038c1 
+Captain: I suppose you're right... #line:0ee432f 
+Captain: There's been a change of plans. We're going to a planet called Trado. #line:0708e85 
+<<jump going_to_trado>>
+===
+title: desert_plants
+position: 2046,-710
+---
+You: Then why are we developing desert crops?  #line:0cfbe64 
+You: Everything we've been taught about Soldacia says the planet is lush and rainy. #line:00a948e 
+Captain: Who told you about our agricultural projects?  #line:0275b9e 
+-> Urnst did. #line:0c17773 
+    You: Urnst did. They didn't know why they were given these instructions, but I think I do. #line:0e7ed85 
+-> Why would I tell you that? #line:00ca333 
+    You: Why in the stars would I tell you that? So you can punish them too? #line:034daec 
+    Pilot: I wouldn't mind knowing, kid. #line:0e781b4 
+    -> Fine. It was Urnst. #line:054ea9e 
+        You: Fine. It was Urnst, who else? #line:0c2d682 
+        Pilot: Urnst...they would't lie to you. #line:06576cc 
+        Captain: Well, it d- #line:05b7362 
+        <<jump garm_listen>>
+    -> Just trust me on this. #line:026735f 
+        You: Garm you've got to trust me on this, ok? #line:03fe766 
+        Pilot: Whatever you say... #line:0492dc0 
+        Captain: I hardly think th- #line:064eca4 
+You: We're going to Trado, I know it. #line:010b1a6 
+Captain: Yes! Alright? Are you happy?! We are going to Trado! And for a good reason.  #line:02c9286 
+<<jump going_to_trado>>
+===
+title: sone_lied
+position: 2365,-969
+---
+You: Sone is lying to you! #line:006a8bd 
+Captain: You-! #line:0139125 
+Captain: Don't do this, Kase. #line:0a344e0 
+
+-> Or what? #line:09ae560 
+    <<jump or_what>>
+-> I've seen the messages. #line:0c448bd 
+    <<jump seen_the_messages>>
+===
+title: or_what
+position: 3220,-1128
+---
+You: Or what? Hmm? #line:0bf17d9 
+Captain: I'll throw you in the brig! #line:04db70f 
+You: With Haden?! #line:06a6cd7 
+Pilot: Wait - what?! #line:08b5de2 
+Captain: I-Garm! Get security in here now! #line:0e93509 
+
+-> Garm, listen to me. #line:082da76 
+    <<jump garm_listen>>
+-> Captain, just hear me out. #line:025d327 
+    <<jump captain_hear_me>>
+===
+title: seen_the_messages
+position: 3239,-861
+---
+You: I've seen Sone's messages! #line:0a538f3 
+You: You think you're saving us, but you've been played. #line:0e94c33 
+Pilot: Captain what's going on? You said this was going to save the ship! #line:0285c12 
+Captain: <shake>It <i>is</i></shake>! Soldacia isn't what we thought it was. #line:04086f5 
+You: She's Terradeus' Head of Recruitment first, and your sister second.  #line:0493904 
+Captain: That's -  #line:0c65bac 
+You: There's no time to argue. You know I'm right! #line:047b075 
+<<jump sway_captain>>
+===
+title: garm_listen
+position: 3491,-1225
+---
+You: Garm, listen to me. #line:02e5d18 
+You: I don't know what the captain's told you, but we have to turn the ship, and we have to do it now. #line:0fbb0f6 
+<<if get_time_left() <= 35>>
+    Pilot: There isn't enough time left! The sun she-she'll pull us in!  #line:03324ed 
+    -> Do it anyway.  #line:0ceacec 
+        You: Just <i><shake>do it!</i> Please!</shake>  #line:08f0e66 
+        Pilot: I- Kase I can't. #line:0c2df12 
+        Captain: It's over, Kase. You've lost. Let it go. #line:0909e4e 
+        <<jump END_2>>
+    -> So that's it? #line:01a8627 
+        <<jump so_thats_it_2>>
+<<else>>
+    Captain: Pilot Doro, I am your captain, you can't- #line:06f339f 
+    <<if get_variable("tension_lvl") == "2">>
+        Pilot: Captain, do you want to get shot? #line:0946d9d 
+        Pilot: Do you want <i>me</i> to get shot?! #line:035312f 
+        Captain: Of course not, I- #line:0aa1c81 
+    <<endif>>
+    Pilot: Shut it, Typhe! #line:0f21c38 
+    Pilot: Ahh shit, you better be right about this, kid! #line:0c0815e 
+    <<begin_turn BridgeManager>>
+    Pilot: Here goes! Hold onto something! #line:0147078 
+    Captain: Garm, no! #line:0799003 
+    You: You're a hero, Garm Doro! #line:0dab20a 
+<<endif>>
+===
+title: captain_hear_me
+position: 3492,-1063
+---
+You: Captain. Cyrus. Please just hear me out. #line:0cd49a5 
+Captain: N-fine. Be quick. #line:034d903 
+<<jump sway_captain>>
+===
+title: so_thats_it_2
+position: 3927,-875
+---
+You: So that's it? It's over? #line:0464bd1 
+Captain: It never began. #line:06843c5 
+Captain: None of this ever happened. Do you hear me, pilot? #line:073c064 
+Pilot: ... yes sir. #line:07d80ad 
+Pilot: Kase, I'm sorry. I hope you're wrong about all this. #line:0814551 
+You: Me to Garm...me too... #line:04ba5e3 
+<<jump END_2>>
+===
+title: so_thats_it_3
+position: 3933,-677
+---
+You: So, that's it then? There's really nothing we can do? #line:064a73e 
+Pilot: I'm afraid not. #line:02f1777 
+Captain: Void take us...I... #line:01d9d8f 
+Captain: I'm so sorry. #line:07c2a98 
+<<jump END_2>>
+===
+title: going_to_trado
+position: 2355,-600
+---
+Captain: We're breaking contract with the Soldacia Development Group! #line:033174f 
+Captain: We - we're taking matters into our own hands... #line:0e5ec69 
+You: How could you?! #line:0f6ae61 
+Captain: Because they were <i>wrong</i>! <i>We were wrong!</i> #line:082d214 
+Captain: Our scans were outdated, but thankfully I was able to get better information... #line:01d3c2f 
+
+-> Sone lied to you! <<if get_variable("sone_lied_intel") == "true">> #line:0e2548d 
+    <<jump sone_lied>>
+-> Just stop! #line:030e18f 
+    You: Just <i><shake>stop!</i></shake> #line:0d383d0 
+    You: I-I can't trust you anymore.  #line:044e439 
+    <<jump turn_the_ship_threat_t2_t3>>
+-> What information? #line:0143679 
+    You: What information? #line:0d8064e 
+    <<if get_variable("sone_lied_intel") == "true">>
+        <<jump seen_the_messages>>
+    <<else>>
+        Captain: Information that the SDG wouldn't want us to have because they wanted to protect their investment! #line:033aa6e 
+        Pilot: We tried to tell you. #line:0a491b1 
+        You: Did you? Why not ask the rest of the ship? #line:0de836f 
+        Captain: How do you think that would have gone, hm? #line:0d5ff3a 
+        Captain: There would have been chaos, and this maneuver is too delicate to allow for any interference. #line:0562cb2 
+        -> Just...tell me what's wrong with Soldacia. #line:03f1888 
+            You: Then can you at least tell me what happened to Soldacia? #line:090be3d 
+            Captain: The land is covered in about three meters of ash. #line:06551c8 
+            <<jump wrong_with_soldacia>>
+        -> Maybe people have a reason to be upset. #line:090c87a 
+            <<jump maybe_theres_a_reason>> 
+    <<endif>>
+===
+title: black_t1
+position: 1377,841
+---
+<<set_variable "bridge_sequence" "midpoint_reached">>
+<<if get_variable("tension_lvl") == "2">>
+    Captain: <i>Please</i>, Kase. #line:06fbc2f 
+    Captain: If you have something to say, just say it. #line:04daa08 
+    Captain: I don't want anyone getting hurt. Things are tense enough as it is. #line:0733d50 
+    Captain: And I'd hate to get security involved... #line:0146001 
+<<else>>
+    Captain: Son of a bitch—if you have something to say, say it! #line:0800fdb 
+    Captain: Otherwise I'll have security in here before you can vomit up another one of your lies! #line:0df6cb0 
+<<endif>>
+    -> Let's cut a deal. <<if visited("side_bets")>> #line:0ba9cb4 
+        <<jump cut_a_deal>>
+    -> You're dooming us all and you don't want to admit it. #line:07e3048 
+        You: You're dooming us all and you don't want to admit it. #line:0b1df9c 
+        <<jump dooming_us_all>>
+    -> Your greed is blinding you, Captain. #line:0830709 
+        <<jump blinding_greed>>
+    -> I'd love to see you try! #line:02a6728 
+        You: I'd love to see you try! #line:093c79b 
+        <<jump get_violent_t>>
+===
+title: sway_captain
+position: 3501,-748
+---
+You: I know you want Sone to be telling the truth, but I've seen what you've seen. #line:07300bf 
+You: I showed the reports to Urnst. They're forged. Urnst thought <i>I</i> made them up they were so off base. #line:09e5b8f 
+You: I know you think you're in too deep, but you're not.  #line:03c1c50 
+You: We can still fix this if you  just give the order. #line:0ae8133 
+Captain: Garm? #line:03e82ce 
+Pilot: Yeah, Cap? #line:0274a6d 
+Captain: ...shit. #line:0d4e009 
+Captain: Do it. Pull us around! #line:0de2cd0 
+<<if get_time_left() <= 35>>
+    Pilot: Cap I want to, but we don't have enough time! #line:0e38ee8 
+    -> Do it anyway.  #line:0a60c33 
+        You: What? No! We're so close! Just <i><shake>do it!</i></shake>  #line:095cdd1 
+        <<if get_variable("tension_lvl") == "2">>
+            You: Do it or I start shooting. #line:0b9132b 
+            Pilot: Shit... #line:05cd2b4 
+            <<begin_turn BridgeManager>>
+            Pilot: Stars have mercy on my soul... #line:012a162 
+            Captain: Garm, no! You'll kill us all! #line:0c3b213 
+            You: Ha! We'll make it! We can make it! #line:0953cf5 
+            Pilot: It's not looking good up here. Getting pretty warm! #line:0a78173 
+        <<else>>
+            Pilot: I- Kase I can't. #line:02b189e 
+            Captain: Void take us...I... #line:00c8d5b 
+            Captain: I'm so sorry. #line:0d3e901 
+            <<jump END_2>>
+        <<endif>>
+    -> So that's it? #line:0c9c5ae 
+        <<jump so_thats_it_3>>
+<<else>>
+    Pilot: Ye-haw! Hold on everyone! #line:08cd514 
+    <<begin_turn BridgeManager>>
+    You: Yes!  #line:00c6e68 
+    Captain: You better be right about this, Kase! #line:0e56d47 
+    You: Trust me, alright? #line:072af19 
+    <<jump END_1>>
+<<endif>>
+===
+title: sure_about_this
+position: 3503,-382
+---
+You: So, you're really sure about this? #line:0e24e5f 
+Captain: I don't want to do this, believe me. But it's our best—our only—option. #line:002c238 
+Captain: Trust me. #line:03dcf7f 
+Pilot: Stars help us... #line:027b7d9 
+<<jump END_2>>
+===
+title: maybe_theres_a_reason
+position: 2668,-614
+---
+You: And maybe the people would have a point! You're out of your mind! #line:0b2b147 
+You: All the preparation, all the scans, our equipment, our <i>lives</i> have been prepared for Soldacia. #line:021a434 
+You: And you just expect us to change all that? What's going to happen when we land? #line:0c1dd2f 
+Pilot: But the biome is the same, right, Cap? The climate, soil, all that? #line:0e9cf51 
+<<if get_variable("urnst_plants_intel") == "true">>
+    You: It isn't, is it? That's why Urnst is working on those desert plants. #line:0443eb2 
+    You: Trado is nothing like Soldacia. #line:0c0a9af 
+    Captain: It's...well, I... #line:0063622 
+    Pilot: Captain? Cyrus say something! #line:0a2671f 
+    -> <i>Wait</i> #line:0277e06 
+        <<jump nothing_like_soldacia>>
+    -> Garm there's no time! #line:017a9e4 
+        <<jump garm_listen>>
+<<else>>
+    <<jump nothing_like_soldacia>>
+<<endif>> 
+===
+title: nothing_like_soldacia
+position: 2968,-513
+---
+Captain: No! Void take me...It's nothing like Soldacia! It's a big empty rock that will take years to develop! #line:017ce1b 
+Captain: But we had no choice! At least Trado isn't covered in ash.  #line:0bbde33 
+<<if get_variable("sone_lied_intel") == "true">>
+    You: How could you be so blind?! #line:08724f8 
+    <<jump seen_the_messages>>
+<<else>>
+    <<jump wrong_with_soldacia>>
+<<endif>>
+===
+title: wrong_with_soldacia
+position: 3238,-635
+---
+You: What?! #line:0ad3991 
+Captain: The planet was hit by a meteor. A big one. #line:0c9affc 
+You: That can't be! Wh-when? #line:0b7dc36 
+Captain: About four years ago. Not long after we lost our primary scanning mast. #line:0ba2a24 
+Captain: Since then, it's changed dramatically. All life has ceased. A quarter of the planet was on fire for years. #line:0b78d4c 
+<<jump sure_about_this>>
+===
+title: both_guilty
+position: -824,528
+---
+You: You're both guilty here. #line:06d6e79 
+Pilot: What the hell are you talking about? #line:01bba9c 
+Captain: Is that so? Of what, dare I ask, are we guilty?  #line:0255fbf 
+
+-> For starters, you've been abusing the EPM system. <<if get_variable("captain_messages_intel") == "true">> #line:0d6aed5 
+    <<jump epm_abuse>>
+-> Garm's been making side bets. <<if get_variable("garm_racing_intel") == "true">> #line:086c6fd 
+    <<jump side_bets>>
+-> Enough to put you both away the moment we land. #line:07679ae 
+    <<jump moment_we_land>>
+===
+title: think_your_slick
+position: -819,916
+---
+You: You think you're real slick, don't you, Cap? #line:0567e27 
+You: You really thought you could update the heading without anyone noticing. #line:0ca01ed 
+Captain: What in the void are you talking about? We've been on the same course for decades! #line:0e62baa 
+You: Bullshit. #line:091ed26 
+<<if get_variable("captain_messages_intel") == "true">>
+    -> I have the logs. #line:056af08 
+        <<jump logs_1>>
+    -> I know you've been commandeering the EPM system. #line:03bd219 
+        <<jump epm_abuse>>
+<<else>>
+    <<jump moment_we_land>>
+<<endif>>
+===
+title: dont_play_dumb_garm
+position: -40,1230
+---
+You: Don't play dumb here, Garm. #line:05c346e 
+You: Your hands aren't so clean either, are they? #line:0248834 
+Pilot: Leave me the hell out of this. Can't you see I have a job to do? #line:097108a 
+<<if get_variable("garm_racing_intel") == "true">>
+    -> You're putting us all at risk. #line:0b674f7 
+        You: You're right, you do have a job to do, and you've been abusing it! #line:030dda1 
+        Captain: What are you talking about? #line:08467ff 
+        You: Don't act like you don't know, Captain. #line:0d3f0a1 
+        <<jump side_bets>>
+    -> Does the Captain know about your gambling? #line:0cf43d9 
+        You: Does the Captain know about your little gambling hustle, Garm? #line:0189402 
+        Pilot: You're talking out of your ass! He's lying Captain, don't listen to him. #line:051f7b2 
+        Captain: Well, well, well...do go on, Mr. Rego. #line:0bd7bf1 
+        <<jump side_bets>>
+<<else>>
+    -> Do what I say, or I'll tell everyone your secret! #line:0f2d5d5 
+        <<jump garms_secret>>
+    -> You're right, the Captain's really to blame. #line:080036c 
+        You: You're right, Captain Typhe is the one to blame here. #line:0136eb9 
+        Captain: I still don't believe a word you say. #line:0f4bf3f 
+        <<if get_variable("captain_messages_intel") == "true">>
+            -> I have the logs. #line:0180acd 
+                You: You updated our heading, we're not going to Soldacia anymore. #line:042a0b6 
+                <<jump logs_1>>
+            -> I know you've been commandeering the EPM system. #line:0df9b83 
+                <<jump epm_abuse>>
+        <<else>>
+            You: You updated our heading, we're not going to Soldacia anymore. #line:042be6c 
+            <<jump logs_1>>
+        <<endif>>
+<<endif>>
+===
+title: epm_abuse
+position: 321,873
+---
+You: You've been abusing the emergency personal message system. #line:02d9110 
+Captain: I'm the captain, of course I need to use the EPM system. I would hardly call priority messages "abuse."" #line:0b884f4 
+-> Messages to your sister take priority? <<if get_variable("sone_messages_intel") == "true">> #line:02ac113 
+    You:  Messages to your own sister take priority over everyone else's, then?  #line:09553bf 
+    <<jump black_t1>>
+-> What were the messages about? #line:02214e2 
+    You: What made these messages so damn important? #line:002581a 
+    Captain: They - it's obviously none of your business! #line:0dc0271 
+    You: Stop hiding! #line:09add36 
+    <<jump black_t1>>
+-> What about everyone else? #line:04b6381 
+    You: EMPs were halted! What about everyone else's needs? Everyone else's families? #line:093512a 
+    You: Why are you keeping us in the dark? #line:07a3cc5 
+    <<jump black_t1>>
+===
+title: side_bets
+position: 829,501
+---
+You: Garm's been putting everyone's life in danger. #line:0da7e05 
+Captain: Is that so? #line:07448fc 
+Pilot: This kid's got no idea what he's talking about, I swear. #line:04bb817 
+You: So you aren't betting on how fast you can get us to our destination? #line:0ebabed 
+Pilot: I-no, I would never do that. #line:0bb7576 
+You: Captain? I find it hard to believe you wouldn't know about this already. #line:0f345e6 
+Captain: If I knew anything, I certainly wouldn't tell <i>you</i>. #line:024cda9 
+You: Alright then, I guess I'll just...ah nevermind... #line:0d0b000 
+<<jump black_t1>>
+===
+title: moment_we_land
+position: 714,692
+---
+You: You're guilty enough to get put away for a looong time  - from the moment we land. #line:07c5bef 
+Captain: Guilty? I still haven't heard one shred of evidence from you.  #line:04547fc 
+Captain: Garm? #line:0e3eb95 
+Pilot: I don't know what you're trying to pin on us, kid -  but it ain't sticking. #line:0eae64b 
+-> Captain, you've been abusing the EPM system. <<if get_variable("captain_messages_intel") == "true">> #line:09ef94a 
+    <<jump epm_abuse>>
+-> Garm's been making side bets. <<if get_variable("garm_racing_intel") == "true">> #line:01b76c6 
+    <<jump side_bets>>
+-> You've both been stealing meal rations! #line:05e3eab 
+    <<jump meal_rations>>
+-> I know you're up to something, Captain! #line:03289e9 
+    You: Ok fine, I know you're up to something alright, Captain. #line:056ab69 
+    <<jump black_t1>>
+===
+title: garms_secret
+position: 553,1052
+---
+You: If I go public with what I know, you won't have a job much longer! #line:0735843 
+Pilot: But what do you even know? #line:081ba6e 
+Pilot: Cap, you were right, this kid's full of shit. #line:03e7359 
+
+-> You're stealing meal rations! #line:0876136 
+    <<jump meal_rations>>
+-> I don't know anything about you, but the captain... #line:0069026 
+    You: Ok fine, I've got nothing on you, Garm. But I know you're up to something, Captain. #line:04f2eba 
+    <<jump black_t1>>
+===
+title: cut_a_deal
+position: 1799,961
+---
+// can only get here if you visited side_bets
+You: Alright, alright. Let's cut a deal. #line:0291df7 
+You: I know you're racing, Garm. Placing bets on how fast you can get us to our destination. #line:0834d24 
+Pilot: Who in the stars is starting these rumors?!  #line:031735b 
+You: I don't know how you got your updated routes past the navigation team, you probably bought them off too... #line:08f3474 
+You: But here's what we're gonna do... #line:074fba7 
+-> I shut up and you take us to Soldacia. #line:0b41cdc 
+    <<jump deal_to_soldacia_garm>>
+-> You're gonna pay me to keep my mouth shut. #line:054db2f 
+    <<jump pay_me_garm>>
+===
+title: deal_to_soldacia_garm
+position: 2153,975
+---
+You: I keep quiet about this, and you update the heading to take us back to Soldacia. #line:0e98ac8 
+Captain: What do you mean, "back to Soldacia?" We're still- #line:0888d1f 
+You: Cut the shit, Captain. #line:03bf2ae 
+<<if get_variable("profit_sharing_intel") == "true">>
+    You: I know you're getting paid more to take us to some rock called Trado. #line:09e573c 
+    You: And if you don't update the heading now, everyone's gonna find out about it. #line:07779ad 
+    You: I've got the message logs backed up. On both of you. #line:04932f5 
+    Captain: I-you-you don't- #line:0a71dbe 
+    -> Do it, Garm. #line:094577f 
+        You: Do it, Garm! #line:057f943 
+        <<jump turn_or_else>>
+    -> Give the order, Captain. #line:0017959 
+        <<jump give_the_order>>
+<<else>>
+    You: I know you're taking us off course. You tried to cover your tracks, but you weren't clean enough. #line:0f33d24 
+    You: But I'm more concerned with Garm here. #line:071f0b5 
+    -> Turn the ship, Garm, or else. #line:0633f93 
+        You: Just turn the damn ship, Garm, or I go public with what I know.  #line:0fd766f 
+        <<jump turn_or_else>>
+    -> Do it for yourself, if not for the people. #line:049a57b 
+        You: Garm. Think about your future. Everyone's future! #line:0cd9ea9 
+        You: Do you want to be the man who doomed all thirty thousand of us?! #line:08bc7c8 
+        <<jump turn_or_else>>
+<<endif>>
+
+===
+title: pay_me_garm
+position: 2154,1154
+---
+You: I forget we had this conversation, and you pay me half of what you're making when we get there. #line:079dcf8 
+<<if get_variable("profit_sharing_intel") == "true">>
+    You: And you, Captain, are gonna give me half of your land allotment once we touch down on Trado. #line:0c3d637 
+    Captain: Trado? What are you talking about?! #line:0cfce30 
+    You: That's right. I put it all together. #line:0855708 
+    You: I've got all the evidence I need backed up. #line:02784f2 
+    You: And I can make it all go away. #line:0c9a913 
+<<else>>
+    You: Wherever that is... #line:054ddd1 
+    You: And you, Captain, are gonna make sure that my parents and I are taken care of when we land. #line:0f2db8e 
+    Pilot: You can't be serious! #line:0d3edde 
+    You: But I am. I've got all the data I need backed up.  #line:0251a41 
+    You: And I can make it all go away. #line:0229a1f 
+    Pilot: Shit... #line:0685ec8 
+<<endif>>
+You: Well? Do we have a deal? #line:08a021b 
+Pilot: Yeah...yeah, we got a deal. #line:0641171 
+You: That's what I like to hear. I expect to see the credits in my account as soon as the maneuver is complete. #line:0afd201 
+Captain: Just...keep me out of this. #line:01c9324 
+You: I'm afraid it's far too late for that, Captain... #line:02780bf 
+<<set_variable "pilotPayout" "true">>
+<<jump END_2>>
+===
+title: meal_rations
+position: 1017,1750
+---
+<<if get_variable("tension_lvl") == "2">>
+    You: You're both stealing meal rations, and everyone knows about it. #line:05bbd33 
+    Pilot: What? #line:05b5e75 
+    Captain: I have no idea where you're coming up with these baseless accusations. #line:0aef39d 
+    <<jump black_t1>>
+<<else>>
+    You: You—you're stealing meal rations! And everyone knows it! #line:000a20d 
+    Pilot: Ok kid, you've got nothing on us at all, do you? #line:0a3fd19 
+    <<actiavate_gun_reminder GunDrawSlider>>
+    You: Well...umm... #line:0150bb6 
+    Captain: I think we've heard enough. Garm, get security in here ASAP! #line:08b6c2b 
+    Pilot: On it, Cap. #line:0c253ea 
+    <<jump END_2>>
+<<endif>>
+===
+title: turn_or_else
+position: 2498,1054
+---
+You: Do you want your pilot's license revoked? You'll turn 20 years of experience worthless just like <i>that</i>? #line:01b5f00 
+You: Not to mention, your whole betting ring would dragged into the light of day and -  #line:0804115 
+Pilot: Shut up! OK! I'll do it. Just shut up!  #line:04b3635 
+Captain: Garm, do not turn this ship, that's an order! #line:0157081 
+<<if get_time_left() <= 35>>
+    Captain:  There isn't enough time! You'll kill us all! #line:0a35093 
+    <<begin_turn BridgeManager>>
+    Pilot: You want me to turn the ship? I'll turn the fucking ship! #line:051b84b 
+    Captain: Garm no! #line:0df787c 
+    You: Oh shit... #line:0b5ae7b 
+    Captain: What have you done?! #line:0a5ab92 
+    <<jump END_3>>
+<<else>>
+    Pilot: Hold on to something everyone! #line:015577c 
+    <<begin_turn BridgeManager>>
+    <<set_variable "pilotBlackmailSoldacia" "true">>
+    Pilot: Here she goes!! #line:0b12570 
+    Captain: Garm you fool, you're ruining everything! #line:0e44eac 
+<<endif>>
+===
+title: give_the_order
+position: 2823,938
+---
+You: Just give the order, Captain. Then we can all move on with our lives! #line:0cf8427 
+<<if get_variable("meteor_email_intel") == "true">>
+    Captain: But the meteor it- #line:0c205d6 
+    You: Screw your meteor, Soldacia's perfectly safe and you know it! #line:0bee40c 
+<<endif>>
+You: If you won't do it for me, do it for everyone else on this ship! #line:0e714dd 
+<<if get_time_left() <= 35>>
+    Pilot: Doesn't matter who we do it for, we're out of time! #line:0ab7bad 
+    Captain: Garm's right, it's simply too late to do this, Kase. #line:0a38bce 
+<<endif>>
+Pilot: Cap, we're running out of time here! #line:02418b3 
+Captain: Alright, just do it! Turn the ship Garm! #line:084839e 
+<<begin_turn BridgeManager>>
+Pilot: Hold onto something, people! #line:02bf8b6 
+You: Damn, that's bright. #line:0cdf728 
+Captain: If we're wrong, you know what that means, don't you? #line:09d67e7 
+You: We're not wrong... #line:0436b22 
+You: We can't be wrong. #line:0555d91 
+===
+title: deal_to_soldacia_captain
+position: 2160,557
+---
+You: Give the order to turn the ship for Soldacia, and I forget this ever happened. #line:03bbed3 
+<<if get_variable("tension_lvl") == "2">>
+    You: I'll even let your brains stay in your skull. #line:0a1b93b 
+    Captain: Void protect me... #line:0ee4705 
+<<else>>
+    Captain: You can't be serious. Are you trying to blackmail me? #line:01eab0b 
+    You: I'm not trying, Captain. Now give the order. #line:08b25ba 
+<<endif>>
+Pilot: Captain? What do you want me to do here? #line:0d5dfdf 
+Captain: Just...let me think! #line:0aeca81 
+
+-> Do it for the people if not yourself. #line:0446204 
+    <<jump for_the_people>>
+-> Garm, listen to me. #line:0c3031e 
+    <<jump garm_listen>>
+===
+title: pay_me_captain
+position: 2159,764
+---
+You: You're going to sign over half of your land allotment on Trado, and I delete any evidence I have on you. #line:00c25f1 
+Captain: You can't be serious! #line:04967fe 
+You: Once we land, people will want answers, and I have them, Captain. #line:009a79b 
+You: But if we can come to an undersanding here...I'll let them believe whatever you were planning to tell them. #line:0dd6b0c 
+Captain: Stars above...shit. #line:0309d4b 
+Pilot: Captain what the hell is going on?! #line:0d361f6 
+-> Do we have a deal?  #line:0f6dacd 
+    <<jump have_a_deal>>
+-> Garm, listen to me. #line:0b2b04d 
+    <<jump garm_listen>>
+===
+title: have_a_deal
+position: 2543,754
+---
+<<set_variable "capPayout" "true">>
+You: There's no time for this! Give the order, or I'll ruin you, Typhe. #line:0e45688 
+You: And don't even think about sending your goons after me. #line:04eb9f5 
+<<if get_variable("captain_punish_prisoner_intel") == "true">>
+    You: I know all about your friend in the brig. #line:0feac90 
+    Captain: There's no one in the brig. What are you- #line:0384477 
+    You: First Mate Loomis. You told everyone she left on her own. #line:057fc98 
+    Pilot: Haden? You spoke to Haden?! #line:099b75d 
+    Captain: He did nothing of the sort. #line:09c7a69 
+    <<jump garm_listen>>
+<<else>>
+    You: If I don't walk out of here alone, my contacts will upload everything. #line:0c7dec0 
+    Captain: Your what? #line:0552660 
+    <<if get_variable("tension_lvl") == "2">>
+        You: I had to have gotten this gun from someone, right?  And it <i>is</i> loaded.  #line:000714a 
+        You: I'm not operating alone, Captain. You're already on your way out and you don't even know it. #line:0f0f302 
+    <<endif>>
+    <<jump give_the_order>>
+<<endif>>
+===
+title: for_the_people
+position: 2523,599
+---
+You: Captain, think about the 30,000 other people on the ship for once! You know we can't go to Trado. #line:006e88c 
+Captain: I do nothing <i>but</i> think about the people! #line:0965b33 
+You: Then prove it! Turn the ship around.  #line:04d67d8 
+Captain: Fine! #line:0e2d92d 
+Captain: Garm? Do it! #line:007cb12 
+<<if get_time_left() <= 45>>
+    Pilot: There isn't enough time! We'll be doomed if we change course now! #line:0c012f0 
+    <<if get_variable("tension_lvl") != "1">>
+        -> I don't care! #line:06791bf 
+            You: I don't care, just turn the fucking ship! #line:0afff0f 
+            Pilot: Captain? #line:0f13177 
+            Captain: Do it! #line:097036f 
+            Pilot: What? #line:01a85d7 
+            Captain: Just do what he says! #line:03f779c 
+            Pilot: Here goes! #line:0025aef 
+            <<begin_turn BridgeManager>>
+            Pilot: Hold onto something everyone! #line:09feca7 
+        -> So that's it? #line:00c8108 
+            <<jump so_thats_it_2>>
+    <<else>>
+        <<jump so_thats_it_2>>
+    <<endif>>
+<<else>>
+    Pilot: You had better be right about this! #line:0b5dfe4 
+    <<begin_turn BridgeManager>>
+    <<set_variable "capBlackmailSoldacia" "true">>
+    Pilot: Hold on to something everyone! #line:0757c0d 
+    Pilot: Here she goes!! #line:0dd6d41 
+    You: I knew you'd make the right choice. #line:0ce10a0 
+<<endif>>
+===
+title: changed_the_heading
+position: -590,2136
+---
+You: I've seen the updated maps. #line:072ee83 
+<<if get_variable("tension_lvl") == "1">>
+    Captain: Just because you're a NAT doesn't mean you know everything. #line:050b6bc 
+    Pilot: Seriously. They give you kids access to some hardware and suddenly they think they rule the ship. #line:04161fb 
+<<else>>
+    Captain: I'm sure you've seen something that worries you, and I'm sorry if you're confused. #line:0794868 
+    Captain: But really, just because you're young and armed doesn't mean you know everything. #line:0e9a09f 
+<<endif>>
+-> Stay out of this Garm. #line:04eadf1 
+    <<jump stay_out_of_this>>
+-> Garm, listen to me. #line:044be92 
+    <<jump garm_listen_2>>
+-> It's my generation you're screwing over. #line:01d1919 
+    <<jump my_generation>>
+===
+title: mess_with_me
+position: -575,2454
+---
+<<if get_variable("tension_lvl") == "1">>
+    You: Don't mess with me captain. #line:0e3c23a 
+    Pilot: Kid's talking a mighty big game... #line:00801dd 
+    Captain: I have no intention of "messing with you..." #line:051cc9b 
+    Captain: but I fail to see why I should be concerned with you at all. #line:056cc4b 
+
+    -> I don't even need you. #line:035ff5a 
+        <<jump i_dont_need_you>>
+    -> You're messing with everyone on the ship. #line:0d56e94 
+        <<jump messing_with_everyone>>
+<<else>>
+    You: Captain I'm not messing around, here. #line:0bdd77e 
+    Captain: I gathered that much. But I really don't think I'm messing with anyone! #line:03d7977 
+    -> I don't even need you. #line:02ca7ea 
+        <<jump i_dont_need_you>>
+    -> You're messing with everyone on the ship. #line:0bebe19 
+        <<jump messing_with_everyone>>
+<<endif>>
+===
+title: playing_dumb
+position: -913,1974
+---
+You: Stop playing dumb, Captain. #line:0668ed0 
+You: We don't have much time here, and I don't want to waste it talking in circles. #line:001dc88 
+You: I know we're not going to Soldacia anymore. #line:01d581c 
+<<jump changed_the_heading>>
+===
+title: threaten_t1
+position: 1363,2123
+tags: tension
+---
+<<set_variable "bridge_sequence" "midpoint_reached">>
+<<if get_variable("tension_lvl") == "1">>
+    Captain: You keep talking like you <i>mean something</i> on this ship. #line:0c90b8b 
+    Captain: Do you really think that all this chest pounding will get you anywhere? #line:02362e6 
+    Captain: You're disctracting me from doing my job at a critical moment for our journey. #line:051f02b 
+    -> You're dooming us all and you don't want to admit it. #line:01bacdd 
+        You: You're dooming us all and you don't want to admit it. #line:0c9d0b1 
+        <<jump dooming_us_all>>
+    -> Your greed is blinding you, Captain. #line:00f4259 
+        <<jump blinding_greed>>
+    -> Don't make me get violent... #line:0fc51a1 
+        <<jump get_violent_t>>
+<<else>>
+    Captain: Look. I...I know you're serious here, but this is a critical moment in our journey. #line:09857d0 
+    -> You're dooming us all and you don't want to admit it. #line:04b7b90 
+        You: You're dooming us all and you don't want to admit it. #line:0e3d779 
+        <<jump dooming_us_all>>
+    -> Your greed is blinding you, Captain. #line:026fe5b 
+        <<jump blinding_greed>>
+    -> Please don't make me shoot you. #line:0ea717e 
+        <<jump get_violent_t>>
+<<endif>>
+===
+title: stay_out_of_this
+position: -215,2092
+---
+You: Garm, stay out of this. I bet the Captain hasn't even told you a thing. #line:08715bf 
+Captain: You're right, because there is nothing to tell. #line:08d82c7 
+Pilot: I think the kid's the one who should be staying out of this... #line:0a03c45 
+<<if get_variable("tension_lvl") == "2">>
+    You: Don't try me Garm! #line:0c58691 
+<<endif>>
+
+-> I don't need either of you. #line:01d12ca 
+    <<jump i_dont_need_you>>
+-> Then what about you abusing the EPMs? <<if get_variable("captain_messages_intel") == "true">> #line:063c738 
+    <<jump epm_abuse>>
+-> I have the logs, Captain. #line:0942b3c 
+    <<jump logs_1>>
+===
+title: garm_listen_2
+position: -216,1936
+---
+You: Garm, listen to me. I don't know what the Captain's told you, but you have to take me seriously. #line:0c30c80 
+Pilot: Cap hasn't told me anything. Give me one good reason I should listen to you. #line:0a2f9d7 
+<<if get_variable("tension_lvl") == "2">>
+    You: Other than the gun? Really? #line:083cf84 
+<<endif>>
+
+<<if get_variable("garm_racing_intel") == "true">>
+    -> You're putting us all at risk just to make a bit of money. #line:0a7fd32 
+        You: You're right, you do have a job to do, and you've been abusing it! #line:09f64dc 
+        Captain: What are you talking about? #line:0403723 
+        You: Don't act like you don't know, Captain. #line:0e4867c 
+        <<jump side_bets>>
+    -> Does the Captain know about your gambling? #line:06a0907 
+        You: Does the Captain know about your little gambling hustle, Garm? #line:0448371 
+        Pilot: You're talking out of your ass! He's lying Captain, don't listen to him. #line:062732f 
+        Captain: Well, well, well...do go on, Mr. Rego. #line:0dfd91d 
+        <<jump side_bets>>
+<<endif>>
+
+-> You know what, I don't need you. #line:0f721ca 
+    <<jump i_dont_need_you>>
+-> We're not going to Soldacia! #line:00eed3d 
+    <<jump not_going_to_soldacia>>
+
+===
+title: my_generation
+position: -230,2274
+---
+You: Hey - it's my generation you're screwing over here. #line:0db90b8 
+You: We were born on this ship, and we'll be stuck wherever it lands! #line:0b0b884 
+<<jump not_going_to_soldacia>>
+===
+title: i_dont_need_you
+position: 180,2440
+---
+You: You know what, screw it. I don't even need you. #line:0a9e2f7 
+<<if get_variable("tension_lvl") == "2">>
+    Captain: Easy now... #line:02d53d6 
+<<endif>>
+
+-> I've got the override code <<if get_variable("override_code_intel") == "true">> #line:0ef71cf 
+    <<jump override_code>>
+-> I'm more concerned with Garm here. #line:05d9b8a 
+    You: I'm more concerned with Garm here. #line:01fcfed 
+    Pilot: What? #line:03f6b98 
+    <<jump dont_play_dumb_garm>>
+-> You're done as soon as we land, anyway. #line:0486cf0 
+    <<jump moment_we_land>>
+===
+title: messing_with_everyone
+position: 177,2600
+---
+You: You're messing with the fate of everyone on this ship. #line:084c148 
+You: You don't think people will find out? #line:09846aa 
+<<jump not_going_to_soldacia>>
+===
+title: override_code
+position: 606,2465
+---
+You: I've got the override code. #line:0242a64 
+Captain: What are you talking about? There's no such- #line:02ace3f 
+You: 7907652. #line:06c5acd 
+Pilot: Woah, is...is that right, Captain? #line:0aee99b 
+Captain: Of course not! #line:047ebcd 
+You: It is, and you know it. It's where your family's farm used to be... #line:01d9b38 
+Captain: I- you leave my family out of this! #line:077f2e6 
+
+-> Step aside, Captain. #line:00f9520 
+    <<jump step_aside>>
+-> This is all about your family. #line:05af6e0 
+    <<jump about_family>>
+===
+title: step_aside
+position: 962,2457
+---
+You: Step aside, Captain. I don't want to hurt you. #line:0d26394 
+<<jump threaten_t1>>
+===
+title: dont_want_to_do_that
+position: 2081,2006
+---
+You: Captain you don't want to do that... #line:03ed008 
+Captain: I'm through with you. We're done here. Leave at once or you <i>will</i> regret it. #line:07a5e44 
+===
+title: lets_talk
+position: 2153,2204
+---
+You: Fine then. Let's talk, but we're running out of time. #line:0453c07 
+Captain: There's not much to talk about, seeing as you really have no idea what's going on. #line:07b65b4 
+
+-> Sone lied to you! <<if get_variable("sone_lied_intel") == "true">> #line:0b28b4f 
+    <<jump sone_lied>>
+-> Then why do we need desert plants? <<if get_variable("urnst_plants_intel") == "true">> #line:0db75ba 
+    <<jump desert_plants>>
+-> So tell me. #line:0e54a34 
+    <<jump so_tell_me>>
+-> I know everything! #line:0a53951 
+    <<jump know_everything>>
+
+===
+title: not_going_to_soldacia
+position: 874,2064
+---
+<<set_variable "bridge_sequence" "midpoint_reached">>
+You: We're not going to Soldacia! You have to know this! #line:0b7ce30 
+You: The planet we've all been dreaming of for the past 20 years, you're OK just letting that go? #line:035e4a1 
+Captain: No one's letting go of anything! #line:06ba272 
+-> Sone lied to you! <<if get_variable("sone_lied_intel") == "true">> #line:0ecb5ae 
+    <<jump sone_lied>>
+-> Then why do we need desert plants? <<if get_variable("urnst_plants_intel") == "true">> #line:018111e 
+    <<jump desert_plants>>
+-> Just tell me what's going on. #line:00ee0c5 
+    <<jump so_tell_me>>
+-> I know everything! #line:0d65d3a 
+    You: I know everything you're up to! #line:0e39fcf 
+    Captain: You know <i><shake>nothing</i></shake>! #line:072e86f 
+    <<jump threaten_t1>>
+===
+title: about_family
+position: 934,2617
+---
+You: This is all about your family. Your "redemption". Isn't it? #line:0d614c1 
+Captain: You don't know anything about me. #line:0bf773f 
+You: But Haden does, doesn't she? #line:043f74a 
+Captain: I-I-Who are you- #line:054bfa3 
+Pilot: Haden?! #line:07a9f8f 
+You: Where do you think I got the code? #line:01e388e 
+You: Now get out of the way so I can use it to save our asses! #line:0eb88d9 
+Captain: Over my dead body! #line:083d2cd 
+<<jump threaten_t1>>
+===
+title: think_about_it_event
+position: -630,-2329
+---
+You: I'll think about it. #line:074969c 
+<<resume_stopped_node>>
+===
+title: turn_the_ship_threat_t2_t3
+position: 2009,2383
+---
+You: I want you to turn the damn ship. Give the order. Please. #line:0d3dc56 
+Captain: I...I can't do it. I won't do it. #line:0359ce1 
+Pilot: Captain he's got a <i>gun</i>! #line:0221d3a 
+<<jump turn_the_ship>>
+===
+title: where_should_we_go
+position: 156,-4199
+---
+You: Where do <i>you</i> think we should go, Garm? #line:026e838 
+Pilot: I-w...S-Soldacia? #line:0ea8048 
+You: I'd have to agree with you there. #line:0d043fd 
+<<jump take_us_to_soldacia>>
+===
+title: no_time
+position: -29,-3561
+---
+You: Because there's no time, Garm! Are you forgetting about the massive star in front of us?! #line:09c2ae9 
+<<jump turn_the_ship_premid>>
+===
+title: no_choice
+position: -5,-3417
+---
+You: You don't really have a choice, Garm. You have to trust me. #line:03c89a8 
+You: I didn't have a choice but to trust leadership my whole life. #line:09cc0b0 
+You: I don't see why I should extend that luxery to you now. #line:0365a3f 
+Pilot: You don't understand what's happening here! #line:064a6f0 
+-> So tell me! #line:0b1ee22 
+    <<jump tell_me>>
+-> Just shut up and turn the ship! #line:03ce67f 
+    <<jump turn_the_ship_premid>>
+===
+title: join_him
+position: 2,-3274
+---
+You: Do you want to join our late captain? #line:08225d0 
+Pilot: No but - #line:03a85b8 
+<<jump turn_the_ship_premid>>
+===
+title: calm_down
+position: 46,-4016
+---
+You: Alright. Just take some deep breaths here, we have to calm down. #line:09a3247 
+Pilot: I think I'm gonna be sick... #line:0909ec0 
+You: We have to focus. Are you with me? #line:04edca7 
+Pilot: You <i> killed him</i>! #line:02ca438 
+-> Get it together! #line:03774b6 
+    <<jump get_it_together>>
+-> Do you want to join him? #line:012bd20 
+    <<jump join_him>>
+===
+title: tell_me
+position: 168,-3850
+---
+You: Then tell me! #line:05d7a07 
+You: How am I supposed to trust anyone if you won't say what's going on?! #line:0d88c60 
+Pilot: We're going to a planet called Trado. #line:0644bfd 
+Pilot: Captain Typhe didn't really tell me much either. #line:0aab2c8 
+Pilot: But he said Soldacia wasn't...there was a meteor or something and it... #line:0a1de24 
+<<if get_variable("meteor_email_intel") != "true">>
+    Pilot: We just can't go there anymore, Soldacia is ruined. Trado was our only other option. #line:0501de0 
+    You: No! It...it can't be. How? #line:016ff95 
+    Pilot: I don't know, alright?! I didn't ask, and now we might never know thanks to you! #line:07da3f0 
+    -> I don't believe it, turn the ship or else. #line:0c43079 
+        <<jump turn_the_ship_premid>>
+    -> So that's it? #line:05c25b6 
+        <<jump so_thats_it_cap_dead>>
+<<else>>
+    You: He was lying! #line:059b32d 
+    You: I saw the reports, they're nonsense! #line:0f792e6 
+    Pilot: What?! #line:03df4b3 
+    You: Captain was talking to his sister, Sone. She convinced him to take us to <i>her<i/> company's planet. #line:0079964 
+    You: And I refuse to let all of our lives fall into her plan! #line:0afad53 
+    You: Now turn the damn ship! #line:0831c16 
+    <<jump take_us_to_soldacia>>
+<<endif>>
+
+===
+title: turn_the_ship_premid
+position: 688,-3662
+---
+You: I'm done listening to you! #line:090e5f7 
+You: Now turn the ship, or else you'll be next! #line:04b6458 
+Pilot: Screw you! I'll never do anything you tell me to! #line:09b5e74 
+Pilot: I'd rather freeze in the void than let Captain Typhe's death be in vain. #line:0508ac4 
+You: Fine! You'll get what you deserve... #line:0db8776 
+<<jump END_2>>
+===
+title: get_it_together
+position: 290,-4024
+---
+You: Get it together, Garm! #line:0722015 
+Pilot: Ok...ok... #line:0a002fa 
+You: We don't have a lot of time here, you have to change our approach angle. #line:07ef8df 
+<<jump take_us_to_soldacia>>
+===
+title: so_thats_it_cap_dead
+position: 679,-3813
+---
+You: So that's it? #line:0c0fa4d 
+Pilot: That's it. #line:0992e42 
+Pilot: We're just going to have to make the most of it on Trado. #line:03d516f 
+Pilot: Cap knew people would be upset and demoralized when they heard about Soldacia. It would have been chaos... #line:0097191 
+You: What have I done? #line:0ba8d5c 
+Pilot: We still have a year of the journey left, he didn't think we could take that kind of blow. #line:0ea00ce 
+Pilot: But now...stars help us all... #line:0cf5be6 
+<<jump END_2>>
+===
+title: in_the_way
+position: -966,-4890
+---
+You: He was in the way. #line:0bee4a1 
+You: This is about me and you, Captain. Are you in the way? #line:04c5e17 
+<<if get_variable("bridge_sequence") == "pre_mid">>
+    Captain: This only seems to be about <i>you</i>! #line:061d97c 
+    Captain: And if Garm had nothing to do with it, then why in the stars did you <i>kill him?!</i> #line:076624e 
+    You: You're not listening to me!  #line:05d1080 
+    Captain: There's nothing you can say now that would have me trust you, not after what you've done. #line:0bdd13d 
+    <<if get_variable("sone_lied_intel") == "true">>
+        You: You're sister is lying to you! #line:07c3570 
+        Captain: What?! What are you talking about? #line:048a224 
+        You: Sone. I've seen the messages, you think you're doing this for everyone on the ship, but you're not! #line:080261d 
+        You: She's got you in her pocket. #line:0852b53 
+        Captain: My family has nothing to do with this! #line:0bee5b8 
+        You: Your family has <i>everything</i> to do with this! You know this is wrong! #line:0d89036 
+    <<endif>>
+        -> You're doing this to restore your own family's glory aren't you? #line:0da3489 
+            <<jump familys_glory>>
+        -> Trust your own gut if you won't trust me. #line:00af3c3 
+            <<jump trust_your_own_gut>>
+        -> I don't even need you, I have the override code. <<if get_variable("override_code_intel") == "true">> #line:0ba5b3b 
+            <<jump i_have_override>>
+<<else>>
+    Captain: N-no, I don't suppose I am. #line:0fef1cc 
+    Captain: What do you want me to do? #line:07a8c6c 
+    You: The manual override, do it now. #line:08ad865 
+    <<jump manual_override>>
+<<endif>>
+===
+title: tell_me_cap
+position: -114,-5410
+---
+You: So tell me! If what you're doing is so honorable, then why all the secrecy? #line:0171630 
+Captain: I don't have to tell you anything. It's for your own good! For everyone's good! #line:0ffb8c9 
+You: Do you think this was what was best for Garm? Do you?! #line:003784f 
+Captain: Have you no respect for the dead?! #line:09145c3 
+-> If you don't tell me what's going on I'll kill you, too. #line:0e6e9f1 
+    <<jump ill_kill_you>>
+-> It's not too late to make his death mean something. #line:03735aa 
+    You: It's not too late to make his death mean something. #line:0eb59f1 
+    <<jump in_too_deep>>
+===
+title: override_or_else
+position: -687,-5101
+---
+You: Captain, you either input the override code or follow Garm into the void. #line:0388966 
+You: Your choice. #line:0e5531d 
+<<jump manual_override>> 
+===
+title: familys_glory
+position: -116,-4947
+---
+You: You're doing this all just to restore your own family's glory, aren't you? #line:0e9b87b 
+Captain: I'm doing this for everyone on this ship! I've been leading you for twenty years! #line:008afe2 
+Captain: Do you really think I'd throw that all of that away for some nostalgic yearnings? #line:012cc70 
+You: Yes! Even if you won't admit it to yourself that's exactly what's going on here. #line:00d8e04 
+<<jump in_too_deep>>
+===
+title: trust_your_own_gut
+position: -106,-4803
+---
+You: You must know this deal is too good to be true. Trust your own gut if you won't trust me. #line:0c31694 
+You: How will you be able to face the people you've been leading all these years when we land on some dusty rock? #line:0da2faa 
+Captain: We don't have a choice! #line:08cc9cf 
+You: Yes we do! Right now! #line:09ace8b 
+<<jump in_too_deep>>
+===
+title: in_too_deep
+position: 620,-5209
+---
+You: You might think you're in too deep, but we can still do this! #line:0ab34cf 
+You: <i>You</i> can still make the right choice. #line:0dc1b36 
+Captain: I just don't think I can trust you, Kase... #line:0913715 
+<<if get_variable("sone_lied_intel") == "true">>
+    You: Captain it's your sister you can't trust. #line:0529cd3 
+    You: I've seen the reports she's been sending you. #line:0c54ad9 
+    Captain: How- #line:014b086 
+    You: It doesn't matter how. I took them to Urnst...you should have showed them the reports. #line:002c233 
+    You: But you didn't - because deep down, you knew the whole thing was fake. Please...fix this before it's too late. #line:01b3857 
+    Captain: I...fine you're right! #line:0cb5f70 
+    <<if get_time_left() <= 62>>
+        Captain: But there's not enough time to make the maneuver. We'd all die, Kase. #line:01ca1bd 
+        Captain: It's too late... #line:0998fde 
+        -> Better to die among the stars than waste away from starvation... #line:0c5ce71 
+            <<jump die_among_stars>>
+        -> So that's it? #line:074051c 
+            <<jump so_thats_it_pilot_dead>>
+    <<endif>>
+    <<jump manual_override>>
+<<endif>>
+Captain: It's over. #line:0069f11 
+<<jump END_2>>
+===
+title: ill_kill_you
+position: 296,-5387
+---
+<<set_variable "ill_kill_you" "true">>
+You: Captain...if you don't tell me what's going on I swear on the stars, I'll kill you right here. #line:09a3c75 
+Captain: Telling you the truth won't change anything now. Killing me will only make your own life worse. #line:0c2c502 
+Captain: Go ahead. Do it. #line:07e992c 
+<<wait 2>>
+Captain: Just do it already! #line:0a3772b 
+<<wait 1>>
+Captain: COME ON! KILL ME! #line:0ea4804 
+-> No. No more bloodshed. #line:0cbe396 
+    <<jump no_more_bloodshed>>
+-> Say nothing. #line:02d9ede 
+    Captain: Coward. #line:0657425 
+    // BrTODO: Turn captain around here?
+===
+title: no_more_bloodshed
+position: 309,-4726
+---
+You: No! No one else needs to die today! #line:02aa3d1 
+You: You don't deserve to be spared from watching us all suffer on this planet you're taking us to... #line:08b085d 
+<<jump END_2>>
+===
+title: i_have_override
+position: -112,-5248
+---
+You: Actually screw it, I don't need you. I have the code. #line:0248719 
+Captain: What?! #line:0d87e1f 
+You: Just step aside, Captain, and no one else has to get hurt. #line:0927cf4 
+Captain: I...I can't do that. #line:03ff242 
+You: I don't want to do this, Cap. Please don't make me do this. #line:06d59ac 
+Captain: Your actions are your own. As are mine, and I won't let you divert this ship! #line:0779d4f 
+-> Then you leave me no choice. #line:0fbcf23 
+    You: Then you leave me no choice... #line:0fe608c 
+    <<wait 3>>
+    Captain: W-well?? #line:04d6ab9 
+    Captain: Just get it over with!! #line:0702537 
+-> Fine, let's talk. #line:00f266c 
+    You: Captain, you have to trust me. #line:022d696 
+    Captain: After you shot an unarmed man?! #line:0e95556 
+    <<jump in_too_deep>>
+===
+title: so_thats_it_pilot_dead
+position: 938,-5049
+---
+You: So that's it? #line:0383b91 
+Captain: That's it. #line:051cb57 
+Captain: We're just going to have to make the most of it on Trado. #line:0eb0842 
+Captain: You have to understand, people would have been upset and demoralized if they learned about Soldacia. It would have been chaos... #line:000b61c 
+You: What have I done? #line:0760d6b 
+Captain: We still have a year of the journey left, I just don't think the people could take that kind of blow. #line:01b8a81 
+Captain: But now...stars help us all... #line:01a93ec 
+<<jump END_2>>
+===
+title: die_among_stars
+position: 925,-5216
+---
+You: Would you rather waste away from starvation? And watch everyone you know and love do the same? #line:051ca12 
+You: The people <i>you're</i> responsible for? #line:072baf4 
+You: Or send us into Surator and at least give us the dignity of dying among the stars? #line:0714e01 
+Captain: You don't know th- #line:0e31969 
+You: Captain. #line:06e736d 
+Captain: You're right. We're doomed no matter what... #line:050076d 
+Captain: Stars protect us... #line:08ef4d7 
+<<begin_turn BridgeManager>>
+Captain: And give us everlasting light... #line:01f9f68 
+===
+title: override_pilot_living
+position: -676,-3245
+---
+<<if get_time_left() <= 60>>
+    Pilot: What are you doing?? #line:0efe7a5 
+    Pilot: The override takes twice as long as the normal maneunver, we're not gonna make it! #line:0c0e638 
+    You: Then do something! #line:06d2fad 
+    Pilot: You overrode my controls! It's all in the ship's hands now... we're doomed. #line:045c0aa 
+    You: No, th-that can't be right, there has to be a away there- #line:0b17765 
+    Pilot: It's over, Kase! #line:0062eb8 
+    Pilot: Make peace with whatever you believe in...if you can. #line:02e15b9 
+<<else>>
+    Pilot: You really did have the code huh? #line:0ecccba 
+    Pilot: I guess we're in for a bit of a ride now. #line:0823392 
+    You: Are we going to make it? #line:0c2cff1 
+    Pilot: We'll see, but it looks like it. #line:0addeab 
+    Pilot: Hell of a trick you're pulling here, could have killed everyone on the ship with a stunt like that. #line:053c220 
+    You: Well, it's a good thing I knew what I was doing... #line:020d29a 
+    Pilot: Right... #line:09b2f52 
+    Pilot: I don't think I'll ever forgive you for killing Cyrus but...if you're right... #line:07863b7 
+    Pilot: I might be able to respect you. #line:003dfe4 
+    You: Thanks, Garm. I'll take what I can get. #line:0f778a5 
+<<endif>>
+===
+title: all_dead_router
+position: -691,-3067
+---
+// Should only get here if there is no turn var set
+<<if get_variable("override_code_intel") == "true">>
+    You: Maybe there's enough time for the override? #line:0776b6e 
+<<else>>
+    You: Maybe everything will work out... #line:0a5ecbf 
+    <<jump END_2>>
+<<endif>>
+===

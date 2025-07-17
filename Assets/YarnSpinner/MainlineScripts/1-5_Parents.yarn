@@ -1,0 +1,289 @@
+﻿title: parents_start
+tags: 
+position: 136,-163
+---
+<<if visited("parents_start")>>
+    <<jump parents_return>>
+<<endif>>
+<<Knock_Random Player>>
+You: Mom? Dad? #line:016e061
+<<Knock_2 Player>>
+You: Hey! I know you're home. #line:02a06a2 
+<<Stop_Domestic_Layer ParentsAudioController>>
+Mom: Kase? Dear! Kase is here! #line:07e1e52 
+Dad: Hm? Oh! There's our Navigational Assistant in Training! #line:0cb832d 
+Dad: Good to hear from you, I think... shouldn't you be on the job? #line:03acba1 
+Dad: NATs aren't really known for getting a lot of time off. #line:038b04a 
+-> About that...   #line:08b0596 
+    <<jump about_that>>
+-> This is my job.  #line:03757a6 
+    <<jump is_my_job>>
+
+===
+
+title: about_that
+position: 521,32
+---
+You: Uh yeah about that. There's uhhh, a situation, I guess. #line:033d3a4 
+Mom: What is it, dear?  #line:04223e5 
+Dad: Hey, we're in a lockdown. How did you even get here? #line:08986c1 
+You: Well... #line:0df615f 
+    <<jump explain>>
+===
+
+title: is_my_job
+position: 497,-313
+---
+You: This...is my job. #line:07fa49e 
+Mom: What do you mean, dear? Is it the lockdown?  #line:0bb5ede 
+Dad: Wait, how are you walking around right now? Shouldn't you be locked at your station? #line:09c2908 
+You: It's... #line:045ad1f 
+You: I'll try to explain this as best I can. #line:0169c56 
+    <<jump explain>>
+===
+
+title: explain
+position: 925,-178
+---
+You: Just before the lockdown, I was sitting at the terminal, doing my regular work and something... #line:0e2dd09 
+You: Something weird happened. #line:04405fb 
+You: Or more like, I noticed something strange. #line:033523c 
+Mom: Strange how, honey? #line:076ca58 
+You: The course of the ship, it's different. Our approach angle for the gravity assist is all wrong.  #line:05d0b63 
+Mom: Come now, maybe you made a mistake?  #line:05c548c 
+Dad: Ha, I'm with your mother on this one, there's no way we're off course. #line:09c1870 
+You: I know I've only been at the terminal for a few weeks but I paid attention to my training.  #line:0e6363e 
+You: We've changed course, I'm certain. #line:018088d
+<<wait 2>>
+You: Mom, Dad, say something, please. #line:04d1a63 
+// here the parents, especially Eriana, get much more serious in tone
+Mom: I'm thinking... #line:0b9af8c 
+Mom: This is serious, Kase. #line:06bc3c1 
+Mom: Were you discovered? You still haven't explained how you got out of the lockdown. #line:0f3fb5a 
+    -> Doesn't matter. #line:0a509d5 
+        <<jump doesnt_matter>>
+    -> Ailyn helped me. #line:082308c 
+        <<jump ailyn_helped>>
+
+===
+
+title: give_gun
+position: 1813,-169
+---
+<<Stop_Search_Foley ParentsAudioController>>
+Dad: Sorry, had to get something. #line:06ee71d 
+Mom: Is that... #line:0069715 
+Dad: Yes, he should have it. With what he's onto he could be in danger. #line:05c0ee7
+Dad: There's a planet's worth of units on the line here... #line:01d80f9 
+Dad: We don't know what kind of deals might be happening behind closed doors.  #line:019d580 
+Dad: And there might not be time to figure it out with words alone... #line:055abcd 
+    -> In danger? #line:00edd34 
+        You: In danger? #line:059aaf4 
+    -> What do you have? #line:08f4e77 
+        You: What do you have? #line:015f234 
+Mom: We don't know what kind of danger he's in. #line:047917d 
+Dad: Exactly. If we don't use this now, then when, Eriana? When? #line:04fd9df 
+Mom: This isn't like back home, there's nowhere to run here and-- #line:0bc870f 
+You: Guys! #line:0e5afa3 
+Mom: Dammit Gil! Fine... #line:054b62d 
+Mom: Kase, this is serious. #line:0c0d613 
+Dad: Careful with this, kid. #line:0b2620f 
+Mom: It's a gun. #line:0d85c53 
+<<Play_GunSlide ParentsAudioController>>
+<<Show_Gun VoidSpaceManager>>
+Game: A gun slides into view. #line:0e62b9a 
+-> Take gun. #line:0292a56 
+    <<jump take_it>>
+-> A gun?! #line:0792f24 
+    <<jump door>>
+===
+
+
+title: door
+position: 2165,-307
+---
+You: A gun!? Where the hell did you--?  #line:06d4ba8 
+Dad: It's a long story. Let's just say the original owner won't be missing it... #line:007bf21 
+You: Wait are you saying you <i>killed someone?!</i> #line:0893214 
+Mom: No no no, not at all. #line:0b4b784 
+Mom: But the original owner <i>is</i> dead. #line:01d6007 
+Dad: Died on our operating table on Day 0. A dock worker I think. #line:02f38da 
+Dad: Thought it might come in handy down the line, looks like now it has. #line:02c09f7 
+You: Shit. #line:067a75f 
+Mom: Shit is right, Kase. And you're deep in it now. #line:0b668cc 
+Dad: Can't leave it there, either. #line:0918011 
+You: I guess not...  #line:08aeb31 
+<<jump take_it>>
+===
+
+title: take_it
+position: 2533,-160
+---
+<<enable_gun>>
+You: I guess this might be useful... #line:09ab853 
+Mom: No one knows you have that, try to keep it that way ok? #line:0e15339 
+You: Right. #line:042996b 
+Dad: And for all we know it doesn't even work. #line:07acc36 
+Dad: I hope to hell you never have to find out, either. #line:080e05a 
+Dad: If you do end up using it. You've got <style=imp>six bullets</style> there. And I doubt you'll find any more. #line:0270cbe 
+Mom: And they <i>will</i> kill people. #line:0bfdf26
+Mom: Try aiming it, see how it feels. #line:095626a 
+Game: Hold <style=imp>R</style> or <style=imp>Right Mouse Button</style> to pull your gun. Keep it pressed to keep the gun out. Letting go will stow the gun when the meter runs out. #line:0a208dd 
+    <<jump aim_it_event>>
+===
+title: aim_it_event
+position: 2867,-144
+---
+Dad: Go on. #line:0f3fbe9 
+Game: Hold <style=imp>R</style> or <style=imp>Right Mouse Button</style> to pull your gun. Keep it pressed to keep the gun out. Letting go will stow the gun when the meter runs out. #line:0ab3752 
+    <<jump aim_it_2_event>>
+===
+title: aim_it_2_event
+position: 3167,-329
+---
+Mom: Aim it. #line:032bb22 
+Game: Hold <style=imp>R</style> or <style=imp>Right Mouse Button</style> to pull your gun. Keep it pressed to keep the gun out. Letting go will stow the gun when the meter runs out. #line:0cc8841 
+    <<jump aim_it_event>>
+===
+title: gun_draw_event_Parents
+position: 3605,-159
+tags: 1
+---
+<<if visited("gun_draw_event_Parents")>>
+    <<resume_stopped_node>>
+<<else>>
+    <<jump gun_draw_Parents_b>>
+<<endif>>
+===
+title: gun_draw_Parents_b
+position: 3891,-158
+---
+You: It's heavy. #line:0032b02 
+You: Are you sure about this? #line:01a49d8 
+Dad: I am. #line:06caca2 
+Mom: I'm not. Be careful with that. No one will be happy to see it. #line:05d135f
+You: No, I guess not. #line:0bf770e 
+Mom: As far as we know, it's the only gun on the ship, and for good reason. #line:0642f6e 
+Dad: You'll be alright son. Just use your head. #line:048c48a
+-> This seems like a bad idea. #line:0ff6d23 
+    You: This seems like a bad idea... #line:04bb0b3 
+    <<jump do_now>>
+-> What should I do now? #line:083cb01 
+    You: What should I do now? #line:05ac585 
+    <<jump do_now>>
+===
+title: do_now
+position: 4200,-154
+---
+Mom: Just keep asking questions, but be careful who you talk to. #line:01df27b 
+Dad: And what you tell them. #line:06eede2 
+Dad: If this is a navigation issue, why not talk to your supervisor, Forrester? #line:02a0573
+Mom: That's true, we've been traveling for twenty years...that's a lot of data at her disposal. #line:0b89293 
+Dad: And you know, Urnst mentioned something when we had them over for dinner the other night. #line:0ec803f 
+Dad: Something about new research they're doing. #line:0bfc3e5 
+Mom: Just remember- #line:0c5f590 
+Mom: Loose lips sink ships. #line:03c1531 
+Dad: Good luck, Kase. #line:02dfa24
+<<setSequence GameManager "FollowingUp">>
+===
+title: ailyn_helped
+position: 1233,-28
+---
+You: Ailyn helped me get out. #line:0717002 
+Mom: So she knows? #line:09af766 
+You: She knows everything I just told you. #line:08563f5 
+<<Play_Search_Foley ParentsAudioController>>
+Mom: I hope she knows what she's in for... #line:0c62e1d 
+You: What do you mean? #line:084036f 
+Dad: Where the hell is it? #line:0d63084 
+// muffled voice
+Mom: Gil, where are you going? Gil? #line:041dc56 
+//Dad leaves to grab gun and approaches the door again.
+<<jump guys_transition>>
+===
+title: doesnt_matter
+position: 1266,-307
+---
+You: Look I'd rather not tell you. #line:0d47e57 
+<<Play_Search_Foley ParentsAudioController>>
+Mom: Hmm. Well, the less we know the better I suppose. #line:03db0bb 
+You: Mom? Is this-- #line:0105a3c 
+Dad: Where the hell is it? #line:00e16d2 
+// muffled voice
+Mom: Gil, where are you going? Gil? #line:0c5f943 
+<<jump guys_transition>>
+//Dad leaves to grab gun and approaches the door again.
+
+===
+title: gun_shoot_event_Parents
+position: 3624,-487
+---
+<<if visited("gun_shoot_event_Parents")>>
+    <<jump gun_shoot_event_Parents_02>>
+<<endif>>
+Mom: <shake>KASE!</shake> #line:0b6e568 
+Dad: Well I guess it works! #line:02444be 
+You: Sorry! #line:01b3e38 
+You: I- I wanted to know how it felt. #line:0f6e13e 
+Dad: There are others places to test your aim besides our door! #line:00f1466 
+Mom: Well there isn't really anywhere to test it. #line:0d80a23
+<<resume_stopped_node>> 
+//You: I'll just go now. #line:0e6c36a 
+===
+
+title: gun_shoot_event_Parents_02
+position: 3881,-570
+---
+<<if visited("gun_shoot_event_Parents_02")>>
+    <<jump gun_shoot_event_Parents_03>>
+<<endif>>
+Dad: <shake>HEY! Again!?</shake> What the fuck is wrong with you, Kase? #line:080db66 
+You: Sorry, sorry.  #line:069b31c 
+Mom: Sorry won't bring someone back to life. You have to be more careful. #line:0f6d440 
+===
+
+title: gun_shoot_event_Parents_03
+position: 3882,-409
+---
+Dad: Use that gun elsewhere! #line:03f8c1e
+===
+title: parents_return
+position: 490,-665
+---
+<<Knock_Random Player>>
+You: Guys? #line:0191191 
+<<Stop_Domestic_Layer ParentsAudioController>>
+Dad: Kase? What is it? #line:060d757 
+-> What if I'm wrong? #line:015b2b6 
+    <<jump what_if_im_wrong>>
+-> Never mind. #line:0038565 
+    <<jump parents_nevermind>>
+===
+title: what_if_im_wrong
+position: 832,-587
+---
+You: What if I'm wrong? #line:009c4cf 
+Dad: Well, you saw what you saw. #line:05769ae 
+Dad: My guess is we won't really know what's true until we land. #line:043fc64 
+Dad: For what it's worth, I believe you. #line:0b7b913 
+You: Thanks, Dad. #line:04d8ca3 
+===
+title: parents_nevermind
+position: 837,-760
+---
+You: Ah, never mind. #line:0ed4719 
+===
+title: guys_transition
+position: 1521,-169
+---
+You: Hey... #line:0aa810b 
+-> What's going on? #line:0639c90
+    You: Mom, what's going on? #line:0f3fa2f 
+    Mom: I don't know, Kase. #line:0a36d4b 
+    Mom: Your dad has that look on his face...  #line:0cd8622 
+-> Dad, please don't be mad. #line:0151bc0 
+    You: Please don't be mad. #line:0aae693 
+    Mom: No one's mad at you. #line:024297a 
+    Mom: Well. <i>We</i> aren't mad at you. #line:03a1b79 
+<<jump give_gun>>
+===

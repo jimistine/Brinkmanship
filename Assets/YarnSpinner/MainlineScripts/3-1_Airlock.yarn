@@ -1,0 +1,45 @@
+﻿title: 3-1_Airlock
+tags:
+---
+Captain: Who in the void do you think you are? #line:0388968 
+Captain: We're about to undergo a critical maneuver here, access to the bridge is strictly prohibited! #line:0b3a8ce 
+You: My name is Kase Rego, I'm a Navigational Assistant in Training. #line:0c607f9 
+Captain: And? #line:02d3774 
+-> I have critical navigational information, sir. #line:07b6392 
+    <<jump critical_info>>
+-> We're all in grave danger. #line:056b24d 
+    <<jump grave_danger>>
+-> We need to talk. #line:0214226 
+    <<jump need_to_talk>>
+===
+title: critical_info
+position: 432,-179
+---
+You: I have critical navigational information about that maneuver, sir. #line:0c359f6 
+You: It's an emergency. #line:092c552 
+<<jump quickly_now>>
+===
+title: grave_danger
+position: 430,-21
+---
+You: Captain, we're all in grave danger, you have to let me in. #line:09fe32a 
+You: You have to trust me! #line:0bac8d9 
+<<jump quickly_now>>
+===
+title: need_to_talk
+position: 429,139
+---
+You: Captain, we need to talk. #line:043dd6e 
+You: It's urgent. #line:05be723 
+<<jump quickly_now>>
+===
+title: quickly_now
+position: 869,-15
+---
+Captain: Bah! I don't have time for this babble. Get in here and state your case. #line:051bec1 
+Captain: Quickly now. #line:09aa8e3 
+<<OpenBridgeSideDoors AirlockManager>>
+<<wait 3>>
+<<enable_gun>>
+<<jump Bridge_Start>>
+===

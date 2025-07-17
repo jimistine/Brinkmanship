@@ -1,0 +1,153 @@
+﻿title: parents_old_start
+tags: 
+position: 136,-163
+---
+
+// YOU: Mom? Dad?
+//     <<wait 5>>
+// YOU: Hello? Are you there?
+//     <<wait 2>>
+// MOM: Dear! He's here!
+// DAD: Huh? Oh!
+//     <<wait 2>>
+// DAD: There you are! You've been busy for so long!
+// ->Not that long...
+//     <<jump long>>
+// ->Sorry. A lot has happened.
+//     <<jump alot>>
+
+// ===
+
+// title: long
+// position: 521,32
+// ---
+// MOM: Well, it's felt like so long.
+//     <<wait 1>>
+// YOU: Sorry, Mom, Dad. It's just...
+// YOU: I have some things to explain.
+// DAD: Does it have to do with this goddamn lockdown.
+// YOU: Kind of?
+//     <<jump explain>>
+// ===
+
+// title: alot
+// position: 497,-313
+// ---
+// MOM: Is it the lockdown?
+// YOU: Uhh... yes and no.
+// DAD: Wait, how are you walking around right now? Should you be locked at the terminal?
+// YOU: It's...
+//     <<wait 1>>
+// YOU: I'll try to explain this as best as possible.
+//     <<jump explain>>
+// ===
+
+// title: explain
+// position: 950,-160
+// ---
+// YOU: Today, I was sitting at the terminal, doing my regular work. Something weird happen.
+// YOU: Or more like, I noticed something strange.
+// DAD: Don't you notice weird stuff all the time? I mean, it's space.
+// MOM: Hey! Don't interrupt them!
+// MOM: Please dear, continue.
+// YOU: Thanks.
+// YOU: The course of the ship, it's different. We're going way off the original path.
+//     <<wait 1>>
+// MOM: Are you sure? Maybe you noticed something that you didn't know was always there?
+// YOU: I've been at the terminal for years. I know the course like the back of my hand. I even checked to see if I was seeing something was, but I wasn't. I'm certain of what I saw.
+// YOU: We're changing course, I'm almost certain.
+//     <<wait 3>>
+// YOU: Mom, Dad, say something, please.
+// MOM: Were you discovered? How did you get out of the lockdown?
+// YOU: I may have snuck out.
+// DAD: Where the hell is it?
+// // muffled voice
+// MOM: Honey, where are you going? Honey?
+// //Dad leaves to grab gun and approaches the door again.
+// ->What's going on?
+//     <<jump questioning>>
+// ->Dad, please don't be mad.
+//     <<jump mad>>
+// ===
+
+// title: questioning
+// position: 1371,-10
+// ---
+// MOM: I don't know, dear. 
+// DAD: Sorry about that. I had to get something.
+// MOM: Is that...
+// DAD: Yes, he should have it. he did good, but know he're in danger.
+// DAD: Here you go, kid.
+//     <<wait  3>>
+// // gun slides into view
+// -> Grab gun
+//     <<jump take_it>>
+// -> Look at door
+//     <<jump door>>
+
+// ===
+// title: mad
+// position: 1364,-298
+// ---
+// MOM: Sweetie, we're not mad, I promise. I'll talk to your father.
+// DAD: No need to talk. I'm not angry at all. In fact, I have something to help.
+// MOM: What are you... Is that...
+// // gun slides into view
+// -> Grab gun
+//     <<jump take_it>>
+// -> Look at door
+//     <<jump door>>
+
+// ===
+
+// title: door
+// position: 1785,-268
+// ---
+// YOU: A gun? Dad, where did you?
+// DAD: I've always had it. 
+// MOM: He brought it onto the ship when we departed. It's older than you, sweetie. I can't believe you managed to sneak that on, dear.
+// DAD: You know that I tend to be a bit paranoid. I always said that there was a chance of something going wrong, and now it's happened.
+// YOU: You've had it this whole time?
+// DAD: Yep. Also, there's only six bullets in there, so use it wisely.
+// YOU: Wait, you're telling me to use this?
+// DAD: Of course. Like I said, you found something big, best to protect yourself.
+// MOM: Are you sure about this?
+// DAD: I am. It's about time that gun was used anyway.
+//     <<wait  2>>
+// YOU: Thanks, Dad.
+// DAD: You're welcome.
+// MOM: Be careful out there!
+// -> Shoot door
+//     <<jump shoot>>
+// -> Leave
+// ===
+
+// title: take_it
+// position: 1791,20
+// ---
+// YOU: I don't know where you got this, but thanks, Dad.
+// DAD: I brought that with me when we first got onto this ship. Maybe I'm paranoid, but I thought there was a possibility of something going wrong and if that did happen, I better have something to protect myself.
+// YOU: You didn't think to tell me until now?
+// MOM: Honestly, I forgot he had it. I told him it was stupid to bring it on board.
+// DAD: I had great hindsight. And now, our boy needs it, just in case.
+// MOM: I don't think this is a good idea. I want you to protect yourself, but...
+// DAD: It will be fine. There's only six bullets in there anyway. Don't rely on it too much.
+// YOU: Six? Only six?
+// DAD: I had to sneak that gun on board. It was hard to hide bullets anywhere besides the gun. Be careful with your shot.
+// YOU: Okay, I'll use it the best I can.
+// MOM: Be safe, dear!
+// -> Shoot door
+//     <<jump shoot>>
+// -> Leave
+// ===
+
+// title: shoot
+// position: 2124,-112
+// ---
+// MOM: EEEEGH!
+// DAD: What the hell, son?
+// YOU: Sorry, sorry. I wanted to see if it worked.
+// DAD: There are others places to test your aim besides our door.
+// YOU: Sorry...
+// YOU: I'll just go now.
+===

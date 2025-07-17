@@ -1,0 +1,404 @@
+﻿title: TestCaptainConvo_01_Start
+tags:
+position: -101,-69
+---
+// Conversations
+Captain: A NAT on the bridge, this had better be good. #line:027a4e2 
+Pilot: Wait, they're a NAT? They should be locked down! #line:0b61fcf 
+
+-> Who was that? #line:0947fb7 
+    <<jump who_was_that>>
+-> <style=lie></style>I had emergency permission to move about. #line:0137793 
+    <<jump move_about>>
+-> <style=rumor></style>I think you know why I'm here. #line:03bfc8f 
+    <<jump why_im_here>>
+===
+title: why_im_here
+position: 308,334
+---
+You: You know why I'm here, you can't do this, Captain. #line:044e13b 
+Captain: Can't do what, exactly? #line:0e91a46 
+
+-> <style=true></style>You're not taking us to Planet 1. #line:05cfb73 
+    <<jump not_to_planet_one>>
+-> Stop playing dumb. #line:001b4be 
+    <<jump playing_dumb>>
+===
+title: move_about
+position: 274,-66
+---
+You: I had permission to move about. Captain, this is an emergency. #line:0166d8b 
+Captain: What is? #line:0065c8a 
+
+-> Stop playing dumb. #line:03969d9 
+    <<jump playing_dumb>>
+-> <style=true></style>Our current destination is unsafe. #line:008b377 
+    <<jump destination_unsafe>>
+===
+title: who_was_that
+position: 257,-291
+---
+You: Who said that? #line:0e74052 
+Captain: That doesn't matter. What does- #line:05e9a6f 
+Pilot: That was Johnny Pilot, you should know who steers the ship, NAT... #line:0662024 
+
+-> <style=address>to Johnny</style> You have to help us. #line:0dcc868 
+    <<jump help_us>>
+-> <style=address>to Captain</style> Does he know? #line:08c4a5a 
+    <<jump does_he_know>>
+
+===
+title: destination_unsafe
+position: 607,-108
+---
+You: The planet you're taking us to, it isn't safe, Captain. #line:0fb771b 
+Captain: I- you have no idea what you're talking about. #line:055a0e9 
+<<jump tbc>>
+===
+title: playing_dumb
+position: 616,88
+---
+You: Captain, stop playing dumb! I know- #line:0f3ef83 
+-> <style=rumor></style>Where you're taking us. #line:0f1b3df 
+    <<jump tbc>>
+-> <style=true></style>That you've been lied to. #line:0239926 
+    <<jump tbc>>
+-> <style=lie></style>That you've been talking to Firm 2. #line:0473270 
+    <<jump tbc>>
+
+===
+title: does_he_know
+position: 614,-375
+---
+You: Does he know the full story, Captain? #line:07169a1 
+Pilot: What story are they talking about back there? #line:0c19429 
+<<jump tbc>>
+===
+title: help_us
+position: 620,-515
+---
+You: Johnny...Johnny you have to help us. I don't know what the captain's told you, but we're making a big mistake. #line:0f90742 
+Pilot: Cap hasn't told me anything, kid. I can't see in there, Captain, do they look alright? #line:05ade42 
+Captain: No I can't say that they do... #line:019740a 
+<<jump tbc>>
+===
+title: not_to_planet_one
+position: 609,344
+---
+You: You aren't taking us to Planet 1. #line:041861a 
+Pilot: Cap? #line:06beb9d 
+Captain: What in the stars gave you that idea? #line:005b3d9 
+You: I have proof. Message records. <i>Your</i> message records, Captain... #line:00c6829 
+<<jump tbc>>
+===
+title: tbc
+position: 1735,-206
+---
+TO BE: CONTINUED #line:01ee80d
+-> Restart Bridge? #line:0da7edc 
+    <<restart_bridge>>
+-> I'd rather not. #line:0881229 
+===
+
+title: event-npc-death
+position: -285,-1707
+---
+<<if is_all_npc_dead()>>
+<<jump on_captain_pilot_both_died_event>>
+<<elseif is_npc_dead("Pilot")>>
+<<jump on_pilot_killed_event>>
+<<elseif is_npc_dead("Captain")>>
+<<jump on_cap_killed_event>>
+<<else>>
+// Fall back 
+I killed someone #line:0392a63 
+<<resume>>
+<<endif>>
+===
+
+title: event-gun-threat
+position: -275,-1162
+---
+<<if     get_variable("gun-threat-state") == "holstered">>
+<<if !is_npc_dead("Captain")>>
+<<jump on_gun_stow_event>>
+<<endif>>
+<<resume>>
+<<elseif get_variable("gun-threat-state") == "raised">>
+<<jump on_gun_draw_event>>
+<<elseif get_variable("gun-threat-state") == "aimed">>
+<<jump on_gun_aimed_event>>
+<<elseif get_variable("gun-threat-state") == "firing-no-ammo">>
+<<jump on_firing_no_ammo_event>>
+<<elseif get_variable("gun-threat-state") == "missed">>
+<<jump on_gun_shot_but_missed_event>>
+<<elseif get_variable("gun-threat-state") == "hit-attackable-disabled">> // Example: Like a Door NPC that can't be killed 
+<<jump on_hit_attackable_disabled_event>>
+<<else>>
+You: Umm.. what just happened?? #line:0c98de0 
+<<resume>>
+<<endif>>
+// Variable `gun-threat-state` track following states:
+// holstered, raised, aimed, firing-no-ammo, hit, missed, hit-attackable-disabled
+// This event WILL NOT trigger on: hostered, hit
+// When an NPC is hit event-npc-death is triggered instead
+// Currently hostered variable is used in if statments exclusively, this state change does not trigger any event.
+===
+
+title: on_gun_draw_event
+position: 548,-1186
+---
+<<if visited("on_gun_draw_event")==false>>
+    // Fallback for if the node we're on doesn't have a specific gunDraw version and you pull out the gun
+    Captain: What- Where the hell did you get that? #line:0174e61 
+    <<jump on_gun_draw_event_b>>
+<<else>>
+    <<jump on_gun_draw_event_02>>
+<<endif>>
+
+===
+title: on_gun_draw_event_b
+position: 548,-1186
+---
+You: Doesn't matter. What matters is that you listen to what I'm about to tell you. #line:0c9c64e 
+Pilot: Captain? What's going on back there? #line:05a947e 
+You: You listen to me too, Pilot. #line:0b4b06e 
+Captain: He's got- he's got a gun, Pilot. #line:066d799 
+Captain: We can talk. Just please put that thing away. #line:0e848bd 
+<<jump why_im_here>>
+
+===
+title: on_gun_draw_event_02
+position: 548,-1186
+---
+<<if visited("on_gun_draw_event_02")==false>>
+    // If the player has already pulled and stowed the gun, and now they pull it again
+    Captain: I- please, I thought we had settled this. #line:0d5fdec 
+    Captain: You put it away once. We can make this work if you put it away again. #line:039f26a 
+    <<wait 2>>
+    Captain: Fine... #line:0d8e5ca 
+    <<resume>>
+<<else>>
+    <<jump on_gun_draw_event_03>>
+<<endif>>
+===
+title: on_gun_draw_event_03
+position: 548,-1186
+---
+<<if visited("on_gun_draw_event_03")==false>>
+    Captain: Again? Fine. Keep it out. #line:07d6f9f 
+    <<resume>>
+<<else>>
+    <<jump on_gun_draw_event_04>>
+<<endif>>
+===
+title: on_gun_draw_event_04
+position: 548,-1186
+---
+Captain: -ahem. #line:06d53ed 
+<<resume>>
+===
+
+title: on_gun_aimed_event
+position: 474,-1331
+---
+<<if !is_npc_dead("Captain")>>
+Captain: Stop aiming that shit at me. #line:0d44e2d 
+<<endif>>
+<<resume>>
+===
+
+title: on_firing_no_ammo_event
+position: 484,-1038
+---
+<<if !is_npc_dead("Captain")>>
+Captain: You ain't scaring anyone here. #line:038d8be 
+<<endif>>
+<<resume>>
+===
+
+title: on_hit_attackable_disabled_event
+position: 492,-1499
+---
+Captain: This is bullet proof.. You know that right? #line:0ab125c 
+<<resume>>
+===
+
+title: on_gun_shot_but_missed_event
+position: 503,-861
+---
+// Shoot but didn't hit anything - Fallback for if the node we're on doesn't have a specific gunShoot version
+<<if visited("on_gun_shot_but_missed_event") == false>>
+    Captain: FUCK! Are you crazy?! #line:0ab1b1f 
+    -> Maybe #line:019e6dc 
+        <<jump are_you_crazy>>
+    -> You're not taking me seriously. #line:0cd5e81 
+        <<jump take_me_seriously>>
+    -> <style=address>to Johnny</style> I'm not messing around, Pilot. #line:0b94717 
+        <<jump not_messing_around>>
+<<else>>
+    <<jump TestCaptainConvo_01_gunShoot_event_02>>
+<<endif>>
+
+===
+title: TestCaptainConvo_01_gunShoot_event_02
+position: 2174,-2288
+---
+// Fallback for if the node we're on doesn't have a specific gunShoot version and we've already shot once
+<<if visited("TestCaptainConvo_01_gunShoot_event_02") == false>>
+    Captain: Shit! Just, <i>stop</i>! Please! Before you get us all killed. #line:0575026 
+    You: You're the one getting us all killed captain. #line:0f4f5f4 
+    Pilot: Cap I think he <i>is</i> crazy. What are are you talking about, kid? #line:05a3fa1 
+    <<resume>>
+<<else>>
+    <<jump TestCaptainConvo_01_gunShoot_event_03>>
+<<endif>>
+===
+title: TestCaptainConvo_01_gunShoot_event_03
+position: 2525,-2275
+---
+Captain: Gah!  #line:092e902 
+<<resume>>
+
+===
+title: on_cap_killed_event
+position: 1627,-1462
+---
+// Heavy breathing for a beat
+Pilot: What did you do?! Cap? Captain?! #line:04bc184 
+You: Holy shit. Ok. Ok breath. Fuck. #line:0fe1db4 
+-> Alright Pilot, just you and me now. #line:009bed3
+    <<jump tbc>>
+-> It had to be done. #line:0efcc38 
+    <<jump tbc>>
+-> You're next if you don't listen. #line:0e27a06 
+    <<jump tbc>>
+
+===
+title: KillPilot_CapDead
+position: 1625,-2293
+---
+<<wait  1>>
+You: I can't take it. #line:0bcb5eb 
+You: I just...can't. #line:00abd0e 
+You: Stars surround, what the fuck do I do now? #line:011f173 
+===
+title: on_pilot_killed_event
+position: 1616,-1816
+---
+Holy shit. Ok. Ok breath. Fuck. #line:05d3b30 
+Captain: What have you done?! #line:0c19b06 
+You: I- #line:04ea8f1 
+Captain: Without anyone to pilot, the guidance computer is <i>locked in</i> you fool! #line:0fbe3ca 
+-> Then you better hop on the controls. #line:043fe2f 
+    <<jump hop_on_controls>>
+-> He was in the way. #line:09d4be8 
+    <<jump in_the_way>>
+
+===
+title: on_captain_pilot_both_died_event
+position: 1617,-2159
+---
+You: They wouldn't listen. #line:018a93c 
+You: Void take us all, how do I get us out of this mess now? #line:0cf5245 
+
+===
+title: are_you_crazy
+position: 1177,-751
+---
+You: I might be. Do you really want to find out? #line:02d48b8 
+Captain: Void take me, you are crazy. #line:0785f7b 
+<<jump now_can_we_talk>>
+
+===
+title: take_me_seriously
+position: 1169,-1115
+---
+You: You're not taking me seriously, Captain. #line:0c50fa1 
+You: You should really be taking me seriously. #line:008dc3d 
+Pilot: Cap, I believe him at that much. Let's hear him out. #line:00881f3 
+<<jump now_can_we_talk>>
+===
+title: not_messing_around
+position: 1169,-937
+---
+Pilot: Shit, kid alright alright I hear ya. #line:0dee354 
+You: Good. Now let me explain- #line:03d31c3 
+-> Captain's being lied to. #line:08bfecb 
+    <<jump cap_being_lied_to>>
+-> We need to update the heading right now. #line:0f547f7 
+    <<jump update_heading_now>>
+===
+title: now_can_we_talk
+position: 1761,-980
+---
+You: Now can we talk? #line:0210bc5 
+Captain: I suppose we can. #line:049aa3d 
+You: Good. Now listen- #line:058eb5b 
+-> <style=rumor></style>Captain's being lied to. #line:06a7b5a 
+    <<jump cap_being_lied_to>>
+-> We need to update the heading. #line:090ba70 
+    <<jump update_heading_now>>
+===
+title: cap_being_lied_to
+position: 1861,-1274
+---
+You: You're being lied to, Captain. #line:050ac92 
+You: Planet 2 isn't what you think it is. #line:031b89e 
+Captain: I have no idea what you're talking about. #line:0868a49 
+Captain: I've never even eard of Planet 2. #line:0fc79fc 
+<<jump tbc>>
+===
+title: update_heading_now
+position: 2008,-744
+---
+You: We need to update the heading <i>now</i> #line:0d20197 
+Pilot: What do you mean? #line:0de587f 
+Captain: Don't listen to him, Pilot. #line:0b7e394 
+Captain: I don't care what he does, we must stay the course. #line:07abcff 
+<<jump tbc>>
+===
+title: hop_on_controls
+position: 1906,-1941
+---
+You: Then you better hop on the controls, Cap. #line:099d639 
+You: I won't ask twice. #line:0b4e269 
+<<jump tbc>>
+===
+title: in_the_way
+position: 1922,-1747
+---
+You: He was in the way. #line:00c9153 
+You: Are you in the way, Captain? #line:0b7d4da 
+Captain: I- I don't- no. I'm not. What do you want? #line:0fd594d 
+<<jump tbc>>
+===
+title: pilotDead_capLiving_gunShoot
+position: 2144,-2126
+---
+You: You're not <i>listening</i> to me, Captain! #line:0f31568 
+You: The next time I won't miss! #line:0182ea8 
+Captain: Ok! Ok I- I'll do what you want. #line:0ec64f3 
+<<jump tbc>>
+===
+title: on_gun_stow_event
+position: 138,-780
+---
+// The player has drawn the gun, and stowed it
+Captain: That's better. #line:037741e 
+Captain: Now, what is it? #line:0cff02f 
+<<resume>>
+===
+title: event-resume
+position: -295,-2164
+---
+<<if is_all_npc_dead()>>
+    <<jump on_captain_pilot_both_died_event>>
+<<elseif is_npc_dead("Captain")>>
+    <<jump on_cap_killed_event>>
+<<elseif is_npc_dead("Pilot")>>
+    <<jump on_pilot_killed_event>>
+<<else>>
+    <<resume_stopped_node>>
+<<endif>>
+===

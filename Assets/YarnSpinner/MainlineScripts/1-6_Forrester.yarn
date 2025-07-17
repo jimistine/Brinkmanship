@@ -1,0 +1,476 @@
+﻿title: Forrester_start
+position: -635,-628
+---
+//Hi welcome, here is the initial node for Forrester.
+<<if visited("Forrester_intro") == false>>
+	<<set_variable "forresterStatus" "neutral">>
+	<<jump Forrester_intro>>
+<<elseif get_variable("forresterStatus") == "neutral">>
+	<<jump Forrester_continue>>
+<<elseif get_variable("forresterStatus") == "trust">>
+	<<jump Forrester_bonus>>
+<<elseif get_variable("forresterStatus") == "fail">>
+	<<jump Forrester_failed>>
+<<endif>>
+
+// ->Talk to Forrester again after failing completely
+// 	<<jump Forrester_failed>>
+// ->Talk to Forrester again after succeeding
+// 	<<jump Forrester_bonus>>
+// ->Raise your gun in front of Forrester
+// 	<<jump Forrester_gunDraw>>
+===
+title: Forrester_intro
+position: -626,-303
+---
+<<Knock_Random Player>>
+You: Chief Kee? #line:077838c 
+<<Knock_Random Player>>
+You: Chief Kee, are you there? #line:0fb6250 
+Kee: What in the stars? #line:017151d 
+Kee: Hey! I'm trying to get some shut-eye here! #line:0c11071 
+Kee: Not like I get much opportunity to do so when the ship's running proper... #line:0079aca 
+You: Sorry Chief. #line:029454d 
+You: Were you...sleeping? #line:0d91049 
+Kee: I was until you started buzzing around, NAT. #line:0df5f80 
+-> Sorry, I'll let you rest. #line:047a95a 
+	<<jump goaway>>
+-> This is important. #line:0bd51b2 
+	You: This is important, boss. #line:0d638c4 
+	Kee: I'm sure it is. #line:02ab973 
+Kee: Wait… how the hell are you out and about?                 #line:056c62b 
+-> Something's happened with the ship. #line:0b0aba0 
+	<<jump Forrester_ship>>
+-> Friends in high places. #line:02d7110 
+	You: I've got friends in high places, okay? #line:0b3365a 
+	Kee: How nice for you. #line:0494301 
+	Kee: Spit it out then. What's so important? #line:04a8f07 
+	<<jump Forrester_ship>>
+-> Don't worry about it. #line:04a4ba7 
+	You: Don't worry about it, ok? #line:0b487ed 
+	Kee: It's my job to worry about it, Kase. #line:00779ef 
+	<<jump goaway>>
+===
+title: goaway
+position: 49,260
+---
+<<if visited_count("goaway") == 0>>
+	You: I don't have time for this, just forget it. #line:095e7e8 
+	Kee: Fine by me. Get back to your office. #line:0203609 
+<<elseif visited_count("goaway") == 1>>
+	You: You know what? I think I'm done here. #line:06ed161 
+	Kee: Great. Thanks for nothing, kid. #line:0555d86 
+<<elseif visited_count("goaway") == 2>>
+	You: Actually, I should go. #line:07c50d8 
+	Kee: Then beat it. #line:0413186 
+<<elseif visited_count("goaway") == 3>>
+	You: I think we're done here. #line:0de4933 
+	Kee: Couldn't agree more. Kindly leave me alone until this maneuver is over. #line:0a7b1ed 
+	<<set_variable "forresterStatus" "failed">>
+<<endif>>
+===
+title: Forrester_ship
+position: -631,-34
+---
+You: Something's happening with the ship. #line:028f653 
+Kee: Yeah? Something's always happening with the ship. #line:0751e93 
+Kee: How many decades have we been on this voyage, and kids like you still get spooked by creaks in the floorboards. #line:09d54a6 
+You: Floorboards? #line:0d11364 
+Kee: Eh, yet another thing from before your time. #line:09683e7 
+You: I'm serious. I was looking into the ship's course just now, there's this anomaly and I- #line:0e341f9 
+Kee: Why were you looking into the ship's course? #line:022902a 
+-> It's my job? #line:057d8c5 
+	<<jump just_bored>>
+-> Something is off. #line:068f501 
+	You: Something's been feeling...off lately. #line:03164ad 
+Kee: I'm not surprised you feel "off". #line:00ac9a6 
+Kee: You've been staying after hours every night, mapping out the stars or whatever you do to entertain yourself. #line:0661f54 
+Kee: As if we would ever go anywhere other than one planet in our lifetimes. #line:00d20bf 
+Kee: How do you know you haven't started seeing things? #line:0781a8a 
+-> Everyone could be in danger. #line:008a3de 
+	<<jump Forrester_foolproof>>
+-> I talked to Tav. <<if visited("tavstart")>> #line:065dc6c 
+	<<jump Forrester_tav_initial>>
+-> Maybe you're right. #line:0f084c5 
+	<<jump goaway>>
+
+===
+title: just_bored
+position: 12,21
+---
+You: Because it's my job? #line:0c24b66 
+Kee: Your job is to do what I tell you. #line:0b02bb6 
+Kee: But I understand - you were bored. So, go on. #line:0e841a5 
+-> This is hopeless. #line:0504f0b 
+	You: This is hopeless. #line:0c081ce 
+-> You need to take me seriously. #line:00cdaa6 
+	You: You need to take me more seriously. #line:05fc6cc 
+<<jump Forrester_offended>>
+===
+title: Forrester_foolproof
+position: 80,-240
+---
+You: If what I saw is true, everyone could be in danger. #line:079d1d1 
+Kee: I didn't know you had such a knack for drama. #line:0e5cd29 
+Kee: The ship's engineering is foolproof. <style=imp>The Brink</style> is older than you are, kid. #line:0e19ba3 
+Kee: And more importantly - #line:0db2c47 
+Kee: I know how to do my job. Are you saying that I can't? #line:0a843bb 
+-> If that's what it takes. #line:06bb2eb 
+	You: I know you don't respect me, and maybe I haven't earned your respect. #line:08b49f2 
+	You: But I really think there's a problem here… and if I'm right, everything is on the line. #line:0e813c6 
+	You: You need to hear me out. Please. #line:0fac716 
+	<<jump Forrester_persuaded>>
+-> I don't mean to offend… #line:037ad93 
+	You: No offense but... #line:01eb307 
+	<<jump Forrester_offended>>
+-> Ugh, why am I even talking to you? #line:048331e 
+	<<jump goaway>>
+===
+title: Forrester_persuaded
+position: 364,-480
+---
+Kee: Alright, fine. #line:07d2036 
+Kee: Seems I underestimated you, Kase. #line:059a60e 
+Kee: Honestly, I always thought you were too much of a suck-up, real good at following orders like all the other kids. #line:0cd69a6 
+Kee: But you got your own brain. #line:00ae0e6 
+Kee: Start talking before I change my mind. #line:0e04dff 
+<<jump Forrester_success>>
+===
+title: Forrester_offended
+position: 355,-154
+---
+Kee: What do you mean, NAT? #line:0192a5a 
+-> I trust you, but the captain… #line:03f8201 
+	<<jump Forrester_captain>>
+-> My parents told me not to trust anyone. #line:04e6899 
+	<<jump Forrester_parents>>
+===
+title: Forrester_captain
+position: 745,194
+---
+You: I trust you, but the captain... #line:0fa5930 
+Kee: <style=imp>Captain Typhe</style>? #line:01dcd5d 
+Kee: Tell me, kid. #line:017922a 
+Kee: What did you learn about him growing up? #line:008f4f5  #line:064d8c1 
+You: That he's an experienced leader, I guess. #line:0ba0571 
+You: He was important on Estea, so that's why he became captain. #line:09105cf 
+Kee: Ah, yes. The storied hero of our mother-moon. #line:05762e1 
+Kee: And now? With these new… revelations of yours? #line:0687485 
+Kee: What do you think of him? #line:06843ed 
+-> Even he could make a mistake. #line:0f951c1 
+	<<jump Forrester_captain_doubt>>
+-> He could have something to hide. #line:0574193
+	You: I think he could have something to hide. #line:078db98 
+	<<jump Forrester_persuaded>>
+===
+title: Forrester_captain_doubt
+position: 1086,205
+---
+You: I think even he could make a mistake. #line:0b0b6be 
+Kee: A mistake? If that's the case, perhaps he'd like to hear about it.  #line:0b2f521 
+Kee: Go ask him. I'm sure it will be amusing. #line:001a655 
+Kee: Now, I'm going back to sleep. #line:0af950a 
+===
+title: Forrester_parents
+position: 668,-147
+---
+You: My parents made it clear I shouldn't trust just anyone with this. #line:0fd4216 
+Kee: Your parents? Void take me, you are a kid aren't you... #line:0a61abb 
+Kee: Can't say I made it a point to recall your last name. #line:022b5df 
+Kee: Remind me, would you? #line:06b583d 
+-> Rego. #line:0d5732b 
+	<<jump Forrester_parents_rego>>
+-> …Never mind. #line:0596783 
+	<<jump goaway>>
+===
+title: Forrester_parents_rego
+position: 940,-151
+---
+You: It's Rego. #line:0c070c0 
+Kee: Right. Gil and Eriana. Tough people. Good people. #line:096deb6 
+Kee: I'll hear you out. If they sent you, maybe there is something going on. #line:0dd60bf 
+<<jump Forrester_success>>
+===
+title: Forrester_tav_initial
+position: 51,405
+---
+You: Well, I've talked to Tav - a friend of mine in the mailroom. #line:0f4f176 
+Kee: Another kid, I assume?  #line:06af685 
+Kee: Why should I care?   #line:0e033cf 
+-> She told me about the EPMs. <<if visited("tav_level_2")>> #line:0f3b04c 
+	<<jump Forrester_tav_1>>
+-> She thinks something's up, too. #line:02044ca 
+	<<jump Forrester_tav_dismiss>>
+===
+title: Forrester_tav_dismiss
+position: 47,595
+---
+Kee: And you think putting two brain cells next to each other makes them smarter than just one? #line:02b6937 
+Kee: Well, have fun rubbing 'em together. #line:0eb73f8 
+Kee: Let me know if you come up with anything real. #line:0c3ce46 
+Kee: If I'm still awake. #line:0c39a1d 
+-> Alright, fine. Something's up with EPMs. <<if visited("tav_level_2")>> #line:09f4ec6 
+	<<jump Forrester_tav_1>>
+-> We'll see.  #line:02a46f4 
+You: We'll see.  #line:0ceb7c6 
+===
+title: Forrester_tav_1
+position: 400,367
+---
+Kee: EPMs? #line:0d14480 
+You: The mailroom has been rejecting all requests - except the captain's. #line:0570df6 
+Kee: So the captain gets special privileges to send classified letters. #line:004bf89 
+Kee: That rubs you the wrong way because…? #line:0e04ab1 
+-><style=true></style>They're to a family member. Sone Typhe. <<if visited("tav_l_3")>> #line:0b63e81 
+	<<jump Forrester_tav_2>>
+-> I don't know. Something's fishy. #line:0dfef31 
+	<<jump keepgoing>>
+-> I guess it makes sense. #line:083ce75 
+	<<jump goaway>>
+===
+title: Forrester_tav_2
+position: 402,748
+---
+You: They're all going to a family member. Sone Typhe. #line:002647b 
+Kee: And there's something wrong with someone talking to their <style=imp>sister</style>? #line:00f8b84 
+<<set_variable "sister_intel" "true">>
+You: His sister, huh? #line:0cbc350 
+You: No, I mean, not ordinarily, but this isn't an ordinary situation. #line:0c37d03 
+<<jump Forrester_captain>>
+===
+title: keepgoing
+position: 755,372
+---
+Kee: Hm. Might be. #line:0abc88a 
+Kee: If you find out more about that, let me know. #line:0e30be8 
+Kee: I'll wait up for you. #line:0730f9e 
+===
+title: gun_shoot_event_Kee
+position: -167,-962
+---
+<<if !visited("gun_shoot_event_Kee")>>
+	Kee: <i><shake>Fuck!</i></shake> #line:08840b6 
+	Kee: Did you-did you <i>shoot at me?!</i> #line:07493a0 
+	-> There's more where that came from. #line:0d90cf6 
+		You: I did. And there's more where that came from. #line:02bd85b 
+	-> Say nothing. #line:0c542c5 
+	Kee: Goddamn, kid.  #line:03dd80f // takes a beat to breath out
+	Kee: You know what? You got guts. #line:083c9c5 
+	Kee: Looks like you're serious. I'll hear you out. #line:0104643 
+	<<jump Forrester_success>>
+<<else>>
+	Kee: <i>Shit!!</i> Cut that out! #line:0f5f473 
+	<<jump Forrester_bonus>>
+<<endif>>
+===
+title: Forrester_success
+position: 1169,-942
+---
+<<set_variable "forresterStatus" "trust">>
+Kee: You said there was heading update? #line:007c51b 
+You: That's right. #line:07a23ae 
+Kee: Ok. Give me a second. #line:0f667ec 
+Kee: I'll pull up the logs on my end, see what's going on. #line:086b9b7 
+// brtodo: Audio, add some bleeps and bloops, or at least some muffled typing 
+Kee: Hmm... #line:0b76de5 
+Kee: Consider me convinced, NAT. You were right. #line:0cba7e8 
+Kee: There was a course correction… but whoever did it tried to cover it up. #line:06698b3 
+You: I knew it. #line:0f5287a 
+Kee: I'm not gonna speculate on who did it. I, personally, don't want my head on a platter. #line:0a32901 
+Kee: But whoever it was, they had some kind of clearance. #line:0e0818e 
+You: So what was the course correction? #line:064edc0 
+Kee: Looks like the ship's now headed to the <style=imp>Modula Region.</style> #line:0947a3a 
+<<set_variable "modulaRegion_intel" "true">>
+Kee: Exactly where to, I can't be sure. #line:0f27d9e 
+Kee: You know who Urnst is, right? The agriculture head? #line:016febf 
+-> Yeah I've actually checked in with them.<<if visited("urnst_start")>> #line:019e3bc 
+	<<jump forrester_talked_with_urnst>>
+-> <style=true></style>Yeah they're friends with my parents. #line:04928eb 
+	<<jump friends_with_parents>>
+-> <style=lie></style>Never heard of them. #line:0fd27e6 
+	<<jump never_heard_of_them>>
+===
+title: never_heard_of_them
+position: 1552,-662
+---
+You: Never head of them. #line:080a0ad 
+<<if visited("Forrester_parents_rego")>>
+	Kee: Wait if you're the Rego kid- #line:00378a8 
+	Kee: Urnst is close with your parents, I'm sure of it. #line:04858db 
+	Kee: What the hell are you keeping from me, Kase? #line:0c68df4 
+	-> I don't know why I said that, I know them. #line:0ff686b 
+		You: I don't know why I said that. #line:06c78b2 
+		<<jump friends_with_parents>>
+	-> Don't know what you're talking about. #line:07f1607 
+		You: I have no idea what you're talking about, Forrester, Really. #line:038e01f 
+		Kee: Bull fucking shit you don't. #line:0194832 
+		Kee: I don't know what you're hiding but I'm done talking to you. #line:0a8ca36 
+		<<set_variable "forresterStatus" "fail">>
+<<else>>
+	Kee: Strange... #line:0ec18bc 
+	<<jump urnst_info_no_parents>>
+<<endif>>
+===
+title: forrester_talked_with_urnst
+position: 1544,-825
+---
+You: Yeah, I just talked with them. #line:07dd946 
+Kee: Yeah? Good. #line:02dfdcb 
+Kee: I can't believe I'm saying this, but I think you should keep investigating.  #line:06b5b90 
+You: Thanks, chief. #line:0aac17f 
+Kee: Good luck, gnat. Gotta feeling you'll need it. #line:0d68c1f 
+<<set_variable "Forrester_course_intel" "true">>
+===
+
+title: friends_with_parents
+position: 1927,-945
+---
+You: Yeah they're actually friends with my folks. Why? #line:04a48bf 
+Kee: Well, I can't believe I'm saying this, but I think you should keep investigating.   #line:08deb41 
+Kee: Real infodump of a person, they are. #line:03fb33d 
+Kee: But credit where credit is due: as agricultural director, they know a hell of a lot more of the history of planetary development than I do. #line:090a595 
+Kee: They might even know something interesting.  #line:09b8247 
+You: Thanks, chief. #line:0eca3fc 
+Kee: Good luck, NAT. I've got a feeling you'll need it. #line:051243a 
+
+<<set_variable "Forrester_course_intel" "true">> //Player knows about the course correction now!
+===
+title: urnst_info_no_parents
+position: 1902,-636
+---
+Kee: Well, I can't believe I'm saying this, but I think you should keep investigating.  #line:07ccf80 
+Kee: Real infodump of a person, they are.  #line:01191d7 
+Kee: But credit where credit is due: as agricultural director, they know a hell of a lot more of the history of planetary development than I do. #line:0b705b7 
+Kee: They might even know something interesting.   #line:0467531 
+You: Thanks, chief. #line:0769fdb 
+Kee: Urnst is your next stop now, got it? #line:0bb4afe 
+Kee: Good luck, NAT. Gotta feeling you'll need it. #line:0397fd0 
+
+<<set_variable "Forrester_course_intel" "true">> //Player knows about the course correction now!
+===
+title: Forrester_continue
+position: -1238,-380
+---
+<<Knock_Random Player>>
+Kee: Ugh, what now? #line:0c57eaf 
+-> You have to hear me out about the ship. #line:0974500 
+	<<jump Forrester_continue_ship>>
+-> I've got some new info. <<if visited("tavstart")>> #line:0fec310 //if tav true
+	<<jump Forrester_continue_tav>>
+
+===
+title: Forrester_continue_ship
+position: -1073,194
+---
+Kee: Okay, let's do this again. #line:0194880 
+Kee: How do you know you're right about the ship? #line:08b18cf 
+-> If what I saw is true, everyone could be in danger. #line:0f3f2f3 
+	<<jump Forrester_foolproof>>
+-> Never mind. #line:0d5944d 
+	You: Well... #line:0e37f80 
+	<<jump goaway>>
+
+===
+title: Forrester_continue_tav
+position: -1197,332
+---
+Kee: About some EPMs? What about them? #line:0feb4d1 
+-> <style=true></style>They're to a family member. Sone Typhe. <<if visited("tav_l_3")>> #line:03e6fa4 
+	<<jump Forrester_tav_2>>
+-> …I lied, I don't have anything. #line:0175112 
+	<<jump goaway>>
+
+===
+title: Forrester_failed
+position: -283,-656
+---
+<<Knock_Random Player>>
+You: Forrester? #line:091303c 
+<<if visited("Forrester_failed")>>
+	<<Knock_Random Player>>
+	You: Hey! Forrester come on! #line:0bd87cd 
+	You: Dammit... #line:0bb8e08 
+<<else>>
+	Kee: Go the hell away, NAT. #line:022ddb1 
+	Kee: I've had enough of you. #line:07a7ff7 
+<<endif>>
+===
+title: Forrester_bonus
+position: -1891,-495
+---
+<<Knock_Random Player>>
+Kee: You ain't done with me yet, NAT? #line:0774f34 
+-> How do you know my parents? <<if visited("Forrester_parents_rego")>> #line:0752b35 
+	<<jump Forrester_bonus_parents>>
+-> How long would it take to reroute the ship? <<if visited("reroute_ship")==false>> #line:07525fe 
+	<<jump reroute_ship>>
+-> Sorry for shooting your door, chief. <<if visited("Forrester_shootdoor") == true>> #line:0ba2c40 
+	<<jump Forrester_bonus_shoot>>
+-> I'm good. #line:0bdee1b 
+	<<jump Forrester_bonus_bye>>
+===
+title: Forrester_bonus_parents
+position: -2319,146
+---
+Kee: I knew them before the ship took off. #line:0a834df 
+Kee: They're both doctors. Good people. #line:089137d 
+Kee: Everyone's got secrets, especially when they sign on for a twenty-year trip with no coming back. #line:0da307e 
+Kee: But they're solid folk. You lucked out, NAT. #line:0ada6a4 
+<<jump Forrester_bonus_recur>>
+===
+title: Forrester_bonus_me
+position: -2077,145
+---
+Kee: Hey, if you die, who navigates the ship? #line:01083ea 
+Kee: I'm kidding. But I'm also serious here. #line:0e26749 
+Kee: I'll keep an eye on you. If something happens, I'll see what I can do. #line:0b2546e 
+Kee: But till then, let's not put our eggs in one basket. #line:0cbe132 
+Kee: Eggs being us. #line:096d06a 
+<<jump Forrester_bonus_recur>>
+===
+title: Forrester_bonus_shoot
+position: -1720,161
+---
+Kee: No worries, NAT. It showed me you weren't a wuss. #line:0118536 
+You: You thought I was a wuss? #line:0ed55ab 
+Kee: You don't know a world outside this ship. #line:077689d 
+Kee: You can't blame me for not trusting any one of you one bit. #line:0d52d31 
+Kee: Until now, that is. #line:0f30c9f 
+<<jump Forrester_bonus_recur>>
+===
+title: reroute_ship
+position: -2605,146
+---
+You: How long would it take to reroute the ship? #line:04b93ee 
+Kee: If we're really off course? #line:04f7b9c 
+Kee: Hmm... not too long. #line:028622b 
+Kee: Probably about thirty seconds. Give or take. #line:00a520a 
+Kee: But if it's not realigned by the time the gravity assist engages... #line:02f1c2e 
+Kee: Things will get very, <i>very</i> Hot. #line:0e2ab5b 
+-> Got it. #line:02e4688 
+	You: Understood. #line:001f7b0 
+-> What do you mean? #line:0b86e56 
+	You: Hot how? #line:0ac11a3 
+	Kee: What did you learn in nav school?! #line:00179dd 
+	Kee: If you screw this up we'll succumb to Surator-9s gravity and plunge right into the star. #line:0011ebe 
+	You: Shit... #line:07b91b5 
+	Kee: Shit is right, kid. #line:01d49cf 
+===
+title: Forrester_bonus_recur
+position: -2251,473
+---
+Kee: Anything else? #line:00e3182 
+-> How do you know my parents? <<if visited("Forrester_bonus_parents")==false>> #line:0249292 
+	<<jump Forrester_bonus_parents>>
+-> How long would it take to reroute the ship? <<if visited("reroute_ship")==false>> #line:06ba1db 
+	<<jump reroute_ship>>
+-> Sorry for shooting your door, chief. <<if visited("Forrester_bonus_shoot")==false>> #line:07a94e5  //if visited Forrester_shootdoor true
+	<<jump Forrester_bonus_shoot>>
+-> I'm good. #line:0118ba9 
+	<<jump Forrester_bonus_bye>>
+===
+title: Forrester_bonus_bye
+position: -1920,584
+---
+Kee: Good luck, NAT. Gonna need it. #line:0233fdf 
+===

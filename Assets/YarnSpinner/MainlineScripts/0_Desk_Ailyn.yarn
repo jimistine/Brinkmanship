@@ -1,0 +1,400 @@
+﻿title: Desk_Ailyn_Start
+tags:
+position: -1130,-399
+---
+// This is where we'll check to see how far along the player is before continuing the conversation
+<<if !visited("Intro_Start")>>
+    // To 1-2_3_Intro
+    <<jump Intro_Start>>
+<<elseif getSequence() == "FirstSteps">>
+    <<jump ailyn_first_steps>>
+<<elseif getSequence() == "FollowingUp">>
+    <<jump ailyn_parents>>
+<<elseif getSequence() == "TheInvestigationBegins" || getSequence() == "Prisoner">>
+    <<jump investigation_router>>
+<<endif>>
+===
+title: investigation_router
+position: -789,132
+---
+<<if !visited("investigation_router")>>
+    You: Ailyn, you there? #line:0dfde17 
+    Ailyn: Hey Kase, yeah what's up? #line:0054972 
+<<else>>
+    You: I'm back. #line:0b18ac1 
+    Ailyn: Learn anything new? #line:01dbeba 
+<<endif>>
+
+-> I talked to Forrester <<if visited("Forrester_intro") && !visited("forrester_checkin")>> #line:0190406 
+    <<jump forrester_checkin>>
+-> I talked to Tav <<if visited("tavstart") && !visited("tav_checkin")>> #line:0913dec 
+    <<jump tav_checkin>>
+-> I talked to Urnst <<if visited("urnst_intro") && !visited("urnst_checkin")>> #line:00e90f6 
+    <<jump urnst_checkin>>
+-> I talked to Brine <<if visited("brinestart") && !visited("brine_checkin")>> #line:09133c6 
+    <<jump brine_checkin>>
+-> I took a trip to the brig <<if visited("prisonerstart") && !visited("ailyn_prisoner")>>
+    You: Well I took a trip to the brig.
+    <<jump ailyn_prisoner>>
+-> Nothing yet. #line:0352871 
+    You: No not yet. #line:0eb06de 
+    Ailyn: Alright, I don't want to rush you, but we're running out of time here. #line:01d6871 
+    You: I know, I know...I'll keep you posted. #line:0554902 
+    Ailyn: Got it, I'll sit tight. #line:0429e77 
+===
+title: ailyn_first_steps
+position: -599,-790
+---
+Ailyn: Hey. You talk to your parents already? #line:0a4852d 
+You: No, not yet. #line:02529f1 
+Ailyn: Ok well check back in after, curious to hear what they have to say about all this. #line:0cc5ed8 
+You: Right, sounds good.  #line:0dfc248 
+===
+title: ailyn_parents
+position: -601,-608
+---
+<<Toggle_Ailyn_Ping VoidSpaceManager>>
+Ailyn: How's it going? #line:02eb71f 
+You: Well I talked to my parents. #line:0e247b9 
+Ailyn: And? #line:0879f66 
+-> They gave me a gun. #line:0232abe 
+    <<jump gave_me_gun>>
+-> They believed me. #line:0a51033 
+    <<jump believed_me>>
+===
+title: gave_me_gun
+position: -195,-676
+---
+// check here if the player has shot the gun
+You: They gave me a gun, Ailyn. #line:025fcaa 
+Ailyn: Like a <i>gun</i> gun?! #line:00d5e32 
+You: A gun gun. #line:0d6b8b5 
+Ailyn: Holy shit... #line:08f2819 
+Ailyn: ...that's awesome. #line:0f0fc49 
+You: What?! #line:0b85e71 
+Ailyn: I just think they're cool, ok?  #line:0ee8ea4 
+You: Sure... #line:00652a2 
+Ailyn: So they believed you? #line:07f47ee 
+You: Yeah. #line:0bc6411 
+<<jump believed_me>>
+===
+title: believed_me
+position: -193,-480
+---
+You: Seems like they believed me. #line:0558a39 
+You: They got weirdly serious about it all. #line:056b460 
+Ailyn: Shit, this might be big. #line:02e4d8d 
+You: Well yeah if it's true... #line:03da01d 
+You: Void knows where we'll end up. #line:0f42979 
+Ailyn: So what now?  #line:07f6200 
+<<jump investigation_begins_start>>
+===
+title: investigation_begins_start
+position: 209,-574
+---
+You: Well, now I start asking questions I guess. #line:0205c8c 
+<<if visited("gave_me_gun")>>
+    You: Don't know how much I'll need this gun, but... #line:0ca5d67 
+    Ailyn: If this goes all the way to the top you'll be face to face with the captain. #line:0870bce 
+    You: You think...? #line:084183a 
+    Ailyn: This is sketchy, Kase, I don't really know what we're in for. #line:0b622a0 
+<<endif>>
+Ailyn: Who are you gonna talk to first? #line:067dc71 
+
+-> My boss, Forrester. #line:0122599 
+    <<jump kee_first>>
+-> Urnst, on the ag deck. #line:05af003 
+    <<jump urnst_first>>
+-> Mailroom probably knows something. #line:0a6e734 
+    <<jump tav_first>>
+-> The captain. #line:057078a 
+    <<jump bridge_first>>
+
+===
+title: TimesUp
+position: -1230,-147
+---
+Ailyn: Kase? #line:050ed1f 
+Ailyn: Kase! #line:06a588d 
+Ailyn: We're out of time! #line:071cacb 
+===
+title: kee_first
+position: 643,-806
+---
+You: I think I can trust Forrester Kee, my boss down here on the nav deck. #line:0da1655 
+Ailyn: That makes sense. #line:07a1d6b 
+<<jump activate_doors>>
+
+===
+title: urnst_first
+position: 647,-647
+---
+You: My parents mentioned something about Urnst Polto. #line:0d15ddf 
+Ailyn: Up on the agriculture deck?  #line:0be5a36 
+You: Yeah, they're pretty far up the food chain so they might know why we changed course. #line:02e74e6 
+Ailyn: Let's hope so. #line:01af618 
+<<jump activate_doors>>
+
+===
+title: tav_first
+position: 659,-485
+---
+You: What do you think about the mailroom? #line:0863944 
+Ailyn: Mailroom...let me see who's posted up there during the lockdown... #line:0b792e4 
+Ailyn: Ah, looks like Tav's on duty. #line:07b366e 
+Ailyn: She definitely can't keep a secret, but she won't lie to you. #line:0c472d4 
+You: Got it. #line:021d956 
+<<jump activate_doors>>
+===
+title: bridge_first
+position: 646,-322
+---
+You: You know what, we don't have time to creep around. #line:0500749 
+You: I'm going right to the bridge, can you get me in? #line:048a583 
+Ailyn: Holy shit, Kase, are you serious? #line:06c0d7e 
+You: Deadly serious. #line:0f83784 
+Ailyn: I...I mean ok. The bridge door, well, you can't miss it. It's the big red one. #line:07d1181 
+Ailyn: Just promise me you'll think before you start shooting? #line:0f7dbad 
+-> Sure. #line:0300268 
+    You: Sure, of course. #line:0e21ebf 
+    Ailyn: That's not very reassuring. #line:03344ae 
+-> I'll do what needs to be done. #line:06fe196 
+    You: I can't promise you anything, Ailyn. We don't really know what's going on here. #line:0bf818a 
+    Ailyn: That's what worries me... #line:03aec0a 
+-> I'm not killing anyone. #line:02a7ef2 
+    You: Don't worry, I'm not gonna kill anyone. #line:099a680 
+    Ailyn: No offense but I don't have the most confidence in your aim either. #line:062e166 
+    Ailyn: Guns kick quite a bit you know. #line:029617b 
+    You: I know, I know. I won't miss. #line:0fc6b5c 
+Ailyn: Well, we'll talk more when you get there, I'll have to let you in. #line:03643c2 
+You: Got it, talk soon. #line:08e413c 
+<<jump activate_doors>>
+===
+title: activate_doors
+position: 1146,-545
+---
+Ailyn: Oh, Kase. There's one more lead that might be worth looking into. #line:093ff53 
+You: Who's that? #line:0cc7b51 
+Ailyn: I've heard of some guy down on sanitation deck. Name's Jonn Brine. #line:0eaf074 
+Ailyn: Shady dude, but apparently he's got a lot of people in his pocket. #line:0d0d3ab 
+You: Interesting, I'll make sure to be on my toes around him, then. #line:0ca6ed8
+Ailyn: If you're gonna have any time to confront the captain, you should get to the bridge in about...fifteen minutes. #line:0485f8d 
+Ailyn: You might not have time to talk to everyone, so choose wisely. Got it? #line:0216812
+You: How will I know when I'm out of time?  #line:04821e2 
+Ailyn: When Surator covers that outer ring... #line:0d67630 
+<<ActivateRings VoidSpaceManager>>
+Ailyn: We're out of time, and you'll have to head to the bridge.  #line:081d1c6 
+You: And it's already getting bigger... #line:091966e 
+Ailyn: That's right. You can head to the bridge right now if you want but...might not be a bad idea to do some digging. #line:078c0f9 
+You: I'll think about it... be seeing you. #line:0c019be 
+<<setSequence GameManager "TheInvestigationBegins">>
+===
+title: tav_checkin
+position: -260,60
+---
+You: I dropped by the mail room. #line:06451d6 
+Ailyn: How's Tav? #line:0362acd 
+You: Bored. #line:0c7cf1c 
+Ailyn: Get anything interesting out of her? #line:0a5261d 
+<<if get_variable("meteor_email_intel") == "true">>
+    You: Yeah a lot actually. #line:005ea92 
+    You: The Captain's been getting messages from his sister, and she's claiming that Soldacia was hit by a meteor. #line:0653278 
+    Ailyn: A meteor? Like a big one? #line:03410f0 
+    You: Apparently a very big one. Enough to cover the whole planet in ash. #line:06d7d1c 
+    Ailyn: <i>Shit</i>. Do you believe her? #line:0fbcef2 
+    <<if visited("meteor_effect")>>
+        You: I actually went and asked Urnst about it. #line:019ee15 
+        You: They said it was bullshit. #line:0ddde81 
+        Ailyn: They didn't really say bullshit, did they? #line:0af0b87 
+        You: Well no, but it's a lie. Sone is lying, and the Captain is eating it up. #line:0270521 
+    <<else>>
+        You: I don't know. I might go talk to Urnst about it, but I'm not sure if there's time. #line:06ece5f 
+        Ailyn: Yeah Urnst is a lot of things, but brief isn't one of them. #line:03713de 
+        You: Exactly.         #line:001e934 
+    <<endif>>
+    You: I'm not sure if I'm missing any pieces here, but things are definitely comeing together. #line:01a94ca 
+    Ailyn: Coming together might be as much as we have time for. #line:03f3161 
+    You: Agreed. #line:0a6deec 
+<<elseif get_variable("sone_messages_intel") == "true">>
+    You: Well, the Captain's been sending and recieving a lot of messages from his sister, Sone. #line:024b3b5 
+    Ailyn: Interesting...she tell you what they said? #line:0cb937f 
+    You: No. At least not yet. #line:0f1949d 
+    You: Not sure what it would take to get her to open one, but there's gotta be a way. #line:089cde7 
+    Ailyn: I'm sure there's a way, but is there the time? #line:0814f21 
+    You: Good point. We'll see. #line:0ecf531 
+<<elseif get_variable("captain_messages_intel") == "true">>
+    You: Captain's been sending and recieving a lot of emergency personal messages. #line:0307381 
+    You: Could be for a lot of reasons, but it does seem shady. #line:0555e04 
+    Ailyn: Interesting...do you know who they're to? Or from? #line:06516d4 
+    You: Not yet. Gotta get some more dirt for Tav I think. #line:077d1d7 
+    Ailyn: Sounds about right. #line:0a19ea5 
+<<elseif get_variable("EPM_intel") == "true">>
+    You: Not too much, just that emergency personal messages have been halted. #line:04d2afe 
+    Ailyn: Halted? I thought the point was for them to be available at all times. #line:0821087 
+    Ailyn: You know, for emergencies? #line:0d6739b 
+    You: Yeah it's definitely strange. Seems like someone is trying to stop us from reaching home. #line:06fe8aa 
+    Ailyn: Or others from reaching us. #line:07dcce9 
+    You: Exactly...  #line:0fd19e1 
+<<else>>
+    You: No nothing yet. #line:0a8127a 
+    Ailyn: Got it. #line:01a5b6d 
+<<endif>>
+
+<<jump anything_else>>
+===
+title: forrester_checkin
+position: -265,-83
+---
+You: I stopped by Forrester's office. #line:0350177 
+Ailyn: And? #line:0c54c7a 
+You: She was asleep. #line:0659590 
+Ailyn: Asleep?! #line:0f56449 
+You: Yep. #line:02d9288 
+<<if get_variable("modulaRegion_intel") == "true">>
+    You: She was at least able to confirm that we're not going to Soldacia. #line:0e27d47 
+    Ailyn: Damn. I mean I guess at least we have confirmation... #line:0586540 
+    Ailyn: But I was really hoping you were wrong. #line:0df35b5 
+    You: Me too, Ailyn. Me too. #line:06cfa31 
+<<else>>
+    Ailyn: Get anything useful out of her? #line:05dacf2 
+    You: What do you think? #line:0b3dc96 
+    Ailyn: Damn. Think she's in on it? #line:0ceea77 
+    You: Maybe...hadn't really considered that. #line:0afda0e 
+    Ailyn: Worth thinking about, anyway. #line:06bdb24 
+<<endif>>
+<<jump anything_else>>
+
+===
+title: urnst_checkin
+position: -250,226
+---
+You: Well I talked to Urnst. #line:054220d 
+Ailyn: How'd that go? #line:0fcb45c 
+<<if get_variable("profit_sharing_intel") == "true">>
+    <<jump ailyn_urnst_profit_sharing>>
+<<elseif get_variable("trado_intel") == "true">> // and terradeus
+    You: Well it seems like we're going to a planet called Trado. #line:0f4863e 
+    Ailyn: Trado? #line:072bd38 
+    You: Yeah. Owned by a company called Terradeus. Another expoplanet development group. #line:0ac5ce6 
+    Ailyn: Shit! Why?! #line:0467ffb 
+    You: Don't know. At least not yet. #line:0b830eb 
+    Ailyn: We need to get to the bottom of this. #line:0d57711 
+<<elseif get_variable("urnst_plants_intel") == "true">>
+    You: Went ok. Was able to get them to tell me about some new plants they're working on. #line:00fd473 
+    Ailyn: I'm sure that was fascinating. #line:0cefa1b 
+    You: I mean a little. Didn't bode well if I'm being honest. They're supposedly drought-resistant plants. #line:0f5ab44 
+    Ailyn: Weird...there's a ton of water on Soldacia, right? #line:05a304c 
+    You: There is, but if we're not going to Soldacia... #line:0ccc316 
+    Ailyn: Shit... #line:05bcdfa 
+<<else>>
+    You: Not so good. Couldn't get anything useful out of them. #line:0d897ec 
+    Ailyn: Damn. #line:0b71c77 
+<<endif>>
+<<jump anything_else>>
+
+===
+title: brine_checkin
+position: -248,402
+---
+You: I managed to track down Brine. #line:0f10175 
+Ailyn: No shit. #line:039f9fd 
+You: Yes shit, smells awful down there. It's no wonder you guys in security leave him alone. #line:059d6ba 
+Ailyn: Yeah that's a good point. I always thought he just paid someone off. Huh...anyway what did he have to say? #line:000395c 
+<<if get_variable("garm_racing_intel") == "true">>
+    <<jump ailyn_garm_racing>>
+<<elseif get_variable("have_brig_key") == "true">>
+    <<jump ailyn_brig_key>>
+<<else>>
+    You: Couldn't really get anything out of the bastard. #line:00a2fe9 
+    Ailyn: Hmm, can't say I'm surprised. #line:0e19271 
+<<endif>>
+
+<<jump anything_else>>
+
+===
+title: anything_else
+position: 308,-352
+---
+Ailyn: Got anything else? #line:0bf1e25 
+-> Not now. #line:0d62f35 
+    <<jump not_now>>
+-> I talked to Forrester <<if visited("Forrester_intro") && !visited("forrester_checkin")>> #line:0c40214 
+    <<jump forrester_checkin>>
+-> I talked to Tav <<if visited("tavstart") && !visited("tav_checkin")>> #line:0a7509f 
+    <<jump tav_checkin>>
+-> I talked to Urnst <<if visited("urnst_intro") && !visited("urnst_checkin")>> #line:028e9e0 
+    <<jump urnst_checkin>>
+-> I talked to Brine <<if visited("brinestart") && !visited("brine_checkin")>> #line:00dbf7c 
+    <<jump brine_checkin>>
+===
+title: not_now
+position: 636,105
+---
+You: Nothing right now, I'll keep you posted. #line:0c3794f 
+Ailyn: Got it. #line:0f7b112 
+===
+title: ailyn_garm_racing
+position: 99,411
+---
+You: Yeah got some interesting intel on Garm Doro. #line:0b13a3e 
+Ailyn: The pilot? Is he the one on the bridge right now? #line:0a8e760 
+You: Sure is. And get this, the guy has been betting on how fast he can get the ship to certain locations. #line:0f1c497 
+Ailyn: You mean he's...racing The Brink? With thirty-thousand people on it? #line:0e14fd9 
+You: Yep.  #line:02dee7a 
+Ailyn: Damn. Think that's enough leverage on him? #line:0d9bf3e 
+You: Yeah I think it might be. #line:07b626b 
+Ailyn: I would hope so. What a bastard. #line:00b0fb0 
+<<jump anything_else>>
+===
+title: ailyn_brig_key
+position: 102,567
+---
+You: Well, I ended up getting a key to the brig from him. #line:050bcfa 
+Ailyn: The brig? What...did you use it? #line:061927f 
+Ailyn: You know what, I don't want to know. I know things are getting intense, but this is too far. #line:0622a81 
+<<if visited("prisonerstart")>>
+    You: I used it alright...
+    <<jump ailyn_prisoner>>
+<<else>>
+    You: No not yet. #line:079e298 
+    Ailyn: Don't. #line:07513bc 
+    You: What? #line:0afa0b2 
+    Ailyn: Just...if anyone found out you went down there and connected that you were working with me... #line:061ab3b 
+    You: I see what you mean, but this is huge, Ailyn. It won't come back to you. #line:0728f9b 
+    Ailyn: You think Brine doesn't have a way out of you pinning this on him? #line:03d9636 
+    You: I...I don't know. #line:01e5708 
+    Ailyn: Just please...don't. #line:0aebb23 
+<<endif>>
+
+<<jump anything_else>>
+===
+title: ailyn_urnst_profit_sharing
+position: 104,242
+---
+You: Surprisingly good. I think the captain is selling us out. #line:0050c47 
+Ailyn: Oh yeah, that's great. #line:01d961a 
+You: You know what I meant. This is huge. #line:0aa716e 
+You: I was telling myself there must be a good reason, like he was saving us or something. #line:011fdc2 
+You: But right now the only reason we have is that the captain is taking us to some planet called Trado where he'll get a bigger payout. #line:0182360 
+Ailyn: That son of a bitch! #line:01dbfdc 
+You: I think I might have enough to confront him. I need some real answers here. #line:04cc3e3 
+Ailyn: Yeah, don't have much more time anyway. #line:0686bb5 
+<<jump anything_else>>
+===
+title: ailyn_prisoner
+position: 104,795
+---
+Ailyn: ...
+-> I need to tell you about this. #line:05f8a65 
+    You: I need to talk about this. #line:0b57807 
+    Ailyn: Kase I don't want to know, ok?  #line:0969b75 
+    You: Why not? Did you know about this? About who's down there? #line:0ffb905 
+    Ailyn: I don't know anything about anything. #line:0d3623b 
+    You: Ailyn what in the void is going- #line:015ba31 
+    Ailyn: I said I don't know anything! #line:0fc9746 
+    You: I...ok. Ok fine. You don't know anything... #line:0069dc8 
+-> Ok fine, you don't need to know. #line:0b5ddba 
+    You: Did you...ok. Ok we don't need to get into it I guess. #line:06cab7c 
+<<jump anything_else>>
+
+===
