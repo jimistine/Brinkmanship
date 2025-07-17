@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D73BAC51-AA73-4CB4-9134-154A0A67290B}" SchemaVersion="110">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{D73BAC51-AA73-4CB4-9134-154A0A67290B}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="FX_Vol" ID="{E48563AF-85DA-4F88-A42C-9DA0EB589C9D}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="60"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="VO_Vol" ID="{3ED66288-CC69-45A4-A51B-BF51F95C6B1E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="60"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Music_Vol" ID="{7C1795D1-CB77-457E-94E6-FFF9E87CD67A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="60"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Master_Vol" ID="{72C4B8AD-15CB-47F2-95D0-E56E24272543}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="60"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Azimuth" ID="{3845B933-73DE-4A3B-986F-6096E61C250D}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="2"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="180"/>
+						<Property Name="Min" Type="Real64" Value="-180"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Music_LPF" ID="{DBD4E85C-6129-4E32-97C2-3A83A2C9A421}">
+					<PropertyList>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="75"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="75"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="EngineIntensity" ID="{D3530436-FD26-49C1-8722-12691A6D2533}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="SunIntensity" ID="{979752F5-2F89-4ABF-942B-DC14F152686B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="10"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="10"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D2E643DC-3D47-4B69-AC4A-1CA9386F116E}" SchemaVersion="110" RootDocumentID="{B4C1CEC8-4963-401B-9FDF-CDC6F79E102D}" ParentDocumentID="{B4C1CEC8-4963-401B-9FDF-CDC6F79E102D}">
+	<Events>
+		<WorkUnit Name="FX" ID="{D2E643DC-3D47-4B69-AC4A-1CA9386F116E}" OwnerID="{B4C1CEC8-4963-401B-9FDF-CDC6F79E102D}" PersistMode="Nested">
+			<ChildrenList>
+				<WorkUnit Name="Ambient" ID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}" PersistMode="Reference"/>
+				<WorkUnit Name="Player" ID="{2301A4A2-887E-4531-AE5C-E745897C4E05}" PersistMode="Reference"/>
+				<WorkUnit Name="UI" ID="{F28AEE65-2221-4F8D-9E7B-004A8D042A93}" PersistMode="Reference"/>
+				<WorkUnit Name="General" ID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}" PersistMode="Reference"/>
+				<Event Name="Stop_All_Audio" ID="{C3D04ACA-5D60-4562-882F-AC1864B87032}">
+					<ChildrenList>
+						<Action Name="" ID="{9C6ABB4A-AB17-4E8C-8EB9-95BCA7D67796}" ShortID="739837511">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{91A31282-6F08-4EF7-A3DA-6DE62FA139EE}" ShortID="348407597">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SunIntensity" ID="{979752F5-2F89-4ABF-942B-DC14F152686B}" WorkUnitID="{D73BAC51-AA73-4CB4-9134-154A0A67290B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

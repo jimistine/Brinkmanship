@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}" SchemaVersion="110" RootDocumentID="{B4C1CEC8-4963-401B-9FDF-CDC6F79E102D}" ParentDocumentID="{D2E643DC-3D47-4B69-AC4A-1CA9386F116E}">
+	<Events>
+		<WorkUnit Name="Ambient" ID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}" OwnerID="{D2E643DC-3D47-4B69-AC4A-1CA9386F116E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="play_bridge_ambient" ID="{0751B19D-DB51-4019-B900-805CC86B3AE8}">
+					<ChildrenList>
+						<Action Name="" ID="{30534445-35A1-47FD-91C5-698CE94F3921}" ShortID="353193996">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bridge_ambiance_draft_2" ID="{48FD455B-22EE-41E3-AA36-6EF4A7A9F332}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E96502C0-1857-4832-B2AB-9176932292F9}" ShortID="238949485">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D60B3EDE-8485-47E6-853B-BAECB8F575F6}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="90"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bridge_ambiance_draft_2" ID="{48FD455B-22EE-41E3-AA36-6EF4A7A9F332}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{27817FDF-2E7B-4F7B-9CBB-5F6B861EF734}" ShortID="266644731">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Engine_Ambient" ID="{42C9EA4E-ECCA-47FF-8E37-34BDAB6B2BCA}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B9A348EC-B46B-4C44-9F58-8FAE78C20E1A}" ShortID="375364707">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ship_ambience" ID="{88BD13A4-5D8A-492C-9519-E26C8DD8B36F}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_void_amb_01" ID="{EF7663FD-0AA4-4037-9B23-83608C1EA05A}">
+					<ChildrenList>
+						<Action Name="" ID="{FFBEBC77-1145-45A7-A5E9-7D355DBFEE4F}" ShortID="3338351">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ship_ambience" ID="{BD597620-1E87-4BAB-B83E-7ECA7C27CCF5}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{96947F2A-F539-4E07-B792-AF328A3AEC77}" ShortID="142028469">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AA771BF2-C45C-46BC-9A07-8AFF3BDC6DCA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="90"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ship_ambience" ID="{BD597620-1E87-4BAB-B83E-7ECA7C27CCF5}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_void_amb_01" ID="{50B413E4-C01B-47BD-863A-3443DA2ECCFC}">
+					<ChildrenList>
+						<Action Name="" ID="{F5897E3F-71DB-4993-BD05-AD9424B28DF5}" ShortID="295232895">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ship_ambience" ID="{BD597620-1E87-4BAB-B83E-7ECA7C27CCF5}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_engine_ambient" ID="{A461B84A-6475-447F-A718-7A72CF32C3D3}">
+					<ChildrenList>
+						<Action Name="" ID="{792F956E-D636-4BED-9E43-0BA6D08560E4}" ShortID="82697241">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Engine_Ambient" ID="{2E665E55-AECD-4CF3-BDB9-CD3583AD96B8}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_engine_ambient" ID="{1DD6B2FF-BD91-45DE-A265-E3F2ED87E317}">
+					<ChildrenList>
+						<Action Name="" ID="{46A005F8-316E-4A2B-993D-D8B071CB817A}" ShortID="730825140">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Engine_Ambient" ID="{2E665E55-AECD-4CF3-BDB9-CD3583AD96B8}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_amb_coda_soldacia" ID="{F2288DEA-BCAE-4ADF-9C84-5B05D55E706D}">
+					<ChildrenList>
+						<Action Name="" ID="{01E247F2-7B7C-4026-AB4A-E4A594BAFFAA}" ShortID="51189194">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="environment_forest" ID="{EBBA1A03-65FA-4FE1-BCD0-22F8A7ECEC77}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{43B7F851-3329-45D7-A7BC-82A799B46631}" ShortID="601210807">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Forest Birds 01" ID="{41CAC2C7-30E1-4BC5-B4D0-D617817F8EFF}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_amb_coda_trado" ID="{4D1E531A-415F-4137-BB32-D173BCD65597}">
+					<ChildrenList>
+						<Action Name="" ID="{67748050-2643-4140-934B-D7AFE75B2552}" ShortID="254267612">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ice_and_Wind_Drone_6" ID="{80671137-0BC8-430E-9FD7-95E0ACD577A0}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{695AF751-D9B6-472E-8B46-D5A82EC3586A}" ShortID="234504494">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind Medium" ID="{439C04F7-3CD7-40FD-B686-5E672FC2BB53}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3D3BE1EC-A057-4A4B-9D70-0107BDB12242}" ShortID="714193049">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind Strong" ID="{0CD4C9B3-C811-40C4-A7DF-E1F8D2A6D658}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EE2A81F5-D654-4475-86E6-D8355F651E14}" ShortID="780574115">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Howling Wind 02" ID="{27EE48F7-519C-4CEE-9ADB-B67E928EFC56}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_amb_coda_soldacia" ID="{DA2A1210-7C77-49B8-A0C4-B3CDB0A897F4}">
+					<ChildrenList>
+						<Action Name="" ID="{D4292190-08A1-43B1-8569-475C38D192A9}" ShortID="795018213">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="10"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="environment_forest" ID="{EBBA1A03-65FA-4FE1-BCD0-22F8A7ECEC77}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3AB9F27F-9F8E-414F-8673-BFCECB00C6F6}" ShortID="367393386">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Forest Birds 01" ID="{41CAC2C7-30E1-4BC5-B4D0-D617817F8EFF}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_amb_coda_trado" ID="{AD9C0F3D-CF31-4BE2-9C45-74668041DAFD}">
+					<ChildrenList>
+						<Action Name="" ID="{7C0B0433-9061-4F0C-8D3F-74A3907B2A86}" ShortID="708200886">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="15"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind Strong" ID="{0CD4C9B3-C811-40C4-A7DF-E1F8D2A6D658}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0B7C27A0-7E5E-4114-B733-3F73F5C310EF}" ShortID="1066437670">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="6.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ice_and_Wind_Drone_6" ID="{80671137-0BC8-430E-9FD7-95E0ACD577A0}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C081BDA8-FD64-421E-8374-82C7D7D65F03}" ShortID="860904364">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="6.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind Medium" ID="{439C04F7-3CD7-40FD-B686-5E672FC2BB53}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F5D5CDD0-85BD-4FB1-A9D0-3A467DD37BD7}" ShortID="367378347">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="6.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Howling Wind 02" ID="{27EE48F7-519C-4CEE-9ADB-B67E928EFC56}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Quarters_Comp_Interact_Layer" ID="{72AE002C-4B66-463D-9FEA-9D42F8958929}">
+					<ChildrenList>
+						<Action Name="" ID="{96AD45F8-5DE3-4D6D-8D0F-05CF3110EFE6}" ShortID="82899978">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Quarters_Comp_Interact_Layer" ID="{9959A51F-5005-4BA3-A00C-80AB450D1A56}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Quarters_Clean" ID="{573BA728-8EC0-4AB7-AF9A-10454A0CC857}">
+					<ChildrenList>
+						<Action Name="" ID="{2D7296D0-B549-4C1C-BC60-449B8240A82C}" ShortID="888488823">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Quarters_Clean" ID="{087DC983-FB08-45DA-B216-820D82A24BE7}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Quarters_Soccer_Match" ID="{854C8DE5-A14D-4C9A-9295-7DBA0013C3E1}">
+					<ChildrenList>
+						<Action Name="" ID="{82A668F5-8185-4E57-BC82-69E8FEE4F86D}" ShortID="583363132">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Quarters_Soccer_Match" ID="{A69CC65C-EAD5-4998-83DB-DC25E4F7F669}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Quarters_Comp_Interact_Layer" ID="{D675F1B5-6AEF-4D17-9E07-CC9A68245C62}">
+					<ChildrenList>
+						<Action Name="" ID="{A34B964D-0C26-448A-8C5A-310435A6544A}" ShortID="264580499">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Quarters_Comp_Interact_Layer" ID="{9959A51F-5005-4BA3-A00C-80AB450D1A56}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1B1FE26A-C3D9-439D-AF80-7FE69BFF0660}" ShortID="620561402">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AF3BB939-E4F6-4AE2-BEE2-38B3B71069D6}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="82"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Quarters_Comp_Interact_Layer" ID="{9959A51F-5005-4BA3-A00C-80AB450D1A56}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Quarters_Clean" ID="{2F6CE2E0-5C16-4ABD-B229-32C9944E95FE}">
+					<ChildrenList>
+						<Action Name="" ID="{9074ECDD-8AE2-4F82-9B2F-04AE9083CB45}" ShortID="358909805">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Quarters_Clean" ID="{087DC983-FB08-45DA-B216-820D82A24BE7}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E424280D-1F22-471E-97F9-8D158EDA58AF}" ShortID="908227036">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A323ED22-78B2-4832-B2FC-C6B0A9DEE5A5}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="87"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Quarters_Clean" ID="{087DC983-FB08-45DA-B216-820D82A24BE7}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Quarters_Soccer_Match" ID="{7B7DB5D1-4ED7-46B5-BA88-DD3E0FAC5F58}">
+					<ChildrenList>
+						<Action Name="" ID="{59BFA62D-B767-4B85-85FF-18C34103F7B5}" ShortID="923641094">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Quarters_Soccer_Match" ID="{A69CC65C-EAD5-4998-83DB-DC25E4F7F669}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B20DB5F1-FFB9-4C6F-B7C8-6157DFB317F4}" ShortID="234050119">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6F5BA906-CA6D-43D9-BAB3-5C95700EAF38}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="75"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Quarters_Soccer_Match" ID="{A69CC65C-EAD5-4998-83DB-DC25E4F7F669}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Quarters_Stack" ID="{02376F54-E6CC-484F-8A87-6D6FE6E49608}">
+					<ChildrenList>
+						<Action Name="" ID="{2EC70335-630B-42BA-A03D-CE4A6CCC582B}" ShortID="576282262">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Quarters_Clean" ID="{2F6CE2E0-5C16-4ABD-B229-32C9944E95FE}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{478A5728-34E4-4DC1-8DCF-11B7291A25B6}" ShortID="79099364">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Quarters_Comp_Interact_Layer" ID="{D675F1B5-6AEF-4D17-9E07-CC9A68245C62}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Quarters_Brine" ID="{C121251E-85A2-4516-AE34-2576DD184824}">
+					<ChildrenList>
+						<Action Name="" ID="{ACD6E5E0-0E8B-46A1-874F-4F3DA640E437}" ShortID="931277762">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Quarters_Soccer_Match" ID="{7B7DB5D1-4ED7-46B5-BA88-DD3E0FAC5F58}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0640E0DE-D8C0-4482-8569-19219B08466C}" ShortID="399630024">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Quarters_Clean" ID="{2F6CE2E0-5C16-4ABD-B229-32C9944E95FE}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Quarters_All" ID="{59143D57-821D-4A65-A717-1AFE57E54F3E}"/>
+				<Event Name="Play_Brinkmanship_Beethoven_Layer" ID="{D314F0D6-7CF4-493D-A8DC-4488AA0B2E5C}">
+					<ChildrenList>
+						<Action Name="" ID="{711716A4-2AB6-49C6-BFA5-C43753A59C42}" ShortID="66901753">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_Beethoven_Layer" ID="{C912CCC4-F91C-4089-8CD1-99827887B4A5}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Brinkmanship_Domestic_Layer" ID="{2D472B52-33A4-4645-B0D2-06235BEAFCAB}">
+					<ChildrenList>
+						<Action Name="" ID="{252FFA30-8B6C-447F-A372-8D145529A546}" ShortID="1019064256">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_Domestic_Layer" ID="{5DBF2E22-1590-425E-9A45-61652E36ABE7}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Brinkmanship_Plant_Spritizng_Layer" ID="{747BE513-4563-4309-8CD7-075F687F9900}">
+					<ChildrenList>
+						<Action Name="" ID="{670B1C03-33D1-4215-B924-4A7CCBBB3701}" ShortID="708004389">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_Plant_Spritizng_Layer" ID="{C05C0524-0846-4833-AEB2-56DEE41D33BF}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Brinkmanship_Beethoven_Layer" ID="{81D8FF57-3EB7-4DBA-8E04-F8B53ADBDA1E}">
+					<ChildrenList>
+						<Action Name="" ID="{48A52728-FA50-48BF-A1F8-715D9F30E8F8}" ShortID="299348253">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_Beethoven_Layer" ID="{C912CCC4-F91C-4089-8CD1-99827887B4A5}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Brinkmanship_Domestic_Layer" ID="{1B3CCEBF-AF15-4F05-B10D-162B54FA433E}">
+					<ChildrenList>
+						<Action Name="" ID="{81BE19C0-BEE1-4646-8326-381203DBB31C}" ShortID="554371700">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_Domestic_Layer" ID="{5DBF2E22-1590-425E-9A45-61652E36ABE7}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Brinkmanship_Plant_Spritizng_Layer" ID="{64DF39F7-4D33-44B3-964D-526C6E6ED84B}">
+					<ChildrenList>
+						<Action Name="" ID="{5E0B4F33-69E7-4BD0-9737-83E470AAF431}" ShortID="901349800">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_Plant_Spritizng_Layer" ID="{C05C0524-0846-4833-AEB2-56DEE41D33BF}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Quarters_Urnst" ID="{EDCA124D-066B-4A8A-80E9-CFE4C0C038C6}">
+					<ChildrenList>
+						<Action Name="" ID="{3333C45A-3191-4BEC-910D-609B920E7F3D}" ShortID="721924702">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Brinkmanship_Beethoven_Layer" ID="{D314F0D6-7CF4-493D-A8DC-4488AA0B2E5C}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{75BF21BA-58E0-4999-89AE-F3D61197EED5}" ShortID="601394168">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Brinkmanship_Plant_Spritizng_Layer" ID="{747BE513-4563-4309-8CD7-075F687F9900}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B19F1DE4-BF08-49B3-B40C-370C21ACEC79}" ShortID="502186753">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Quarters_Clean" ID="{2F6CE2E0-5C16-4ABD-B229-32C9944E95FE}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Quarters_Parents" ID="{70356AE5-2814-4096-B2DC-6B6EB7348866}">
+					<ChildrenList>
+						<Action Name="" ID="{9BB2B1E7-A1E1-4CB8-B3B6-8571CF72D13D}" ShortID="926698970">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Brinkmanship_Domestic_Layer" ID="{2D472B52-33A4-4645-B0D2-06235BEAFCAB}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C3301D44-C4BD-4818-8216-509AE6A1BB74}" ShortID="951678721">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Quarters_Clean" ID="{6BC0FB1E-C8CE-472F-8EEE-1CE4FEC56676}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Prisoner_Humming" ID="{CF3758F1-525E-44CB-AD53-AFECCE678092}">
+					<ChildrenList>
+						<Action Name="" ID="{BE8D1872-A7D4-4B20-863D-14C9C64F2E14}" ShortID="838801744">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Prisoner_Humming_Solo" ID="{60E93EE2-F4D9-44C1-A7B6-2B9EDF4DF067}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Quarters_Prisoner" ID="{CA72927D-99C7-45CB-BBDF-5261E62F1203}">
+					<ChildrenList>
+						<Action Name="" ID="{9B26DF53-C00B-43FE-8989-D38C7D5D3A3F}" ShortID="773650358">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Prisoner_Humming" ID="{CF3758F1-525E-44CB-AD53-AFECCE678092}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FD6B0C49-55FA-4171-A965-84BDAEB88B57}" ShortID="290573892">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Quarters_Clean" ID="{2F6CE2E0-5C16-4ABD-B229-32C9944E95FE}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Prisoner_Humming" ID="{9144A959-644C-4915-ACDE-6AACF5193D2C}">
+					<ChildrenList>
+						<Action Name="" ID="{972A4C05-B14B-4C57-B22E-85267068474B}" ShortID="100087182">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Prisoner_Humming_Solo" ID="{60E93EE2-F4D9-44C1-A7B6-2B9EDF4DF067}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

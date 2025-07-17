@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2301A4A2-887E-4531-AE5C-E745897C4E05}" SchemaVersion="110" RootDocumentID="{B4C1CEC8-4963-401B-9FDF-CDC6F79E102D}" ParentDocumentID="{D2E643DC-3D47-4B69-AC4A-1CA9386F116E}">
+	<Events>
+		<WorkUnit Name="Player" ID="{2301A4A2-887E-4531-AE5C-E745897C4E05}" OwnerID="{D2E643DC-3D47-4B69-AC4A-1CA9386F116E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Plr_Walk" ID="{5CC1722E-6676-40F0-A501-984F7F2CD3D1}">
+					<ChildrenList>
+						<Action Name="" ID="{09215AFB-B3F7-456A-B94B-D8C767810502}" ShortID="799246236">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Plr_FS" ID="{023CA8C0-25FB-4767-9C4C-C5358F8F0DD7}" WorkUnitID="{3812CBE8-8FCB-44BA-A7FA-085A68A2623E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Gun" ID="{ADB5803A-2E6E-49FD-8545-CC68ECD4A75F}" ShortID="570952154">
+					<ChildrenList>
+						<Event Name="GunStow" ID="{AEA50433-2ABA-426D-B323-B72342DAE17A}">
+							<ChildrenList>
+								<Action Name="" ID="{8214D3DF-F64F-4814-9EC8-30B865D8CA4E}" ShortID="658990883">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Foley Bag Fabric Large Trekking-004" ID="{7DACC8FC-76CC-4CF3-9C4A-B7BE7CB3DA4A}" WorkUnitID="{3812CBE8-8FCB-44BA-A7FA-085A68A2623E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="GunDraw" ID="{CB0E3192-1A31-441B-9EB9-E30F17F517FE}">
+							<ChildrenList>
+								<Action Name="" ID="{06B67990-6576-43A9-A27E-915B7AD2D2FD}" ShortID="229722791">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Spas_Foley_01" ID="{00723DD1-0360-451B-AEDD-7B49B20CE267}" WorkUnitID="{3812CBE8-8FCB-44BA-A7FA-085A68A2623E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="GunFire" ID="{D6E34B58-9DC6-4808-9F39-1703BA09272E}">
+							<ChildrenList>
+								<Action Name="" ID="{7BE08BE0-AA13-48F5-A2E5-4D175F9582DE}" ShortID="699768107">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="28"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{11C3A30B-5346-4720-B7D5-A9011D7CC6E7}" ShortID="1047065720">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PowerfulSciFiHandgun_01" ID="{9B93283A-B21B-4E14-B4DC-5D764FBF2301}" WorkUnitID="{3812CBE8-8FCB-44BA-A7FA-085A68A2623E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{46B5F289-FC11-453C-9471-5CF44B5E4C20}" ShortID="950629209">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.25"/>
+										<Property Name="FadeInCurve" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="6K_Ringing" ID="{35089C7F-E6D0-4E6E-8EE1-738E8C5D2EC3}" WorkUnitID="{3812CBE8-8FCB-44BA-A7FA-085A68A2623E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6C70E69A-BD96-4D29-9BCB-FAB6EDC43F27}" ShortID="786145353">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Lowpass" Type="int16" Value="58"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VO_Bus" ID="{98B04A98-A9A7-4444-B16E-C9142931B0C7}" WorkUnitID="{74E11157-FB6F-43A4-A548-2A5C63889393}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0131BDC0-06A0-4A37-9322-074665BA7655}" ShortID="200339660">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Lowpass" Type="int16" Value="80"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Aux_Bridge" ID="{49CC7F7C-911F-41BF-A223-51DB738C9372}" WorkUnitID="{74E11157-FB6F-43A4-A548-2A5C63889393}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C0434E8A-1F97-4AA6-B3F1-75007E1D6107}" ShortID="670152700">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Lowpass" Type="int16" Value="80"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Aux_Void" ID="{A2685C0D-9354-46DD-9F08-0F2D0A539E6A}" WorkUnitID="{74E11157-FB6F-43A4-A548-2A5C63889393}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9CB06DB7-BBD7-451E-8757-D8C141785ED3}" ShortID="644048589">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Lowpass" Type="int16" Value="75"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Foley" ID="{0511FB5F-5F39-44C8-99AA-1113096E3553}" WorkUnitID="{3812CBE8-8FCB-44BA-A7FA-085A68A2623E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{89F7FB86-9F50-4097-8F20-313E81C9E512}" ShortID="651790366">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="Lowpass" Type="int16" Value="72"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Weapon" ID="{42CC1845-803E-469C-B0AE-67705C9391A5}" WorkUnitID="{3812CBE8-8FCB-44BA-A7FA-085A68A2623E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A0BD668D-ACFE-49B8-8D47-50CC20EE4298}" ShortID="87785033">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Lowpass" Type="int16" Value="75"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI" ID="{FF23551E-566C-4733-9C59-16DD621616B6}" WorkUnitID="{BD0164C8-F5FB-4788-9C1B-46DA03E1315A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DB65E1AB-D8E4-4431-8B8E-62CF4B3D2B43}" ShortID="1006909288">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="26"/>
+										<Property Name="Lowpass" Type="int16" Value="72"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="FX_General" ID="{AA5E67F6-F852-47BA-A611-90C6453BD831}" WorkUnitID="{699CC1F2-6731-4B0A-8BCF-3ACFCE237652}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A2206256-5A19-4FB7-A5BA-E56657F4A063}" ShortID="396735054">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="28"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="8"/>
+										<Property Name="FadeTime" Type="Real64" Value="5.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="GunFireNoAmmo" ID="{B6E1D7B8-2697-48A2-82EF-7482B22D05B1}">
+							<ChildrenList>
+								<Action Name="" ID="{34D4C319-1AD4-4A23-B0A1-CFD62CDA2732}" ShortID="858439731">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="M4_Foley_06" ID="{C494D205-06D9-465F-A023-FB9552CD22CF}" WorkUnitID="{3812CBE8-8FCB-44BA-A7FA-085A68A2623E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

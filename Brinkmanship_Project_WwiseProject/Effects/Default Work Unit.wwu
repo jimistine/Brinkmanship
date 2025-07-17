@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EAA2C729-EC7F-4191-B02B-4D4C54A23BF1}" SchemaVersion="110">
+	<Effects>
+		<WorkUnit Name="Default Work Unit" ID="{EAA2C729-EC7F-4191-B02B-4D4C54A23BF1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="ActiveEngineDistort" ID="{EA8CC493-A32D-4778-B426-9E1AD105A515}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionDrive" Type="Real32" Value="0"/>
+						<Property Name="DistortionType" Type="int32" Value="1"/>
+					</PropertyList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{853EE000-7B2B-4889-8411-315696B5E97A}" ShortID="124762750">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="DistortionDrive"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="EngineIntensity" ID="{D3530436-FD26-49C1-8722-12691A6D2533}" WorkUnitID="{D73BAC51-AA73-4CB4-9134-154A0A67290B}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{4A95CBB6-B4BC-46CB-AE01-F95B33712F21}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>9.87654</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Effect>
+				<Effect Name="New_Compressor" ID="{2F395C53-E980-43B7-B83A-513F43B77D73}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3"/>
+				<Effect Name="New_Stereo_Delay" ID="{CC0A0C7A-A06D-4B9D-ABC5-597C71CA1DCB}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+					<PropertyList>
+						<Property Name="LeftDelayTime" Type="Real32" Value="0.08"/>
+						<Property Name="RightDelayTime" Type="Real32" Value="0.19"/>
+						<Property Name="WetLevel" Type="Real32" Value="-15"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="Radio_Distortion" ID="{7FC9C821-4BF2-43F9-8586-5BB5EB3209FC}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionDrive" Type="Real32" Value="29"/>
+						<Property Name="DistortionTone" Type="Real32" Value="65"/>
+						<Property Name="DistortionType" Type="int32" Value="1"/>
+						<Property Name="OutputLevel" Type="Real32" Value="1"/>
+						<Property Name="PreEQBand1Frequency" Type="Real32" Value="959"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="RadioEQ" ID="{ABB55A78-691B-42A3-994A-FA1F7C6688F0}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+						<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+						<Property Name="FrequencyBand1" Type="Real32" Value="800"/>
+						<Property Name="FrequencyBand3" Type="Real32" Value="2760"/>
+						<Property Name="GainBand1" Type="Real32" Value="-24"/>
+						<Property Name="OnOffBand2" Type="bool" Value="False"/>
+						<Property Name="OnOffBand3" Type="bool" Value="False"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="DoorEQ" ID="{37BC12DB-762C-4756-80F6-1A9F780E9BB9}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand1" Type="Real32" Value="588"/>
+						<Property Name="FrequencyBand3" Type="Real32" Value="4052"/>
+						<Property Name="GainBand3" Type="Real32" Value="-14.5"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="DoorVerb" ID="{928F905B-0EEF-4A98-930D-16FB9C38DEC4}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
+						<Property Name="ERLevel" Type="Real32" Value="-47"/>
+						<Property Name="ERPattern" Type="int32" Value="22"/>
+						<Property Name="PreDelay" Type="Real32" Value="0"/>
+						<Property Name="ReverbLevel" Type="Real32" Value="-46"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="PADistortion" ID="{19B952F2-5184-4C93-A57D-87A8601C3C15}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionDrive" Type="Real32" Value="27"/>
+						<Property Name="DistortionTone" Type="Real32" Value="0"/>
+						<Property Name="DistortionType" Type="int32" Value="1"/>
+						<Property Name="OutputLevel" Type="Real32" Value="-4"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
+	</Effects>
+</WwiseDocument>

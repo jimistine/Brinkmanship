@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{388AD32F-B767-4B1E-B7AB-CDE26EAA204C}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{388AD32F-B767-4B1E-B7AB-CDE26EAA204C}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="FX" ID="{699CC1F2-6731-4B0A-8BCF-3ACFCE237652}" PersistMode="Reference"/>
+				<WorkUnit Name="Dialogue" ID="{B7F69DD3-FA0E-4A41-AE9D-74BEFCFFFBB0}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

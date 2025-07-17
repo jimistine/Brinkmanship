@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}" SchemaVersion="110" RootDocumentID="{B4C1CEC8-4963-401B-9FDF-CDC6F79E102D}" ParentDocumentID="{B4C1CEC8-4963-401B-9FDF-CDC6F79E102D}">
+	<Events>
+		<WorkUnit Name="Music" ID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}" OwnerID="{B4C1CEC8-4963-401B-9FDF-CDC6F79E102D}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_Lvl_1_Loop" ID="{E52C1CA6-051C-49D9-A3FE-3BF7FDC64EBB}">
+					<ChildrenList>
+						<Action Name="" ID="{61EFEB5F-4A63-4E51-8C22-74B563A3A9B1}" ShortID="408305217">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{15F2F8EA-108B-43AC-ACDE-3C35D8C4139A}" ShortID="727793408">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7C238154-9A72-4D5F-A5A7-324752D8B6EB}" ShortID="900374225">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="FadeTime" Type="Real64" Value="7"/>
+								<Property Name="Volume" Type="Real64" Value="-5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{49BD8ABF-BA22-4BCF-8548-43337EA748E3}" ShortID="18767712">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="20"/>
+								<Property Name="FadeTime" Type="Real64" Value="15"/>
+								<Property Name="Volume" Type="Real64" Value="-16"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2507435B-D03C-4B37-B873-9090713A3F76}" ShortID="980405932">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L1_v01_022824" ID="{9E106ABD-ACB8-40F3-8776-D17A51D2EE58}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E6BFEBC3-23FC-4E78-A457-1943BA53DB1D}" ShortID="611039395">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L2_v02_032724" ID="{FB4D550F-A689-4B36-ACF9-7C03220D4989}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7AE8E4EA-B3DA-44AB-A24F-4C717BF582E1}" ShortID="96174009">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L3_v01_022824" ID="{9A23B513-2201-4E73-9B6B-8A1A85548295}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Fade_Music" ID="{A055BC01-23AA-4215-9976-0783A9316043}">
+					<ChildrenList>
+						<Action Name="" ID="{23A6F930-9AEB-451D-A2F2-D939D7C66D93}" ShortID="1005052913">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Stinger_Drama" ID="{8B5E9D79-D902-47AE-BBCA-131C90FBB49E}">
+					<ChildrenList>
+						<Action Name="" ID="{48C1F572-948A-4058-922D-25A64C181A46}" ShortID="308433628">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7A2BF8BA-775F-4E70-ABAE-91ED78FFFF6A}" ShortID="707364465">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Lvl_2_Loop" ID="{AFDDC2D9-A2CA-479F-B0D2-04155ECD67DD}">
+					<ChildrenList>
+						<Action Name="" ID="{50535BDD-2F21-4FEC-A4B4-DBBE6AB281AA}" ShortID="1006588918">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Full_Stack" ID="{1C0AA205-DC7D-4699-AAB4-FD0D99B3A126}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0822D9B9-66FA-4CF0-B811-D110E024F633}" ShortID="983754680">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Volume" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6185E210-FD13-4475-9227-F838C9CD6456}" ShortID="1007030310">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Volume" Type="Real64" Value="-9"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0888A1F2-4072-4361-AD3F-98F44D866B69}" ShortID="1015410069">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L2_v02_032724" ID="{FB4D550F-A689-4B36-ACF9-7C03220D4989}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7DA60050-746B-46B7-A9CF-2DF5C78FD7AE}" ShortID="55469129">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L3_v01_022824" ID="{9A23B513-2201-4E73-9B6B-8A1A85548295}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Lvl_3_Loop" ID="{CC2C1A62-A705-44DE-B947-0E37A5DBD123}">
+					<ChildrenList>
+						<Action Name="" ID="{F5BCF753-5A3E-45C8-AA36-B1853F401FCB}" ShortID="886978244">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Full_Stack" ID="{1C0AA205-DC7D-4699-AAB4-FD0D99B3A126}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BAE6CD91-F115-435A-9FB3-73078309DFEA}" ShortID="189221180">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L2_v02_032724" ID="{FB4D550F-A689-4B36-ACF9-7C03220D4989}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3784D344-CE75-408D-B4B7-5AFA4D340C4A}" ShortID="1044662776">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{43B0D2A9-4C66-4816-9D44-1158B4BF6789}" ShortID="368335392">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L3_v01_022824" ID="{9A23B513-2201-4E73-9B6B-8A1A85548295}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Unmute_Track_03" ID="{7169C2C5-F974-46C4-A25E-80409335D951}">
+					<ChildrenList>
+						<Action Name="" ID="{CCD99EB8-3511-434D-80B4-EB7C44B6907F}" ShortID="1005815778">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L3_v01_022824" ID="{9A23B513-2201-4E73-9B6B-8A1A85548295}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Unmute_Track_01" ID="{C387EE77-F198-4FF5-A640-3E62603363F6}">
+					<ChildrenList>
+						<Action Name="" ID="{E25F3D03-5E15-4795-89E2-F019A1EB7FBF}" ShortID="722244038">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L1_v01_022824" ID="{9E106ABD-ACB8-40F3-8776-D17A51D2EE58}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Unmute_Track_02" ID="{4102AF52-500F-4E9E-94E5-33CDDE92B5C9}">
+					<ChildrenList>
+						<Action Name="" ID="{48DC6877-250D-4BB9-9108-B0B8E06BC21A}" ShortID="813254736">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L2_v02_032724" ID="{FB4D550F-A689-4B36-ACF9-7C03220D4989}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mute_Track_01" ID="{0C34E248-7CEC-4A46-9EE7-C71B7A51DE6B}">
+					<ChildrenList>
+						<Action Name="" ID="{34107826-C608-4ED5-AC29-86330C2B00C7}" ShortID="610418471">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L1_v01_022824" ID="{9E106ABD-ACB8-40F3-8776-D17A51D2EE58}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mute_Track_02" ID="{BCB1AC94-13FD-41AD-877D-4FDB250D29D1}">
+					<ChildrenList>
+						<Action Name="" ID="{E3F1F4C9-30EF-403A-B193-1142C7BAA5F7}" ShortID="849161228">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L2_v02_032724" ID="{FB4D550F-A689-4B36-ACF9-7C03220D4989}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mute_Track_03" ID="{95628972-24DE-43E3-A93C-972C005CFE1D}">
+					<ChildrenList>
+						<Action Name="" ID="{F9516545-CDE9-49C0-8587-2F8BD844B3EA}" ShortID="739714624">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L3_v01_022824" ID="{9A23B513-2201-4E73-9B6B-8A1A85548295}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Fade_In_Lvl_02" ID="{1A036353-364C-4208-A557-0F9F81361DDE}">
+					<ChildrenList>
+						<Action Name="" ID="{475D6012-1579-4B51-AAA3-B112E77C5F61}" ShortID="215451186">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L2_v02_032724" ID="{FB4D550F-A689-4B36-ACF9-7C03220D4989}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Lvl_1_Loop_Filtered" ID="{77500C6E-7A9D-4D3B-96CF-1F4DFA0B97DE}">
+					<ChildrenList>
+						<Action Name="" ID="{3A2BC5F3-3875-4B81-97F2-D22DCDC4A368}" ShortID="680788801">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A6409B1D-5D90-4279-AC04-DA8F988F09D0}" ShortID="1067343796">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="Lowpass" Type="int16" Value="75"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L1_v01_022824" ID="{9E106ABD-ACB8-40F3-8776-D17A51D2EE58}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A8C5E448-AC47-4B1B-890C-085C05874FB1}" ShortID="42968427">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Volume" Type="Real64" Value="-2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3C7C07E4-4EB3-4F2D-AEFB-3D57ABF4A7D7}" ShortID="539705184">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L2_v02_032724" ID="{FB4D550F-A689-4B36-ACF9-7C03220D4989}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D120D85C-5C97-4A16-BD8E-69E83503AC99}" ShortID="875552891">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L3_v01_022824" ID="{9A23B513-2201-4E73-9B6B-8A1A85548295}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{80A72011-5396-43F6-BC13-29D30DE52F1E}" ShortID="839366479">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="20"/>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="15"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64" Value="-16"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Lvl_3_Loop_Bridge" ID="{41DF9C8D-3E48-469B-A65C-043F3FDC9C75}">
+					<ChildrenList>
+						<Action Name="" ID="{1069593C-18B6-4336-93A3-A66A5828C12C}" ShortID="180164267">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7CC80ED3-246C-482C-8881-A7D5607DD4F5}" ShortID="805449923">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L2_v02_032724" ID="{FB4D550F-A689-4B36-ACF9-7C03220D4989}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1804A5C5-31ED-498A-8D5B-51E833E39AC4}" ShortID="753199328">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+								<Property Name="Volume" Type="Real64" Value="-9"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E5431EC9-78A1-4F95-8090-09B11835DDC7}" ShortID="868515087">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Brinkmanship_MX_L3_v01_022824" ID="{9A23B513-2201-4E73-9B6B-8A1A85548295}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MM_Music" ID="{317E7014-3B88-47EF-BB0D-F9A3C828DCF9}">
+					<ChildrenList>
+						<Action Name="" ID="{91E57F02-E547-4145-B38D-4C9FBD8F3EBA}" ShortID="435420048">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AF3A6307-368D-4599-BB70-9F0ED4BB2704}" ShortID="655329443">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mute_Track_03" ID="{95628972-24DE-43E3-A93C-972C005CFE1D}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Airlock_In" ID="{FF2763F7-BD16-4B69-A1FE-3AAC5CFEF6BC}">
+					<ChildrenList>
+						<Action Name="" ID="{073D3F4D-C9D7-450D-ACC7-9991C125F1FF}" ShortID="390451608">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Volume" Type="Real64" Value="-6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Airlock_Out" ID="{7DFEF1ED-3F78-42CF-A704-A0DB78D84385}">
+					<ChildrenList>
+						<Action Name="" ID="{B0F31E90-59C3-44A1-AD40-98802DF9D0AB}" ShortID="579438496">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Volume" Type="Real64" Value="-2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Playlist_01" ID="{7C830D69-F702-4BA2-A1DB-F06AE26CB753}" WorkUnitID="{A6A00D92-A93D-45BE-888E-971800D59D2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
