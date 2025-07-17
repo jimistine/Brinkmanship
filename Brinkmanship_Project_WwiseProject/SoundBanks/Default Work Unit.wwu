@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{350ED211-0BCC-406D-9ED6-17E590AAE979}" SchemaVersion="110">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{350ED211-0BCC-406D-9ED6-17E590AAE979}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Dialogue" ID="{B5D2FC38-EC8E-41B6-A771-8DD13A923253}" PersistMode="Reference"/>
+				<WorkUnit Name="SoundEffects" ID="{5BE60641-8818-4EAC-BF24-B189139CD8A9}" PersistMode="Reference"/>
+				<WorkUnit Name="MusicBank" ID="{8DDBE6C8-F9B1-4BE6-915A-70E1B22A51CB}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

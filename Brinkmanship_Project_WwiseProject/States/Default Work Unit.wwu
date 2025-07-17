@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{97FA7AC8-52D2-46EA-B1A2-218D69FFAC19}" SchemaVersion="110">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{97FA7AC8-52D2-46EA-B1A2-218D69FFAC19}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="PausedStateGroup" ID="{22282A12-93C1-4AB2-BD1A-406034592641}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{4D4A07F9-E3DA-462A-9BF6-31BE956BE0B9}"/>
+						<State Name="PausedState" ID="{E2ED893E-4664-456B-A6BA-ABAA827E8004}"/>
+						<State Name="UnpausedState" ID="{217E8CB7-380D-4ABB-98B6-7A042A49D61C}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Brig_State_Group" ID="{50EE8A01-B53A-416E-A613-6CAF0019E3C7}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="3"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{96710910-655B-44D8-8EDF-2300EBA426CA}"/>
+						<State Name="In_Brig" ID="{A89BF82A-AC4D-4841-A383-F37D21AA9BE0}"/>
+						<State Name="Out_of_Brig" ID="{3AEA3207-0F00-4F57-9FA9-FA661F658B64}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="ProgressGroup" ID="{9A98E722-6B4C-4D65-A667-EB12D47B7E48}">
+					<ChildrenList>
+						<State Name="None" ID="{4E909CE0-9070-4882-831D-1C9AB301EF65}"/>
+						<State Name="MainMenu" ID="{6C21E786-9DBD-46AF-95BD-2FC8424A6EDE}"/>
+						<State Name="Void_0" ID="{4288233F-3DEA-4919-99C9-833BADA48762}"/>
+						<State Name="Void_1" ID="{D1192EAE-9516-46F6-BC4A-02450B21E5F6}"/>
+						<State Name="Void_2" ID="{1E4E7BC8-4C86-4C3A-B75A-FDB59199DFAE}"/>
+						<State Name="Bridge" ID="{1177A16C-4355-48C2-9363-0082E48CB74B}"/>
+						<State Name="Coda" ID="{B44AE625-1867-4ACD-A935-6CD9672878A8}"/>
+						<State Name="Void_0p" ID="{2D931CB4-364B-420D-8699-AC6162379B95}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

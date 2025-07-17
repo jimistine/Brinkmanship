@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4AEACA20-E9E5-4845-A024-BAB7A5224BD6}" SchemaVersion="110">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{4AEACA20-E9E5-4845-A024-BAB7A5224BD6}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="GunAlarm_Session" ID="{6878C371-A4A5-401B-9E83-159DB7245524}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Gun_Alarm" ID="{E75F24B9-DF1A-414E-9631-3E9C930AA612}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Shoot_Gun_Alarm" ID="{4B61927B-57AD-4F3F-B317-5176D43DA7A4}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="GunFire" ID="{D6E34B58-9DC6-4808-9F39-1703BA09272E}" WorkUnitID="{2301A4A2-887E-4531-AE5C-E745897C4E05}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Gun_Alarm" ID="{BA9523E1-46BD-4987-B7DA-A3CFFB4D55A6}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Music_Vol" ID="{7C1795D1-CB77-457E-94E6-FFF9E87CD67A}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="VO_Vol" ID="{3ED66288-CC69-45A4-A51B-BF51F95C6B1E}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Master_Vol" ID="{72C4B8AD-15CB-47F2-95D0-E56E24272543}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="EngineIntensity" ID="{D3530436-FD26-49C1-8722-12691A6D2533}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Azimuth" ID="{3845B933-73DE-4A3B-986F-6096E61C250D}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SunIntensity" ID="{979752F5-2F89-4ABF-942B-DC14F152686B}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_LPF" ID="{DBD4E85C-6129-4E32-97C2-3A83A2C9A421}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="FX_Vol" ID="{E48563AF-85DA-4F88-A42C-9DA0EB589C9D}"/>
+							<Value>60</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{96710910-655B-44D8-8EDF-2300EBA426CA}"/>
+						<CurrentStateRef Name="PausedState" ID="{E2ED893E-4664-456B-A6BA-ABAA827E8004}"/>
+						<CurrentStateRef Name="None" ID="{4E909CE0-9070-4882-831D-1C9AB301EF65}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Tinnitus_test" ID="{C55A2621-2BF6-4C4F-AE3C-47B414D1B449}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="GunFire" ID="{D6E34B58-9DC6-4808-9F39-1703BA09272E}" WorkUnitID="{2301A4A2-887E-4531-AE5C-E745897C4E05}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Plr_Walk" ID="{5CC1722E-6676-40F0-A501-984F7F2CD3D1}" WorkUnitID="{2301A4A2-887E-4531-AE5C-E745897C4E05}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Knocks_Random" ID="{E2C50E83-53E2-4CC1-B34A-971036548851}" WorkUnitID="{699CC1F2-6731-4B0A-8BCF-3ACFCE237652}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="play_void_amb_01" ID="{EF7663FD-0AA4-4037-9B23-83608C1EA05A}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Door_A_Open" ID="{475635B6-1303-46E4-B042-1CB8FBC840E3}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_MovementA" ID="{6D147603-0E16-4B35-A18C-ECBCC2A976D5}" WorkUnitID="{BD0164C8-F5FB-4788-9C1B-46DA03E1315A}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Door_Close" ID="{1FA71898-261B-489C-9701-44304D84CE67}" WorkUnitID="{699CC1F2-6731-4B0A-8BCF-3ACFCE237652}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Engine_Ambient" ID="{2E665E55-AECD-4CF3-BDB9-CD3583AD96B8}" WorkUnitID="{65CAE1E3-2612-4ADE-A168-58EECE9CB26C}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="New_Door_Lockdown_TEMP" ID="{36BF4216-3E45-4649-A8BA-A6F292135401}" WorkUnitID="{699CC1F2-6731-4B0A-8BCF-3ACFCE237652}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Music_Vol" ID="{7C1795D1-CB77-457E-94E6-FFF9E87CD67A}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="VO_Vol" ID="{3ED66288-CC69-45A4-A51B-BF51F95C6B1E}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Master_Vol" ID="{72C4B8AD-15CB-47F2-95D0-E56E24272543}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="EngineIntensity" ID="{D3530436-FD26-49C1-8722-12691A6D2533}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Azimuth" ID="{3845B933-73DE-4A3B-986F-6096E61C250D}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SunIntensity" ID="{979752F5-2F89-4ABF-942B-DC14F152686B}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_LPF" ID="{DBD4E85C-6129-4E32-97C2-3A83A2C9A421}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="FX_Vol" ID="{E48563AF-85DA-4F88-A42C-9DA0EB589C9D}"/>
+							<Value>60</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{96710910-655B-44D8-8EDF-2300EBA426CA}"/>
+						<CurrentStateRef Name="None" ID="{4D4A07F9-E3DA-462A-9BF6-31BE956BE0B9}"/>
+						<CurrentStateRef Name="None" ID="{4E909CE0-9070-4882-831D-1C9AB301EF65}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="ActiveEngine_Session" ID="{15919941-BA7B-4F4D-BD45-E7D9C3A45976}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="ActiveEngine_Start" ID="{24265F37-D402-476F-A850-263BE4D70E45}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ship_turning" ID="{33D25E52-7383-495C-AA00-5792E73E3635}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ActiveEngine_Creak" ID="{A350AA95-202D-4AD3-AC74-D19FCABDDF1A}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ActiveEngine_End" ID="{55EDD87F-E9EE-4556-AC75-06858CA543E7}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Music" ID="{A36BC415-3097-41DC-88B3-86E543E7CF7F}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Lvl_1_Loop_Filtered" ID="{77500C6E-7A9D-4D3B-96CF-1F4DFA0B97DE}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_MM_Music" ID="{317E7014-3B88-47EF-BB0D-F9A3C828DCF9}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Lvl_1_Loop" ID="{E52C1CA6-051C-49D9-A3FE-3BF7FDC64EBB}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Lvl_2_Loop" ID="{AFDDC2D9-A2CA-479F-B0D2-04155ECD67DD}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Lvl_3_Loop" ID="{CC2C1A62-A705-44DE-B947-0E37A5DBD123}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Lvl_3_Loop_Bridge" ID="{41DF9C8D-3E48-469B-A65C-043F3FDC9C75}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Mute_Track_01" ID="{0C34E248-7CEC-4A46-9EE7-C71B7A51DE6B}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Mute_Track_02" ID="{BCB1AC94-13FD-41AD-877D-4FDB250D29D1}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Mute_Track_03" ID="{95628972-24DE-43E3-A93C-972C005CFE1D}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Unmute_Track_01" ID="{C387EE77-F198-4FF5-A640-3E62603363F6}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Unmute_Track_02" ID="{4102AF52-500F-4E9E-94E5-33CDDE92B5C9}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Unmute_Track_03" ID="{7169C2C5-F974-46C4-A25E-80409335D951}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Fade_Music" ID="{A055BC01-23AA-4215-9976-0783A9316043}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Stinger_Drama" ID="{8B5E9D79-D902-47AE-BBCA-131C90FBB49E}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Fade_In_Lvl_02" ID="{1A036353-364C-4208-A557-0F9F81361DDE}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_All_Audio" ID="{C3D04ACA-5D60-4562-882F-AC1864B87032}" WorkUnitID="{D2E643DC-3D47-4B69-AC4A-1CA9386F116E}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Music_Vol" ID="{7C1795D1-CB77-457E-94E6-FFF9E87CD67A}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="VO_Vol" ID="{3ED66288-CC69-45A4-A51B-BF51F95C6B1E}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Master_Vol" ID="{72C4B8AD-15CB-47F2-95D0-E56E24272543}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="EngineIntensity" ID="{D3530436-FD26-49C1-8722-12691A6D2533}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Azimuth" ID="{3845B933-73DE-4A3B-986F-6096E61C250D}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SunIntensity" ID="{979752F5-2F89-4ABF-942B-DC14F152686B}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_LPF" ID="{DBD4E85C-6129-4E32-97C2-3A83A2C9A421}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="FX_Vol" ID="{E48563AF-85DA-4F88-A42C-9DA0EB589C9D}"/>
+							<Value>60</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{4D4A07F9-E3DA-462A-9BF6-31BE956BE0B9}"/>
+						<CurrentStateRef Name="None" ID="{4E909CE0-9070-4882-831D-1C9AB301EF65}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Coda" ID="{60C18455-3ECB-4E78-91D7-95FF0C27BA7F}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="play_amb_coda_soldacia" ID="{F2288DEA-BCAE-4ADF-9C84-5B05D55E706D}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="play_amb_coda_trado" ID="{4D1E531A-415F-4137-BB32-D173BCD65597}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="stop_amb_coda_soldacia" ID="{DA2A1210-7C77-49B8-A0C4-B3CDB0A897F4}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="stop_amb_coda_trado" ID="{AD9C0F3D-CF31-4BE2-9C45-74668041DAFD}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Coda_Hit" ID="{7BBB0385-F22A-44F7-A064-836ACF586E13}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Lvl_3_Loop" ID="{CC2C1A62-A705-44DE-B947-0E37A5DBD123}" WorkUnitID="{6397AEB2-58F1-4DB7-BE80-60559D68DDD0}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Ambients" ID="{7054C0A3-8B86-4E01-A4CC-04286DC51B62}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Quarters_Clean" ID="{2F6CE2E0-5C16-4ABD-B229-32C9944E95FE}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Quarters_Comp_Interact_Layer" ID="{D675F1B5-6AEF-4D17-9E07-CC9A68245C62}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Quarters_Soccer_Match" ID="{7B7DB5D1-4ED7-46B5-BA88-DD3E0FAC5F58}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Quarters_Comp_Interact_Layer" ID="{72AE002C-4B66-463D-9FEA-9D42F8958929}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Quarters_Soccer_Match" ID="{854C8DE5-A14D-4C9A-9295-7DBA0013C3E1}" WorkUnitID="{04A85730-24C1-4B1E-B2C0-A60A068175CD}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Music_Vol" ID="{7C1795D1-CB77-457E-94E6-FFF9E87CD67A}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="VO_Vol" ID="{3ED66288-CC69-45A4-A51B-BF51F95C6B1E}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Master_Vol" ID="{72C4B8AD-15CB-47F2-95D0-E56E24272543}"/>
+							<Value>60</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="EngineIntensity" ID="{D3530436-FD26-49C1-8722-12691A6D2533}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Azimuth" ID="{3845B933-73DE-4A3B-986F-6096E61C250D}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_LPF" ID="{DBD4E85C-6129-4E32-97C2-3A83A2C9A421}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="FX_Vol" ID="{E48563AF-85DA-4F88-A42C-9DA0EB589C9D}"/>
+							<Value>60</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{96710910-655B-44D8-8EDF-2300EBA426CA}"/>
+						<CurrentStateRef Name="None" ID="{4D4A07F9-E3DA-462A-9BF6-31BE956BE0B9}"/>
+						<CurrentStateRef Name="None" ID="{4E909CE0-9070-4882-831D-1C9AB301EF65}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Ship_Voice_Bridge" ID="{ED8F9D93-266B-496C-9D53-C6BAADE4815A}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_countdown_10s" ID="{709C5CB3-52A8-43B8-99D0-7675F69BA9A3}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_ship_voice_ugly_ending" ID="{4C90C4FA-0ADB-439E-8EDA-39EBD2824506}" WorkUnitID="{72FCE1C7-B3E2-4D01-99ED-8CEF3C0A789B}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{4D4A07F9-E3DA-462A-9BF6-31BE956BE0B9}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Dialogue_FX_Test" ID="{CC136A42-6CD9-4C38-B980-26AE6262917F}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_line00b0fb0" ID="{8B08DA70-9D01-462D-AEDD-BFF0B50AFC1E}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_line0364b66" ID="{4C8284F8-77E2-43AF-97A8-4F907EC2C8FB}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_line0a78173" ID="{C2524CFC-DEEF-49CC-A3BA-A4DE103AFB62}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_line00d9b94" ID="{73E0BB5A-D455-40CB-9E44-921C9DC5DF42}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_line00239fe" ID="{F8A9F366-792D-4984-9DE0-63A8483776C5}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_line00e16d2" ID="{BC5A997C-4C44-484F-A1E7-69FD212B7223}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_line0074d4b" ID="{DE5D0A5D-FD5B-4EA3-9952-8EFD80D5BFFA}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_line00a520a" ID="{813BF270-D0D8-4725-8CF6-0CE1EA858BEE}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_line0b3a8ce" ID="{9EFDC9D2-281E-4F44-BF63-7435C8D85B9D}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_line00c265e" ID="{4F3787F2-E93D-43A8-A4E9-DE38A210DAD3}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_line0b884f4" ID="{0CDBE0BF-1FA0-46DC-8AA4-29C83148D69C}" WorkUnitID="{D2E12607-A0F8-475C-AEFB-1B5441FBC0FE}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>
