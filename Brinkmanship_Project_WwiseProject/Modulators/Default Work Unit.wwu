@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B33117A1-9D80-4663-88FD-311402ED4770}" SchemaVersion="110">
+	<Modulators>
+		<WorkUnit Name="Default Work Unit" ID="{B33117A1-9D80-4663-88FD-311402ED4770}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorTime Name="Tinnitus_Fade_Out" ID="{BFBB49DA-F8AA-4D35-852F-14F540E2D7F6}" ShortID="992346667">
+					<PropertyList>
+						<Property Name="TimeModDuration" Type="Real64" Value="3.3"/>
+					</PropertyList>
+				</ModulatorTime>
+			</ChildrenList>
+		</WorkUnit>
+	</Modulators>
+</WwiseDocument>
